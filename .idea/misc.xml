@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/box_main.xml" value="0.22" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/button_main.xml" value="0.14722222222222223" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_question_mark.xml" value="0.19427083333333334" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/shape_blog_img.xml" value="0.35052083333333334" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/font/roboto.xml" value="0.2125" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/font/roboto_thin.xml" value="0.2125" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout-v31/test.xml" value="0.334375" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/about_us_template.xml" value="0.22" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_consultation.xml" value="0.33" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_correction.xml" value="0.5" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_one_to_one.xml" value="0.22" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_one_toone.xml" value="0.2896396396396396" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_self_paced.xml" value="0.33" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/d.xml" value="0.22" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_about_us.xml" value="0.16" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_about_us_Details.xml" value="0.3182291666666667" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_about_us_details.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_home.xml" value="0.21" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_online_cources.xml" value="0.5" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/test.xml" value="0.75" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/yiiu.xml" value="0.2896396396396396" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

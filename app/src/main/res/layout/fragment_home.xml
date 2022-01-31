@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginTop="50dp"
+                app:cardElevation="5dp"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp">
+
+
+                    <TextView
+
+                        android:id="@+id/title_main_courses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Online IELTS Courses"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textSize="@dimen/textSizeTitle"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_courses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:justificationMode="inter_word"
+                        android:text="Prepare for IELTS online with self-paced or one-to-one cources, and use the IELTS writing correction and consulation services"
+                        android:textSize="@dimen/textSizeDescription"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/title_main_courses" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_main_courses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Get Started"
+                        android:textColor="?attr/colorOnPrimary"
+                        android:textSize="10sp"
+                        app:backgroundTint="?attr/colorPrimary"
+                        app:cornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_main_courses" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonConsultation"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="Get Consulation"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textSize="10sp"
+                        app:cornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/button_main_courses"
+                        app:layout_constraintEnd_toStartOf="@+id/button_main_courses"
+                        app:layout_constraintTop_toTopOf="@+id/button_main_courses"
+                        app:rippleColor="?attr/colorSecondary"
+                        app:strokeColor="?attr/colorPrimary"
+                        app:strokeWidth="1dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginTop="50dp"
+                app:cardElevation="5dp"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp">
+
+
+                    <TextView
+
+                        android:id="@+id/title_main_correctiom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IELTS Writing Correction"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textSize="@dimen/textSizeTitle"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_correction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:justificationMode="inter_word"
+                        android:text="Send us your IELTS writing for correction and receive expert feedback. We mark your errors, suggest changes and offer advice on how to improve your writing based on IELTS assessment criteria."
+                        android:textSize="@dimen/textSizeDescription"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/title_main_correctiom" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_main_correction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="More Info"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:textSize="10sp"
+                        app:backgroundTint="?attr/colorPrimary"
+                        app:cornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_main_correction" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginTop="50dp"
+                app:cardElevation="5dp"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/title_main_blog"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Latest Blog Posts"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textSize="@dimen/textSizeTitle"
+                        android:textStyle="bold"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteX="10dp" />
+
+                    <TextView
+                        android:id="@+id/text_main_blog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
+                        android:text="Free IELTS lessons that every IELTS candidate needs to read about IELTS listening, reading, writing and speaking skills."
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/title_main_blog" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_main_blog"
+                        tools:layout_editor_absoluteX="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="250dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardElevation="1dp"
+                                app:strokeColor="?attr/colorPrimary"
+                                app:strokeWidth="1dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="250dp"
+                                        android:layout_height="150dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/img_blog_improve" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:text="How to improve your reading speed?"
+                                            android:textColor="?attr/colorSecondaryVariant"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="1dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:text="Nov 16, 2021 | Reading"
+                                            android:textSize="@dimen/textSizeDate" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:justificationMode="inter_word"
+                                            android:text="What problems do you have reading in English? What can you do to improve your reading? We know that speed is a major area of concern for readers, but solving this problem is not that difficult. Read the passage to find at least three ways you can..."
+                                            android:textColor="?attr/colorSecondaryVariant"
+                                            android:textSize="@dimen/textSizeDescription" />
+
+
+                                        <com.google.android.material.button.MaterialButton
+                                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="bottom|end"
+                                            android:layout_marginTop="28dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:text="Continue reading >>"
+                                            android:textColor="@color/black"
+                                            android:textSize="10sp" />
+
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginEnd="20dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardElevation="1dp"
+                                app:strokeColor="?attr/colorPrimary"
+                                app:strokeWidth="1dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="250dp"
+                                        android:layout_height="150dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/img_blog_speak" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:text="Who Speaks at the IELTS Speaking Test?"
+                                            android:textColor="?attr/colorSecondaryVariant"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="1dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:text="Nov 11, 2021 | Speaking"
+                                            android:textSize="10sp" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="8dp"
+
+                                            android:layout_marginEnd="10dp"
+                                            android:justificationMode="inter_word"
+                                            android:text="A lesson on the IELTS Speaking sessionThe IELTS Speaking session, which is sometimes referred to as the IELTS Interview, is not a simple question and answer session between two people. The examiners are instructed to behave differently throughout the speaking test..."
+                                            android:textColor="?attr/colorSecondaryVariant"
+                                            android:textSize="15sp" />
+
+                                        <com.google.android.material.button.MaterialButton
+                                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="bottom|end"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:text="Continue reading >>"
+                                            android:textColor="@color/black"
+                                            android:textSize="10sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="250dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="20dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardElevation="1dp"
+                                app:strokeColor="?attr/colorPrimary"
+                                app:strokeWidth="1dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="250dp"
+                                        android:layout_height="150dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/img_blog_read" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:text="How to Read Storybooks"
+                                            android:textColor="?attr/colorSecondaryVariant"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="1dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:text="Nov 9, 2021 | Reading"
+                                            android:textSize="10sp" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:justificationMode="inter_word"
+                                            android:text="Can I Practice Reading with Storybooks?Taking reading tests is a must for IELTS candidates. There are a lot of options to choose from when it comes to reading. Newspapers, magazines, newsfeeds, course books, etc. Short storybooks are also amazing sources for improving..."
+                                            android:textColor="?attr/colorSecondaryVariant"
+                                            android:textSize="15sp" />
+
+                                        <com.google.android.material.button.MaterialButton
+                                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="bottom|end"
+                                            android:layout_marginEnd="10dp"
+                                            android:layout_marginTop="28dp"
+                                            android:text="Continue reading >>"
+                                            android:textColor="@color/black"
+                                            android:textSize="10sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

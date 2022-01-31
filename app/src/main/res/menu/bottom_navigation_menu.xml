@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ic_fragment_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home_50"
+        android:title="Home"/>
+    <item
+        android:id="@+id/ic_fragment_studyOnline"
+        android:enabled="true"
+        android:icon="@drawable/ic_reading_50"
+        android:title="Study Online"/>
+<!--    <item-->
+<!--        android:id="@+id/ic_fragment_correction"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/ic_erase_50"-->
+<!--        android:title="Correction"/>-->
+    <item
+        android:id="@+id/ic_fragment_test"
+        android:enabled="true"
+
+        android:icon="@drawable/ic_quiz_50"
+        android:title="Test"/>
+    <item
+        android:id="@+id/ic_fragment_aboutUs"
+        android:enabled="true"
+        android:icon="@drawable/ic_about_50"
+        android:title="About US"/>
+</menu>

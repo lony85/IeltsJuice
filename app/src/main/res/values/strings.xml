@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ieltsjuice</string>
+    <string name="strike_text">$<strike>9.00 USD</strike></string>
+    <string name="Q_consultation_01">How long is the consultation?</string>
+    <string name="A_consultation_01">You will receive a 20-minute consultation. Make sure you go online at least five minutes before it starts.</string>
+    <string name="Q_consultation_02">Where is the consultation held?</string>
+    <string name="A_consultation_02">On Skype. No matter where you are, you can use a smartphone or preferably a laptop to attend.</string>
+    <string name="Q_consultation_03">What happens during the consultation?</string>
+    <string name="A_consultation_03">The session starts with an oral placement test. Then we give you a study plan and advice on how to prepare for IELTS. You can also ask your own questions.</string>
+    <string name="Q_consultation_04">Is this consultation really free?</string>
+    <string name="A_consultation_04">Absolutely! If you are serious about your learning, we are happy to show your the roadmap. (This service is free until further notice.)</string>
+    <string name="Q_consultation_05">Can I book a consultation more than once?</string>
+    <string name="A_consultation_05">Sorry, but you can use this free service once only. If you need to meet with our consultants a second time or need an online lesson, please book a session for a small fee.</string>
+    <string name="Q_consultation_06">Is a high speed Internet connection necessary?</string>
+    <string name="A_consultation_06">Yes. You will be in an audio and/or video call with your teacher, so you’ll need a good Internet connection, but today in most parts of the world, the speed is even higher than needed.</string>
+    <string name="Q_selfPaced_01">How long are the courses?</string>
+    <string name="A_selfPaced_01">They are of different lengths, but you can progress faster or slower depending on your personal speed. Most students finish each skill in a few weeks.</string>
+    <string name="Q_selfPaced_02">Will I have a teacher?</string>
+    <string name="A_selfPaced_02">Yes and no. An experienced British Council IELTS expert teaches you in pre-recorded videos that you can watch anytime, anywhere. No live lessons.</string>
+    <string name="Q_selfPaced_03">Who are your courses for?</string>
+    <string name="A_selfPaced_03">IELTS preparation courses are recommended to English learners of B2 level or higher.</string>
+    <string name="Q_selfPaced_04">How many days/hours do I have to study?</string>
+    <string name="A_selfPaced_04">You can study any time of the day and as often as you want based on your lifestyle or needs, but we recommend at least 3 hours of practice each day.</string>
+    <string name="Q_selfPaced_05">Will I need any books to study during the online course?</string>
+    <string name="A_selfPaced_05">The course materials are more than enough for learning the techniques and strategies. But you definitely need to use the books recommended in the courses for test practice.</string>
+    <string name="Q_selfPaced_06">What if I have a question?</string>
+    <string name="A_selfPaced_06">No worries! Every course has its own question and answer forum where you can get help from our IELTS experts and other students in the course.</string>
+</resources>
