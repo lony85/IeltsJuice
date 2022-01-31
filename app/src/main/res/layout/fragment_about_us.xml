@@ -37,5 +37,5 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_layout"
-        tools:listitem="@layout/about_us_template" />
+        tools:listitem="@layout/template_about_us" />
 </androidx.constraintlayout.widget.ConstraintLayout>

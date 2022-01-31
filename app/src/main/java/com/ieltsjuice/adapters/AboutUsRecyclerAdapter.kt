@@ -38,7 +38,7 @@ class AboutUsRecyclerAdapter(val context: Context, val Teachers: List<Teacher>,p
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val view = LayoutInflater.from(context).inflate(R.layout.about_us_template, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.template_about_us, parent, false)
         return Holder(view)
     }
 

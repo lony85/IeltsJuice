@@ -13,7 +13,6 @@
         android:layout_marginTop="15dp"
         app:cardCornerRadius="300dp"
         app:strokeWidth="5dp"
-
         app:strokeColor="?attr/colorOnPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,8 +34,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/box_main"
-        android:backgroundTint="?attr/colorSecondary"
+        android:background="@drawable/shape_teacher_detail"
         android:orientation="vertical"
         android:paddingTop="100dp"
         app:layout_constraintTop_toTopOf="parent"
