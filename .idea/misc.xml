@@ -7,6 +7,7 @@
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/button_main.xml" value="0.14722222222222223" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_arrow_right.xml" value="0.337" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_arrow_right_color_primary.xml" value="0.337" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_lock_open.xml" value="0.337" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_question_mark.xml" value="0.19427083333333334" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/shape_blog_img.xml" value="0.35052083333333334" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/shape_teacher_detail.xml" value="0.1765" />
@@ -32,10 +33,13 @@
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_self_paced.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_self_paced_speaking.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/template_about_us.xml" value="0.2896396396396396" />
-        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/template_cource_content.xml" value="0.67" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/template_cource_content.xml" value="0.5" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/template_cource_content_lock.xml" value="0.75" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/test.xml" value="0.75" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/yiiu.xml" value="0.2896396396396396" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3225" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3225" />
       </map>
     </option>
   </component>

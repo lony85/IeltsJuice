@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IELTS SPEAKING"
+                android:textColor="?attr/colorSecondaryVariant"
+                android:textSize="@dimen/textSizeTitle"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="An Online Self-paced Course"
+                android:textSize="@dimen/textSizeDate"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="20dp">
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_speaking" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About the Cource"
+                android:textSize="@dimen/textSizeTitle"
+                android:textColor="?attr/colorSecondaryVariant"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:textSize="@dimen/textSizeDescription"
+                android:text="Video lessons covering all the strategies you need for IELTS speaking. You can stop and replay the contents as many times as you want. Start today and study IELTS in your own time and at your own pace."
+                />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_microphone"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:textSize="@dimen/textSizeDescription"
+                android:text="This course includes :"
+                android:textColor="?attr/colorSecondaryVariant"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:textSize="@dimen/textSizeDescription"
+                android:text="Self-study program 36 video lessons 21 hrs of study time 3 downloadable resources Full lifetime access Access on any devices."                 />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_speakingCourse_Register"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Register Now"
+                app:cornerRadius="20dp"
+                android:layout_gravity="end"/>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+<com.google.android.material.textfield.TextInputLayout
+
+    android:id="@+id/dropdown_menu"
+    android:layout_width="match_parent"
+    android:hint="Choose Course Content ..."
+    android:focusableInTouchMode="true"
+    android:layout_gravity="center"
+    android:layout_height="match_parent"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+    <AutoCompleteTextView
+                android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="none"/>
+</com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/courseContentRecyclerView"
+                tools:listitem="@layout/template_cource_content"
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

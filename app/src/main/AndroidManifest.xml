@@ -13,9 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ieltsjuice">
         <activity
-            android:name=".WithoutNavigationBarActivity"
-            android:exported="false" />
-        <activity
             android:name=".SelfPacedActivity"
             android:exported="false" />
         <activity

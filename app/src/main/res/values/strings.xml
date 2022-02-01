@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ieltsjuice</string>
+    <string name="app_name">IeltsJuice</string>
     <string name="strike_text">$<strike>9.00 USD</strike></string>
     <string name="Q_consultation_01">How long is the consultation?</string>
     <string name="A_consultation_01">You will receive a 20-minute consultation. Make sure you go online at least five minutes before it starts.</string>
