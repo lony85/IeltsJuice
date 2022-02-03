@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ieltsjuice.R
 import com.ieltsjuice.model.SelfPacedCourses
 
-class SelfPacedAdapter(val context: Context, private val Courses: List<SelfPacedCourses>) :
+class SelfPacedAdapter(val context: Context, private val Courses: List<SelfPacedCourses>,val selectedView:ViewSelected) :
     RecyclerView.Adapter<SelfPacedAdapter.Holder>() {
     inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val courseTitle: TextView = itemView.findViewById(R.id.txtTitle_course_Details)
@@ -24,6 +24,9 @@ class SelfPacedAdapter(val context: Context, private val Courses: List<SelfPaced
             courseTitle.text = category.Title
             courseIcon.setImageResource(resourceIdIcon)
 
+            itemView.setOnClickListener {
+                selectedView.selectedView(Courses[adapterPosition],adapterPosition)
+            }
         }
     }
 
@@ -39,5 +42,13 @@ class SelfPacedAdapter(val context: Context, private val Courses: List<SelfPaced
 
     override fun getItemCount(): Int {
         return Courses.count()
+    }
+
+    // 1.create interface in adapter
+    // 2. get an object of interface in args of adapter
+    // 3. fill (or call) object of interface with your date
+    // 4. implementation in MainActivity
+    interface ViewSelected{
+        fun selectedView(Course:SelfPacedCourses,position: Int)
     }
 }

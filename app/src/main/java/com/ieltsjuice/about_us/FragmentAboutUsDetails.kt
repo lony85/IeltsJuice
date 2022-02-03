@@ -1,16 +1,15 @@
-package com.ieltsjuice
+package com.ieltsjuice.about_us
 
 import android.content.ActivityNotFoundException
-import android.content.ComponentName
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.ieltsjuice.R
 import com.ieltsjuice.databinding.FragmentAboutUsDetailsBinding
 
 
@@ -123,9 +122,8 @@ class FragmentAboutUsDetails : Fragment() {
             binding.titleAboutDetails.text = teacherTitle
             binding.descriptionAboutDetails.text = teacherDescription
             bindImage(teacherName!!)
-            Log.i("Hamed", "Data recived")
         } else {
-            Log.i("Hamed", "Data Not recived")
+            //Todo
         }
 
     }

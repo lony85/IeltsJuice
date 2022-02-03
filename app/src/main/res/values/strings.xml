@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ielts Juice</string>
+    <string name="app_name">IELTS Juice</string>
     <string name="strike_text">$<strike>9.00 USD</strike></string>
     <string name="Q_consultation_01">How long is the consultation?</string>
     <string name="A_consultation_01">You will receive a 20-minute consultation. Make sure you go online at least five minutes before it starts.</string>
@@ -25,4 +25,17 @@
     <string name="A_selfPaced_05">The course materials are more than enough for learning the techniques and strategies. But you definitely need to use the books recommended in the courses for test practice.</string>
     <string name="Q_selfPaced_06">What if I have a question?</string>
     <string name="A_selfPaced_06">No worries! Every course has its own question and answer forum where you can get help from our IELTS experts and other students in the course.</string>
+    <string name="loremIpsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <!--    Self Paced Speaking-->
+    <string name="txtSpeakingTestLayoutDesc1">Welcome to the Speaking module of the IELTS Juice Online Academy. The course consists of 10 chapters with hours of videos, interactive exercises, downloads, further study recommendations. There is also a speaking forum where you can discuss your questions with teachers and other learners.\n"We start off by looking at the test layout, watch an interview recorded at the IELTS Juice studio, and later, we will practice the features of each part. During the course, you will be able to test yourself using lots of interactive exercises.</string>
+    <string name="txtSpeakingTestLayoutDesc2">As you just learned from the video lesson, the Academic and General Training modules of IELTS are the same in the Speaking part.</string>
+    <string name="txtModelSpeakingPart1Desc1">In this part of the academy, you will watch a complete model of the IELTS Speaking test conducted at the IELTS Juice studio. Let’s start with part 1.</string>
+    <string name="txtModelSpeakingPart1Desc2">Watch the recording again. Only this time, just let the examiner speak and mute or pause when the candidate answers the questions. Keep your recorded voice with you throughout the course. This will help you have a tangible feeling of your progress.</string>
+    <string name="txtModelSpeakingPart2Desc1">This is a model IELTS Speaking test part 2 conducted at the IELTS Juice studio. Watch it carefully and see how the interviewer gives the question card and asks the candidate to return it.</string>
+    <string name="txtModelSpeakingPart2Desc2">Look at the card below (from the video lesson) and prepare your answers. Even better, keep your notes and your recorded voice for this card with you throughout the course. Later on, this will help you have insights into how well you could have improved your performance.</string>
+    <string name="txtSelfPacedModelSpeakingPart2CardView">Describe you like or admire. \nYou should say: \n ✓ who this person is \n ✓ what this person has done \n ✓ why this person is well-known \n ✓ and explain why you admire this person.</string>
+    <string name="txtModelSpeakingPart3Desc1">This is a model IELTS speaking test part 3 conducted at the IELTS Juice studio. Watch it carefully.</string>
+    <string name="txtModelSpeakingPart3Desc2">Watch the recording again. Only this time, just let the examiner speak and mute or pause when the candidate answers the questions. Keep your recorded voice with you throughout the course. This will help you have a tangible feeling of your progress. Remember! For this part, you should speak at length and expect follow-up questions from the examiner, so be prepared.</string>
+
+
 </resources>

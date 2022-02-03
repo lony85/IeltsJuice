@@ -1,4 +1,4 @@
-package com.ieltsjuice
+package com.ieltsjuice.self_paced
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.ieltsjuice.ConsultationActivity
+import com.ieltsjuice.OneToOneActivity
 import com.ieltsjuice.databinding.FragmentOnlineCourcesBinding
 
 class FragmentOnlineCourses:Fragment() {
@@ -27,7 +29,7 @@ class FragmentOnlineCourses:Fragment() {
             startActivity(intent)
         }
         binding.buttonMainCoursesOnetoOne.setOnClickListener{
-            val intent = Intent(this.requireActivity(),OneToOneActivity::class.java)
+            val intent = Intent(this.requireActivity(), OneToOneActivity::class.java)
             startActivity(intent)
         }
         binding.buttonMainCoursesSelfPaced.setOnClickListener{

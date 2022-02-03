@@ -1,4 +1,4 @@
-package com.ieltsjuice
+package com.ieltsjuice.about_us
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.ieltsjuice.R
 import com.ieltsjuice.adapters.AboutUsRecyclerAdapter
 import com.ieltsjuice.databinding.FragmentAboutUsBinding
 import com.ieltsjuice.model.Teacher
@@ -49,7 +50,6 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn{
 
     override fun moreInfoBtn(teacher: Teacher, position: Int) {
         val bundle = Bundle()
-//        bundle.putString("TeacherName","salam")
         bundle.putString(KEY_teacherName,teacher.teacherName)
         bundle.putString(KEY_teacherTitle,teacher.title)
         bundle.putString(KEY_teacherDesc,teacher.description)

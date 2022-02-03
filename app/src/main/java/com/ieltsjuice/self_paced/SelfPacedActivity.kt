@@ -1,9 +1,8 @@
-package com.ieltsjuice
+package com.ieltsjuice.self_paced
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.TypedValue
-import android.view.ViewGroup
+import com.ieltsjuice.R
 import com.ieltsjuice.databinding.ActivitySelfPacedBinding
 
 class SelfPacedActivity : AppCompatActivity() {

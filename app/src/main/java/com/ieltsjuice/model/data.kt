@@ -98,4 +98,5 @@ object data {
         SelfPacedCourses("6.12 Cambridge IELTS 8 Test 4","ic_lock"),
         SelfPacedCourses("S.6.12 Cambridge IELTS 8 Test 4 Quiz","ic_lock")
     )
+
 }

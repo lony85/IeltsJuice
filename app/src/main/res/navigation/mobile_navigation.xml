@@ -14,13 +14,13 @@
 
 <!--    <fragment-->
 <!--        android:id="@+id/navigation_services"-->
-<!--        android:name="com.ieltsjuice.FragmentOnlineCourses"-->
+<!--        android:name="com.ieltsjuice.self_paced.FragmentOnlineCourses"-->
 <!--        android:label="@string/title_services"-->
 <!--        tools:layout="@layout/fragment_services" />-->
 
 <!--    <fragment-->
 <!--        android:id="@+id/navigation_order"-->
-<!--        android:name="com.com.ieltsjuice.FragmentAboutUsDetails"-->
+<!--        android:name="com.com.ieltsjuice.about_us.FragmentAboutUsDetails"-->
 <!--        android:label="@string/title_order"-->
 <!--        tools:layout="@layout/fragment_order" />-->
 

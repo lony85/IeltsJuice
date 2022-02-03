@@ -16,7 +16,7 @@
 <!--        android:icon="@drawable/ic_erase_50"-->
 <!--        android:title="Correction"/>-->
     <item
-        android:id="@+id/ic_fragment_test"
+        android:id="@+id/ic_fragment_placement_quiz"
         android:enabled="true"
 
         android:icon="@drawable/ic_quiz_50"

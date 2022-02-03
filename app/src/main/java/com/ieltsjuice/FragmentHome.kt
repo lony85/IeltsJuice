@@ -1,16 +1,13 @@
 package com.ieltsjuice
 
-import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.ieltsjuice.adapters.AboutUsRecyclerAdapter
 import com.ieltsjuice.databinding.FragmentHomeBinding
-import com.ieltsjuice.model.data
+import com.ieltsjuice.self_paced.FragmentOnlineCourses
 
 class FragmentHome : Fragment() {
     lateinit var binding: FragmentHomeBinding
@@ -36,7 +33,7 @@ class FragmentHome : Fragment() {
         }
         binding.buttonMainCourses.setOnClickListener {
             val transaction = parentFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragment_container,FragmentOnlineCourses())
+            transaction.replace(R.id.fragment_container, FragmentOnlineCourses())
             transaction.addToBackStack(null)
             transaction.commit()
         }
