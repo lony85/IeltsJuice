@@ -36,6 +36,53 @@
     <string name="txtSelfPacedModelSpeakingPart2CardView">Describe you like or admire. \nYou should say: \n ✓ who this person is \n ✓ what this person has done \n ✓ why this person is well-known \n ✓ and explain why you admire this person.</string>
     <string name="txtModelSpeakingPart3Desc1">This is a model IELTS speaking test part 3 conducted at the IELTS Juice studio. Watch it carefully.</string>
     <string name="txtModelSpeakingPart3Desc2">Watch the recording again. Only this time, just let the examiner speak and mute or pause when the candidate answers the questions. Keep your recorded voice with you throughout the course. This will help you have a tangible feeling of your progress. Remember! For this part, you should speak at length and expect follow-up questions from the examiner, so be prepared.</string>
+    <!--     Test Result   -->
+    <string name="txtTitleA1">You are a Beginner</string>
+    <string name="txtDescriptionTitleA1">An English learner at A1 level:</string>
+    <string name="txtDescriptionA1">
+        • Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type.
+        \n• Can introduce him/herself and others and can ask and answer questions about personal details such as where he/she lives, people he/she knows and things he/she has.
+        \n• Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help.</string>
+    <string name="txtTitleA2">You are Pre-Intermediate</string>
+    <string name="txtDescriptionTitleA2">An English learner at A2 level:</string>
+    <string name="txtDescriptionA2">
+        • Can understand sentences and frequently used expressions related to areas of most immediate relevance (e.g. very basic personal and family information, shopping, local geography, employment).
+        \n• Can communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters.
+        \n• Can describe in simple terms aspects of his/her background, immediate environment and matters in areas of immediate need.</string>
+    <string name="txtTitleB1">You are Intermediate</string>
+    <string name="txtDescriptionTitleB1">An English learner at B1 level:</string>
+    <string name="txtDescriptionB1">
+        • May get a 4.0 - 4.5 in IELTS after enough exam training.
+        \n• Can understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc.
+        \n• Can deal with most situations likely to arise whilst travelling in an area where the language is spoken.
+        \n• Can produce simple connected text on topics which are familiar or of personal interest.
+        \n• Can describe experiences and events, dreams, hopes and ambitions and briefly give reasons and explanations for opinions and plans.</string>
+    <string name="txtTitleB2">Well-done! You are Upper-Intermediate</string>
+    <string name="txtDescriptionTitleB2">An English learner at B2 level:</string>
+
+    <string name="txtDescriptionB2">
+        • May get a 5.0 - 6.0 in IELTS after enough exam training.
+        \n• Can understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in his/her field of specialization.
+        \n• Can interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.
+        \n• Can produce clear, detailed text on a wide range of subjects and explain a viewpoint on a topical issue giving the advantages and disadvantages of various options.</string>
+    <string name="txtTitleC1">Congrats! You are Advanced!</string>
+    <string name="txtDescriptionTitleC1">An English learner at C1 level:</string>
+    <string name="txtDescriptionC1">
+        • May get a 6.5 - 7.5 in IELTS after enough exam training.
+        \n• Can understand a wide range of demanding, longer texts, and recognize implicit meaning.
+        \n• Can express him/herself fluently and spontaneously without much obvious searching for expressions.
+        \n• Can use language flexibly and effectively for social, academic and professional purposes.
+        \n• Can produce clear, well-structured, detailed text on complex subjects, showing controlled use of organisational patterns, connectors and cohesive devices.</string>
+    <string name="txtTitleC2">Wow! You are Very Advanced!</string>
+    <string name="txtDescriptionTitleC2">An English learner at C2 level:</string>
+    <string name="txtDescriptionC2">
+        • May get a 8.0 - 9.0 in IELTS after enough exam training.
+        \n• Can understand with ease virtually everything heard or read.
+        \n• Can summarize information from different spoken and written sources, reconstructing arguments and accounts in a coherent presentation.
+        \n• Can express him/herself spontaneously, very fluently and precisely, differentiating finer shades of meaning even in more complex situations.</string>
+
+
+
 
 
 </resources>

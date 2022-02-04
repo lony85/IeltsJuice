@@ -22,7 +22,7 @@
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_one_toone.xml" value="0.2896396396396396" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_placement_test.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_self_paced.xml" value="0.18" />
-        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_test_result.xml" value="0.2896396396396396" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_test_result.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_without_navigation_bar.xml" value="0.2774774774774775" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/cource_content_template.xml" value="0.2896396396396396" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/d.xml" value="0.22" />
@@ -36,6 +36,7 @@
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_self_paced.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_self_paced_course_detail.xml" value="0.41397849462365593" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_self_paced_speaking.xml" value="0.2" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_test_result.xml" value="0.2896396396396396" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/template_about_us.xml" value="0.2896396396396396" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/template_cource_content.xml" value="0.5" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/template_cource_content_lock.xml" value="0.75" />
