@@ -38,11 +38,9 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun replaceFragment(fragment: Fragment){
-        if (fragment != null){
-            val transacion = supportFragmentManager.beginTransaction()
-            transacion.replace(R.id.fragment_container,fragment)
-            transacion.commit()
-        }
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment_container,fragment)
+        transaction.commit()
 
     }
 }

@@ -1,6 +1,6 @@
 package com.ieltsjuice.model
 
-object data {
+object Data {
     val Teachers = listOf(
         Teacher("Kasra Sharifan","Co-founder and CFO","British Council certified English teacher, IDP-trained IELTS instructor, content writer, editor-in-chief, co-founder, and Chief Financial Officer (CFO) at IELTS Juice Online Academy.","teacher_kasra_sharifan","","https://www.linkedin.com/in/kasra-sharifan","https://www.facebook.com/kasra.sharifan","","https://kasrasharifan.com/"),
         Teacher("Mehdi Safavi","Co-founder and CEO","A Cambridge certified English teacher (CELTA Grade A) with over 17 years of teaching experience. He is trained by IDP Australia and is an IELTS expert in Tbilisi Georgia.","teacher_mehdi_safavi","https://www.instagram.com/mehdisafavi/","https://www.linkedin.com/in/mehdi-safavi-5b0b2349/","https://www.facebook.com/mehdi.safavi","skype:mehdi-safavi?chat","https://mehdisafavi.com/"),
@@ -98,5 +98,4 @@ object data {
         SelfPacedCourses("6.12 Cambridge IELTS 8 Test 4","ic_lock"),
         SelfPacedCourses("S.6.12 Cambridge IELTS 8 Test 4 Quiz","ic_lock")
     )
-
 }

@@ -12,15 +12,10 @@ class SelfPacedActivity : AppCompatActivity() {
         binding = ActivitySelfPacedBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val trasaction = supportFragmentManager.beginTransaction()
-        trasaction.add(R.id.frameLayout_SelfPaced, FragmentSelfPaced())
-        trasaction.commit()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.add(R.id.frameLayout_SelfPaced, FragmentSelfPaced())
+        transaction.commit()
 
 
     }
-
-
-
-
-
 }

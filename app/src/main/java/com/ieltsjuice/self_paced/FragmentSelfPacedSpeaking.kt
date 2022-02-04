@@ -4,13 +4,11 @@ import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
-import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,7 +16,7 @@ import com.ieltsjuice.R
 import com.ieltsjuice.adapters.SelfPacedAdapter
 import com.ieltsjuice.databinding.FragmentSelfPacedSpeakingBinding
 import com.ieltsjuice.model.SelfPacedCourses
-import com.ieltsjuice.model.data
+import com.ieltsjuice.model.Data
 
 const val KEY_SelfPacedCourseTitle = "KEY_SelfPacedCourseTitle"
 
@@ -86,7 +84,7 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
             when (it.toString()) {
                 "Introduction" -> {
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), data.speakingIntroduction, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.speakingIntroduction, this)
                     binding.courseContentRecyclerView.adapter = coursesAdapter
                     binding.scrollView.post {
                         binding.scrollView.scrollTo(
@@ -98,26 +96,26 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
                 }
                 "IELTS Speaking Part 1" -> {
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), data.SpeakingPart1, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.SpeakingPart1, this)
                 }
                 "IELTS Speaking Part 2" -> {
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), data.SpeakingPart2, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.SpeakingPart2, this)
                 }
                 "IELTS Speaking Part 3" -> {
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), data.SpeakingPart3, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.SpeakingPart3, this)
                 }
                 "IELTS Speaking Assessment Criteria" -> {
                     coursesAdapter = SelfPacedAdapter(
                         this.requireActivity(),
-                        data.SpeakingAssessmentCriteria,
+                        Data.SpeakingAssessmentCriteria,
                         this
                     )
                 }
                 "Speaking Practice" -> {
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), data.SpeakingPractice, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.SpeakingPractice, this)
                 }
             }
             binding.courseContentRecyclerView.adapter = coursesAdapter

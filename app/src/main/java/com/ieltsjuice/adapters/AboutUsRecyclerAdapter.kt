@@ -15,11 +15,11 @@ class AboutUsRecyclerAdapter(val context: Context, val Teachers: List<Teacher>,p
     RecyclerView.Adapter<AboutUsRecyclerAdapter.Holder>() {
     inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val teacherImage = itemView.findViewById<ImageView>(R.id.imageView_about_RecyclerView)
-        val teacherName = itemView.findViewById<TextView>(R.id.name_about_Details)
-        val teacherTitle = itemView.findViewById<TextView>(R.id.title_about_Details)
+        private val teacherImage: ImageView = itemView.findViewById(R.id.imageView_about_RecyclerView)
+        private val teacherName: TextView = itemView.findViewById(R.id.name_about_Details)
+        private val teacherTitle: TextView = itemView.findViewById(R.id.title_about_Details)
 
-        val moreButton = itemView.findViewById<Button>(R.id.btn_more_aboutUs)
+        private val moreButton: Button = itemView.findViewById(R.id.btn_more_aboutUs)
 
         fun bindData(category: Teacher, context: Context) {
             val resourceId =

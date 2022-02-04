@@ -4,16 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ieltsjuice.R
 import com.ieltsjuice.adapters.AboutUsRecyclerAdapter
 import com.ieltsjuice.databinding.FragmentAboutUsBinding
 import com.ieltsjuice.model.Teacher
-import com.ieltsjuice.model.data
-import kotlin.concurrent.fixedRateTimer
+import com.ieltsjuice.model.Data
 
 const val KEY_teacherName = "KEY_teacherName"
 const val KEY_teacherTitle = "KEY_teacherTitle"
@@ -40,7 +37,7 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         super.onViewCreated(view, savedInstanceState)
-        TeachersAdapter = AboutUsRecyclerAdapter(this.requireActivity(),data.Teachers,this)
+        TeachersAdapter = AboutUsRecyclerAdapter(this.requireActivity(),Data.Teachers,this)
 
         binding.aboutUsRecyclerView.adapter = TeachersAdapter
         val layoutManager = LinearLayoutManager(this.requireActivity())

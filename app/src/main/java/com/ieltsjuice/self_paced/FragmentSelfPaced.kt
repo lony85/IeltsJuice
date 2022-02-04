@@ -25,14 +25,14 @@ lateinit var binding : FragmentSelfPacedBinding
 
 
         binding.buttonSelfPacedSpeaking.setOnClickListener {
-            val trasaction = parentFragmentManager.beginTransaction()
-            trasaction.replace(R.id.frameLayout_SelfPaced,FragmentSelfPacedSpeaking())
-            trasaction.addToBackStack(null)
-            trasaction.commit()
+            val transaction = parentFragmentManager.beginTransaction()
+            transaction.replace(R.id.frameLayout_SelfPaced,FragmentSelfPacedSpeaking())
+            transaction.addToBackStack(null)
+            transaction.commit()
         }
 
         //FAQ Session
-        var result: Boolean = false
+        var result = false
         binding.question1CardView.setOnClickListener {
             // Gets linearlayout
             val layout = binding.questionAnswerDivider1
@@ -154,7 +154,7 @@ lateinit var binding : FragmentSelfPacedBinding
             }
         }
     }
-    fun Float.toDips() =
+    private fun Float.toDips() =
         TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this, resources.displayMetrics)
 
 }
