@@ -23,7 +23,7 @@
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             style="?attr/collapsingToolbarLayoutLargeStyle"
-            android:id="@+id/topAppBar"
+            android:id="@+id/appBarMain"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             >

@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         replaceFragment(FragmentHome)
 
         binding.bottomNavigation.setOnNavigationItemSelectedListener {
