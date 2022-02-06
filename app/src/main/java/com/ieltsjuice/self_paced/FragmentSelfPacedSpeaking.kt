@@ -9,14 +9,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import android.widget.LinearLayout
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ieltsjuice.R
 import com.ieltsjuice.adapters.SelfPacedAdapter
 import com.ieltsjuice.databinding.FragmentSelfPacedSpeakingBinding
-import com.ieltsjuice.model.SelfPacedCourses
 import com.ieltsjuice.model.Data
+import com.ieltsjuice.model.SelfPacedCourses
 
 const val KEY_SelfPacedCourseTitle = "KEY_SelfPacedCourseTitle"
 
@@ -85,6 +86,11 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
         (binding.dropdownMenu.editText as AutoCompleteTextView).addTextChangedListener {
             when (it.toString()) {
                 "Introduction" -> {
+                    //set height of RecyclerView Container
+                    val lp: ViewGroup.LayoutParams = binding.frameViewRecyclerView.layoutParams
+                    lp.height = 1000
+                    binding.frameViewRecyclerView.requestLayout()
+
                     coursesAdapter =
                         SelfPacedAdapter(this.requireActivity(), Data.speakingIntroduction, this)
                     binding.courseContentRecyclerView.adapter = coursesAdapter
@@ -97,18 +103,39 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
 
                 }
                 "IELTS Speaking Part 1" -> {
+                    //set height of RecyclerView Container
+                    val lp: ViewGroup.LayoutParams = binding.frameViewRecyclerView.layoutParams
+                    lp.height = 1000
+                    binding.frameViewRecyclerView.requestLayout()
+
                     coursesAdapter =
                         SelfPacedAdapter(this.requireActivity(), Data.SpeakingPart1, this)
+
                 }
                 "IELTS Speaking Part 2" -> {
+                    //set height of RecyclerView Container
+                    val lp: ViewGroup.LayoutParams = binding.frameViewRecyclerView.layoutParams
+                    lp.height = 1000
+                    binding.frameViewRecyclerView.requestLayout()
+
                     coursesAdapter =
                         SelfPacedAdapter(this.requireActivity(), Data.SpeakingPart2, this)
                 }
                 "IELTS Speaking Part 3" -> {
+                    //set height of RecyclerView Container
+                    val lp: ViewGroup.LayoutParams = binding.frameViewRecyclerView.layoutParams
+                    lp.height = 1000
+                    binding.frameViewRecyclerView.requestLayout()
+
                     coursesAdapter =
                         SelfPacedAdapter(this.requireActivity(), Data.SpeakingPart3, this)
                 }
                 "IELTS Speaking Assessment Criteria" -> {
+                    //set height of RecyclerView Container
+                    val lp: ViewGroup.LayoutParams = binding.frameViewRecyclerView.layoutParams
+                    lp.height = 1000
+                    binding.frameViewRecyclerView.requestLayout()
+
                     coursesAdapter = SelfPacedAdapter(
                         this.requireActivity(),
                         Data.SpeakingAssessmentCriteria,
@@ -116,6 +143,11 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
                     )
                 }
                 "Speaking Practice" -> {
+                    //set height of RecyclerView Container
+                    val lp: ViewGroup.LayoutParams = binding.frameViewRecyclerView.layoutParams
+                    lp.height = 1000
+                    binding.frameViewRecyclerView.requestLayout()
+
                     coursesAdapter =
                         SelfPacedAdapter(this.requireActivity(), Data.SpeakingPractice, this)
                 }
