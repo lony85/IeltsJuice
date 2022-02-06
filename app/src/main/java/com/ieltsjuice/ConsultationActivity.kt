@@ -6,7 +6,9 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.TypedValue
+import android.view.MenuItem
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 
 import com.ieltsjuice.databinding.ActivityConsultationBinding
 
@@ -157,9 +159,22 @@ class ConsultationActivity : AppCompatActivity() {
 
             }
         }
+        // Toolbar
+        setSupportActionBar(binding.toolbarMain)
+        binding.collapsingBarMain.setExpandedTitleColor(ContextCompat.getColor(this,android.R.color.transparent))
+        binding.collapsingBarMain.title = "Online Consultation"
+        supportActionBar!!.setHomeButtonEnabled(true)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
     }
 
-    fun Float.toDips() =
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId==android.R.id.home){
+            onBackPressed()
+        }
+        return true
+    }
+
+    private fun Float.toDips() =
         TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this, resources.displayMetrics)
 }
 

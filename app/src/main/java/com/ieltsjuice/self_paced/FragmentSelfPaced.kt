@@ -15,7 +15,7 @@ lateinit var binding : FragmentSelfPacedBinding
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentSelfPacedBinding.inflate(layoutInflater,container,false)
         return binding.root
     }

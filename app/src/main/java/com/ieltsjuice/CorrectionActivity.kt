@@ -5,6 +5,8 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import androidx.core.content.ContextCompat
 import com.ieltsjuice.databinding.ActivityCorrectionBinding
 
 class CorrectionActivity : AppCompatActivity() {
@@ -74,5 +76,18 @@ class CorrectionActivity : AppCompatActivity() {
                 )
             }
         }
+        // Toolbar
+        setSupportActionBar(binding.toolbarMain)
+        binding.collapsingBarMain.setExpandedTitleColor(ContextCompat.getColor(this,android.R.color.transparent))
+        binding.collapsingBarMain.title = "Writing Correction"
+        supportActionBar!!.setHomeButtonEnabled(true)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId==android.R.id.home){
+            onBackPressed()
+        }
+        return true
     }
 }
