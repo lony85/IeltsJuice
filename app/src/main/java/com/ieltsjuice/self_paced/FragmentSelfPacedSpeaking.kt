@@ -80,7 +80,9 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
             "IELTS Speaking Assessment Criteria",
             "Speaking Practice"
         )
+
         val adapter = ArrayAdapter(this.requireActivity(), R.layout.drop_down_item, courseContent)
+
         (binding.dropdownMenu.editText as AutoCompleteTextView).setAdapter(adapter)
 
         (binding.dropdownMenu.editText as AutoCompleteTextView).addTextChangedListener {

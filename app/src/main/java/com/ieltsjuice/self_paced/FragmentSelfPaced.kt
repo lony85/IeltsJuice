@@ -27,7 +27,6 @@ lateinit var binding : FragmentSelfPacedBinding
         binding.buttonSelfPacedSpeaking.setOnClickListener {
             val transaction = parentFragmentManager.beginTransaction()
             transaction.replace(R.id.frameLayout_SelfPaced,FragmentSelfPacedSpeaking())
-            transaction.addToBackStack(null)
             transaction.commit()
         }
 
