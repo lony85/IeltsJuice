@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
-import android.widget.LinearLayout
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,7 +18,7 @@ import com.ieltsjuice.databinding.FragmentSelfPacedSpeakingBinding
 import com.ieltsjuice.model.Data
 import com.ieltsjuice.model.SelfPacedCourses
 
-const val KEY_SelfPacedCourseTitle = "KEY_SelfPacedCourseTitle"
+const val KEY_SelfPacedCourseMainTitle = "KEY_SelfPacedCourseMainTitle"
 
 class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
     lateinit var binding: FragmentSelfPacedSpeakingBinding
@@ -170,17 +169,64 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
 
     override fun selectedView(Course: SelfPacedCourses, position: Int) {
         if (binding.dropdownMenu.editText!!.text.toString() == "Introduction") {
+
+//            val intent = Intent(this.requireActivity(),IntroductionActivity::class.java)
+//            intent.putExtra(KEY_SelfPacedCourseMainTitle,Course.Title)
+//            startActivity(intent)
             val bundle = Bundle()
-            bundle.putString(KEY_SelfPacedCourseTitle, Course.Title)
+            bundle.putString(KEY_SelfPacedCourseMainTitle, Course.Title)
+            when (Course.Title) {
+                "1.1 Speaking Test Layout" -> {
+                   course("1.1 Speaking Test Layout")
+                }
+                "1.2 Model Speaking Part 1" -> {
+                    course("1.2 Model Speaking Part 1")
+                }
 
-            val fragment = FragmentSelfPacedCourseDetail()
-            fragment.arguments = bundle
+                "1.3 Model Speaking Part 2" -> {
+                    course("1.3 Model Speaking Part 2")
+                }
+                "1.4 Model Speaking Part 3" -> {
+                    course("1.4 Model Speaking Part 3")
+                }
+                "S.1.1 The Speaking Test Layout - Quiz" -> {
+                    quiz("S.1.1 The Speaking Test Layout - Quiz")
+                }
+                "S.1.2 Model Speaking Part 1 - Quiz" -> {
+                    quiz("S.1.2 Model Speaking Part 1 - Quiz")
+                }
 
-            val replaceTransaction = parentFragmentManager.beginTransaction()
-            replaceTransaction.replace(R.id.frameLayout_SelfPaced, fragment)
-            replaceTransaction.addToBackStack(null)
-            replaceTransaction.commit()
+                "S.1.3 Model Speaking Part 2 - Quiz" -> {
+                    quiz("S.1.3 Model Speaking Part 2 - Quiz")
+                }
+
+                "S.1.4 Model Speaking Part 3 - Quiz" -> {
+                    quiz("S.1.4 Model Speaking Part 3 - Quiz")
+                }
+            }
         }
+    }
+    fun course(Course: String){
+        val bundle = Bundle()
+        bundle.putString(KEY_SelfPacedCourseMainTitle, Course)
+        val fragment = FragmentSelfPacedCourseDetail()
+        fragment.arguments = bundle
+
+        val replaceTransaction = parentFragmentManager.beginTransaction()
+        replaceTransaction.replace(R.id.fragment_container_speaking, fragment)
+        replaceTransaction.addToBackStack(null)
+        replaceTransaction.commit()
+    }
+    fun quiz(quiz: String){
+        val bundle = Bundle()
+        bundle.putString(KEY_SelfPacedCourseMainTitle, quiz)
+        val fragment = FragmentTestSpeaking()
+        fragment.arguments = bundle
+
+        val replaceTransaction = parentFragmentManager.beginTransaction()
+        replaceTransaction.replace(R.id.fragment_container_speaking, fragment)
+        replaceTransaction.addToBackStack(null)
+        replaceTransaction.commit()
     }
 
 }

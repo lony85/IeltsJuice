@@ -9,8 +9,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ieltsjuice.R
 import com.ieltsjuice.model.SelfPacedCourses
+import com.ieltsjuice.self_paced.SelfPacedSpeakingActivity
 
-class SelfPacedAdapter(val context: Context, private val Courses: List<SelfPacedCourses>,val selectedView:ViewSelected) :
+class SelfPacedAdapter(
+    val context: Context, private val Courses: List<SelfPacedCourses>,
+    val selectedView: ViewSelected
+) :
     RecyclerView.Adapter<SelfPacedAdapter.Holder>() {
     inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val courseTitle: TextView = itemView.findViewById(R.id.txtTitle_course_Details)

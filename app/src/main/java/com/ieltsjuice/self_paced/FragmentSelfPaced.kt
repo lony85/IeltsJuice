@@ -1,5 +1,6 @@
 package com.ieltsjuice.self_paced
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -7,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.ieltsjuice.R
+import com.ieltsjuice.databinding.ActivitySelfPacedSpeakingBinding
 import com.ieltsjuice.databinding.FragmentSelfPacedBinding
 
 class FragmentSelfPaced : Fragment() {
@@ -25,9 +27,12 @@ lateinit var binding : FragmentSelfPacedBinding
 
 
         binding.buttonSelfPacedSpeaking.setOnClickListener {
-            val transaction = parentFragmentManager.beginTransaction()
-            transaction.replace(R.id.frameLayout_SelfPaced,FragmentSelfPacedSpeaking())
-            transaction.commit()
+            val intent = Intent(this.requireActivity(),SelfPacedSpeakingActivity::class.java)
+            startActivity(intent)
+//            val transaction = parentFragmentManager.beginTransaction()
+//            transaction.replace(R.id.frameLayout_SelfPaced,FragmentSelfPacedSpeaking())
+//            transaction.addToBackStack(null)
+//            transaction.commit()
         }
 
         //FAQ Session
