@@ -68,13 +68,901 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <FrameLayout
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        android:id="@+id/frameLayout_SelfPaced"
+    <androidx.constraintlayout.widget.ConstraintLayout
+       app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:paddingBottom="16dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBar" />
+        tools:context=".self_paced.SelfPacedActivity">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="Self-paced Courses"
+                    android:textColor="?attr/colorSecondaryVariant"
+                    android:textSize="@dimen/textSizeTitle" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+
+                    android:text="For busy IELTS candidates who want to study in their own time."
+                    android:textSize="@dimen/textSizeDate" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+
+                    <FrameLayout
+                        android:id="@+id/frameLayoutListning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@+id/frameLayoutReading"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/materialCardView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="260dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardElevation="8dp"
+                                app:strokeColor="?attr/colorPrimary"
+                                app:strokeWidth="2dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="100dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/img_listening" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:text="IELTS Listening"
+                                            android:textColor="?attr/colorSecondaryVariant"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:justificationMode="inter_word"
+                                            android:text="Best approaches to each part of IELTS Listening test"
+                                            android:textSize="@dimen/textSizeDescription" />
+
+
+                                        <com.google.android.material.button.MaterialButton
+                                            android:id="@+id/buttonSelfPacedListening"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center"
+                                            android:layout_marginTop="18dp"
+                                            android:text="Go to Course"
+                                            android:textColor="?attr/colorOnPrimary"
+                                            android:textSize="10sp"
+                                            app:cornerRadius="10dp" />
+
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@color/Green"
+                            android:padding="2dp"
+                            android:text="49 USD"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:textSize="@dimen/textSizeDescription"
+                            android:textStyle="bold" />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/framLayoutWriting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@+id/frameLayoutSpeaking"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/frameLayoutListning">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/materialCardView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="260dp"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardElevation="8dp"
+                                app:strokeColor="?attr/colorPrimary"
+                                app:strokeWidth="2dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="100dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/img_writing" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:text="IELTS Writing"
+                                            android:textColor="?attr/colorSecondaryVariant"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:justificationMode="inter_word"
+                                            android:text="Top tips and speaking practice materials for the three parts"
+                                            android:textSize="@dimen/textSizeDescription" />
+
+
+                                        <com.google.android.material.button.MaterialButton
+                                            android:id="@+id/buttonSelfPacedWriting"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center"
+                                            android:layout_marginBottom="5dp"
+                                            android:text="Go to Course"
+                                            android:textColor="?attr/colorOnPrimary"
+                                            android:textSize="10sp"
+                                            app:cornerRadius="10dp" />
+
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@color/Green"
+                            android:padding="2dp"
+                            android:text="79 USD"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:textSize="@dimen/textSizeDescription"
+                            android:textStyle="bold" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frameLayoutReading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/frameLayoutListning"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/materialCardView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="260dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardElevation="8dp"
+                                app:strokeColor="?attr/colorPrimary"
+                                app:strokeWidth="2dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="100dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/img_reading" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:text="IELTS Reading"
+                                            android:textColor="?attr/colorSecondaryVariant"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:justificationMode="inter_word"
+                                            android:text="All the strategies you need for success in IELTS reading"
+                                            android:textSize="@dimen/textSizeDescription" />
+
+
+                                        <com.google.android.material.button.MaterialButton
+                                            android:id="@+id/buttonSelfPacedReading"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center"
+                                            android:layout_marginBottom="5dp"
+                                            android:text="Go to Course"
+                                            android:textColor="?attr/colorOnPrimary"
+                                            android:textSize="10sp"
+                                            app:cornerRadius="10dp" />
+
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@color/Green"
+                            android:padding="2dp"
+                            android:text="79 USD"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:textSize="@dimen/textSizeDescription"
+
+                            android:textStyle="bold" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frameLayoutSpeaking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/framLayoutWriting"
+                        app:layout_constraintTop_toBottomOf="@id/frameLayoutReading">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/materialCardView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="260dp"
+                                android:layout_marginTop="10dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardElevation="8dp"
+                                app:strokeColor="?attr/colorPrimary"
+                                app:strokeWidth="2dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="150dp"
+                                        android:layout_height="100dp"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/img_speaking" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:text="IELTS Speaking"
+                                            android:textColor="?attr/colorSecondaryVariant"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:justificationMode="inter_word"
+                                            android:text="How to write letters, reports and essays based on IELTS criteria"
+                                            android:textSize="@dimen/textSizeDescription" />
+
+
+                                        <com.google.android.material.button.MaterialButton
+                                            android:id="@+id/button_selfPaced_Speaking"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginBottom="5dp"
+                                            android:text="Go to Course"
+                                            android:textColor="?attr/colorOnPrimary"
+                                            android:textSize="10sp"
+                                            app:cornerRadius="10dp" />
+
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@color/Green"
+                            android:padding="2dp"
+                            android:text="39 USD"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:textSize="@dimen/textSizeDescription"
+                            android:textStyle="bold" />
+
+                    </FrameLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Frequently Asked Questions"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textSize="@dimen/textSizeTitle"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Answers to some of your common questions about these IELTS courses." />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/question1_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="5dp"
+                        app:rippleColor="?attr/colorSecondary"
+                        app:strokeColor="?attr/colorPrimary"
+                        app:strokeWidth="1dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center|start"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_question_mark" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="@string/Q_selfPaced_01"
+                                    android:textSize="18sp" />
+
+
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:id="@+id/questionAnswerDivider1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="45dp"
+                                android:layout_marginEnd="40dp" />
+
+                            <TextView
+                                android:id="@+id/txtA1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="60dp"
+                                android:layout_marginEnd="40dp"
+                                android:layout_marginBottom="2dp"
+                                android:justificationMode="inter_word"
+                                android:textSize="0dp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/icArrowQ1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center|end"
+                            android:src="@drawable/ic_arrow_right" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/question2_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="5dp"
+                        app:rippleColor="?attr/colorSecondary"
+                        app:strokeColor="?attr/colorPrimary"
+                        app:strokeWidth="1dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center|start"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_question_mark" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="@string/Q_selfPaced_02"
+                                    android:textSize="18sp" />
+
+
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:id="@+id/questionAnswerDivider2"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="45dp"
+                                android:layout_marginEnd="40dp" />
+
+                            <TextView
+                                android:id="@+id/txtA2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="60dp"
+                                android:layout_marginEnd="40dp"
+                                android:layout_marginBottom="2dp"
+                                android:justificationMode="inter_word"
+                                android:textSize="0dp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/icArrowQ2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center|end"
+                            android:src="@drawable/ic_arrow_right" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/question3_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="5dp"
+                        app:rippleColor="?attr/colorSecondary"
+                        app:strokeColor="?attr/colorPrimary"
+                        app:strokeWidth="1dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center|start"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_question_mark" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="@string/Q_selfPaced_03"
+                                    android:textSize="18sp" />
+
+
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:id="@+id/questionAnswerDivider3"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="45dp"
+                                android:layout_marginEnd="40dp" />
+
+                            <TextView
+                                android:id="@+id/txtA3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="60dp"
+                                android:layout_marginEnd="40dp"
+                                android:layout_marginBottom="2dp"
+                                android:justificationMode="inter_word"
+                                android:textSize="0dp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/icArrowQ3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center|end"
+                            android:src="@drawable/ic_arrow_right" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/question4_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="5dp"
+                        app:rippleColor="?attr/colorSecondary"
+                        app:strokeColor="?attr/colorPrimary"
+                        app:strokeWidth="1dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center|start"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_question_mark" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="@string/Q_selfPaced_04"
+                                    android:textSize="18sp" />
+
+
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:id="@+id/questionAnswerDivider4"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="45dp"
+                                android:layout_marginEnd="40dp" />
+
+                            <TextView
+                                android:id="@+id/txtA4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="60dp"
+                                android:layout_marginEnd="40dp"
+                                android:layout_marginBottom="2dp"
+                                android:justificationMode="inter_word"
+                                android:textSize="0dp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/icArrowQ4"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center|end"
+                            android:src="@drawable/ic_arrow_right" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/question5_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="5dp"
+                        app:rippleColor="?attr/colorSecondary"
+                        app:strokeColor="?attr/colorPrimary"
+                        app:strokeWidth="1dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center|start"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_question_mark" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="@string/Q_selfPaced_05"
+                                    android:textSize="18sp" />
+
+
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:id="@+id/questionAnswerDivider5"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="45dp"
+                                android:layout_marginEnd="40dp" />
+
+                            <TextView
+                                android:id="@+id/txtA5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="60dp"
+                                android:layout_marginEnd="40dp"
+                                android:layout_marginBottom="2dp"
+                                android:justificationMode="inter_word"
+                                android:textSize="0dp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/icArrowQ5"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center|end"
+                            android:src="@drawable/ic_arrow_right" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/question6_cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="5dp"
+                        app:rippleColor="?attr/colorSecondary"
+                        app:strokeColor="?attr/colorPrimary"
+                        app:strokeWidth="1dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center|start"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_question_mark" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="40dp"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:text="@string/Q_selfPaced_06"
+                                    android:textSize="18sp" />
+
+
+                            </LinearLayout>
+
+                            <com.google.android.material.divider.MaterialDivider
+                                android:id="@+id/questionAnswerDivider6"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="45dp"
+                                android:layout_marginEnd="40dp" />
+
+                            <TextView
+                                android:id="@+id/txtA6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="60dp"
+                                android:layout_marginEnd="40dp"
+                                android:layout_marginBottom="2dp"
+                                android:justificationMode="inter_word"
+                                android:textSize="0dp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/icArrowQ6"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center|end"
+                            android:src="@drawable/ic_arrow_right" />
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <FrameLayout-->
+<!--        android:id="@+id/frameLayout_SelfPaced"-->
+<!--        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:paddingBottom="16dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/appBar" />-->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

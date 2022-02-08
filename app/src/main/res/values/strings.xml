@@ -26,7 +26,7 @@
     <string name="Q_selfPaced_06">What if I have a question?</string>
     <string name="A_selfPaced_06">No worries! Every course has its own question and answer forum where you can get help from our IELTS experts and other students in the course.</string>
     <string name="loremIpsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
-    <!--    Self Paced Speaking-->
+    <!--    Self Paced Speaking -->
     <string name="txtSpeakingTestLayoutDesc1">Welcome to the Speaking module of the IELTS Juice Online Academy. The course consists of 10 chapters with hours of videos, interactive exercises, downloads, further study recommendations. There is also a speaking forum where you can discuss your questions with teachers and other learners.\n"We start off by looking at the test layout, watch an interview recorded at the IELTS Juice studio, and later, we will practice the features of each part. During the course, you will be able to test yourself using lots of interactive exercises.</string>
     <string name="txtSpeakingTestLayoutDesc2">As you just learned from the video lesson, the Academic and General Training modules of IELTS are the same in the Speaking part.</string>
     <string name="txtModelSpeakingPart1Desc1">In this part of the academy, you will watch a complete model of the IELTS Speaking test conducted at the IELTS Juice studio. Let’s start with part 1.</string>
@@ -36,6 +36,25 @@
     <string name="txtSelfPacedModelSpeakingPart2CardView">Describe you like or admire. \nYou should say: \n ✓ who this person is \n ✓ what this person has done \n ✓ why this person is well-known \n ✓ and explain why you admire this person.</string>
     <string name="txtModelSpeakingPart3Desc1">This is a model IELTS speaking test part 3 conducted at the IELTS Juice studio. Watch it carefully.</string>
     <string name="txtModelSpeakingPart3Desc2">Watch the recording again. Only this time, just let the examiner speak and mute or pause when the candidate answers the questions. Keep your recorded voice with you throughout the course. This will help you have a tangible feeling of your progress. Remember! For this part, you should speak at length and expect follow-up questions from the examiner, so be prepared.</string>
+    <!--    Self Paced Listening -->
+    <string name="txtAboutTheListeningTestDesc1">In this introductory lesson, you will learn why it’s important to take the listening skill seriously and prepare for it.</string>
+    <string name="txtAboutTheListeningTestDesc2">Got a question? Write in the listening forum, and one of the other learners or our IELTS experts will reply.</string>
+    <string name="txtTheListeningTestLayoutDesc1">What do you know about the layout of the IELTS listening test? Do you know how many people speak in each part of the test? What about the contents of each part and the skills tested? Watch the video to find out.</string>
+    <string name="txtTheListeningTestLayoutDesc2">Now open a Cambridge IELTS book and have a look at the four parts to see what they are like. Got a question? Write in the listening forum, and one of the other learners or our IELTS experts will reply.</string>
+    <string name="txtEnglishAccentsDesc1">IELTS is an international English test; therefore, during the listening part of the exam, you will hear different English accents. Watch this video and familiarize yourself with the common English accents in IELTS.</string>
+    <string name="txtEnglishAccentsDesc2">Which accent did you find the most difficult to understand? Explain why you feel more comfortable with some English accents in the listening forum. Can you suggest ways to be exposed to different English accents? For example, what radio channels do you normally listen to?</string>
+    <string name="txtFeaturesOfTheAustralianAccentDesc1">Until now, we have learnt three standard and common accents in IELTS namely: Modern Standard British English (MSBE), the North American accent, and the Australian accent. But how often do you watch movies in which actors speak with an Australian accent? How about course books, radio stations, podcasts and speeches in Australian English?
+\nIn this lesson, you’ll learn some features of this accent to help you comprehend the Australian speakers better.</string>
+    <string name="txtFeaturesOfTheAustralianAccentDesc2">Got a question? Write in the listening forum, and one of the other learners or our IELTS experts will reply.</string>
+    <string name="txtListeningQuestionTypesDesc1">IELTS uses a variety of questions in the Listening module. They can be categorized into seven types. Watch the video lesson below to learn more.</string>
+    <string name="txtListeningQuestionTypesDesc2">Got a question? Write in the listening forum, and one of the other learners or our IELTS experts will reply.</string>
+
+
+
+
+
+
+
     <!--     Test Result   -->
     <string name="txtTitleA1">You are a Beginner</string>
     <string name="txtDescriptionTitleA1">An English learner at A1 level:</string>

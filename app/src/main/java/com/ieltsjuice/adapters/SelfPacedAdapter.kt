@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ieltsjuice.R
 import com.ieltsjuice.model.SelfPacedCourses
-import com.ieltsjuice.self_paced.SelfPacedSpeakingActivity
+
 
 class SelfPacedAdapter(
     val context: Context, private val Courses: List<SelfPacedCourses>,

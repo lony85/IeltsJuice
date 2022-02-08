@@ -1,5 +1,6 @@
-package com.ieltsjuice.self_paced
+package com.ieltsjuice.self_paced.speaking
 
+import android.app.AlertDialog
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
@@ -15,8 +16,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ieltsjuice.R
 import com.ieltsjuice.adapters.SelfPacedAdapter
 import com.ieltsjuice.databinding.FragmentSelfPacedSpeakingBinding
+import com.ieltsjuice.databinding.TemplateRegisterAlertDialogBinding
 import com.ieltsjuice.model.Data
 import com.ieltsjuice.model.SelfPacedCourses
+import com.ieltsjuice.self_paced.FragmentSelfPacedCourseDetail
 
 const val KEY_SelfPacedCourseMainTitle = "KEY_SelfPacedCourseMainTitle"
 
@@ -35,24 +38,39 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //toolBar Name
 
         binding.buttonSpeakingCourseRegister.setOnClickListener {
-            val webUri =
-                Uri.parse("https://ieltsjuice.com/services/ielts-speaking-self-paced-course/")
-            val iWeb = Intent(Intent.ACTION_VIEW, webUri)
-            iWeb.setPackage("com.android.chrome")
-            try {
-                startActivity(iWeb)
-            } catch (e: ActivityNotFoundException) {
-                startActivity(
-                    Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse("https://ieltsjuice.com/services/ielts-speaking-self-paced-course/")
+            val dialog = AlertDialog.Builder(this.requireActivity()).create()
+            val dialogBinding = TemplateRegisterAlertDialogBinding.inflate(layoutInflater)
+
+            dialog.setView(dialogBinding.root)
+            dialog.setCancelable(false)
+            dialog.create()
+            dialog.show()
+
+            dialogBinding.registerBtn.setOnClickListener {
+                dialog.dismiss()
+                val webUri =
+                    Uri.parse("https://ieltsjuice.com/services/ielts-speaking-self-paced-course/")
+                val iWeb = Intent(Intent.ACTION_VIEW, webUri)
+                iWeb.setPackage("com.android.chrome")
+                try {
+                    startActivity(iWeb)
+                } catch (e: ActivityNotFoundException) {
+                    startActivity(
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse("https://ieltsjuice.com/services/ielts-speaking-self-paced-course/")
+                        )
                     )
-                )
+                }
+
+            }
+            dialogBinding.CancelBtn.setOnClickListener {
+                dialog.dismiss()
             }
         }
+
         binding.buttonSpeakingCourseRegisterIRAN.setOnClickListener {
             val webUri = Uri.parse("https://forush.co/18774/918823/")
             val iWeb = Intent(Intent.ACTION_VIEW, webUri)
@@ -177,7 +195,7 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
             bundle.putString(KEY_SelfPacedCourseMainTitle, Course.Title)
             when (Course.Title) {
                 "1.1 Speaking Test Layout" -> {
-                   course("1.1 Speaking Test Layout")
+                    course("1.1 Speaking Test Layout")
                 }
                 "1.2 Model Speaking Part 1" -> {
                     course("1.2 Model Speaking Part 1")
@@ -206,7 +224,8 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
             }
         }
     }
-    fun course(Course: String){
+
+    fun course(Course: String) {
         val bundle = Bundle()
         bundle.putString(KEY_SelfPacedCourseMainTitle, Course)
         val fragment = FragmentSelfPacedCourseDetail()
@@ -217,7 +236,8 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
         replaceTransaction.addToBackStack(null)
         replaceTransaction.commit()
     }
-    fun quiz(quiz: String){
+
+    private fun quiz(quiz: String) {
         val bundle = Bundle()
         bundle.putString(KEY_SelfPacedCourseMainTitle, quiz)
         val fragment = FragmentTestSpeaking()
