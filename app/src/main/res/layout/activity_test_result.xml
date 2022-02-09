@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".self_paced.SelfPacedActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimaryVariant"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            app:contentScrim="?attr/colorPrimaryVariant"
+            android:id="@+id/collapsingBarMain"
+            style="?attr/collapsingToolbarLayoutLargeStyle"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="-30dp"
+                android:layout_marginTop="45dp"
+                android:fitsSystemWindows="true"
+                android:src="@drawable/img_orance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_gravity="end"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-50dp"
+                android:layout_marginTop="-25dp"
+                android:fitsSystemWindows="true"
+                android:src="@drawable/img_orance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:fitsSystemWindows="true"
+                android:src="@drawable/ielts_juice_logo" />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarMain"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/txtResultTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                tools:text="Result Title"
+                android:textSize="@dimen/textSizeTitle"
+                android:textColor="?attr/colorSecondaryVariant"/>
+
+            <TableLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:weightSum="6"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/ic_resultA1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        tools:src = "@drawable/ic_hand_point_down"/>
+                    <ImageView
+                        android:id="@+id/ic_resultA2"
+                        android:layout_width="50dp"
+                        android:layout_weight="1"
+
+                        android:layout_height="50dp"
+                        tools:src = "@drawable/ic_hand_point_down"/>
+                    <ImageView
+                        android:id="@+id/ic_resultB1"
+
+                        android:layout_width="50dp"
+                        android:layout_weight="1"
+
+                        android:layout_height="50dp"
+                        tools:src = "@drawable/ic_hand_point_down"/>
+                    <ImageView
+                        android:id="@+id/ic_resultB2"
+
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+
+                        tools:src = "@drawable/ic_hand_point_down"/>
+                    <ImageView
+                        android:id="@+id/ic_resultC1"
+
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+
+                        tools:src = "@drawable/ic_hand_point_down"/>
+                    <ImageView
+                        android:id="@+id/ic_resultC2"
+
+                        android:layout_width="50dp"
+                        android:layout_weight="1"
+
+                        android:layout_height="50dp"
+                        tools:src = "@drawable/ic_hand_point_down"/>
+
+                </TableRow>
+
+
+            </TableLayout>
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/img_cefr"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                />
+            <TextView
+                android:id="@+id/txtDescriptionTitle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="@dimen/textSizeDescription"
+                tools:text="Description"/>
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:textSize="@dimen/textSizeDescription"
+                tools:text="Description"/>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
