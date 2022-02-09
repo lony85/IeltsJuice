@@ -4,6 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:id="@+id/title_layout"
         android:layout_width="match_parent"
@@ -19,7 +24,89 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
+            android:textSize="@dimen/textSizeTitle"
+            android:textColor="?attr/colorSecondaryVariant"
+            android:justificationMode="inter_word"
+            android:text="About Us"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSizeDescription"
+            android:justificationMode="inter_word"
+            android:text="@string/aboutUs"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/webSiteBtn"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:text="IELTSJUICE.com"
+            app:strokeWidth="2dp"
+            android:layout_marginTop="20dp"
+
+            app:cornerRadius="8dp"
+            app:strokeColor="?attr/colorPrimary"/>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/skypeBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_skype"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/telegramBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_telegram"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/youtubeBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_youtube"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/instagramBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_instagram"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/twitterBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_twitter"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/facebookBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_facebook"
+
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:textSize="@dimen/textSizeTitle"
             android:textColor="?attr/colorSecondaryVariant"
             android:text="Our Amazing Team"/>
@@ -29,13 +116,14 @@
             android:justificationMode="inter_word"
             android:textSize="@dimen/textSizeDescription"
             android:text="Meet the people who have given life to the website, teach online and create contents for you on IELTS Juice online academy."/>
-    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/aboutUsRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_layout"
-        tools:listitem="@layout/template_about_us" />
+        android:layout_height="wrap_content"
+       tools:listitem="@layout/template_about_us" />
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

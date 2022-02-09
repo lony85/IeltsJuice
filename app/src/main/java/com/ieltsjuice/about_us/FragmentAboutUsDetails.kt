@@ -19,7 +19,7 @@ class FragmentAboutUsDetails : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentAboutUsDetailsBinding.inflate(layoutInflater, container, false)
         return binding.root
     }

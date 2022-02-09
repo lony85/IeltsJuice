@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="15dp">
 
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -27,6 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="10dp" />
+
             <LinearLayout
                 android:id="@+id/QuestionLayout_7"
                 android:layout_width="match_parent"
@@ -39,10 +41,10 @@
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="5dp"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/textSizeDescription"
                     android:text="1. Write the items to arrange the sections in IELTS Listening from top to bottom regarding the
 speakers in each section.: (1,2,3 or 4)"
+                    android:textSize="@dimen/textSizeDescription"
+                    android:textStyle="bold"
                     tools:ignore="HardcodedText" />
 
 
@@ -52,17 +54,20 @@ speakers in each section.: (1,2,3 or 4)"
                     android:text="1) a conversation between two people."
 
                     tools:ignore="HardcodedText" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2) a speech by one speechmaker."
 
                     tools:ignore="HardcodedText" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3) a group talk between two or three or four people."
                     tools:ignore="HardcodedText" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -80,84 +85,91 @@ speakers in each section.: (1,2,3 or 4)"
                         android:id="@+id/txtLayoutQue7Order1"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:inputType="number"
                             android:maxLength="1"
-                            android:maxLines="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_forward"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:layout_gravity="center"/>
+                        android:src="@drawable/ic_forward" />
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtLayoutQue7Order2"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
                         android:layout_width="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:inputType="number"
                             android:maxLength="1"
-                            android:maxLines="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_forward"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:layout_gravity="center"/>
+                        android:src="@drawable/ic_forward" />
+
                     <com.google.android.material.textfield.TextInputLayout
 
                         android:id="@+id/txtLayoutQue7Order3"
-                        android:layout_width="wrap_content"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:inputType="number"
                             android:maxLength="1"
-                            android:maxLines="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:weightSum="6">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_forward"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:layout_gravity="center"/>
+                        android:src="@drawable/ic_forward" />
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtLayoutQue7Order4"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:inputType="number"
                             android:maxLength="1"
-                            android:maxLines="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
@@ -166,6 +178,7 @@ speakers in each section.: (1,2,3 or 4)"
                     android:layout_width="match_parent"
                     android:layout_height="2dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/QuestionLayout_8"
                 android:layout_width="match_parent"
@@ -191,17 +204,20 @@ parts: (1,2,3 or 4)"
                     android:text="1) A client calls an insurance company to buy insurance for his car."
 
                     tools:ignore="HardcodedText" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2) A tour guide gives information about the facilities in a holiday resort."
 
                     tools:ignore="HardcodedText" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3) A discussion among three university graduates about their thesis project."
                     tools:ignore="HardcodedText" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -219,84 +235,91 @@ parts: (1,2,3 or 4)"
                         android:id="@+id/txtLayoutQue8Order1"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:inputType="number"
                             android:maxLength="1"
-                            android:maxLines="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_forward"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:layout_gravity="center"/>
+                        android:src="@drawable/ic_forward" />
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtLayoutQue8Order2"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
                         android:layout_width="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:inputType="number"
                             android:maxLength="1"
-                            android:maxLines="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_forward"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:layout_gravity="center"/>
+                        android:src="@drawable/ic_forward" />
+
                     <com.google.android.material.textfield.TextInputLayout
 
                         android:id="@+id/txtLayoutQue8Order3"
-                        android:layout_width="wrap_content"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:inputType="number"
                             android:maxLength="1"
-                            android:maxLines="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:weightSum="6">
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_forward"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:layout_gravity="center"/>
+                        android:src="@drawable/ic_forward" />
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtLayoutQue8Order4"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:inputType="number"
                             android:maxLength="1"
-                            android:maxLines="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
@@ -316,11 +339,11 @@ parts: (1,2,3 or 4)"
                 <TextView
                     android:id="@+id/txtQueRadioBtn1"
                     android:layout_width="wrap_content"
-                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
+                    android:textStyle="bold"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
 
                 <RadioGroup
@@ -338,6 +361,7 @@ parts: (1,2,3 or 4)"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="No" />
+
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup1Btn3"
                         android:layout_width="wrap_content"
@@ -349,6 +373,7 @@ parts: (1,2,3 or 4)"
                     android:layout_width="match_parent"
                     android:layout_height="2dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/QuestionLayout_9"
                 android:layout_width="match_parent"
@@ -366,50 +391,31 @@ parts: (1,2,3 or 4)"
                     android:textStyle="bold"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
 
-                <SeekBar
-                    android:id="@+id/seekBar"
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:layoutDirection="ltr"
-                    />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
 
                     >
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/fab_play"
+                        android:id="@+id/fab_playQue9"
                         android:layout_width="wrap_content"
                         android:layout_height="71dp"
                         android:clickable="true"
                         app:fabCustomSize="40dp"
-
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/fab_stop"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/ic_baseline_play"
                         tools:ignore="VectorDrawableCompat" />
 
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/fab_stop"
-                        android:layout_width="wrap_content"
-                        android:layout_height="71dp"
-                        android:clickable="true"
+                    <SeekBar
+                        android:id="@+id/seekBarQue9"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layoutDirection="ltr" />
 
-
-                        app:fabCustomSize="40dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toEndOf="@+id/fab_play"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_baseline_stop"
-                        tools:ignore="VectorDrawableCompat" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/txtQue9RadioBtn1Desc"
@@ -419,6 +425,7 @@ parts: (1,2,3 or 4)"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
+
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -434,6 +441,7 @@ parts: (1,2,3 or 4)"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="No" />
+
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup9Btn3"
                         android:layout_width="wrap_content"
@@ -445,6 +453,7 @@ parts: (1,2,3 or 4)"
                     android:layout_width="match_parent"
                     android:layout_height="2dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/QuestionLayout_10"
                 android:layout_width="match_parent"
@@ -455,12 +464,38 @@ parts: (1,2,3 or 4)"
                 <TextView
                     android:id="@+id/txtQue10RadioBtn1"
                     android:layout_width="wrap_content"
-                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
+                    android:textStyle="bold"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_playQue10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="71dp"
+                        android:clickable="true"
+                        app:fabCustomSize="40dp"
+                        app:srcCompat="@drawable/ic_baseline_play"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <SeekBar
+                        android:id="@+id/seekBarQue10"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layoutDirection="ltr" />
+
+                </LinearLayout>
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -477,6 +512,7 @@ parts: (1,2,3 or 4)"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="No" />
+
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup10Btn3"
                         android:layout_width="wrap_content"
@@ -488,6 +524,7 @@ parts: (1,2,3 or 4)"
                     android:layout_width="match_parent"
                     android:layout_height="2dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/QuestionLayout_11"
                 android:layout_width="match_parent"
@@ -498,12 +535,35 @@ parts: (1,2,3 or 4)"
                 <TextView
                     android:id="@+id/txtQue11RadioBtn1"
                     android:layout_width="wrap_content"
-                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
+                    android:textStyle="bold"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_playQue11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="71dp"
+                        android:clickable="true"
+                        app:fabCustomSize="40dp"
+                        app:srcCompat="@drawable/ic_baseline_play"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <SeekBar
+                        android:id="@+id/seekBarQue11"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layoutDirection="ltr" />
+                </LinearLayout>
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -520,6 +580,7 @@ parts: (1,2,3 or 4)"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="No" />
+
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup11Btn3"
                         android:layout_width="wrap_content"
@@ -548,6 +609,7 @@ parts: (1,2,3 or 4)"
                     android:textSize="@dimen/textSizeDescription"
                     android:textStyle="bold"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
+
                 <TextView
                     android:id="@+id/txtQueRadioBtn2_desc"
                     android:layout_width="wrap_content"
@@ -555,7 +617,8 @@ parts: (1,2,3 or 4)"
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
-                    tools:text=""/>
+                    tools:text="" />
+
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -565,7 +628,7 @@ parts: (1,2,3 or 4)"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Yes"
-                        tools:ignore="HardcodedText"/>
+                        tools:ignore="HardcodedText" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup2Btn2"
@@ -592,9 +655,9 @@ parts: (1,2,3 or 4)"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
-                    android:textStyle="bold"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
+                    android:textStyle="bold"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
 
                 <RadioGroup
@@ -644,16 +707,16 @@ parts: (1,2,3 or 4)"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
-                    android:textStyle="bold"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
+                    android:textStyle="bold"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_listening_test1"/>
+                    android:src="@drawable/img_listening_test1" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -688,6 +751,7 @@ parts: (1,2,3 or 4)"
                     android:layout_width="match_parent"
                     android:layout_height="2dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/QuestionLayout_13"
                 android:layout_width="match_parent"
@@ -700,15 +764,17 @@ parts: (1,2,3 or 4)"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
-                    android:textStyle="bold"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
+                    android:textStyle="bold"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_listening_test2"/>
+                    android:src="@drawable/img_listening_test2" />
+
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -742,6 +808,7 @@ parts: (1,2,3 or 4)"
                     android:layout_width="match_parent"
                     android:layout_height="2dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/QuestionLayout_14"
                 android:layout_width="match_parent"
@@ -754,15 +821,17 @@ parts: (1,2,3 or 4)"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
-                    android:textStyle="bold"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
+                    android:textStyle="bold"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_listening_test3"/>
+                    android:src="@drawable/img_listening_test3" />
+
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -796,6 +865,7 @@ parts: (1,2,3 or 4)"
                     android:layout_width="match_parent"
                     android:layout_height="2dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/QuestionLayout_15"
                 android:layout_width="match_parent"
@@ -808,15 +878,17 @@ parts: (1,2,3 or 4)"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
-                    android:textStyle="bold"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
+                    android:textStyle="bold"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_listening_test4"/>
+                    android:src="@drawable/img_listening_test4" />
+
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -850,6 +922,7 @@ parts: (1,2,3 or 4)"
                     android:layout_width="match_parent"
                     android:layout_height="2dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/QuestionLayout_16"
                 android:layout_width="match_parent"
@@ -862,15 +935,17 @@ parts: (1,2,3 or 4)"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
-                    android:textStyle="bold"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
+                    android:textStyle="bold"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_listening_test5"/>
+                    android:src="@drawable/img_listening_test5" />
+
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -915,30 +990,30 @@ parts: (1,2,3 or 4)"
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/textSizeDescription"
                     android:text="4. Watch the video again and fill in the gap."
-                    tools:ignore="HardcodedText"/>
+                    android:textSize="@dimen/textSizeDescription"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/txtFillTheGap"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
-                    tools:text="The Speaking test is ___ and ..."
-                    android:textSize="@dimen/textSizeDescription" />
+                    android:textSize="@dimen/textSizeDescription"
+                    tools:text="The Speaking test is ___ and ..." />
 
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/txtInputLayout1"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:helperText="Type your answer inside the box."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
                     android:hint="Your answer to fill 1st gap is..."
                     android:padding="3dp"
+                    app:helperText="Type your answer inside the box."
                     tools:ignore="HardcodedText">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -950,16 +1025,17 @@ parts: (1,2,3 or 4)"
                         android:maxLength="20"
                         android:singleLine="true" />
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/txtInputLayout2"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:helperText="Type your answer inside the box."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
                     android:hint="Your answer to fill 2nd gap is..."
                     android:padding="3dp"
+                    app:helperText="Type your answer inside the box."
                     tools:ignore="HardcodedText">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -971,16 +1047,17 @@ parts: (1,2,3 or 4)"
                         android:maxLength="20"
                         android:singleLine="true" />
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/txtInputLayout3"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:helperText="Type your answer inside the box."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
                     android:hint="Your answer to fill 3rd gap is..."
                     android:padding="3dp"
+                    app:helperText="Type your answer inside the box."
                     tools:ignore="HardcodedText">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -992,6 +1069,7 @@ parts: (1,2,3 or 4)"
                         android:maxLength="20"
                         android:singleLine="true" />
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"
                     android:layout_height="2dp" />
@@ -1009,26 +1087,28 @@ parts: (1,2,3 or 4)"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="5dp"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/textSizeDescription"
                     android:text="5. Write the Speaking priority to their contents: (1,2 or 3)"
-                    tools:ignore="HardcodedText"/>
+                    android:textSize="@dimen/textSizeDescription"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1) Talk for up to 2 minutes on a written topic without any distractions."
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2) Questions about your life or your career or your ideas about certain matters"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3) Discussion about broader and issues"/>
+                    android:text="3) Discussion about broader and issues" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1040,60 +1120,65 @@ parts: (1,2,3 or 4)"
                         android:id="@+id/txtLayoutOrder1"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:inputType="number"
                             android:maxLength="1"
-                            android:maxLines="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_forward"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:layout_gravity="center"/>
+                        android:src="@drawable/ic_forward" />
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtLayoutOrder2"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
                         android:layout_width="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:inputType="number"
                             android:maxLength="1"
-                            android:maxLines="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
+
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_forward"
+                        android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:layout_gravity="center"/>
+                        android:src="@drawable/ic_forward" />
+
                     <com.google.android.material.textfield.TextInputLayout
 
                         android:id="@+id/txtLayoutOrder3"
-                        android:layout_width="wrap_content"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
 
                         <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:inputType="number"
                             android:maxLength="1"
-                            android:maxLines="1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                            android:maxLines="1" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
+
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"
                     android:layout_height="2dp" />
@@ -1110,12 +1195,13 @@ parts: (1,2,3 or 4)"
                     android:id="@+id/txtQueRadioBtn4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="5dp"
-                    android:textSize="@dimen/textSizeDescription"
                     android:text="6. Which option does NOT affect your Speaking mark?"
-                    tools:ignore="HardcodedText"/>
+                    android:textSize="@dimen/textSizeDescription"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -1128,7 +1214,7 @@ parts: (1,2,3 or 4)"
                         android:layout_height="wrap_content"
                         android:justificationMode="inter_word"
                         android:text="Being able to speak with fluent British or Australian accent."
-                        tools:ignore="HardcodedText"/>
+                        tools:ignore="HardcodedText" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup7Btn2"
@@ -1136,13 +1222,14 @@ parts: (1,2,3 or 4)"
                         android:layout_height="wrap_content"
                         android:justificationMode="inter_word"
                         android:text="Speaking fluently and at length." />
+
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup7Btn3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:justificationMode="inter_word"
                         android:text="Being able to analyze issues and justify your reasons and/or opinions"
-                        tools:ignore="HardcodedText"/>
+                        tools:ignore="HardcodedText" />
                 </RadioGroup>
 
                 <com.google.android.material.divider.MaterialDivider
@@ -1151,13 +1238,13 @@ parts: (1,2,3 or 4)"
             </LinearLayout>
 
 
-
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/finishQuizBtn"
                 android:layout_width="match_parent"
-                app:cornerRadius="8dp"
                 android:layout_height="wrap_content"
-                android:text="Finish Quiz"/>
+                android:text="Finish Quiz"
+                app:cornerRadius="8dp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
 

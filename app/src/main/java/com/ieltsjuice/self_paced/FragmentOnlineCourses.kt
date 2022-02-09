@@ -49,7 +49,7 @@ class FragmentOnlineCourses:Fragment() {
 
         // videoView
 
-        val videoURL :String= "https://ieltsjuice.com/wp-content/uploads/2021/03/1.1-The-Speaking-Test-Layout.mp4"
+        val videoURL :String= "https://embed-fastly.wistia.com/deliveries/a7bb347904064619ff32b794604795317c142e08.m3u8/v2"
         mediaController = MediaController(this.requireActivity())
         val url = Uri.parse(videoURL)
         binding.videoView.setVideoURI(url)

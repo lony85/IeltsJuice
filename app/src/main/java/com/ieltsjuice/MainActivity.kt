@@ -35,8 +35,7 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-
-
+            binding.bottomNavigation.setOnItemReselectedListener {  }  //Empty tag
     }
     private fun replaceFragment(fragment: Fragment){
         val transaction = supportFragmentManager.beginTransaction()

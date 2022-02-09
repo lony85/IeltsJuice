@@ -2,12 +2,19 @@ package com.ieltsjuice.self_paced.listening
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.content.Context
 import android.graphics.Color
+import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.Handler
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SeekBar
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.internetconnection.NetworkChecker
 import com.ieltsjuice.R
 import com.ieltsjuice.databinding.FragmentTestListeningBinding
 import com.ieltsjuice.databinding.TemplateAlertDialogBinding
@@ -15,6 +22,9 @@ import com.ieltsjuice.self_paced.speaking.KEY_SelfPacedCourseMainTitle
 
 class FragmentTestListening : Fragment() {
     lateinit var binding: FragmentTestListeningBinding
+
+    var mp: MediaPlayer? = null
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -267,8 +277,10 @@ class FragmentTestListening : Fragment() {
                     "The differences between the tests."
                 binding.radioGroup3Btn2.text =
                     "You do not listen enough to English audio materials."
-                binding.radioGroup3Btn3.text = "If you know the format of the test better, you can improve your chances of success."
-                binding.radioGroup3Btn4.text = "Improving your general listening is more important than knowing the test format."
+                binding.radioGroup3Btn3.text =
+                    "If you know the format of the test better, you can improve your chances of success."
+                binding.radioGroup3Btn4.text =
+                    "Improving your general listening is more important than knowing the test format."
 
 
                 binding.finishQuizBtn.setOnClickListener {
@@ -285,8 +297,10 @@ class FragmentTestListening : Fragment() {
             "L.1.2 The Listening Test Layout - Quiz" -> {
                 binding.txtQuizTitle.text = quizTitle
                 binding.txtQueRadioBtn2.text = "3. Is the following statement true?"
-                binding.txtQueRadioBtn2Desc.text = "IELTS Listening part has four sections, 10 questions each, and the questions gradually become harder as the test reaches its end."
-                binding.txtFillTheGap.text = "The Listening module is the ___ part of the IELTS test. It takes about ___ minutes and there are exactly ___ questions."
+                binding.txtQueRadioBtn2Desc.text =
+                    "IELTS Listening part has four sections, 10 questions each, and the questions gradually become harder as the test reaches its end."
+                binding.txtFillTheGap.text =
+                    "The Listening module is the ___ part of the IELTS test. It takes about ___ minutes and there are exactly ___ questions."
 
 
                 binding.finishQuizBtn.setOnClickListener {
@@ -294,15 +308,15 @@ class FragmentTestListening : Fragment() {
                     if (binding.radioGroup2Btn1.isChecked) {
                         score += 1
                     }
-                    if (binding.txtLayoutQue7Order1.editText?.text.toString() == "2"&&binding.txtLayoutQue7Order2.editText?.text.toString() == "4"&&binding.txtLayoutQue7Order3.editText?.text.toString() == "1"&&binding.txtLayoutQue7Order4.editText?.text.toString() == "3"){
+                    if (binding.txtLayoutQue7Order1.editText?.text.toString() == "2" && binding.txtLayoutQue7Order2.editText?.text.toString() == "4" && binding.txtLayoutQue7Order3.editText?.text.toString() == "1" && binding.txtLayoutQue7Order4.editText?.text.toString() == "3") {
                         score += 1
                     }
-                    if (binding.txtLayoutQue8Order1.editText?.text.toString() == "1"&&binding.txtLayoutQue8Order2.editText?.text.toString() == "4"&&binding.txtLayoutQue8Order3.editText?.text.toString() == "2"&&binding.txtLayoutQue8Order4.editText?.text.toString() == "3"){
+                    if (binding.txtLayoutQue8Order1.editText?.text.toString() == "1" && binding.txtLayoutQue8Order2.editText?.text.toString() == "4" && binding.txtLayoutQue8Order3.editText?.text.toString() == "2" && binding.txtLayoutQue8Order4.editText?.text.toString() == "3") {
                         score += 1
                     }
-                    if (binding.txtInputLayout1.editText?.text.toString() == "1" || binding.txtInputLayout1.editText?.text.toString() == "1st" || binding.txtInputLayout1.editText?.text.toString() == "first" ) {
-                        if (binding.txtInputLayout2.editText?.text.toString() == "30" ||binding.txtInputLayout2.editText?.text.toString() == "thirty" ){
-                            if (binding.txtInputLayout3.editText?.text.toString() == "40" ||binding.txtInputLayout3.editText?.text.toString() == "forty" )
+                    if (binding.txtInputLayout1.editText?.text.toString() == "1" || binding.txtInputLayout1.editText?.text.toString() == "1st" || binding.txtInputLayout1.editText?.text.toString() == "first") {
+                        if (binding.txtInputLayout2.editText?.text.toString() == "30" || binding.txtInputLayout2.editText?.text.toString() == "thirty") {
+                            if (binding.txtInputLayout3.editText?.text.toString() == "40" || binding.txtInputLayout3.editText?.text.toString() == "forty")
                                 score += 1
                         }
 
@@ -326,7 +340,7 @@ class FragmentTestListening : Fragment() {
                     "MSBE accent, Australian accent, North American accent"
 
                 binding.txtQue9RadioBtn1.text =
-                    "Listen to the audio and decide which accent it is?"
+                    "2. Listen to the audio and decide which accent it is?"
                 binding.radioGroup9Btn1.text =
                     "Modern Standard British English accent"
                 binding.radioGroup9Btn2.text =
@@ -335,7 +349,7 @@ class FragmentTestListening : Fragment() {
                     "North American accent"
 
                 binding.txtQue10RadioBtn1.text =
-                    "Listen to the audio and decide which accent it is?"
+                    "3. Listen to the audio and decide which accent it is?"
                 binding.radioGroup10Btn1.text =
                     "Modern Standard British English accent"
                 binding.radioGroup10Btn2.text =
@@ -344,13 +358,115 @@ class FragmentTestListening : Fragment() {
                     "North American accent"
 
                 binding.txtQue11RadioBtn1.text =
-                    "Listen to the audio and decide which accent it is?"
+                    "4. Listen to the audio and decide which accent it is?"
                 binding.radioGroup11Btn1.text =
                     "Modern Standard British English accent"
                 binding.radioGroup11Btn2.text =
                     "Australian accent"
                 binding.radioGroup11Btn3.text =
                     "North American accent"
+
+                // Sound Player
+
+                binding.fabPlayQue9.setOnClickListener {
+
+                    when {
+                        mp == null -> {
+                            mp = MediaPlayer()
+                            mp!!.setDataSource("https://ieltsjuice.com/wp-content/uploads/2021/08/Accent-1-NA.mp3?_=4")
+                            mp!!.prepare()
+                            mp?.start()
+                            binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_stop)
+                            initialiseSeekBar("Que9")
+
+                        }
+                        mp!!.isPlaying -> {
+                            mp?.pause()
+                            mp?.stop()
+                            mp?.reset()
+                            mp?.release()
+                            mp = null
+                            binding.seekBarQue9.progress = 0
+                            binding.seekBarQue10.progress = 0
+                            binding.seekBarQue11.progress = 0
+                            binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_play)
+                        }
+                        else -> {
+                            mp?.start()
+                            binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_stop)
+                        }
+                    }
+
+
+                }
+                //  SeekBar
+                seekBarChangeListener("Que9")
+                seekBarChangeListener("Que10")
+                seekBarChangeListener("Que11")
+
+
+                binding.fabPlayQue10.setOnClickListener {
+
+                    when {
+                        mp == null -> {
+                            mp = MediaPlayer()
+                            mp!!.setDataSource("https://ieltsjuice.com/wp-content/uploads/2021/08/Accent-2-Aus.mp3?_=5")
+                            mp!!.prepare()
+                            mp?.start()
+                            binding.fabPlayQue10.setImageResource(R.drawable.ic_baseline_stop)
+                            initialiseSeekBar("Que10")
+
+                        }
+                        mp!!.isPlaying -> {
+                            mp?.pause()
+                            mp?.stop()
+                            mp?.reset()
+                            mp?.release()
+                            mp = null
+                            binding.seekBarQue9.progress = 0
+                            binding.seekBarQue10.progress = 0
+                            binding.seekBarQue11.progress = 0
+                            binding.fabPlayQue10.setImageResource(R.drawable.ic_baseline_play)
+                        }
+                        else -> {
+                            mp?.start()
+                            binding.fabPlayQue10.setImageResource(R.drawable.ic_baseline_stop)
+                        }
+                    }
+
+                }
+
+
+                binding.fabPlayQue11.setOnClickListener {
+                    when {
+                        mp == null -> {
+                            mp = MediaPlayer()
+                            mp!!.setDataSource("https://ieltsjuice.com/wp-content/uploads/2021/08/Accent-3-Br.mp3?_=6")
+                            mp!!.prepare()
+                            mp?.start()
+                            binding.fabPlayQue11.setImageResource(R.drawable.ic_baseline_stop)
+                            initialiseSeekBar("Que11")
+
+                        }
+                        mp!!.isPlaying -> {
+                            mp?.pause()
+                            mp?.stop()
+                            mp?.reset()
+                            mp?.release()
+                            mp = null
+                            binding.seekBarQue9.progress = 0
+                            binding.seekBarQue10.progress = 0
+                            binding.seekBarQue11.progress = 0
+                            binding.fabPlayQue11.setImageResource(R.drawable.ic_baseline_play)
+                        }
+                        else -> {
+                            mp?.start()
+                            binding.fabPlayQue11.setImageResource(R.drawable.ic_baseline_stop)
+                        }
+                    }
+
+                }
+
 
                 binding.finishQuizBtn.setOnClickListener {
                     var score = 0
@@ -380,9 +496,53 @@ class FragmentTestListening : Fragment() {
                 binding.txtQue9RadioBtn1Desc.text =
                     "To today’s program: Overweight Kids. \n According to medical research, obesity is fast becoming the most serious and costly disease among our children. Overeating and under-exercising lie at the _____ of the problem."
 
+
                 binding.radioGroup9Btn1.text = "hat"
                 binding.radioGroup9Btn2.text = "hard"
                 binding.radioGroup9Btn3.text = "heart"
+
+                // Sound Player
+
+                seekBarChangeListener("Que9")
+                binding.fabPlayQue9.setOnClickListener {
+                    when {
+                        mp == null -> {
+                            mp = MediaPlayer()
+                            mp!!.setDataSource("https://ieltsjuice.com/wp-content/uploads/2021/08/IELTS_Juice_Obesity_Overweight_kids.mp3?_=2")
+                            mp!!.prepare()
+                            mp?.start()
+                            binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_pause)
+                        }
+                        mp!!.isPlaying -> {
+                            mp?.pause()
+                            binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_play)
+                        }
+                        else -> {
+                            mp?.start()
+                            binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_pause)
+                        }
+                    }
+                    initialiseSeekBar("Que9")
+
+                }
+                //  SeekBar
+                seekBarChangeListener("Que9")
+
+//                binding.fabStopQue9.setOnClickListener {
+//                    if (mp != null) {
+//                        try {
+//                            mp?.stop()
+//                            mp?.reset()
+//                            mp?.release()
+//                            mp = null
+//                            Log.i("MP", mp.toString())
+//                            binding.seekBarQue9.progress = 0
+//                            binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_play)
+//                            mp?.seekTo(0)
+//                        } catch (ex: Exception) {
+//                        }
+//                    }
+//                }
 
                 binding.finishQuizBtn.setOnClickListener {
                     var score = 0
@@ -394,6 +554,7 @@ class FragmentTestListening : Fragment() {
 
                 }
             }
+
             "L.1.5 Listening Question Types - Quiz" -> {
                 binding.txtQuizTitle.text = quizTitle
 
@@ -478,6 +639,138 @@ class FragmentTestListening : Fragment() {
                 }
             }
         }
+    }
+
+    private fun initialiseSeekBar(Que: String) {
+        when (Que) {
+            "Que9" -> {
+                binding.seekBarQue9.max = mp!!.duration
+                val handler = Handler()
+                handler.postDelayed(object : Runnable {
+                    override fun run() {
+                        try {
+                            // Update positionBar
+                            binding.seekBarQue9.progress = mp!!.currentPosition
+
+
+                            handler.postDelayed(this, 1000)
+
+
+                        } catch (ex: Exception) {
+//                        seekBar.progress = 0              //Error when User Press Back Button
+                        }
+                    }
+                }, 0)
+            }
+            "Que10" -> {
+                binding.seekBarQue10.max = mp!!.duration
+                val handler = Handler()
+                handler.postDelayed(object : Runnable {
+                    override fun run() {
+                        try {
+                            // Update positionBar
+                            binding.seekBarQue10.progress = mp!!.currentPosition
+
+
+                            handler.postDelayed(this, 1000)
+
+
+                        } catch (ex: Exception) {
+//                        seekBar.progress = 0              //Error when User Press Back Button
+                        }
+                    }
+                }, 0)
+            }
+            "Que11" -> {
+                binding.seekBarQue11.max = mp!!.duration
+                val handler = Handler()
+                handler.postDelayed(object : Runnable {
+                    override fun run() {
+                        try {
+                            // Update positionBar
+                            binding.seekBarQue11.progress = mp!!.currentPosition
+
+
+                            handler.postDelayed(this, 1000)
+
+
+                        } catch (ex: Exception) {
+//                        seekBar.progress = 0              //Error when User Press Back Button
+                        }
+                    }
+                }, 0)
+            }
+        }
+
+    }
+
+    private fun seekBarChangeListener(Que: String) {
+        when (Que) {
+            "Que9" -> {
+                binding.seekBarQue9.setOnSeekBarChangeListener(object :
+                    SeekBar.OnSeekBarChangeListener {
+                    override fun onProgressChanged(
+                        seebar: SeekBar?,
+                        progress: Int,
+                        fromUser: Boolean
+                    ) {
+                        if (fromUser) {
+                            mp?.seekTo(progress)
+                        }
+
+                    }
+
+                    override fun onStartTrackingTouch(p0: SeekBar?) {
+                    }
+
+                    override fun onStopTrackingTouch(p0: SeekBar?) {
+                    }
+                })
+            }
+            "Que10" -> {
+                binding.seekBarQue10.setOnSeekBarChangeListener(object :
+                    SeekBar.OnSeekBarChangeListener {
+                    override fun onProgressChanged(
+                        seebar: SeekBar?,
+                        progress: Int,
+                        fromUser: Boolean
+                    ) {
+                        if (fromUser) {
+                            mp?.seekTo(progress)
+                        }
+
+                    }
+
+                    override fun onStartTrackingTouch(p0: SeekBar?) {
+                    }
+
+                    override fun onStopTrackingTouch(p0: SeekBar?) {
+                    }
+                })
+            }
+            "Que11" -> {
+                binding.seekBarQue11.setOnSeekBarChangeListener(object :
+                    SeekBar.OnSeekBarChangeListener {
+                    override fun onProgressChanged(
+                        seebar: SeekBar?,
+                        progress: Int,
+                        fromUser: Boolean
+                    ) {
+                        if (fromUser) {
+                            mp?.seekTo(progress)
+                        }
+
+                    }
+
+                    override fun onStartTrackingTouch(p0: SeekBar?) {
+                    }
+
+                    override fun onStopTrackingTouch(p0: SeekBar?) {
+                    }
+                })
+            }
+        }
+
     }
 
     @SuppressLint("SetTextI18n")
