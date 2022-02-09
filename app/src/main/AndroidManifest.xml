@@ -13,13 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ieltsjuice">
         <activity
+            android:name=".self_paced.writing.SelfPacedWritingActivity"
+            android:exported="false" />
+        <activity
             android:name=".self_paced.listening.SelfPacedListeningActivity"
             android:exported="false" />
         <activity
             android:name=".self_paced.speaking.SelfPacedSpeakingActivity"
             android:exported="false" />
         <activity
-            android:name=".self_paced.IntroductionActivity"
+            android:name=".self_paced.reading.SelfPacedReadingActivity"
             android:exported="false" />
         <activity
             android:name=".placement_test.TestResultActivity"

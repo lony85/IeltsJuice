@@ -10,7 +10,9 @@ import androidx.core.content.ContextCompat
 import com.ieltsjuice.R
 import com.ieltsjuice.databinding.ActivitySelfPacedBinding
 import com.ieltsjuice.self_paced.listening.SelfPacedListeningActivity
+import com.ieltsjuice.self_paced.reading.SelfPacedReadingActivity
 import com.ieltsjuice.self_paced.speaking.SelfPacedSpeakingActivity
+import com.ieltsjuice.self_paced.writing.SelfPacedWritingActivity
 
 class SelfPacedActivity : AppCompatActivity() {
     lateinit var binding:ActivitySelfPacedBinding
@@ -28,12 +30,12 @@ class SelfPacedActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.buttonSelfPacedWriting.setOnClickListener {
-//            val intent = Intent(this, SelfPacedSpeakingActivity::class.java)
-//            startActivity(intent)
+            val intent = Intent(this, SelfPacedWritingActivity::class.java)
+            startActivity(intent)
         }
         binding.buttonSelfPacedReading.setOnClickListener {
-//            val intent = Intent(this, SelfPacedSpeakingActivity::class.java)
-//            startActivity(intent)
+            val intent = Intent(this, SelfPacedReadingActivity::class.java)
+            startActivity(intent)
         }
         //FAQ Session
         var result = false
