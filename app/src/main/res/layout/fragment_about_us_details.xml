@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="?attr/colorSecondaryVariant"
+            android:textColor="@color/black"
             android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -60,6 +60,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textSize="15sp"
+            android:textColor="?attr/colorAccent"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name_about_Details"
@@ -73,6 +75,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="20dp"
             android:textSize="16sp"
+            android:textColor="?attr/colorAccent"
             android:justificationMode="inter_word"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -84,6 +87,7 @@
             android:id="@+id/materialDivider"
             android:layout_width="match_parent"
             android:layout_height="1dp"
+app:dividerColor="?attr/colorAccent"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="15dp"
             android:layout_marginStart="15dp"
@@ -95,6 +99,8 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
+            android:textColor="?attr/colorAccent"
+
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"

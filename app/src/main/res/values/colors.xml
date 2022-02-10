@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="Green">#66BB6A</color>
     <color name="correctAnswer">#0ACF13</color>
+    <color name="grey">#E8423C3C</color>
+
 </resources>

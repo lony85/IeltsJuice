@@ -152,7 +152,7 @@
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="5dp"
                         android:text="More Info"
-                        android:textColor="?attr/colorOnSecondary"
+                        android:textColor="?attr/colorOnPrimary"
                         android:textSize="10sp"
                         app:backgroundTint="?attr/colorPrimary"
                         app:cornerRadius="20dp"
@@ -283,8 +283,9 @@
                                             android:layout_gravity="bottom|end"
                                             android:layout_marginTop="28dp"
                                             android:layout_marginEnd="10dp"
+
                                             android:text="Continue reading >>"
-                                            android:textColor="@color/black"
+                                            android:textColor="?attr/colorAccent"
                                             android:textSize="10sp" />
 
 
@@ -361,7 +362,7 @@
                                             android:layout_marginTop="10dp"
                                             android:layout_marginEnd="10dp"
                                             android:text="Continue reading >>"
-                                            android:textColor="@color/black"
+                                            android:textColor="?attr/colorAccent"
                                             android:textSize="10sp" />
                                     </LinearLayout>
 
@@ -434,7 +435,7 @@
                                             android:layout_marginTop="28dp"
                                             android:layout_marginEnd="10dp"
                                             android:text="Continue reading >>"
-                                            android:textColor="@color/black"
+                                            android:textColor="?attr/colorAccent"
                                             android:textSize="10sp" />
                                     </LinearLayout>
 

@@ -32,7 +32,6 @@ class FragmentHome : Fragment() {
             startActivity(intent)
         }
         binding.buttonMainCourses.setOnClickListener {
-
             val transaction = parentFragmentManager.beginTransaction()
             transaction.replace(R.id.fragment_container, FragmentOnlineCourses())
             transaction.addToBackStack(null)

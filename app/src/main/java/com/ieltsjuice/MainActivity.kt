@@ -3,6 +3,8 @@ package com.ieltsjuice
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 
 import androidx.fragment.app.Fragment
 
@@ -36,6 +38,15 @@ class MainActivity : AppCompatActivity() {
             true
         }
             binding.bottomNavigation.setOnItemReselectedListener {  }  //Empty tag
+        
+       // Day Night Switch
+        binding.DayNightSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked){
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }else{
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
     }
     private fun replaceFragment(fragment: Fragment){
         val transaction = supportFragmentManager.beginTransaction()
