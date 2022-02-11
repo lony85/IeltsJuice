@@ -2,7 +2,6 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginStart="15dp"
@@ -129,6 +128,8 @@
                             android:id="@+id/textView3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:textColor="?attr/colorSecondaryVariant"
+
                             android:layout_marginStart="5dp"
                             android:layout_marginEnd="5dp"
                             android:gravity="center"
@@ -156,19 +157,21 @@
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/button_main_courses_OnetoOne"
                             style="?attr/materialButtonOutlinedStyle"
-                            app:cornerRadius="20dp"
-                            app:strokeWidth="1dp"
-                            app:strokeColor="?attr/colorPrimary"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
                             android:layout_gravity="bottom|end"
                             android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
                             android:text="Learn More >>"
                             android:textColor="?attr/colorSecondaryVariant"
                             android:textSize="10sp"
+                            app:cornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                            app:layout_constraintTop_toBottomOf="@+id/textView4"
+                            app:strokeColor="?attr/colorPrimary"
+                            app:strokeWidth="1dp" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </com.google.android.material.card.MaterialCardView>
@@ -210,6 +213,7 @@
                             android:layout_marginStart="5dp"
                             android:layout_marginEnd="5dp"
                             android:gravity="center"
+                            android:textColor="?attr/colorSecondaryVariant"
                             android:text="Self-Paced"
                             android:textSize="@dimen/textSizeDescription"
                             android:textStyle="bold"
@@ -234,19 +238,21 @@
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/button_main_courses_selfPaced"
                             style="?attr/materialButtonOutlinedStyle"
-                            app:cornerRadius="20dp"
-                            app:strokeWidth="1dp"
-                            app:strokeColor="?attr/colorPrimary"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
+                            android:layout_marginBottom="5dp"
                             android:layout_gravity="bottom|end"
                             android:layout_marginTop="5dp"
                             android:text="Learn More >>"
                             android:textColor="?attr/colorSecondaryVariant"
                             android:textSize="10sp"
+                            app:cornerRadius="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                            app:layout_constraintTop_toBottomOf="@+id/textView5"
+                            app:strokeColor="?attr/colorPrimary"
+                            app:strokeWidth="1dp" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

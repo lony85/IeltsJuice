@@ -8,7 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.MediaController
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.example.internetconnection.NetworkChecker
+import com.google.android.material.snackbar.Snackbar
 import com.ieltsjuice.R
 import com.ieltsjuice.databinding.FragmentSelfPacedCourseDetailBinding
 import com.ieltsjuice.self_paced.speaking.KEY_SelfPacedCourseMainTitle
@@ -33,6 +36,7 @@ class FragmentSelfPacedCourseDetail : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("ShowToast")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -45,14 +49,24 @@ class FragmentSelfPacedCourseDetail : Fragment() {
 
 
         // videoPlayer
-        mediaController = MediaController(this.requireActivity())
-        val url = Uri.parse(videoURL)
-        binding.videoView.setVideoURI(url)
 
+            mediaController = MediaController(this.requireActivity())
+            val url = Uri.parse(videoURL)
+        if (NetworkChecker(this.requireActivity()).isInternetConnected) {
+
+            binding.videoView.setVideoURI(url)
+        }
         binding.videoViewPlayButton.setOnClickListener {
-            binding.videoViewProgressBar.visibility = View.VISIBLE
-            binding.videoView.start()
-            binding.videoViewPlayButton.visibility = View.GONE
+            if (NetworkChecker(this.requireActivity()).isInternetConnected) {
+
+                binding.videoViewProgressBar.visibility = View.VISIBLE
+                binding.videoView.start()
+                binding.videoViewPlayButton.visibility = View.GONE
+            }else {
+                Snackbar.make(binding.root, R.string.NoInternet, Snackbar.LENGTH_SHORT)
+                    .setBackgroundTint(ContextCompat.getColor(this.requireActivity(),R.color.colorPrimary))
+                .show()
+            }
         }
         binding.videoView.setOnPreparedListener {
             mediaController.setAnchorView(binding.videoContainer)

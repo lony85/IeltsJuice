@@ -13,8 +13,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.internetconnection.NetworkChecker
+import com.google.android.material.snackbar.Snackbar
 import com.ieltsjuice.R
 import com.ieltsjuice.databinding.FragmentTestListeningBinding
 import com.ieltsjuice.databinding.TemplateAlertDialogBinding
@@ -314,9 +316,16 @@ class FragmentTestListening : Fragment() {
                     if (binding.txtLayoutQue8Order1.editText?.text.toString() == "1" && binding.txtLayoutQue8Order2.editText?.text.toString() == "4" && binding.txtLayoutQue8Order3.editText?.text.toString() == "2" && binding.txtLayoutQue8Order4.editText?.text.toString() == "3") {
                         score += 1
                     }
-                    if (binding.txtInputLayout1.editText?.text.toString() == "1" || binding.txtInputLayout1.editText?.text.toString() == "1st" || binding.txtInputLayout1.editText?.text.toString() == "first") {
-                        if (binding.txtInputLayout2.editText?.text.toString() == "30" || binding.txtInputLayout2.editText?.text.toString() == "thirty") {
-                            if (binding.txtInputLayout3.editText?.text.toString() == "40" || binding.txtInputLayout3.editText?.text.toString() == "forty")
+                    if (binding.txtInputLayout1.editText?.text.toString() == "1" || binding.txtInputLayout1.editText?.text.toString()
+                            .lowercase() == "1st" || binding.txtInputLayout1.editText?.text.toString()
+                            .lowercase() == "first"
+                    ) {
+                        if (binding.txtInputLayout2.editText?.text.toString() == "30" || binding.txtInputLayout2.editText?.text.toString()
+                                .lowercase() == "thirty"
+                        ) {
+                            if (binding.txtInputLayout3.editText?.text.toString() == "40" || binding.txtInputLayout3.editText?.text.toString()
+                                    .lowercase() == "forty"
+                            )
                                 score += 1
                         }
 
@@ -369,34 +378,44 @@ class FragmentTestListening : Fragment() {
                 // Sound Player
 
                 binding.fabPlayQue9.setOnClickListener {
+                    if (NetworkChecker(this.requireActivity()).isInternetConnected) {
 
-                    when {
-                        mp == null -> {
-                            mp = MediaPlayer()
-                            mp!!.setDataSource("https://ieltsjuice.com/wp-content/uploads/2021/08/Accent-1-NA.mp3?_=4")
-                            mp!!.prepare()
-                            mp?.start()
-                            binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_stop)
-                            initialiseSeekBar("Que9")
+                        when {
+                            mp == null -> {
+                                mp = MediaPlayer()
+                                mp!!.setDataSource("https://ieltsjuice.com/wp-content/uploads/2021/08/Accent-1-NA.mp3?_=4")
+                                mp!!.prepare()
+                                mp?.start()
+                                binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_stop)
+                                initialiseSeekBar("Que9")
 
+                            }
+                            mp!!.isPlaying -> {
+                                mp?.pause()
+                                mp?.stop()
+                                mp?.reset()
+                                mp?.release()
+                                mp = null
+                                binding.seekBarQue9.progress = 0
+                                binding.seekBarQue10.progress = 0
+                                binding.seekBarQue11.progress = 0
+                                binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_play)
+                            }
+                            else -> {
+                                mp?.start()
+                                binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_stop)
+                            }
                         }
-                        mp!!.isPlaying -> {
-                            mp?.pause()
-                            mp?.stop()
-                            mp?.reset()
-                            mp?.release()
-                            mp = null
-                            binding.seekBarQue9.progress = 0
-                            binding.seekBarQue10.progress = 0
-                            binding.seekBarQue11.progress = 0
-                            binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_play)
-                        }
-                        else -> {
-                            mp?.start()
-                            binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_stop)
-                        }
+                    } else {
+                        Snackbar.make(binding.root, R.string.NoInternet, Snackbar.LENGTH_SHORT)
+                            .setBackgroundTint(
+                                ContextCompat.getColor(
+                                    this.requireActivity(),
+                                    R.color.colorPrimary
+                                )
+                            )
+                            .show()
                     }
-
 
                 }
                 //  SeekBar
@@ -406,65 +425,86 @@ class FragmentTestListening : Fragment() {
 
 
                 binding.fabPlayQue10.setOnClickListener {
+                    if (NetworkChecker(this.requireActivity()).isInternetConnected) {
 
-                    when {
-                        mp == null -> {
-                            mp = MediaPlayer()
-                            mp!!.setDataSource("https://ieltsjuice.com/wp-content/uploads/2021/08/Accent-2-Aus.mp3?_=5")
-                            mp!!.prepare()
-                            mp?.start()
-                            binding.fabPlayQue10.setImageResource(R.drawable.ic_baseline_stop)
-                            initialiseSeekBar("Que10")
+                        when {
+                            mp == null -> {
+                                mp = MediaPlayer()
+                                mp!!.setDataSource("https://ieltsjuice.com/wp-content/uploads/2021/08/Accent-2-Aus.mp3?_=5")
+                                mp!!.prepare()
+                                mp?.start()
+                                binding.fabPlayQue10.setImageResource(R.drawable.ic_baseline_stop)
+                                initialiseSeekBar("Que10")
 
+                            }
+                            mp!!.isPlaying -> {
+                                mp?.pause()
+                                mp?.stop()
+                                mp?.reset()
+                                mp?.release()
+                                mp = null
+                                binding.seekBarQue9.progress = 0
+                                binding.seekBarQue10.progress = 0
+                                binding.seekBarQue11.progress = 0
+                                binding.fabPlayQue10.setImageResource(R.drawable.ic_baseline_play)
+                            }
+                            else -> {
+                                mp?.start()
+                                binding.fabPlayQue10.setImageResource(R.drawable.ic_baseline_stop)
+                            }
                         }
-                        mp!!.isPlaying -> {
-                            mp?.pause()
-                            mp?.stop()
-                            mp?.reset()
-                            mp?.release()
-                            mp = null
-                            binding.seekBarQue9.progress = 0
-                            binding.seekBarQue10.progress = 0
-                            binding.seekBarQue11.progress = 0
-                            binding.fabPlayQue10.setImageResource(R.drawable.ic_baseline_play)
-                        }
-                        else -> {
-                            mp?.start()
-                            binding.fabPlayQue10.setImageResource(R.drawable.ic_baseline_stop)
-                        }
+                    } else {
+                        Snackbar.make(binding.root, R.string.NoInternet, Snackbar.LENGTH_SHORT)
+                            .setBackgroundTint(
+                                ContextCompat.getColor(
+                                    this.requireActivity(),
+                                    R.color.colorPrimary
+                                )
+                            )
+                            .show()
                     }
-
                 }
 
 
                 binding.fabPlayQue11.setOnClickListener {
-                    when {
-                        mp == null -> {
-                            mp = MediaPlayer()
-                            mp!!.setDataSource("https://ieltsjuice.com/wp-content/uploads/2021/08/Accent-3-Br.mp3?_=6")
-                            mp!!.prepare()
-                            mp?.start()
-                            binding.fabPlayQue11.setImageResource(R.drawable.ic_baseline_stop)
-                            initialiseSeekBar("Que11")
+                    if (NetworkChecker(this.requireActivity()).isInternetConnected) {
 
+                        when {
+                            mp == null -> {
+                                mp = MediaPlayer()
+                                mp!!.setDataSource("https://ieltsjuice.com/wp-content/uploads/2021/08/Accent-3-Br.mp3?_=6")
+                                mp!!.prepare()
+                                mp?.start()
+                                binding.fabPlayQue11.setImageResource(R.drawable.ic_baseline_stop)
+                                initialiseSeekBar("Que11")
+
+                            }
+                            mp!!.isPlaying -> {
+                                mp?.pause()
+                                mp?.stop()
+                                mp?.reset()
+                                mp?.release()
+                                mp = null
+                                binding.seekBarQue9.progress = 0
+                                binding.seekBarQue10.progress = 0
+                                binding.seekBarQue11.progress = 0
+                                binding.fabPlayQue11.setImageResource(R.drawable.ic_baseline_play)
+                            }
+                            else -> {
+                                mp?.start()
+                                binding.fabPlayQue11.setImageResource(R.drawable.ic_baseline_stop)
+                            }
                         }
-                        mp!!.isPlaying -> {
-                            mp?.pause()
-                            mp?.stop()
-                            mp?.reset()
-                            mp?.release()
-                            mp = null
-                            binding.seekBarQue9.progress = 0
-                            binding.seekBarQue10.progress = 0
-                            binding.seekBarQue11.progress = 0
-                            binding.fabPlayQue11.setImageResource(R.drawable.ic_baseline_play)
-                        }
-                        else -> {
-                            mp?.start()
-                            binding.fabPlayQue11.setImageResource(R.drawable.ic_baseline_stop)
-                        }
+                    } else {
+                        Snackbar.make(binding.root, R.string.NoInternet, Snackbar.LENGTH_SHORT)
+                            .setBackgroundTint(
+                                ContextCompat.getColor(
+                                    this.requireActivity(),
+                                    R.color.colorPrimary
+                                )
+                            )
+                            .show()
                     }
-
                 }
 
 
@@ -505,44 +545,41 @@ class FragmentTestListening : Fragment() {
 
                 seekBarChangeListener("Que9")
                 binding.fabPlayQue9.setOnClickListener {
-                    when {
-                        mp == null -> {
-                            mp = MediaPlayer()
-                            mp!!.setDataSource("https://ieltsjuice.com/wp-content/uploads/2021/08/IELTS_Juice_Obesity_Overweight_kids.mp3?_=2")
-                            mp!!.prepare()
-                            mp?.start()
-                            binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_pause)
-                        }
-                        mp!!.isPlaying -> {
-                            mp?.pause()
-                            binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_play)
-                        }
-                        else -> {
-                            mp?.start()
-                            binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_pause)
-                        }
-                    }
-                    initialiseSeekBar("Que9")
+                    if (NetworkChecker(this.requireActivity()).isInternetConnected) {
 
+                        when {
+                            mp == null -> {
+                                mp = MediaPlayer()
+                                mp!!.setDataSource("https://ieltsjuice.com/wp-content/uploads/2021/08/IELTS_Juice_Obesity_Overweight_kids.mp3?_=2")
+                                mp!!.prepare()
+                                mp?.start()
+                                binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_pause)
+                            }
+                            mp!!.isPlaying -> {
+                                mp?.pause()
+                                binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_play)
+                            }
+                            else -> {
+                                mp?.start()
+                                binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_pause)
+                            }
+                        }
+                        initialiseSeekBar("Que9")
+                    } else {
+                        Snackbar.make(binding.root, R.string.NoInternet, Snackbar.LENGTH_SHORT)
+                            .setBackgroundTint(
+                                ContextCompat.getColor(
+                                    this.requireActivity(),
+                                    R.color.colorPrimary
+                                )
+                            )
+                            .show()
+                    }
                 }
                 //  SeekBar
                 seekBarChangeListener("Que9")
 
-//                binding.fabStopQue9.setOnClickListener {
-//                    if (mp != null) {
-//                        try {
-//                            mp?.stop()
-//                            mp?.reset()
-//                            mp?.release()
-//                            mp = null
-//                            Log.i("MP", mp.toString())
-//                            binding.seekBarQue9.progress = 0
-//                            binding.fabPlayQue9.setImageResource(R.drawable.ic_baseline_play)
-//                            mp?.seekTo(0)
-//                        } catch (ex: Exception) {
-//                        }
-//                    }
-//                }
+
 
                 binding.finishQuizBtn.setOnClickListener {
                     var score = 0

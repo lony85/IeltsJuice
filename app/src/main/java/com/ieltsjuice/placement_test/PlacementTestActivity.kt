@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.LinearLayout
+import com.bumptech.glide.Glide
+import com.ieltsjuice.R
 import com.ieltsjuice.databinding.ActivityPlacementTestBinding
 import com.ieltsjuice.model.PlacementTestQuestions
 import com.ieltsjuice.model.Question
@@ -16,8 +18,10 @@ class PlacementTestActivity : AppCompatActivity() {
 
     private var score: Int = 0
     private var mQuestionsList: ArrayList<Question>? = null
+    private val imageURL = "https://ieltsjuice.com/wp-content/uploads/2021/07/"
 
     lateinit var binding: ActivityPlacementTestBinding
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +38,11 @@ class PlacementTestActivity : AppCompatActivity() {
 
 
         //First Data:
+        var image = imageURL + mQuestionsList!![questionNumber].image
+        Glide.with(this)
+            .load(image)
+            .into(binding.imgPlacementTest)
+
         binding.txtQuestion.text = mQuestionsList!![questionNumber].question
         binding.txtAnswerOne.text = mQuestionsList!![questionNumber].optionOne
         binding.txtAnswerTwo.text = mQuestionsList!![questionNumber].optionTwo
@@ -146,6 +155,12 @@ class PlacementTestActivity : AppCompatActivity() {
         binding.txtAnswerTwo.text = mQuestionsList!![questionNumber].optionTwo
         binding.txtAnswerThree.text = mQuestionsList!![questionNumber].optionThree
         binding.txtAnswerFour.text = mQuestionsList!![questionNumber].optionFour
+        var image = imageURL + mQuestionsList!![questionNumber].image
+        Glide.with(this)
+
+            .load(image)
+            .placeholder(R.drawable.ic_loading)
+            .into(binding.imgPlacementTest)
 
     }
 

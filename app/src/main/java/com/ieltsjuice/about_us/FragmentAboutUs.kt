@@ -26,7 +26,7 @@ const val KEY_teacherWebpage = "KEY_teacherWebpage"
 
 class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
     lateinit var binding: FragmentAboutUsBinding
-    lateinit var teachersAdapter: AboutUsRecyclerAdapter
+    private lateinit var teachersAdapter: AboutUsRecyclerAdapter
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

@@ -8,13 +8,13 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">#F4DA68</item>
         <item name="colorSecondaryVariant">@color/black</item>
-        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorOnSecondary">@color/grey</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">  true</item>
         <!-- Customize your theme here. -->
         <item name="android:fontFamily">@font/roboto</item>
-        <item name="colorAccent">@color/grey</item>
+
 
     </style>
 </resources>

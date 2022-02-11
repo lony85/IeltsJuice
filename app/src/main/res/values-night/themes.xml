@@ -2,13 +2,13 @@
     <!-- Base application theme. -->
     <style name="Theme.Ieltsjuice" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#F0A323</item>
-        <item name="colorPrimaryVariant">#E1454543</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">#757575</item>
+        <item name="colorPrimaryVariant">#E19E9E9D</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondary">#A6D5FA</item>
         <item name="colorSecondaryVariant">@color/white</item>
-        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorOnSecondary">#E8787373</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->

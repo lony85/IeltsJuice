@@ -78,13 +78,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end|center"
+                    android:textColor="?attr/colorOnSecondary"
                     android:text="More"
-                    android:textColor="?attr/colorSecondaryVariant"
                     android:textSize="@dimen/textSizeDate"
                     app:icon="@drawable/ic_arrow_right"
                     app:iconGravity="end"
                     app:iconPadding="0dp"
-                    app:iconTint="?attr/colorSecondaryVariant"
+                    app:iconTint="?attr/colorOnSecondary"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>

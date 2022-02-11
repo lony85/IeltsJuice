@@ -3,14 +3,12 @@ package com.ieltsjuice
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 
 import androidx.fragment.app.Fragment
 
 import com.ieltsjuice.databinding.ActivityMainBinding
 import com.ieltsjuice.placement_test.FragmentPlacementQuiz
-import com.ieltsjuice.self_paced.FragmentOnlineCourses
 
 
 class MainActivity : AppCompatActivity() {

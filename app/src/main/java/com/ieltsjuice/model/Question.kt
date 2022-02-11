@@ -3,6 +3,7 @@ package com.ieltsjuice.model
 
 data class Question(
     val id: Int,
+    val image:String,
     val question: String,
     val optionOne: String,
     val optionTwo: String,
@@ -10,4 +11,5 @@ data class Question(
     val optionFour: String,
     val correctAnswer: Int,
     val answerWeight:Int
+
 )

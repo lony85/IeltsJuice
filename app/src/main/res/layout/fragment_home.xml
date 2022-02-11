@@ -285,7 +285,7 @@
                                             android:layout_marginEnd="10dp"
 
                                             android:text="Continue reading >>"
-                                            android:textColor="?attr/colorAccent"
+                                            android:textColor="?attr/colorOnSecondary"
                                             android:textSize="10sp" />
 
 
@@ -362,7 +362,7 @@
                                             android:layout_marginTop="10dp"
                                             android:layout_marginEnd="10dp"
                                             android:text="Continue reading >>"
-                                            android:textColor="?attr/colorAccent"
+                                            android:textColor="?attr/colorOnSecondary"
                                             android:textSize="10sp" />
                                     </LinearLayout>
 
@@ -435,7 +435,7 @@
                                             android:layout_marginTop="28dp"
                                             android:layout_marginEnd="10dp"
                                             android:text="Continue reading >>"
-                                            android:textColor="?attr/colorAccent"
+                                            android:textColor="?attr/colorOnSecondary"
                                             android:textSize="10sp" />
                                     </LinearLayout>
 

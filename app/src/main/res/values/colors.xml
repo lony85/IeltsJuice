@@ -10,5 +10,6 @@
     <color name="Green">#66BB6A</color>
     <color name="correctAnswer">#0ACF13</color>
     <color name="grey">#E8423C3C</color>
+    <color name="colorPrimary">#F0A323</color>
 
 </resources>

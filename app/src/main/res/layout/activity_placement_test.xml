@@ -111,7 +111,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/img_test_1" />
+            tools:src="@drawable/img_test_1" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/answerOneCard"

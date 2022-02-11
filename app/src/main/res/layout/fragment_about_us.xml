@@ -104,10 +104,15 @@
 
                 android:layout_weight="1"/>
         </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/textSizeTitle"
+            android:layout_marginTop="10dp"
             android:textColor="?attr/colorSecondaryVariant"
             android:text="Our Amazing Team"/>
         <TextView

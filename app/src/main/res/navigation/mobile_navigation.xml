@@ -14,7 +14,7 @@
 
 <!--    <fragment-->
 <!--        android:id="@+id/navigation_services"-->
-<!--        android:name="com.ieltsjuice.self_paced.FragmentOnlineCourses"-->
+<!--        android:name="com.ieltsjuice.FragmentOnlineCourses"-->
 <!--        android:label="@string/title_services"-->
 <!--        tools:layout="@layout/fragment_services" />-->
 
