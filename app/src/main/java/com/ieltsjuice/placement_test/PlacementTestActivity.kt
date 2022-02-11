@@ -18,7 +18,7 @@ class PlacementTestActivity : AppCompatActivity() {
 
     private var score: Int = 0
     private var mQuestionsList: ArrayList<Question>? = null
-    private val imageURL = "https://ieltsjuice.com/wp-content/uploads/2021/07/"
+    private val imageURL = "https://ieltsjuice.com/wp-content/uploads/app/opt/img_test_"
 
     lateinit var binding: ActivityPlacementTestBinding
 
@@ -38,7 +38,7 @@ class PlacementTestActivity : AppCompatActivity() {
 
 
         //First Data:
-        var image = imageURL + mQuestionsList!![questionNumber].image
+        var image = imageURL + mQuestionsList!![questionNumber].id +".jpg"
         Glide.with(this)
             .load(image)
             .into(binding.imgPlacementTest)
@@ -155,7 +155,7 @@ class PlacementTestActivity : AppCompatActivity() {
         binding.txtAnswerTwo.text = mQuestionsList!![questionNumber].optionTwo
         binding.txtAnswerThree.text = mQuestionsList!![questionNumber].optionThree
         binding.txtAnswerFour.text = mQuestionsList!![questionNumber].optionFour
-        var image = imageURL + mQuestionsList!![questionNumber].image
+        var image = imageURL + mQuestionsList!![questionNumber].id +".jpg"
         Glide.with(this)
 
             .load(image)
