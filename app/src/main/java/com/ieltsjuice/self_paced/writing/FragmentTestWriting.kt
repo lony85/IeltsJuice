@@ -230,7 +230,7 @@ class FragmentTestWriting:Fragment() {
         dialogBinding.CancelBtn.setOnClickListener {
             dialog.dismiss()
             val transaction = parentFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragment_container_writing, FragmentSelfPacedSpeaking())
+            transaction.remove(FragmentTestWriting())
             transaction.commit()
         }
         dialogBinding.viewAnswersBtn.setOnClickListener {

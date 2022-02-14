@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">IELTS Juice</string>
+    <string name="versionNumber">version : 1.0.0</string>
     <string name="strike_text">$<strike>9.00 USD</strike></string>
     <string name="Q_consultation_01">How long is the consultation?</string>
     <string name="A_consultation_01">You will receive a 20-minute consultation. Make sure you go online at least five minutes before it starts.</string>
@@ -115,6 +116,7 @@ Got a question or not sure if you need to register at the IELTS Juice Online Aca
     \nOr you may as well start a live chat with our support in our website.
     </string>
     <string name="NoInternet">Check your Internet connection…</string>
+
 
 
 </resources>

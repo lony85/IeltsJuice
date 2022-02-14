@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginStart="15dp"
     android:layout_marginTop="5dp"
     android:layout_marginEnd="15dp"
+    android:background="?attr/colorTertiary"
 
     android:orientation="vertical">
 
@@ -47,24 +47,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp" >
+                android:layout_marginBottom="10dp">
 
                 <VideoView
                     android:id="@+id/videoView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
+
                 <Button
                     android:id="@+id/videoViewPlayButton"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/ic_play"/>
+                    android:background="@drawable/ic_play" />
+
                 <ProgressBar
                     android:id="@+id/videoViewProgressBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:visibility="invisible"/>
+                    android:visibility="invisible" />
             </FrameLayout>
 
             <TextView
@@ -88,9 +90,9 @@
                 android:textSize="@dimen/textSizeDescription" />
 
             <LinearLayout
-                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
@@ -113,11 +115,12 @@
                         android:paddingEnd="5dp">
 
                         <ImageView
-                            android:layout_marginTop="5dp"
                             android:id="@+id/imageView2"
                             android:layout_width="0dp"
-                            android:layout_height="136dp"
+                            android:layout_height="120dp"
                             android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            app:layout_constraintBottom_toTopOf="@+id/textView3"
                             app:layout_constraintDimensionRatio="w,1:1"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -128,12 +131,12 @@
                             android:id="@+id/textView3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="?attr/colorSecondaryVariant"
-
                             android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
                             android:layout_marginEnd="5dp"
                             android:gravity="center"
                             android:text="One-to-One"
+                            android:textColor="?attr/colorSecondaryVariant"
                             android:textSize="@dimen/textSizeDescription"
                             android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -194,12 +197,12 @@
                         android:paddingEnd="5dp">
 
                         <ImageView
-                            android:layout_marginTop="5dp"
-
                             android:id="@+id/imageView7"
                             android:layout_width="0dp"
-                            android:layout_height="136dp"
+                            android:layout_height="120dp"
                             android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            app:layout_constraintBottom_toTopOf="@+id/textView"
                             app:layout_constraintDimensionRatio="w,1:1"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -211,10 +214,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
                             android:layout_marginEnd="5dp"
                             android:gravity="center"
-                            android:textColor="?attr/colorSecondaryVariant"
+
                             android:text="Self-Paced"
+                            android:textColor="?attr/colorSecondaryVariant"
                             android:textSize="@dimen/textSizeDescription"
                             android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -240,9 +245,9 @@
                             style="?attr/materialButtonOutlinedStyle"
                             android:layout_width="wrap_content"
                             android:layout_height="40dp"
-                            android:layout_marginBottom="5dp"
                             android:layout_gravity="bottom|end"
                             android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
                             android:text="Learn More >>"
                             android:textColor="?attr/colorSecondaryVariant"
                             android:textSize="10sp"
@@ -280,6 +285,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_marginEnd="16dp"
+                android:layout_gravity="end"
+                android:layout_marginBottom="10dp"
                 android:text="Get Consulation"
                 android:textColor="?attr/colorSecondaryVariant"
                 android:textSize="10sp"
@@ -289,8 +296,7 @@
                 app:layout_constraintTop_toTopOf="@+id/button_main_courses"
                 app:rippleColor="?attr/colorSecondary"
                 app:strokeColor="?attr/colorPrimary"
-                app:strokeWidth="1dp"
-                android:layout_marginBottom="10dp"/>
+                app:strokeWidth="1dp" />
 
 
         </LinearLayout>

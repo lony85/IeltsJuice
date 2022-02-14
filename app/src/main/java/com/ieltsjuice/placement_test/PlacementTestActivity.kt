@@ -6,9 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.LinearLayout
+import androidx.appcompat.app.AlertDialog
 import com.bumptech.glide.Glide
 import com.ieltsjuice.R
 import com.ieltsjuice.databinding.ActivityPlacementTestBinding
+import com.ieltsjuice.databinding.TemplaterAlertDialogBackTestPlacementBinding
 import com.ieltsjuice.model.PlacementTestQuestions
 import com.ieltsjuice.model.Question
 
@@ -29,7 +31,7 @@ class PlacementTestActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        //making question list
+         //making question list
         mQuestionsList = PlacementTestQuestions.getQuestions()
 
         //First Init
@@ -168,5 +170,21 @@ class PlacementTestActivity : AppCompatActivity() {
     fun progressBar(currentPosition: Int) {
         binding.progressBar.progress = currentPosition
         binding.txtProgressBar.text = "$currentPosition" + "/" + binding.progressBar.max
+    }
+
+    override fun onBackPressed() {
+        val alertDialog = AlertDialog.Builder(this).create()
+        val dialogBinding = TemplaterAlertDialogBackTestPlacementBinding.inflate(layoutInflater)
+        alertDialog.setView(dialogBinding.root)
+        alertDialog.setCancelable(true)
+        alertDialog.create()
+        alertDialog.show()
+
+        dialogBinding.continueBtn.setOnClickListener {
+            super.onBackPressed()
+        }
+        dialogBinding.cancelBtn.setOnClickListener {
+            alertDialog.dismiss()
+        }
     }
 }

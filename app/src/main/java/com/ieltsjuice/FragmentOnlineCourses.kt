@@ -53,9 +53,6 @@ class FragmentOnlineCourses : Fragment() {
         }
 
         // videoView
-
-
-
             val videoURL: String =
                 "https://embed-fastly.wistia.com/deliveries/a7bb347904064619ff32b794604795317c142e08.m3u8/v2"
             mediaController = MediaController(this.requireActivity())

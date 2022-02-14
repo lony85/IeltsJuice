@@ -171,7 +171,7 @@ class FragmentTestReading : Fragment() {
         dialogBinding.CancelBtn.setOnClickListener {
             dialog.dismiss()
             val transaction = parentFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragment_container_reading, FragmentSelfPacedSpeaking())
+            transaction.remove(FragmentTestReading())
             transaction.commit()
         }
         dialogBinding.viewAnswersBtn.setOnClickListener {
