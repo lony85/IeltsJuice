@@ -40,7 +40,7 @@ class PlacementTestActivity : AppCompatActivity() {
 
 
         //First Data:
-        var image = imageURL + mQuestionsList!![questionNumber].id +".jpg"
+        val image = imageURL + mQuestionsList!![questionNumber].id +".jpg"
         Glide.with(this)
             .load(image)
             .into(binding.imgPlacementTest)
@@ -157,7 +157,7 @@ class PlacementTestActivity : AppCompatActivity() {
         binding.txtAnswerTwo.text = mQuestionsList!![questionNumber].optionTwo
         binding.txtAnswerThree.text = mQuestionsList!![questionNumber].optionThree
         binding.txtAnswerFour.text = mQuestionsList!![questionNumber].optionFour
-        var image = imageURL + mQuestionsList!![questionNumber].id +".jpg"
+        val image = imageURL + mQuestionsList!![questionNumber].id +".jpg"
         Glide.with(this)
 
             .load(image)
