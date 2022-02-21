@@ -2,17 +2,15 @@ package com.ieltsjuice.self_paced.listening
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
-import android.content.Context
 import android.graphics.Color
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.internetconnection.NetworkChecker
@@ -682,7 +680,7 @@ class FragmentTestListening : Fragment() {
         when (Que) {
             "Que9" -> {
                 binding.seekBarQue9.max = mp!!.duration
-                val handler = Handler()
+                val handler = Handler(Looper.getMainLooper())
                 handler.postDelayed(object : Runnable {
                     override fun run() {
                         try {
@@ -701,7 +699,7 @@ class FragmentTestListening : Fragment() {
             }
             "Que10" -> {
                 binding.seekBarQue10.max = mp!!.duration
-                val handler = Handler()
+                val handler = Handler(Looper.getMainLooper())
                 handler.postDelayed(object : Runnable {
                     override fun run() {
                         try {
@@ -720,7 +718,7 @@ class FragmentTestListening : Fragment() {
             }
             "Que11" -> {
                 binding.seekBarQue11.max = mp!!.duration
-                val handler = Handler()
+                val handler = Handler(Looper.getMainLooper())
                 handler.postDelayed(object : Runnable {
                     override fun run() {
                         try {

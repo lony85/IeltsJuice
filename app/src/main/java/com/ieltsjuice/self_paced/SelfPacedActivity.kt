@@ -1,6 +1,7 @@
 package com.ieltsjuice.self_paced
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.TypedValue
@@ -15,7 +16,7 @@ import com.ieltsjuice.self_paced.speaking.SelfPacedSpeakingActivity
 import com.ieltsjuice.self_paced.writing.SelfPacedWritingActivity
 
 class SelfPacedActivity : AppCompatActivity() {
-    lateinit var binding:ActivitySelfPacedBinding
+        lateinit var binding:ActivitySelfPacedBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySelfPacedBinding.inflate(layoutInflater)

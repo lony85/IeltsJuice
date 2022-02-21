@@ -38,8 +38,4 @@ class FragmentHome : Fragment() {
         }
 
     }
-    private fun Fragment.onRestoreInstanceState(savedInstanceState: Bundle?) {
-        onRestoreInstanceState(savedInstanceState)
-        onCreate(savedInstanceState)
-    }
 }

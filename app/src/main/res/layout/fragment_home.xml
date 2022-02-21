@@ -27,12 +27,13 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
+                android:backgroundTint="?attr/colorTertiaryContainer"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:layout_marginTop="50dp"
                 app:cardElevation="5dp"
-                app:strokeColor="?attr/colorPrimary"
+                app:strokeColor="?attr/colorOnTertiaryContainer"
                 app:strokeWidth="1dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout

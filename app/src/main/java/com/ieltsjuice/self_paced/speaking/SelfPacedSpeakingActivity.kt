@@ -18,9 +18,13 @@ class SelfPacedSpeakingActivity : AppCompatActivity() {
         binding = ActivitySelfPacedSpeakingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.add(R.id.fragment_container_speaking,FragmentSelfPacedSpeaking())
-        transaction.commit()
+        if (savedInstanceState == null) {
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.add(R.id.fragment_container_speaking,FragmentSelfPacedSpeaking())
+            transaction.commit()
+        }
+
+
 
         // Toolbar
         setSupportActionBar(binding.toolbarMain)

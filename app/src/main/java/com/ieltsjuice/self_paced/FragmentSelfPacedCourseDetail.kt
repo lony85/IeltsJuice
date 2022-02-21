@@ -16,7 +16,7 @@ import com.ieltsjuice.R
 import com.ieltsjuice.databinding.FragmentSelfPacedCourseDetailBinding
 import com.ieltsjuice.self_paced.speaking.KEY_SelfPacedCourseMainTitle
 
-const val KEY_QuizTitle="KEY_QuizTitle"
+const val KEY_QuizTitle = "KEY_QuizTitle"
 
 
 class FragmentSelfPacedCourseDetail : Fragment() {
@@ -50,22 +50,26 @@ class FragmentSelfPacedCourseDetail : Fragment() {
 
         // videoPlayer
 
-            mediaController = MediaController(this.requireActivity())
-            val url = Uri.parse(videoURL)
+        mediaController = MediaController(this.requireActivity())
+        val url = Uri.parse(videoURL)
         if (NetworkChecker(this.requireActivity()).isInternetConnected) {
-
             binding.videoView.setVideoURI(url)
         }
         binding.videoViewPlayButton.setOnClickListener {
             if (NetworkChecker(this.requireActivity()).isInternetConnected) {
-
+                binding.videoViewPreviewImg.visibility = View.GONE
                 binding.videoViewProgressBar.visibility = View.VISIBLE
                 binding.videoView.start()
                 binding.videoViewPlayButton.visibility = View.GONE
-            }else {
+            } else {
                 Snackbar.make(binding.root, R.string.NoInternet, Snackbar.LENGTH_SHORT)
-                    .setBackgroundTint(ContextCompat.getColor(this.requireActivity(),R.color.colorPrimary))
-                .show()
+                    .setBackgroundTint(
+                        ContextCompat.getColor(
+                            this.requireActivity(),
+                            R.color.colorPrimary
+                        )
+                    )
+                    .show()
             }
         }
         binding.videoView.setOnPreparedListener {

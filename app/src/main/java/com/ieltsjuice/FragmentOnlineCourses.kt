@@ -53,7 +53,7 @@ class FragmentOnlineCourses : Fragment() {
         }
 
         // videoView
-            val videoURL: String =
+            val videoURL =
                 "https://embed-fastly.wistia.com/deliveries/a7bb347904064619ff32b794604795317c142e08.m3u8/v2"
             mediaController = MediaController(this.requireActivity())
             val url = Uri.parse(videoURL)
@@ -63,6 +63,7 @@ class FragmentOnlineCourses : Fragment() {
 
             binding.videoViewPlayButton.setOnClickListener {
                 if (NetworkChecker(this.requireActivity()).isInternetConnected) {
+                    binding.videoViewPreviewImg.visibility = View.GONE
                     binding.videoViewProgressBar.visibility = View.VISIBLE
                     binding.videoView.start()
                     binding.videoViewPlayButton.visibility = View.GONE

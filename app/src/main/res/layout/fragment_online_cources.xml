@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginStart="15dp"
@@ -23,9 +24,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Online ILETS Courses"
+                android:text="Online IELTS Courses"
                 android:textColor="?attr/colorSecondaryVariant"
-                android:textSize="@dimen/textSizeTitle" />
+                android:textSize="@dimen/textSizeTitle"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -33,14 +35,16 @@
                 android:layout_marginTop="5dp"
                 android:justificationMode="inter_word"
                 android:text="Prepare for IELTS online with self-paced or one-to-one courses, and enjoy the IELTS writing correction and consultation services at an international language academy powered by Machine Learning*."
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="* ML-assisted modules are under development."
-                android:textSize="@dimen/textSizeDate" />
+                android:textSize="@dimen/textSizeDate"
+                tools:ignore="HardcodedText" />
 
             <FrameLayout
                 android:id="@+id/videoContainer"
@@ -53,7 +57,13 @@
                     android:id="@+id/videoView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
-
+                <ImageView
+                    android:id="@+id/videoViewPreviewImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/online_learning"/>
                 <Button
                     android:id="@+id/videoViewPlayButton"
                     android:layout_width="45dp"
@@ -72,15 +82,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Whats`s your learning style?"
+                android:text="What`s your learning style?"
                 android:textColor="?attr/colorSecondaryVariant"
-                android:textSize="@dimen/textSizeTitle" />
+                android:textSize="@dimen/textSizeTitle"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Select the online courses that suit you."
-                android:textSize="@dimen/textSizeDate" />
+                android:textSize="@dimen/textSizeDate"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -114,18 +126,20 @@
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp">
 
-                        <ImageView
+                        <com.airbnb.lottie.LottieAnimationView
                             android:id="@+id/imageView2"
-                            android:layout_width="0dp"
+                            app:lottie_rawRes="@raw/one_to_one"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            android:layout_width="match_parent"
                             android:layout_height="120dp"
                             android:layout_gravity="center"
                             android:layout_marginTop="5dp"
                             app:layout_constraintBottom_toTopOf="@+id/textView3"
-                            app:layout_constraintDimensionRatio="w,1:1"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/ic_one_to_one" />
+                             />
 
                         <TextView
                             android:id="@+id/textView3"
@@ -196,18 +210,20 @@
                         android:paddingStart="5dp"
                         android:paddingEnd="5dp">
 
-                        <ImageView
+                        <com.airbnb.lottie.LottieAnimationView
+                            app:lottie_loop="true"
+                            app:lottie_autoPlay="true"
+                            app:lottie_rawRes="@raw/self_paced"
                             android:id="@+id/imageView7"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="120dp"
                             android:layout_gravity="center"
                             android:layout_marginTop="5dp"
                             app:layout_constraintBottom_toTopOf="@+id/textView"
-                            app:layout_constraintDimensionRatio="w,1:1"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/ic_self_paced" />
+                             />
 
                         <TextView
                             android:id="@+id/textView"

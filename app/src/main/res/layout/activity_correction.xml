@@ -89,8 +89,9 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/materialCardView2"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_width="350dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp"
                 app:strokeColor="?attr/colorPrimary"
@@ -99,8 +100,8 @@
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitXY"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
                     android:src="@drawable/img_writing_correction" />
             </com.google.android.material.card.MaterialCardView>
 
