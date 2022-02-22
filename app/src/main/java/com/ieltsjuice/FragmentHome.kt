@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.ieltsjuice.databinding.FragmentHomeBinding
 
+const val PAGE_NAME_KEY = "PAGE_NAME_KEY"
+
 class FragmentHome : Fragment() {
     lateinit var binding: FragmentHomeBinding
     override fun onCreateView(
@@ -36,6 +38,11 @@ class FragmentHome : Fragment() {
             transaction.addToBackStack(null)
             transaction.commit()
         }
-
+        binding.buttonMainScoreCalculator.setOnClickListener {
+            val intent =
+                Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
+            intent.putExtra(PAGE_NAME_KEY, "calculator")
+            startActivity(intent)
+        }
     }
 }

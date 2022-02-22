@@ -48,6 +48,7 @@
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_self_paced_writing.xml" value="0.2896396396396396" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_splash_screen.xml" value="0.22" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_test_result.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_without_bottom_navigation_bar_avtivity.xml" value="0.2896396396396396" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_without_navigation_bar.xml" value="0.2774774774774775" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/cource_content_template.xml" value="0.2896396396396396" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/d.xml" value="0.22" />
@@ -55,9 +56,10 @@
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_about_us.xml" value="0.22727272727272727" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_about_us_Details.xml" value="0.3182291666666667" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_about_us_details.xml" value="0.33" />
-        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_home.xml" value="0.3628668171557562" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_online_cources.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_placement_quiz.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_score_calculator.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_self_paced.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_self_paced_course_detail.xml" value="0.22" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_self_paced_listening.xml" value="0.33" />
@@ -95,7 +97,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.1" />
+        <option name="scale" value="0.22" />
       </ProjectState>
     </option>
   </component>
