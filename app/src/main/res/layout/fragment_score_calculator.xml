@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="IELTS Band Score Calculator"
+                android:textColor="?attr/colorSecondaryVariant"
+                android:textSize="@dimen/textSizeTitle"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="This IELTS Band Score Calculator will work out your Overall IELTS band score and also your score out of 40 for listening and reading."
+                android:textSize="@dimen/textSizeDescription"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Listening and Reading Score Calculator"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textSize="@dimen/textSizeTitle"
+                        tools:ignore="HardcodedText" />
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txtScoreListening"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Listening out of 40"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/txtScoreListeningResult"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="?attr/colorSecondaryVariant"
+                            android:textSize="@dimen/textSizeDescription"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/txtScoreListening"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/txtScoreListening"
+                            app:layout_constraintTop_toTopOf="@+id/txtScoreListening"
+                            tools:ignore="HardcodedText"
+                            tools:text="Listening Score is : " />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txtScoreReading"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Reading out of 40"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtScoreListening"
+                            tools:ignore="HardcodedText">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/txtScoreReadingResult"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="?attr/colorSecondaryVariant"
+                            android:textSize="@dimen/textSizeDescription"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/txtScoreReading"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/txtScoreReading"
+                            app:layout_constraintTop_toTopOf="@+id/txtScoreReading"
+                            tools:ignore="HardcodedText"
+                            tools:text="Reading Score is : " />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Type of Exam :"
+                            android:textSize="@dimen/textSizeDescription"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:id="@+id/academicRadioBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="50dp"
+                                android:text="Academic"
+                                tools:ignore="HardcodedText" />
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:id="@+id/generalRadioBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="General Training
+"
+                                tools:ignore="HardcodedText" />
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/resetCalculatorBtn"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="20dp"
+                            android:text="Reset"
+                            android:textColor="#FF0000"
+                            app:cornerRadius="20dp"
+                            app:strokeColor="#FF0000"
+                            app:strokeWidth="1dp"
+                            tools:ignore="HardcodedText" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/scoreCalculatorBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="Calculate"
+                            app:cornerRadius="20dp"
+
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    tools:ignore="HardcodedText">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Overall IELTS Band Score Calculator"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textSize="@dimen/textSizeTitle"
+                        tools:ignore="HardcodedText" />
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="10dp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txtScoreOverallListening"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Listening out of 9"
+                            app:layout_constraintBottom_toTopOf="@+id/txtScoreOverallReading"
+                            app:layout_constraintEnd_toStartOf="@+id/txtScoreOverallWriting"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="numberDecimal"
+                                android:maxLength="3"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txtScoreOverallReading"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Reading out of 9"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/txtScoreOverallSpeaking"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txtScoreOverallListening"
+                            tools:ignore="HardcodedText">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+
+                                android:inputType="numberDecimal"
+                                android:maxLength="3"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txtScoreOverallSpeaking"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Speaking out of 9"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/txtScoreOverallReading"
+                            app:layout_constraintTop_toBottomOf="@+id/txtScoreOverallWriting"
+                            tools:ignore="HardcodedText">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+
+                                android:inputType="numberDecimal"
+                                android:maxLength="3"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/txtScoreOverallWriting"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Writing out of 9"
+                            app:layout_constraintBottom_toTopOf="@+id/txtScoreOverallSpeaking"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/txtScoreOverallListening"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+
+                                android:inputType="numberDecimal"
+                                android:maxLength="3"
+                                android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/txtScoreOverallResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textSize="@dimen/textSizeDescription"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText"
+                        tools:text="Your overall score is : 9" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/scoreCalculatorOverallResetBtn"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="20dp"
+                            android:text="Reset"
+                            android:textColor="#FF0000"
+                            app:cornerRadius="20dp"
+                            app:strokeColor="#FF0000"
+                            tools:ignore="HardcodedText" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/scoreCalculatorOverallBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:text="Calculate"
+                            app:cornerRadius="20dp"
+
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Learning more about IELTS overall band scores"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
+                        android:lineSpacingExtra="1dp"
+                        android:text="Learning more about IELTS overall band scores Your Overall Band Score is the average of your four scores for listening, reading, speaking and writing, rounded to the nearest whole or half band. The scores are weighted equally.
+                        \nScores ending in .25 are rounded up to the next half band and those ending in .75 are rounded up to the next whole band.
+                        \nSo for example, if the average of the four components is 5.25, the IELTS band score calculator will round your score up to 5.5. If it is 5.75, the IELTS band score calculator will round up your score to band 6."
+                        android:textSize="@dimen/textSizeDescription"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
