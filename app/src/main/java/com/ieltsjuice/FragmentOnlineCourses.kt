@@ -10,9 +10,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.MediaController
 import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.internetconnection.NetworkChecker
+import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import com.ieltsjuice.databinding.FragmentOnlineCourcesBinding
 import com.ieltsjuice.self_paced.SelfPacedActivity
@@ -40,54 +42,62 @@ class FragmentOnlineCourses : Fragment() {
 
 
         binding.buttonConsultation.setOnClickListener {
-            val intent = Intent(this.requireActivity(), ConsultationActivity::class.java)
+            val intent = Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
+            intent.putExtra(PAGE_NAME_KEY,"Consultation")
             startActivity(intent)
         }
         binding.buttonMainCoursesOnetoOne.setOnClickListener {
-            val intent = Intent(this.requireActivity(), OneToOneActivity::class.java)
+            val intent = Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
+            intent.putExtra(PAGE_NAME_KEY,"OneToOne")
             startActivity(intent)
         }
         binding.buttonMainCoursesSelfPaced.setOnClickListener {
-            val intent = Intent(this.requireActivity(), SelfPacedActivity::class.java)
+            val intent = Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
+            intent.putExtra(PAGE_NAME_KEY,"selfPaced")
             startActivity(intent)
         }
 
         // videoView
-            val videoURL =
-                "https://embed-fastly.wistia.com/deliveries/a7bb347904064619ff32b794604795317c142e08.m3u8/v2"
-            mediaController = MediaController(this.requireActivity())
-            val url = Uri.parse(videoURL)
+        val videoURL =
+            "https://embed-fastly.wistia.com/deliveries/a7bb347904064619ff32b794604795317c142e08.m3u8/v2"
+        mediaController = MediaController(this.requireActivity())
+        val url = Uri.parse(videoURL)
         if (NetworkChecker(this.requireActivity()).isInternetConnected) {
             binding.videoView.setVideoURI(url)
         }
 
-            binding.videoViewPlayButton.setOnClickListener {
-                if (NetworkChecker(this.requireActivity()).isInternetConnected) {
-                    binding.videoViewPreviewImg.visibility = View.GONE
-                    binding.videoViewProgressBar.visibility = View.VISIBLE
-                    binding.videoView.start()
-                    binding.videoViewPlayButton.visibility = View.GONE
-                }else {
-                    Snackbar.make(binding.root, R.string.NoInternet, Snackbar.LENGTH_SHORT)
-                        .setBackgroundTint(ContextCompat.getColor(this.requireActivity(),R.color.colorPrimary))
-                        .show()
-                }
-
+        binding.videoViewPlayButton.setOnClickListener {
+            if (NetworkChecker(this.requireActivity()).isInternetConnected) {
+                binding.videoViewPreviewImg.visibility = View.GONE
+                binding.videoViewProgressBar.visibility = View.VISIBLE
+                binding.videoView.start()
+                binding.videoViewPlayButton.visibility = View.GONE
+            } else {
+                Snackbar.make(binding.root, R.string.NoInternet, Snackbar.LENGTH_SHORT)
+                    .setBackgroundTint(
+                        ContextCompat.getColor(
+                            this.requireActivity(),
+                            R.color.colorPrimary
+                        )
+                    )
+                    .show()
             }
 
-            binding.videoView.setOnPreparedListener {
-                mediaController.setAnchorView(binding.videoContainer)
-                binding.videoView.setMediaController(mediaController)
-                binding.videoView.seekTo(1)
+        }
 
-            }
+        binding.videoView.setOnPreparedListener {
+            mediaController.setAnchorView(binding.videoContainer)
+            binding.videoView.setMediaController(mediaController)
+            binding.videoView.seekTo(1)
 
-            binding.videoView.setOnInfoListener { _, what, _ ->   //player & extras renamed to _
-                if (what == MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START)
-                    binding.videoViewProgressBar.visibility = View.INVISIBLE
-                true
-            }
-            mediaController.show()
+        }
+
+        binding.videoView.setOnInfoListener { _, what, _ ->   //player & extras renamed to _
+            if (what == MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START)
+                binding.videoViewProgressBar.visibility = View.INVISIBLE
+            true
+        }
+        mediaController.show()
     }
 
     override fun onPause() {

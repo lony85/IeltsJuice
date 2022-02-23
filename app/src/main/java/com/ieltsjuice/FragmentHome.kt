@@ -25,11 +25,13 @@ class FragmentHome : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonConsultation.setOnClickListener {
-            val intent = Intent(this.requireActivity(), ConsultationActivity::class.java)
+            val intent = Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
+            intent.putExtra(PAGE_NAME_KEY,"Consultation")
             startActivity(intent)
         }
         binding.buttonMainCorrection.setOnClickListener {
-            val intent = Intent(this.requireActivity(), CorrectionActivity::class.java)
+            val intent = Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
+            intent.putExtra(PAGE_NAME_KEY,"Correction")
             startActivity(intent)
         }
         binding.buttonMainCourses.setOnClickListener {
