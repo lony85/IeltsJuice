@@ -9,15 +9,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.MediaController
-import android.widget.Toast
-import android.widget.Toast.LENGTH_SHORT
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.internetconnection.NetworkChecker
-import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import com.ieltsjuice.databinding.FragmentOnlineCourcesBinding
-import com.ieltsjuice.self_paced.SelfPacedActivity
 
 class FragmentOnlineCourses : Fragment() {
 
