@@ -1,77 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="?attr/colorTertiary"
-    android:layout_height="match_parent"
-    tools:context=".self_paced.SelfPacedActivity">
+    android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimaryVariant"
-        android:fitsSystemWindows="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsingBarMain"
-            style="?attr/collapsingToolbarLayoutLargeStyle"
-            android:layout_width="match_parent"
-            android:layout_height="100dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
-                android:layout_gravity="center"
-                android:fitsSystemWindows="true"
-                android:src="@drawable/ielts_juice_logo"
-                tools:ignore="ContentDescription" />
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-    </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBar"
-        app:layout_constraintVertical_bias="0.0">
+        android:padding="15dp">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/progress_bar"
                 android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:max="100"
-                app:trackThickness="6dp"
                 android:indeterminate="false"
+                android:max="100"
                 android:minHeight="40dp"
-                android:progress="0"/>
+                android:progress="0"
+                app:trackThickness="6dp" />
+
             <TextView
                 android:id="@+id/txtProgressBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="1/100"
                 android:layout_gravity="center"
                 android:padding="10dp"
-                android:textSize="@dimen/textSizeDate" />
+                android:textSize="@dimen/textSizeDate"
+                tools:text="1/100" />
         </LinearLayout>
 
 
@@ -98,10 +66,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:clickable="true"
-            app:rippleColor="?attr/colorPrimary"
             android:layout_marginBottom="10dp"
+            android:clickable="true"
             android:elevation="4dp"
+            app:rippleColor="?attr/colorPrimary"
             app:strokeColor="?attr/colorPrimary"
             app:strokeWidth="1dp">
 
@@ -109,68 +77,71 @@
                 android:id="@+id/txtAnswerOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Maria"
                 android:gravity="center"
                 android:padding="10dp"
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:text="Maria" />
 
         </com.google.android.material.card.MaterialCardView>
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/answerTwoCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            app:rippleColor="?attr/colorPrimary"
-
-            app:strokeColor="?attr/colorPrimary"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
+
+            android:clickable="true"
             android:elevation="4dp"
+            app:rippleColor="?attr/colorPrimary"
+            app:strokeColor="?attr/colorPrimary"
             app:strokeWidth="1dp">
 
             <TextView
                 android:id="@+id/txtAnswerTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Maria"
                 android:gravity="center"
                 android:padding="10dp"
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:text="Maria" />
 
         </com.google.android.material.card.MaterialCardView>
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/answerThreeCard"
             android:layout_width="match_parent"
-            android:clickable="true"
-            app:rippleColor="?attr/colorPrimary"
-
             android:layout_height="wrap_content"
-            app:strokeColor="?attr/colorPrimary"
             android:layout_marginTop="10dp"
+
             android:layout_marginBottom="10dp"
+            android:clickable="true"
             android:elevation="4dp"
+            app:rippleColor="?attr/colorPrimary"
+            app:strokeColor="?attr/colorPrimary"
             app:strokeWidth="1dp">
 
             <TextView
                 android:id="@+id/txtAnswerThree"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Maria"
                 android:gravity="center"
                 android:padding="10dp"
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:text="Maria" />
 
         </com.google.android.material.card.MaterialCardView>
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/answerFourCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:clickable="true"
-            app:rippleColor="?attr/colorPrimary"
-
             android:layout_marginBottom="10dp"
+            android:clickable="true"
+
             android:elevation="4dp"
+            app:rippleColor="?attr/colorPrimary"
             app:strokeColor="?attr/colorPrimary"
             app:strokeWidth="1dp">
 
@@ -186,9 +157,7 @@
         </com.google.android.material.card.MaterialCardView>
 
 
-
-
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

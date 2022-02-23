@@ -1,6 +1,5 @@
 package com.ieltsjuice.self_paced
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -9,10 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.ieltsjuice.R
 import com.ieltsjuice.databinding.FragmentSelfPacedBinding
-import com.ieltsjuice.self_paced.listening.SelfPacedListeningActivity
-import com.ieltsjuice.self_paced.reading.SelfPacedReadingActivity
-import com.ieltsjuice.self_paced.speaking.SelfPacedSpeakingActivity
-import com.ieltsjuice.self_paced.writing.SelfPacedWritingActivity
+import com.ieltsjuice.self_paced.listening.FragmentSelfPacedListening
+import com.ieltsjuice.self_paced.reading.FragmentSelfPacedReading
+import com.ieltsjuice.self_paced.speaking.FragmentSelfPacedSpeaking
+import com.ieltsjuice.self_paced.writing.FragmentSelfPacedWriting
 
 class FragmentSelfPaced:Fragment() {
     lateinit var binding: FragmentSelfPacedBinding
@@ -28,20 +27,32 @@ class FragmentSelfPaced:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonSelfPacedSpeaking.setOnClickListener {
-            val intent = Intent(this.requireActivity(), SelfPacedSpeakingActivity::class.java)
-            startActivity(intent)
+            val transaction = parentFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container_withoutNavigationActivity,FragmentSelfPacedSpeaking())
+            transaction.addToBackStack(null)
+            transaction.commit()
+
         }
         binding.buttonSelfPacedListening.setOnClickListener {
-            val intent = Intent(this.requireActivity(), SelfPacedListeningActivity::class.java)
-            startActivity(intent)
+            val transaction = parentFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container_withoutNavigationActivity,FragmentSelfPacedListening())
+            transaction.addToBackStack(null)
+            transaction.commit()
+
         }
         binding.buttonSelfPacedWriting.setOnClickListener {
-            val intent = Intent(this.requireActivity(), SelfPacedWritingActivity::class.java)
-            startActivity(intent)
+            val transaction = parentFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container_withoutNavigationActivity,FragmentSelfPacedWriting())
+            transaction.addToBackStack(null)
+            transaction.commit()
+
         }
         binding.buttonSelfPacedReading.setOnClickListener {
-            val intent = Intent(this.requireActivity(), SelfPacedReadingActivity::class.java)
-            startActivity(intent)
+            val transaction = parentFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container_withoutNavigationActivity,FragmentSelfPacedReading())
+            transaction.addToBackStack(null)
+            transaction.commit()
+
         }
         //FAQ Session
         var result = false

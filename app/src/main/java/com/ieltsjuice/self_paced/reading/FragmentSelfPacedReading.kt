@@ -237,7 +237,7 @@ class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
         fragment.arguments = bundle
 
         val replaceTransaction = parentFragmentManager.beginTransaction()
-        replaceTransaction.replace(R.id.fragment_container_reading, fragment)
+        replaceTransaction.replace(R.id.fragment_container_withoutNavigationActivity, fragment)
         replaceTransaction.addToBackStack(null)
         replaceTransaction.commit()
     }
@@ -249,7 +249,7 @@ class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
         fragment.arguments = bundle
 
         val replaceTransaction = parentFragmentManager.beginTransaction()
-        replaceTransaction.replace(R.id.fragment_container_reading, fragment)
+        replaceTransaction.replace(R.id.fragment_container_withoutNavigationActivity, fragment)
         replaceTransaction.addToBackStack(null)
         replaceTransaction.commit()
     }

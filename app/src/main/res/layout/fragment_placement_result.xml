@@ -6,62 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorTertiary"
-    tools:context=".self_paced.SelfPacedActivity">
+    >
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimaryVariant"
-        android:fitsSystemWindows="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            app:contentScrim="?attr/colorPrimaryVariant"
-            android:id="@+id/collapsingBarMain"
-            style="?attr/collapsingToolbarLayoutLargeStyle"
-            android:layout_width="match_parent"
-            android:layout_height="100dp">
-
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="-30dp"
-                android:layout_marginTop="45dp"
-                android:fitsSystemWindows="true"
-                android:src="@drawable/img_orance"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:layout_gravity="end"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginEnd="-50dp"
-                android:layout_marginTop="-25dp"
-                android:fitsSystemWindows="true"
-                android:src="@drawable/img_orance"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
-                android:layout_gravity="center"
-                android:fitsSystemWindows="true"
-                android:src="@drawable/ielts_juice_logo" />
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbarMain"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                />
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"

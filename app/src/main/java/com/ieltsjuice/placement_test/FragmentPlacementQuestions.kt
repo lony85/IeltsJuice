@@ -2,36 +2,40 @@ package com.ieltsjuice.placement_test
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils.replace
 import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.LinearLayout
-import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.ieltsjuice.R
-import com.ieltsjuice.databinding.ActivityPlacementTestBinding
-import com.ieltsjuice.databinding.TemplaterAlertDialogBackTestPlacementBinding
+import com.ieltsjuice.databinding.FragmentPlacementQuestionsBinding
 import com.ieltsjuice.model.PlacementTestQuestions
 import com.ieltsjuice.model.Question
 
+
 const val KEY_testResult = "KEY_testResult"
 
-class PlacementTestActivity : AppCompatActivity() {
-
+class FragmentPlacementQuestions : Fragment() {
+    lateinit var binding: FragmentPlacementQuestionsBinding
     private var score: Int = 0
     private var mQuestionsList: ArrayList<Question>? = null
     private val imageURL = "https://ieltsjuice.com/wp-content/uploads/app/opt/img_test_"
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = FragmentPlacementQuestionsBinding.inflate(layoutInflater, container, false)
+        return binding.root
+    }
 
-    lateinit var binding: ActivityPlacementTestBinding
-
-    @SuppressLint("SetTextI18n")
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityPlacementTestBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-
-         //making question list
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        //making question list
         mQuestionsList = PlacementTestQuestions.getQuestions()
 
         //First Init
@@ -40,7 +44,7 @@ class PlacementTestActivity : AppCompatActivity() {
 
 
         //First Data:
-        val image = imageURL + mQuestionsList!![questionNumber].id +".jpg"
+        val image = imageURL + mQuestionsList!![questionNumber].id + ".jpg"
         Glide.with(this)
             .load(image)
             .into(binding.imgPlacementTest)
@@ -74,10 +78,14 @@ class PlacementTestActivity : AppCompatActivity() {
                 progressBar(currentPosition)
                 setQuestion(questionNumber)
             } else {
-                val intent = Intent(this, TestResultActivity::class.java)
-                intent.putExtra(KEY_testResult, score)
-                startActivity(intent)
-                finish()
+                val bundle = Bundle()
+                bundle.putInt(KEY_testResult, score)
+                val fragment = FragmentPlacementResult()
+                fragment.arguments = bundle
+                val transaction = parentFragmentManager.beginTransaction()
+                transaction.replace(R.id.fragment_container_withoutNavigationActivity, fragment)
+                transaction.commit()
+
             }
             Log.i("hamed 2", currentPosition.toString())
         }
@@ -96,10 +104,13 @@ class PlacementTestActivity : AppCompatActivity() {
                 progressBar(currentPosition)
                 setQuestion(questionNumber)
             } else {
-                val intent = Intent(this, TestResultActivity::class.java)
-                intent.putExtra(KEY_testResult, score)
-                startActivity(intent)
-                finish()
+                val bundle = Bundle()
+                bundle.putInt(KEY_testResult, score)
+                val fragment = FragmentPlacementResult()
+                fragment.arguments = bundle
+                val transaction = parentFragmentManager.beginTransaction()
+                transaction.replace(R.id.fragment_container_withoutNavigationActivity, fragment)
+                transaction.commit()
             }
             Log.i("hamed 2", currentPosition.toString())
         }
@@ -118,10 +129,13 @@ class PlacementTestActivity : AppCompatActivity() {
                 progressBar(currentPosition)
                 setQuestion(questionNumber)
             } else {
-                val intent = Intent(this, TestResultActivity::class.java)
-                intent.putExtra(KEY_testResult, score)
-                startActivity(intent)
-                finish()
+                val bundle = Bundle()
+                bundle.putInt(KEY_testResult, score)
+                val fragment = FragmentPlacementResult()
+                fragment.arguments = bundle
+                val transaction = parentFragmentManager.beginTransaction()
+                transaction.replace(R.id.fragment_container_withoutNavigationActivity, fragment)
+                transaction.commit()
             }
             Log.i("hamed 2", currentPosition.toString())
         }
@@ -140,10 +154,13 @@ class PlacementTestActivity : AppCompatActivity() {
                 progressBar(currentPosition)
                 setQuestion(questionNumber)
             } else {
-                val intent = Intent(this, TestResultActivity::class.java)
-                intent.putExtra(KEY_testResult, score)
-                startActivity(intent)
-                finish()
+                val bundle = Bundle()
+                bundle.putInt(KEY_testResult, score)
+                val fragment = FragmentPlacementResult()
+                fragment.arguments = bundle
+                val transaction = parentFragmentManager.beginTransaction()
+                transaction.replace(R.id.fragment_container_withoutNavigationActivity, fragment)
+                transaction.commit()
 
             }
             Log.i("hamed 2", currentPosition.toString())
@@ -157,7 +174,7 @@ class PlacementTestActivity : AppCompatActivity() {
         binding.txtAnswerTwo.text = mQuestionsList!![questionNumber].optionTwo
         binding.txtAnswerThree.text = mQuestionsList!![questionNumber].optionThree
         binding.txtAnswerFour.text = mQuestionsList!![questionNumber].optionFour
-        val image = imageURL + mQuestionsList!![questionNumber].id +".jpg"
+        val image = imageURL + mQuestionsList!![questionNumber].id + ".jpg"
         Glide.with(this)
 
             .load(image)
@@ -172,19 +189,19 @@ class PlacementTestActivity : AppCompatActivity() {
         binding.txtProgressBar.text = "$currentPosition" + "/" + binding.progressBar.max
     }
 
-    override fun onBackPressed() {
-        val alertDialog = AlertDialog.Builder(this).create()
-        val dialogBinding = TemplaterAlertDialogBackTestPlacementBinding.inflate(layoutInflater)
-        alertDialog.setView(dialogBinding.root)
-        alertDialog.setCancelable(true)
-        alertDialog.create()
-        alertDialog.show()
-
-        dialogBinding.continueBtn.setOnClickListener {
-            super.onBackPressed()
-        }
-        dialogBinding.cancelBtn.setOnClickListener {
-            alertDialog.dismiss()
-        }
-    }
+//    override fun onBackPressed() {
+//        val alertDialog = AlertDialog.Builder(this).create()
+//        val dialogBinding = TemplaterAlertDialogBackTestPlacementBinding.inflate(layoutInflater)
+//        alertDialog.setView(dialogBinding.root)
+//        alertDialog.setCancelable(true)
+//        alertDialog.create()
+//        alertDialog.show()
+//
+//        dialogBinding.continueBtn.setOnClickListener {
+//            super.onBackPressed()
+//        }
+//        dialogBinding.cancelBtn.setOnClickListener {
+//            alertDialog.dismiss()
+//        }
+//    }
 }

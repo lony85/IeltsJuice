@@ -6,6 +6,7 @@ import android.view.MenuItem
 import androidx.core.content.ContextCompat
 
 import com.ieltsjuice.databinding.ActivityWithoutBottomNavigationBarBinding
+import com.ieltsjuice.placement_test.FragmentPlacementQuestions
 import com.ieltsjuice.self_paced.FragmentOneToOne
 import com.ieltsjuice.self_paced.FragmentSelfPaced
 
@@ -50,7 +51,13 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 )
                 transaction.commit()
             }
-
+            "placementQuestions" ->{
+                val transaction = supportFragmentManager.beginTransaction()
+                transaction.add(R.id.fragment_container_withoutNavigationActivity,
+                    FragmentPlacementQuestions()
+                )
+                transaction.commit()
+            }
 
         }
 

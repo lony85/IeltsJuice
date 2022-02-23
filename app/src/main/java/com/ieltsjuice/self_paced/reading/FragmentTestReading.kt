@@ -164,7 +164,7 @@ class FragmentTestReading : Fragment() {
             val fragment = FragmentTestSpeaking()
             fragment.arguments = bundle
             val replaceTransaction = parentFragmentManager.beginTransaction()
-            replaceTransaction.replace(R.id.fragment_container_reading, fragment)
+            replaceTransaction.replace(R.id.fragment_container_withoutNavigationActivity, fragment)
             replaceTransaction.addToBackStack(null)
             replaceTransaction.commit()
         }

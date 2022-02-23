@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.ieltsjuice.PAGE_NAME_KEY
+import com.ieltsjuice.WithoutBottomNavigationBarActivity
 import com.ieltsjuice.databinding.FragmentPlacementQuizBinding
 
 class FragmentPlacementQuiz : Fragment() {
@@ -25,7 +27,8 @@ class FragmentPlacementQuiz : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonStartPlacementTest.setOnClickListener {
-            val intent = Intent(this.requireActivity(), PlacementTestActivity::class.java)
+            val intent = Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
+            intent.putExtra(PAGE_NAME_KEY,"placementQuestions")
             startActivity(intent)
         }
     }
