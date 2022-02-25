@@ -50,6 +50,7 @@ class FragmentTestReading : Fragment() {
         }
     }
 
+    //Binding Data
     @SuppressLint("SetTextI18n")
     fun bindData(quizTitle: String) {
         when (quizTitle) {
@@ -145,6 +146,7 @@ class FragmentTestReading : Fragment() {
         }
     }
 
+    //Dialog Action
     @SuppressLint("SetTextI18n")
     private fun dialogActions(quizTitle: String, score: String, questions: String) {
         val dialog = AlertDialog.Builder(this.requireActivity()).create()
@@ -180,6 +182,7 @@ class FragmentTestReading : Fragment() {
         }
     }
 
+    //Correct Answers
     @SuppressLint("SetTextI18n")
     private fun correctAnswers(quizTitle: String) {
         when (quizTitle) {

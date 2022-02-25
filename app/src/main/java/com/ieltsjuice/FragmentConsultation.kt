@@ -42,7 +42,7 @@ class FragmentConsultation : Fragment() {
             }
         }
 
-
+        //FAQ
         binding.question1CardView.setOnClickListener {
             // Gets linearlayout
             val layout = binding.questionAnswerDivider1
@@ -165,7 +165,6 @@ class FragmentConsultation : Fragment() {
         }
 
     }
-
     private fun Float.toDips() =
         TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this, resources.displayMetrics)
 }

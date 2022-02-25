@@ -26,19 +26,18 @@ class FragmentSelfPaced:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding.buttonSelfPacedSpeaking.setOnClickListener {
             val transaction = parentFragmentManager.beginTransaction()
             transaction.replace(R.id.fragment_container_withoutNavigationActivity,FragmentSelfPacedSpeaking())
             transaction.addToBackStack(null)
             transaction.commit()
-
         }
         binding.buttonSelfPacedListening.setOnClickListener {
             val transaction = parentFragmentManager.beginTransaction()
             transaction.replace(R.id.fragment_container_withoutNavigationActivity,FragmentSelfPacedListening())
             transaction.addToBackStack(null)
             transaction.commit()
-
         }
         binding.buttonSelfPacedWriting.setOnClickListener {
             val transaction = parentFragmentManager.beginTransaction()
@@ -54,6 +53,7 @@ class FragmentSelfPaced:Fragment() {
             transaction.commit()
 
         }
+
         //FAQ Session
         var result = false
         binding.question1CardView.setOnClickListener {

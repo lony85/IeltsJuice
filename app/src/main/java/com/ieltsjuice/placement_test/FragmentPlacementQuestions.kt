@@ -14,7 +14,6 @@ import com.ieltsjuice.databinding.FragmentPlacementQuestionsBinding
 import com.ieltsjuice.model.PlacementTestQuestions
 import com.ieltsjuice.model.Question
 
-
 const val KEY_testResult = "KEY_testResult"
 
 class FragmentPlacementQuestions : Fragment() {
@@ -61,7 +60,6 @@ class FragmentPlacementQuestions : Fragment() {
         binding.txtProgressBar.text = "$currentPosition" + "/" + binding.progressBar.max
 
         //choosing answers
-
         binding.answerOneCard.setOnClickListener {
             if (currentPosition > 19) {
                 binding.answerFourCard.layoutParams.height = LinearLayout.LayoutParams.WRAP_CONTENT
@@ -167,6 +165,7 @@ class FragmentPlacementQuestions : Fragment() {
 
     }
 
+    //setting Questions
     private fun setQuestion(questionNumber: Int) {
         binding.txtQuestion.text = mQuestionsList!![questionNumber].question
         binding.txtAnswerOne.text = mQuestionsList!![questionNumber].optionOne
@@ -179,29 +178,12 @@ class FragmentPlacementQuestions : Fragment() {
             .load(image)
             .placeholder(R.drawable.ic_loading)
             .into(binding.imgPlacementTest)
-
     }
 
+    //Progress Bar
     @SuppressLint("SetTextI18n")
     fun progressBar(currentPosition: Int) {
         binding.progressBar.progress = currentPosition
         binding.txtProgressBar.text = "$currentPosition" + "/" + binding.progressBar.max
     }
-
-
-//    override fun onBackPressed() {
-//        val alertDialog = AlertDialog.Builder(this).create()
-//        val dialogBinding = TemplaterAlertDialogBackTestPlacementBinding.inflate(layoutInflater)
-//        alertDialog.setView(dialogBinding.root)
-//        alertDialog.setCancelable(true)
-//        alertDialog.create()
-//        alertDialog.show()
-//
-//        dialogBinding.continueBtn.setOnClickListener {
-//            super.onBackPressed()
-//        }
-//        dialogBinding.cancelBtn.setOnClickListener {
-//            alertDialog.dismiss()
-//        }
-//    }
 }

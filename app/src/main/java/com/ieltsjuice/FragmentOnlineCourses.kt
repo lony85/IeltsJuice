@@ -35,7 +35,6 @@ class FragmentOnlineCourses : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         binding.buttonConsultation.setOnClickListener {
             val intent = Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
             intent.putExtra(PAGE_NAME_KEY,"Consultation")

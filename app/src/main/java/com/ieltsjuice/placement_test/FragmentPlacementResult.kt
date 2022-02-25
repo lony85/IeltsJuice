@@ -27,6 +27,7 @@ class FragmentPlacementResult:Fragment() {
 
         val bundle = arguments
 
+
         when (bundle?.getInt(KEY_testResult)) {
             in 0..18 -> {
                 binding.txtResultTitle.text = getString(R.string.txtTitleA1)

@@ -1,40 +1,34 @@
 package com.ieltsjuice
 
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
-
 import androidx.fragment.app.Fragment
-
+import com.ieltsjuice.about_us.FragmentAboutUs
 import com.ieltsjuice.databinding.ActivityMainBinding
 import com.ieltsjuice.placement_test.FragmentPlacementQuiz
 
-
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
-    private val fragmentHome = FragmentHome()
-    private val fragmentAboutUs = com.ieltsjuice.about_us.FragmentAboutUs()
-    private val fragmentOnlineCourses = FragmentOnlineCourses()
-    private val fragmentPlacementQuiz = FragmentPlacementQuiz()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        replaceFragment(fragmentHome)
+        replaceFragment(FragmentHome()) //First Fragment
 
+        //Bottom Navigation Guide
         binding.bottomNavigation.setOnItemSelectedListener  {
             when (it.itemId){
-                R.id.ic_fragment_home -> replaceFragment(fragmentHome)
-                R.id.ic_fragment_aboutUs -> replaceFragment(fragmentAboutUs)
-                R.id.ic_fragment_studyOnline -> replaceFragment(fragmentOnlineCourses)
-                R.id.ic_fragment_placement_quiz -> replaceFragment(fragmentPlacementQuiz)
+                R.id.ic_fragment_home -> replaceFragment(FragmentHome())
+                R.id.ic_fragment_aboutUs -> replaceFragment(FragmentAboutUs())
+                R.id.ic_fragment_studyOnline -> replaceFragment(FragmentOnlineCourses())
+                R.id.ic_fragment_placement_quiz -> replaceFragment(FragmentPlacementQuiz())
             }
             true
         }
-            binding.bottomNavigation.setOnItemReselectedListener {  }  //Empty tag
+            binding.bottomNavigation.setOnItemReselectedListener {  }  //Leave it - Empty tag
         
        // Day Night Switch
         binding.DayNightSwitch.setOnCheckedChangeListener { _, isChecked ->
@@ -45,6 +39,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun replaceFragment(fragment: Fragment){
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragment_container,fragment)

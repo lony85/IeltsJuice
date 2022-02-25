@@ -38,7 +38,7 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        //Register buttons
         binding.buttonSpeakingCourseRegister.setOnClickListener {
             val dialog = AlertDialog.Builder(this.requireActivity()).create()
             val dialogBinding = TemplateRegisterAlertDialogBinding.inflate(layoutInflater)
@@ -70,7 +70,6 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
                 dialog.dismiss()
             }
         }
-
         binding.buttonSpeakingCourseRegisterIRAN.setOnClickListener {
             val webUri = Uri.parse("https://forush.co/18774/918823/")
             val iWeb = Intent(Intent.ACTION_VIEW, webUri)
@@ -87,7 +86,6 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
             }
         }
 
-
         //Choose Courses Content
         val courseContent = listOf(
             "Introduction",
@@ -98,8 +96,8 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
             "Speaking Practice"
         )
 
+        //Drop down menu Implementation
         val adapter = ArrayAdapter(this.requireActivity(), R.layout.drop_down_item, courseContent)
-
         (binding.dropdownMenu.editText as AutoCompleteTextView).setAdapter(adapter)
 
         (binding.dropdownMenu.editText as AutoCompleteTextView).addTextChangedListener {
@@ -185,12 +183,10 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
 
     }
 
+    //implement "selected view" fun that are coming from SelfPacedAdapter
     override fun selectedView(Course: SelfPacedCourses, position: Int) {
         if (binding.dropdownMenu.editText!!.text.toString() == "Introduction") {
 
-//            val intent = Intent(this.requireActivity(),IntroductionActivity::class.java)
-//            intent.putExtra(KEY_SelfPacedCourseMainTitle,Course.Title)
-//            startActivity(intent)
             val bundle = Bundle()
             bundle.putString(KEY_SelfPacedCourseMainTitle, Course.Title)
             when (Course.Title) {
@@ -225,6 +221,7 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
         }
     }
 
+    //If user choose Course from drop down menu
     fun course(Course: String) {
         val bundle = Bundle()
         bundle.putString(KEY_SelfPacedCourseMainTitle, Course)
@@ -237,6 +234,7 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
         replaceTransaction.commit()
     }
 
+    //If user choose Quiz from drop down menu
     private fun quiz(quiz: String) {
         val bundle = Bundle()
         bundle.putString(KEY_SelfPacedCourseMainTitle, quiz)

@@ -33,17 +33,13 @@ class FragmentTestListening : Fragment() {
         binding = FragmentTestListeningBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
         val bundle = arguments
         if (bundle != null) {
             val quizTitle = bundle.getString(KEY_SelfPacedCourseMainTitle)
-
             bindData(quizTitle!!)
-
             //set height of a View
             when (quizTitle) {
                 "L.1.1.About the Listening Test - Quiz" -> {
@@ -266,6 +262,7 @@ class FragmentTestListening : Fragment() {
         }
     }
 
+    //Binding Data
     @SuppressLint("SetTextI18n", "ShowToast")
     fun bindData(quizTitle: String) {
         when (quizTitle) {
@@ -676,6 +673,7 @@ class FragmentTestListening : Fragment() {
         }
     }
 
+    //Audio Player
     private fun initialiseSeekBar(Que: String) {
         when (Que) {
             "Que9" -> {
@@ -738,7 +736,6 @@ class FragmentTestListening : Fragment() {
         }
 
     }
-
     private fun seekBarChangeListener(Que: String) {
         when (Que) {
             "Que9" -> {
@@ -808,6 +805,7 @@ class FragmentTestListening : Fragment() {
 
     }
 
+    //Dialog Action
     @SuppressLint("SetTextI18n")
     private fun dialogActions(quizTitle: String, score: String, questions: String) {
         val dialog = AlertDialog.Builder(this.requireActivity()).create()
@@ -843,7 +841,8 @@ class FragmentTestListening : Fragment() {
         }
     }
 
-    @SuppressLint("SetTextI18n")
+    //Correct Answers
+     @SuppressLint("SetTextI18n")
     private fun correctAnswers(quizTitle: String) {
         when (quizTitle) {
             "L.1.1.About the Listening Test - Quiz" -> {

@@ -38,16 +38,14 @@ class FragmentSelfPacedCourseDetail : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //Receive Data from FragmentSelfPaced... (speaking,listening,writing,reading)
         val bundle = arguments
         if (bundle != null) {
             val courseTitle = bundle.getString(KEY_SelfPacedCourseMainTitle)
             bindData(courseTitle!!)
-
         }
 
-
         // videoPlayer
-
         mediaController = MediaController(this.requireActivity())
         val url = Uri.parse(videoURL)
         if (NetworkChecker(this.requireActivity()).isInternetConnected) {
@@ -85,26 +83,23 @@ class FragmentSelfPacedCourseDetail : Fragment() {
         }
         mediaController.show()
     }
-
-    //    }
     override fun onPause() {
         super.onPause()
         binding.videoView.pause()
         playBackPosition = binding.videoView.currentPosition
-
     }
-
     override fun onStop() {
         binding.videoView.stopPlayback()
         super.onStop()
     }
 
+
+    //Binding Data
     @SuppressLint("SetTextI18n", "ResourceType")
     fun bindData(courseTitle: String) {
         binding.txtSelfPacedCourseMainTitle.text = courseTitle
 
         when (courseTitle) {
-
             // Speaking
             "1.1 Speaking Test Layout" -> {
                 binding.txtSelfPacedCourseTitle1.text = "Before you watch"
@@ -276,7 +271,6 @@ class FragmentSelfPacedCourseDetail : Fragment() {
 
             }
 
-
             // Reading
             "1.1 What’s IELTS reading test like? (About the reading test)" -> {
                 binding.txtSelfPacedCourseTitle1.text = "Before you watch"
@@ -302,8 +296,6 @@ class FragmentSelfPacedCourseDetail : Fragment() {
                 binding.videoViewPreviewImg.setImageDrawable(ContextCompat.getDrawable(this.requireActivity(),R.drawable.self_paced_reading_1_2))
 
             }
-
-
         }
     }
 }

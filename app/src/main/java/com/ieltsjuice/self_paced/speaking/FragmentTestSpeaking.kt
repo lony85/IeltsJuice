@@ -264,6 +264,7 @@ class FragmentTestSpeaking : Fragment() {
         }
     }
 
+    //Correct Answers
     @SuppressLint("SetTextI18n")
     private fun correctAnswers(quizTitle: String) {
         when (quizTitle) {

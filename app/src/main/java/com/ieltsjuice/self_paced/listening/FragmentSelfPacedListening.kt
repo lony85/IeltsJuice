@@ -215,6 +215,7 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
 
     }
 
+    //implement "selected view" fun that are coming from SelfPacedAdapter
     override fun selectedView(Course: SelfPacedCourses, position: Int) {
         if (binding.dropdownMenu.editText!!.text.toString() == "Introduction") {
 
@@ -259,6 +260,7 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
         }
     }
 
+    //If user choose Course from drop down menu
     fun course(Course: String) {
         val bundle = Bundle()
         bundle.putString(KEY_SelfPacedCourseMainTitle, Course)
@@ -271,6 +273,7 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
         replaceTransaction.commit()
     }
 
+    //If user choose Quiz from drop down menu
     private fun quiz(quiz: String) {
         val bundle = Bundle()
         bundle.putString(KEY_SelfPacedCourseMainTitle, quiz)

@@ -88,6 +88,7 @@ class FragmentTestWriting:Fragment() {
         }
     }
 
+    //Binding Data
     @SuppressLint("SetTextI18n")
     fun bindData(quizTitle: String) {
         when (quizTitle) {

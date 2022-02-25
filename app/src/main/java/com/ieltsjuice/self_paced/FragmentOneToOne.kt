@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.ieltsjuice.databinding.FragmentOneToOneBinding
 
-
 class FragmentOneToOne:Fragment() {
     lateinit var binding: FragmentOneToOneBinding
     override fun onCreateView(
@@ -24,6 +23,7 @@ class FragmentOneToOne:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding.buttonOnetoOneConsultation.setOnClickListener {
             val webUri = Uri.parse("https://ieltsjuice.com/services/consultation/")
             val iWeb = Intent(Intent.ACTION_VIEW, webUri)
@@ -69,6 +69,5 @@ class FragmentOneToOne:Fragment() {
                 )
             }
         }
-
     }
 }

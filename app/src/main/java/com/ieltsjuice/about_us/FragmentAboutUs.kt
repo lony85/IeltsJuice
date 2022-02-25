@@ -23,6 +23,7 @@ const val KEY_teacherLinkedin = "KEY_teacherLinkedin"
 const val KEY_teacherFacebook = "KEY_teacherFacebook"
 const val KEY_teacherSkype = "KEY_teacherSkype"
 const val KEY_teacherWebpage = "KEY_teacherWebpage"
+const val KEY_teacherImage = "KEY_teacherImage"
 
 class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
     lateinit var binding: FragmentAboutUsBinding
@@ -155,13 +156,12 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
 
 
     }
-
     override fun moreInfoBtn(teacher: Teacher, position: Int) {
         val bundle = Bundle()
         bundle.putString(KEY_teacherName, teacher.teacherName)
         bundle.putString(KEY_teacherTitle, teacher.title)
         bundle.putString(KEY_teacherDesc, teacher.description)
-        bundle.putString("KEY_teacherImage", teacher.title)
+        bundle.putString(KEY_teacherImage, teacher.title)
         bundle.putString(KEY_teacherFacebook, teacher.facebook)
         bundle.putString(KEY_teacherLinkedin, teacher.linkedin)
         bundle.putString(KEY_teacherInstagram, teacher.instagram)

@@ -1,11 +1,12 @@
 package com.ieltsjuice
 
+import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.core.content.ContextCompat
-
 import com.ieltsjuice.databinding.ActivityWithoutBottomNavigationBarBinding
+import com.ieltsjuice.databinding.TemplaterAlertDialogBackTestPlacementBinding
 import com.ieltsjuice.placement_test.FragmentPlacementQuestions
 import com.ieltsjuice.self_paced.FragmentOneToOne
 import com.ieltsjuice.self_paced.FragmentSelfPaced
@@ -17,12 +18,13 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
         binding = ActivityWithoutBottomNavigationBarBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Fill the fragment_container of current Activity
         when (intent.getStringExtra(PAGE_NAME_KEY)){
             "calculator" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.add(R.id.fragment_container_withoutNavigationActivity,FragmentScoreCalculator())
                 transaction.commit()
-                binding.collapsingBarMain.title = "IELTS Score Calculator" //todo set toolbar names
+                binding.collapsingBarMain.title = "IELTS Score Calculator" // set toolbar names
 
             }
             "Correction" ->{
@@ -31,7 +33,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                     FragmentCorrection()
                 )
                 transaction.commit()
-                binding.collapsingBarMain.title = "IELTS Writing Correction" //todo set toolbar names
+                binding.collapsingBarMain.title = "IELTS Writing Correction" // set toolbar names
 
             }
             "Consultation" ->{
@@ -40,7 +42,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                     FragmentConsultation()
                 )
                 transaction.commit()
-                binding.collapsingBarMain.title = "Consultation" //todo set toolbar names
+                binding.collapsingBarMain.title = "Consultation" // set toolbar names
             }
             "OneToOne" ->{
                 val transaction = supportFragmentManager.beginTransaction()
@@ -48,7 +50,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                     FragmentOneToOne()
                 )
                 transaction.commit()
-                binding.collapsingBarMain.title = "Online Private Courses" //todo set toolbar names
+                binding.collapsingBarMain.title = "Online Private Courses" // set toolbar names
 
             }
             "selfPaced" ->{
@@ -57,7 +59,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                     FragmentSelfPaced()
                 )
                 transaction.commit()
-                binding.collapsingBarMain.title = "self-Paced Courses" //todo set toolbar names
+                binding.collapsingBarMain.title = "self-Paced Courses" // set toolbar names
 
             }
             "placementQuestions" ->{
@@ -66,11 +68,9 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                     FragmentPlacementQuestions()
                 )
                 transaction.commit()
-                binding.collapsingBarMain.title = "Test Your English" //todo set toolbar names
+                binding.collapsingBarMain.title = "Test Your English" // set toolbar names
             }
-
         }
-
 
         // Toolbar
         setSupportActionBar(binding.toolbarMain)
@@ -89,5 +89,27 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
             onBackPressed()
         }
         return true
+    }
+
+    override fun onBackPressed() {
+
+        if (intent.getStringExtra(PAGE_NAME_KEY) == "placementQuestions"){    // To avoid loosing test process , User must confirm exit button
+            val alertDialog = AlertDialog.Builder(this).create()
+        val dialogBinding = TemplaterAlertDialogBackTestPlacementBinding.inflate(layoutInflater)
+        alertDialog.setView(dialogBinding.root)
+        alertDialog.setCancelable(true)
+        alertDialog.create()
+        alertDialog.show()
+
+        dialogBinding.continueBtn.setOnClickListener {
+            super.onBackPressed()
+        }
+        dialogBinding.cancelBtn.setOnClickListener {
+            alertDialog.dismiss()
+        }
+        }else{
+            super.onBackPressed() // in any page except placement test
+
+        }
     }
 }
