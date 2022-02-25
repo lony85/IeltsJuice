@@ -266,7 +266,7 @@ class FragmentTestListening : Fragment() {
         }
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "ShowToast")
     fun bindData(quizTitle: String) {
         when (quizTitle) {
             "L.1.1.About the Listening Test - Quiz" -> {

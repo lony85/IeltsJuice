@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="?attr/colorTertiary"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".OneToOneActivity">
+    android:layout_height="match_parent">
 
     <androidx.core.widget.NestedScrollView
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
@@ -29,6 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Online Private Courses"
+                tools:ignore="HardcodedText"
                 android:textColor="?attr/colorSecondaryVariant"
                 android:textSize="@dimen/textSizeTitle" />
 
@@ -36,6 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="IELTS Prep | General English | Business English"
+                tools:ignore="HardcodedText"
                 android:textSize="@dimen/textSizeDate" />
 
             <TextView
@@ -44,7 +45,9 @@
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
                 android:text="Why go to a language school when you can bring your teacher to the comfort of your home or office anywhere in the world."
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:ignore="HardcodedText"
+                tools:targetApi="o" />
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="250dp"
@@ -57,13 +60,15 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/img_one_to_one" />
+                    android:src="@drawable/img_one_to_one"
+                    tools:ignore="ContentDescription" />
             </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="One-to-One Classes"
+                tools:ignore="HardcodedText"
                 android:textColor="?attr/colorSecondaryVariant"
                 android:textSize="@dimen/textSizeTitle" />
 
@@ -78,6 +83,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:text="10 Sessions"
+                    tools:ignore="HardcodedText"
                     android:textSize="@dimen/textSizeDescription" />
 
                 <TextView
@@ -86,6 +92,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:text=": $199 USD"
+                    tools:ignore="HardcodedText"
                     android:textSize="@dimen/textSizeDescription" />
 
                 <TextView
@@ -94,6 +101,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:text="(Save ~ 14%)"
+                    tools:ignore="HardcodedText"
                     android:textColor="@color/Green"
                     android:textSize="13sp"
                     android:textStyle="bold" />
@@ -104,6 +112,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Session by Session : $23 USD"
+                tools:ignore="HardcodedText"
                 android:textSize="@dimen/textSizeDescription" />
 
             <TextView
@@ -111,6 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="✓ Private teacher on Skype/Zoom"
+                tools:ignore="HardcodedText"
                 android:textSize="@dimen/textSizeDescription" />
 
             <TextView
@@ -118,14 +128,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="✓ One-hour lessons made just for you"
+                tools:ignore="HardcodedText"
                 android:textSize="@dimen/textSizeDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="✓ Get the class recording after each lesson
-"
+                android:text="✓ Get the class recording after each lesson"
+                tools:ignore="HardcodedText"
                 android:textSize="@dimen/textSizeDescription" />
 
             <TextView
@@ -133,6 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="✓ 24/7 premium support"
+                tools:ignore="HardcodedText"
                 android:textSize="@dimen/textSizeDescription" />
 
             <com.google.android.material.button.MaterialButton
@@ -143,6 +155,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
                 android:text="Register Now"
+                tools:ignore="HardcodedText"
                 android:textColor="?attr/colorOnPrimary"
                 android:textSize="10sp"
                 app:backgroundTint="?attr/colorPrimary"
@@ -161,8 +174,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:justificationMode="inter_word"
+                tools:ignore="HardcodedText"
                 android:text="After registration (session by session or 10-session packages), we will contact you to arrange the days and times of your classes based on your preferences and tutor availability. Need a free consultation?"
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:targetApi="o" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_OnetoOne_consultation"
@@ -173,6 +188,7 @@
                 android:layout_gravity="bottom|end"
                 android:layout_marginEnd="10dp"
                 android:text="Get Consultation "
+                tools:ignore="HardcodedText"
                 android:textColor="?attr/colorSecondaryVariant"
                 android:textSize="10sp"
                 app:cornerRadius="20dp"
@@ -193,6 +209,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText"
                     android:text="Live in IRAN?" />
 
                 <LinearLayout
@@ -203,6 +220,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText"
                         android:text="To register at a discounted price , " />
 
                     <com.google.android.material.button.MaterialButton
@@ -212,6 +230,7 @@
                         android:layout_height="40dp"
                         android:layout_marginEnd="16dp"
                         android:text="Click here"
+                        tools:ignore="HardcodedText"
                         android:textColor="?attr/colorSecondaryVariant"
                         android:textSize="10sp"
                         app:cornerRadius="20dp"
@@ -224,11 +243,6 @@
 
 
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal" />
 
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"

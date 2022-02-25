@@ -91,6 +91,8 @@ class FragmentOnlineCourses : Fragment() {
         binding.videoView.setOnInfoListener { _, what, _ ->   //player & extras renamed to _
             if (what == MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START)
                 binding.videoViewProgressBar.visibility = View.INVISIBLE
+            binding.videoViewPlayButton.visibility = View.GONE
+            binding.videoViewPreviewImg.visibility = View.GONE
             true
         }
         mediaController.show()
