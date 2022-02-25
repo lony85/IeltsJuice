@@ -1,9 +1,7 @@
 package com.ieltsjuice.placement_test
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
-import android.text.TextUtils.replace
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -33,6 +31,7 @@ class FragmentPlacementQuestions : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //making question list
@@ -188,6 +187,7 @@ class FragmentPlacementQuestions : Fragment() {
         binding.progressBar.progress = currentPosition
         binding.txtProgressBar.text = "$currentPosition" + "/" + binding.progressBar.max
     }
+
 
 //    override fun onBackPressed() {
 //        val alertDialog = AlertDialog.Builder(this).create()

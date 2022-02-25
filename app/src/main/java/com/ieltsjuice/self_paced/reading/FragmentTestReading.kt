@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment
 import com.ieltsjuice.R
 import com.ieltsjuice.databinding.FragmentTestReadingBinding
 import com.ieltsjuice.databinding.TemplateAlertDialogBinding
-import com.ieltsjuice.self_paced.speaking.FragmentSelfPacedSpeaking
 import com.ieltsjuice.self_paced.speaking.FragmentTestSpeaking
 import com.ieltsjuice.self_paced.speaking.KEY_SelfPacedCourseMainTitle
 

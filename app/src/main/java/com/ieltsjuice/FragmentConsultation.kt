@@ -23,7 +23,7 @@ class FragmentConsultation : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var result: Boolean = false
+        var result = false
 
 
         binding.buttonConsultation.setOnClickListener {

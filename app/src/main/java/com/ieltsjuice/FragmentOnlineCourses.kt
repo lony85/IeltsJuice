@@ -19,7 +19,6 @@ class FragmentOnlineCourses : Fragment() {
 
     private var playBackPosition = 0
     lateinit var mediaController: MediaController
-    private var videoURL: String? = null
 
 
     lateinit var binding: FragmentOnlineCourcesBinding

@@ -13,32 +13,31 @@ import com.ieltsjuice.placement_test.FragmentPlacementQuiz
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
-    private val FragmentHome = FragmentHome()
-    private val FragmentAboutUs = com.ieltsjuice.about_us.FragmentAboutUs()
-    private val FragmentOnlineCourses = FragmentOnlineCourses()
-    private val FragmentPlacementQuiz = FragmentPlacementQuiz()
+    private val fragmentHome = FragmentHome()
+    private val fragmentAboutUs = com.ieltsjuice.about_us.FragmentAboutUs()
+    private val fragmentOnlineCourses = FragmentOnlineCourses()
+    private val fragmentPlacementQuiz = FragmentPlacementQuiz()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        replaceFragment(fragmentHome)
 
-        replaceFragment(FragmentHome)
-
-        binding.bottomNavigation.setOnNavigationItemSelectedListener {
+        binding.bottomNavigation.setOnItemSelectedListener  {
             when (it.itemId){
-                R.id.ic_fragment_home -> replaceFragment(FragmentHome)
-                R.id.ic_fragment_aboutUs -> replaceFragment(FragmentAboutUs)
-                R.id.ic_fragment_studyOnline -> replaceFragment(FragmentOnlineCourses)
-                R.id.ic_fragment_placement_quiz -> replaceFragment(FragmentPlacementQuiz)
+                R.id.ic_fragment_home -> replaceFragment(fragmentHome)
+                R.id.ic_fragment_aboutUs -> replaceFragment(fragmentAboutUs)
+                R.id.ic_fragment_studyOnline -> replaceFragment(fragmentOnlineCourses)
+                R.id.ic_fragment_placement_quiz -> replaceFragment(fragmentPlacementQuiz)
             }
             true
         }
             binding.bottomNavigation.setOnItemReselectedListener {  }  //Empty tag
         
        // Day Night Switch
-        binding.DayNightSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
+        binding.DayNightSwitch.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked){
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             }else{

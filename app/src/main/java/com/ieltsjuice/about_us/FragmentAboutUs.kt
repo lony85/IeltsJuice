@@ -36,7 +36,6 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
         return binding.root
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -46,7 +45,6 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
         val layoutManager = LinearLayoutManager(this.requireActivity())
         binding.aboutUsRecyclerView.layoutManager = layoutManager
         binding.aboutUsRecyclerView.setHasFixedSize(true)
-
 
         //Social Media
         binding.skypeBtn.setOnClickListener {

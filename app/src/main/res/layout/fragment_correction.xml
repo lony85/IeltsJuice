@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorTertiary"
-    android:orientation="vertical"
-    tools:context=".ConsultationActivity">
+    >
 
 
     <androidx.core.widget.NestedScrollView
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,35 +17,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBar">
 
-
         <LinearLayout
-
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Online Consultation"
-                android:textColor="?attr/colorSecondaryVariant"
-                android:textSize="@dimen/textSizeTitle"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:justificationMode="inter_word"
-                android:text="Face-to-face consultation with experienced English teachers and IELTS experts certified by Cambridge University and trained by British Council and IDP Australia over Skype (Free for a limited time)."
-                android:textSize="@dimen/textSizeDescription" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/parent">
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:id="@+id/materialCardView2"
+                android:layout_width="350dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="5dp"
                 app:strokeColor="?attr/colorPrimary"
@@ -57,10 +40,9 @@
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/img_online_consultation" />
-
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/img_writing_correction" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -68,542 +50,176 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Consultation"
+                android:text="Writing Correction"
                 android:textColor="?attr/colorSecondaryVariant"
                 android:textSize="@dimen/textSizeTitle"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
+                tools:layout_editor_absoluteX="280dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="2dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/strike_text"
-                    android:textSize="@dimen/textSizeDescription" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="free*"
-                    android:textColor="@color/Green"
-                    android:textSize="@dimen/textSizeDescription"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="* free for a limited time"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text=" Normal (in 72 hrs) : $6.90 USD *"
+                android:textSize="@dimen/textSizeDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text=" Express (in 24 hrs) : $9.90 USD *"
+                android:textSize="@dimen/textSizeDescription" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="*per writing task"
                 android:textSize="@dimen/textSizeDate" />
 
             <TextView
+                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="10dp"
                 android:justificationMode="inter_word"
-                android:text="Success in English learning and getting a great score in IELTS begins with reliable advice. In a 20-minute consultation, you will:"
+                android:text="Send us your IELTS writing for correction and receive expert feedback. We mark your errors, suggest changes and offer advice on how to improve your writing based on IELTS assessment criteria."
                 android:textSize="@dimen/textSizeDescription" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text=" • get to know your exact English level"
-                android:textSize="@dimen/textSizeDescription" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" • be introduced to recommended learning materials"
-                android:textSize="@dimen/textSizeDescription" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" • receive a personalized study plan"
-                android:textSize="@dimen/textSizeDescription" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" • learn about available study methods"
-                android:textSize="@dimen/textSizeDescription" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:justificationMode="inter_word"
-                android:text="All you need to do is book a consultation and one of our experienced English teachers will show up on Skype to meet you."
-                android:textSize="@dimen/textSizeDescription" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/buttonConsultation"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_gravity="end"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="10dp"
-                android:text="Schedule time"
-                android:textColor="?attr/colorOnPrimary"
-                android:textSize="10sp"
-                app:backgroundTint="?attr/colorPrimary"
-                app:cornerRadius="20dp" />
-
-            <com.google.android.material.divider.MaterialDivider
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Frequently Asked Questions"
-                android:textColor="?attr/colorSecondaryVariant"
-                android:textSize="@dimen/textSizeTitle"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Here are our answers to some of your questions about our online consultation service at IELTS Juice Online Academy" />
-
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical">
+                android:gravity="end"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
 
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/question1_cardView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="5dp"
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_correction_contactUs"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Have a question?"
+                    android:textColor="?attr/colorSecondaryVariant"
+                    android:textSize="10sp"
+                    app:cornerRadius="20dp"
                     app:rippleColor="?attr/colorSecondary"
                     app:strokeColor="?attr/colorPrimary"
-                    app:strokeWidth="1dp">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center|start"
-                        android:layout_marginStart="10dp"
-                        android:src="@drawable/ic_question_mark" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="40dp"
-                            android:orientation="horizontal">
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginTop="1dp"
-                                android:layout_marginEnd="10dp"
-                                android:text="@string/Q_consultation_01"
-                                android:textSize="18sp" />
-
-
-                        </LinearLayout>
-
-                        <com.google.android.material.divider.MaterialDivider
-                            android:id="@+id/questionAnswerDivider1"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_marginStart="45dp"
-                            android:layout_marginEnd="40dp" />
-
-                        <TextView
-                            android:id="@+id/txtA1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="60dp"
-                            android:layout_marginEnd="40dp"
-                            android:layout_marginBottom="2dp"
-                            android:justificationMode="inter_word"
-                            android:textSize="0dp" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/icArrowQ1"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center|end"
-                        android:src="@drawable/ic_arrow_right" />
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/question2_cardView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="5dp"
-                    app:rippleColor="?attr/colorSecondary"
-                    app:strokeColor="?attr/colorPrimary"
-                    app:strokeWidth="1dp">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center|start"
-                        android:layout_marginStart="10dp"
-                        android:src="@drawable/ic_question_mark" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="40dp"
-                            android:orientation="horizontal">
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginTop="1dp"
-                                android:layout_marginEnd="10dp"
-                                android:text="@string/Q_consultation_02"
-                                android:textSize="18sp" />
-
-
-                        </LinearLayout>
-
-                        <com.google.android.material.divider.MaterialDivider
-                            android:id="@+id/questionAnswerDivider2"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_marginStart="45dp"
-                            android:layout_marginEnd="40dp" />
-
-                        <TextView
-                            android:id="@+id/txtA2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="60dp"
-                            android:layout_marginEnd="40dp"
-                            android:layout_marginBottom="2dp"
-                            android:justificationMode="inter_word"
-                            android:textSize="0dp" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/icArrowQ2"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center|end"
-                        android:src="@drawable/ic_arrow_right" />
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/question3_cardView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="5dp"
-                    app:rippleColor="?attr/colorSecondary"
-                    app:strokeColor="?attr/colorPrimary"
-                    app:strokeWidth="1dp">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center|start"
-                        android:layout_marginStart="10dp"
-                        android:src="@drawable/ic_question_mark" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="40dp"
-                            android:orientation="horizontal">
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginTop="1dp"
-                                android:layout_marginEnd="10dp"
-                                android:text="@string/Q_consultation_03"
-                                android:textSize="18sp" />
-
-
-                        </LinearLayout>
-
-                        <com.google.android.material.divider.MaterialDivider
-                            android:id="@+id/questionAnswerDivider3"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_marginStart="45dp"
-                            android:layout_marginEnd="40dp" />
-
-                        <TextView
-                            android:id="@+id/txtA3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="60dp"
-                            android:layout_marginEnd="40dp"
-                            android:layout_marginBottom="2dp"
-                            android:justificationMode="inter_word"
-                            android:textSize="0dp" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/icArrowQ3"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center|end"
-                        android:src="@drawable/ic_arrow_right" />
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/question4_cardView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="5dp"
-                    app:rippleColor="?attr/colorSecondary"
-                    app:strokeColor="?attr/colorPrimary"
-                    app:strokeWidth="1dp">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center|start"
-                        android:layout_marginStart="10dp"
-                        android:src="@drawable/ic_question_mark" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="40dp"
-                            android:orientation="horizontal">
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginTop="1dp"
-                                android:layout_marginEnd="10dp"
-                                android:text="@string/Q_consultation_04"
-                                android:textSize="18sp" />
-
-
-                        </LinearLayout>
-
-                        <com.google.android.material.divider.MaterialDivider
-                            android:id="@+id/questionAnswerDivider4"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_marginStart="45dp"
-                            android:layout_marginEnd="40dp" />
-
-                        <TextView
-                            android:id="@+id/txtA4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="60dp"
-                            android:layout_marginEnd="40dp"
-                            android:layout_marginBottom="2dp"
-                            android:justificationMode="inter_word"
-                            android:textSize="0dp" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/icArrowQ4"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center|end"
-                        android:src="@drawable/ic_arrow_right" />
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/question5_cardView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="5dp"
-                    app:rippleColor="?attr/colorSecondary"
-                    app:strokeColor="?attr/colorPrimary"
-                    app:strokeWidth="1dp">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center|start"
-                        android:layout_marginStart="10dp"
-                        android:src="@drawable/ic_question_mark" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="40dp"
-                            android:orientation="horizontal">
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginTop="1dp"
-                                android:layout_marginEnd="10dp"
-                                android:text="@string/Q_consultation_05"
-                                android:textSize="18sp" />
-
-
-                        </LinearLayout>
-
-                        <com.google.android.material.divider.MaterialDivider
-                            android:id="@+id/questionAnswerDivider5"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_marginStart="45dp"
-                            android:layout_marginEnd="40dp" />
-
-                        <TextView
-                            android:id="@+id/txtA5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="60dp"
-                            android:layout_marginEnd="40dp"
-                            android:layout_marginBottom="2dp"
-                            android:justificationMode="inter_word"
-                            android:textSize="0dp" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/icArrowQ5"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center|end"
-                        android:src="@drawable/ic_arrow_right" />
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/question6_cardView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="10dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="5dp"
-                    app:rippleColor="?attr/colorSecondary"
-                    app:strokeColor="?attr/colorPrimary"
-                    app:strokeWidth="1dp">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center|start"
-                        android:layout_marginStart="10dp"
-                        android:src="@drawable/ic_question_mark" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="40dp"
-                            android:orientation="horizontal">
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginTop="1dp"
-                                android:layout_marginEnd="10dp"
-                                android:text="@string/Q_consultation_06"
-                                android:textSize="18sp" />
-
-
-                        </LinearLayout>
-
-                        <com.google.android.material.divider.MaterialDivider
-                            android:id="@+id/questionAnswerDivider6"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_marginStart="45dp"
-                            android:layout_marginEnd="40dp" />
-
-                        <TextView
-                            android:id="@+id/txtA6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="60dp"
-                            android:layout_marginEnd="40dp"
-                            android:layout_marginBottom="2dp"
-                            android:justificationMode="inter_word"
-                            android:textSize="0dp" />
-                    </LinearLayout>
-
-                    <ImageView
-                        android:id="@+id/icArrowQ6"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center|end"
-                        android:src="@drawable/ic_arrow_right" />
-                </com.google.android.material.card.MaterialCardView>
-
+                    app:strokeWidth="1dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_correction_sendNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Send Now"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="10sp"
+                    app:backgroundTint="?attr/colorPrimary"
+                    app:cornerRadius="20dp"/>
 
             </LinearLayout>
 
 
-        </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp" />
 
+            <!--            <com.google.android.material.card.MaterialCardView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                app:strokeWidth="0dp"-->
+            <!--                android:layout_marginBottom="40dp">-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Live in IRAN?" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To pay a discounted price , " />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_correction_IranDiscount"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="Click here"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textSize="10sp"
+                        app:cornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/button_main_courses"
+                        app:layout_constraintEnd_toStartOf="@+id/button_main_courses"
+                        app:layout_constraintTop_toTopOf="@+id/button_main_courses"
+                        app:rippleColor="?attr/colorSecondary"
+                        app:strokeColor="?attr/colorPrimary"
+                        app:strokeWidth="1dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="For the express service , " />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_correction_IranExpress"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="16dp"
+
+                        android:text="Click here"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textSize="10sp"
+                        app:cornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/button_main_courses"
+                        app:layout_constraintEnd_toStartOf="@+id/button_main_courses"
+                        app:layout_constraintTop_toTopOf="@+id/button_main_courses"
+                        app:rippleColor="?attr/colorSecondary"
+                        app:strokeColor="?attr/colorPrimary"
+                        app:strokeWidth="1dp" />
+
+
+                </LinearLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp" />
+            </LinearLayout>
+
+            <!--            </com.google.android.material.card.MaterialCardView>-->
+
+
+        </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

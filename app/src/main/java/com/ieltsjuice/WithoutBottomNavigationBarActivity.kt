@@ -22,6 +22,8 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.add(R.id.fragment_container_withoutNavigationActivity,FragmentScoreCalculator())
                 transaction.commit()
+                binding.collapsingBarMain.title = "IELTS Score Calculator" //todo set toolbar names
+
             }
             "Correction" ->{
                 val transaction = supportFragmentManager.beginTransaction()
@@ -29,6 +31,8 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                     FragmentCorrection()
                 )
                 transaction.commit()
+                binding.collapsingBarMain.title = "IELTS Writing Correction" //todo set toolbar names
+
             }
             "Consultation" ->{
                 val transaction = supportFragmentManager.beginTransaction()
@@ -36,6 +40,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                     FragmentConsultation()
                 )
                 transaction.commit()
+                binding.collapsingBarMain.title = "Consultation" //todo set toolbar names
             }
             "OneToOne" ->{
                 val transaction = supportFragmentManager.beginTransaction()
@@ -43,6 +48,8 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                     FragmentOneToOne()
                 )
                 transaction.commit()
+                binding.collapsingBarMain.title = "Online Private Courses" //todo set toolbar names
+
             }
             "selfPaced" ->{
                 val transaction = supportFragmentManager.beginTransaction()
@@ -50,6 +57,8 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                     FragmentSelfPaced()
                 )
                 transaction.commit()
+                binding.collapsingBarMain.title = "self-Paced Courses" //todo set toolbar names
+
             }
             "placementQuestions" ->{
                 val transaction = supportFragmentManager.beginTransaction()
@@ -57,6 +66,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                     FragmentPlacementQuestions()
                 )
                 transaction.commit()
+                binding.collapsingBarMain.title = "Test Your English" //todo set toolbar names
             }
 
         }
@@ -70,7 +80,6 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 android.R.color.transparent
             )
         )
-        binding.collapsingBarMain.title = "IELTS Score Calculator" //todo set toolbar names
         supportActionBar!!.setHomeButtonEnabled(true)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
     }

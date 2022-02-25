@@ -16,8 +16,6 @@ import com.ieltsjuice.R
 import com.ieltsjuice.databinding.FragmentSelfPacedCourseDetailBinding
 import com.ieltsjuice.self_paced.speaking.KEY_SelfPacedCourseMainTitle
 
-const val KEY_QuizTitle = "KEY_QuizTitle"
-
 
 class FragmentSelfPacedCourseDetail : Fragment() {
 
