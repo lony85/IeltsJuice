@@ -122,8 +122,6 @@ class FragmentAboutUsDetails : Fragment() {
             binding.titleAboutDetails.text = teacherTitle
             binding.descriptionAboutDetails.text = teacherDescription
             bindImage(teacherName!!)
-        } else {
-            //Todo
         }
 
     }
