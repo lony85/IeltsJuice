@@ -86,7 +86,6 @@ class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
             }
         }
 
-
         //Choose Courses Content
         val courseContent = listOf(
             "Introduction",

@@ -17,6 +17,7 @@ class AboutUsRecyclerAdapter(val context: Context, val Teachers: List<Teacher>,p
 
         private val teacherImage: ImageView = itemView.findViewById(R.id.imageView_about_RecyclerView)
         private val teacherName: TextView = itemView.findViewById(R.id.name_about_Details)
+        private val teacherFamily:TextView = itemView.findViewById(R.id.family_about_Details)
         private val teacherTitle: TextView = itemView.findViewById(R.id.title_about_Details)
 
         private val moreButton: Button = itemView.findViewById(R.id.btn_more_aboutUs)
@@ -28,6 +29,7 @@ class AboutUsRecyclerAdapter(val context: Context, val Teachers: List<Teacher>,p
             teacherImage.setImageResource(resourceId)
             teacherName.text = category.teacherName
             teacherTitle.text = category.title
+            teacherFamily.text = category.teacherFamily
 
             moreButton.setOnClickListener {
                 pressed.moreInfoBtn(Teachers[adapterPosition],adapterPosition)

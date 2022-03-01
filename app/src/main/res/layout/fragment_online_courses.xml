@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="15dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginEnd="15dp"
     android:background="?attr/colorTertiary"
     android:orientation="vertical"
     >
 
-
-
     <androidx.core.widget.NestedScrollView
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -176,7 +175,7 @@
                             android:id="@+id/button_main_courses_OnetoOne"
                             style="?attr/materialButtonOutlinedStyle"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="bottom|end"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
@@ -261,7 +260,7 @@
                             android:id="@+id/button_main_courses_selfPaced"
                             style="?attr/materialButtonOutlinedStyle"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="bottom|end"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
@@ -300,7 +299,7 @@
                 android:id="@+id/buttonConsultation"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:layout_gravity="end"
                 android:layout_marginBottom="10dp"

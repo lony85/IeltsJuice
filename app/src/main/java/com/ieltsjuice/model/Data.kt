@@ -3,7 +3,8 @@ package com.ieltsjuice.model
 object Data {
     val Teachers = listOf(
         Teacher(
-            "Kasra Sharifan",
+            "Kasra",
+            "Sharifan",
             "Co-founder and CFO",
             "British Council certified English teacher, IDP-trained IELTS instructor, content writer, editor-in-chief, co-founder, and Chief Financial Officer (CFO) at IELTS Juice Online Academy.",
             "teacher_kasra_sharifan",
@@ -14,7 +15,8 @@ object Data {
             "https://kasrasharifan.com/"
         ),
         Teacher(
-            "Mehdi Safavi",
+            "Mehdi",
+            "Safavi",
             "Co-founder and CEO",
             "A Cambridge certified English teacher (CELTA Grade A) with over 17 years of teaching experience. He is trained by IDP Australia and is an IELTS expert in Tbilisi Georgia.",
             "teacher_mehdi_safavi",
@@ -25,7 +27,8 @@ object Data {
             "https://mehdisafavi.com/"
         ),
         Teacher(
-            "David Stanley Beggs",
+            "David",
+            "Stanley Beggs",
             "Content Writer & Marketing Agent",
             "A US-born English teacher who specializes in teaching spoken English. He has taught conversational in Mexico, Thailand, and now Georgia.",
             "teacher_david_beggs",
@@ -36,7 +39,8 @@ object Data {
             ""
         ),
         Teacher(
-            "Soolmaz Neishaboori",
+            "Soolmaz",
+            "Neishaboori",
             "Online Tutor & Content Writer",
             "An IDP-trained IELTS expert, online tutor and content writer at English Juice Online Academy. She writes blog posts on IELTS and GE.",
             "teacher_soolmaz_neishaboori",
@@ -47,7 +51,8 @@ object Data {
             ""
         ),
         Teacher(
-            "Elham Hedeshi",
+            "Elham",
+            "Hedeshi",
             "Content Writer",
             "An English teacher, passionate traveler, travel blogger, and researcher. She writes blog posts in different themes.",
             "teacher_elham_hedeshi",
@@ -58,7 +63,8 @@ object Data {
             ""
         ),
         Teacher(
-            "Sadegh Keshtkar",
+            "Sadegh",
+            "Keshtkar",
             "Content Writer & Graphic Designer",
             "A creative and artistic graphic designer, techology writer and researcher with years of online activities.",
             "teacher_sadegh_keshtkar",
@@ -69,7 +75,8 @@ object Data {
             ""
         ),
         Teacher(
-            "Rahman Haghparast",
+            "Rahman",
+            "Haghparast",
             "Technical Consultant",
             "Professional full stack developer with over a decade of experience in software development.",
             "teacher_rahman",
@@ -80,7 +87,8 @@ object Data {
             ""
         ),
         Teacher(
-            "Saghy Ghassemi",
+            "Saghy",
+            "Ghassemi",
             "Translator",
             "English-German translator. Law student",
             "teacher_saghy_ghassemi",
@@ -91,7 +99,8 @@ object Data {
             ""
         ),
         Teacher(
-            "Elham Naseri",
+            "Elham",
+            "Naseri",
             "Content Writer",
             "Experienced in the fields of content development and management, as well as digital marketing.",
             "teacher_elham_naseri",
@@ -102,7 +111,8 @@ object Data {
             ""
         ),
         Teacher(
-            "Hamed Hassanizawe",
+            "Hamed",
+            "Hassanizawe",
             "Content Writer",
             "A passionate traveler, travel blogger and researcher.",
             "teacher_hamed_hassanizawe",
@@ -113,7 +123,8 @@ object Data {
             ""
         ),
         Teacher(
-            "Mehryar Kishi",
+            "Mehryar",
+            "Kishi",
             "Content Writer",
             "A passionate and committed teacher and content creator with more than 12 years of experience in education and training.",
             "teacher_mehryar_kishi",
@@ -124,7 +135,8 @@ object Data {
             ""
         ),
         Teacher(
-            "ShB Hosseinzadeh",
+            "ShB",
+            "Hosseinzadeh",
             "Content Writer",
             "An expert and committed online general English teacher interested in writing, traveling, biking, doing research, and digital learning.",
             "teacher_leila_hosseinzadeh",
