@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,7 +7,7 @@
     android:layout_gravity="bottom"
     android:orientation="vertical"
     android:background="?attr/colorTertiary"
-    tools:context=".MainActivity">
+    >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,7 +25,6 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:backgroundTint="?attr/colorTertiaryContainer"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
@@ -44,6 +41,13 @@
                     android:layout_marginEnd="10dp"
                     android:padding="10dp">
 
+                    <ImageView
+                        android:id="@+id/educationImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:src="@drawable/education_home"/>
 
                     <TextView
 
@@ -55,7 +59,7 @@
                         android:textSize="@dimen/textSizeTitle"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toBottomOf="@+id/educationImg" />
 
                     <TextView
                         android:id="@+id/text_main_courses"
@@ -72,7 +76,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/button_main_courses"
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="5dp"
                         android:text="Get Started"
@@ -88,7 +92,7 @@
                         android:id="@+id/buttonConsultation"
                         style="?attr/materialButtonOutlinedStyle"
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
                         android:text="Get Consulation"
                         android:textColor="?attr/colorSecondaryVariant"
@@ -121,7 +125,13 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
                     android:padding="10dp">
-
+                    <ImageView
+                        android:id="@+id/correctionImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:src="@drawable/correction_home"/>
 
                     <TextView
 
@@ -133,7 +143,8 @@
                         android:textSize="@dimen/textSizeTitle"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toBottomOf="@+id/correctionImg"
+                        tools:layout_editor_absoluteY="10dp" />
 
                     <TextView
                         android:id="@+id/text_main_correction"
@@ -150,7 +161,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/button_main_correction"
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="5dp"
                         android:text="More Info"
@@ -185,6 +196,13 @@
                     android:layout_marginEnd="10dp"
                     android:padding="10dp">
 
+                    <ImageView
+                    android:id="@+id/writingImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/score_home"/>
 
                     <TextView
 
@@ -196,7 +214,7 @@
                         android:textSize="@dimen/textSizeTitle"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/writingImg"
                         tools:ignore="HardcodedText" />
 
                     <TextView
@@ -216,7 +234,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/button_main_score_calculator"
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="5dp"
                         android:text="Score Calculator"

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_50"
+        android:title="@string/home"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/navigation_studyOnline"
+        android:icon="@drawable/ic_reading_50"
+        android:title="@string/study_online"/>
+
+    <item
+        android:id="@+id/navigation_placement_quiz"
+        android:icon="@drawable/ic_quiz_50"
+        android:title="@string/test"/>
+
+    <item
+        android:id="@+id/navigation_aboutUs"
+        android:icon="@drawable/ic_about_50"
+        android:title="@string/about_us"/>
+</menu>

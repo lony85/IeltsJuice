@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="Theme.IeltsJuice" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#C0C0F0</item>
+        <item name="colorPrimary">#1878D8</item>
         <item name="colorPrimaryVariant">@color/black</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">#A6D5FA</item>
         <item name="colorSecondaryVariant">#C0C0F0</item>

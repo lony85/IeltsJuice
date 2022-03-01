@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.ieltsjuice.databinding.FragmentHomeBinding
 
 const val PAGE_NAME_KEY = "PAGE_NAME_KEY"
@@ -34,11 +35,11 @@ class FragmentHome : Fragment() {
             intent.putExtra(PAGE_NAME_KEY,"Correction")
             startActivity(intent)
         }
+
+
         binding.buttonMainCourses.setOnClickListener {
-            val transaction = parentFragmentManager.beginTransaction()
-            transaction.replace(R.id.fragment_container, FragmentOnlineCourses())
-            transaction.addToBackStack(null)
-            transaction.commit()
+            findNavController().navigate(R.id.navigation_studyOnline)
+
         }
         binding.buttonMainScoreCalculator.setOnClickListener {
             val intent =
@@ -47,4 +48,4 @@ class FragmentHome : Fragment() {
             startActivity(intent)
         }
     }
-}
+  }

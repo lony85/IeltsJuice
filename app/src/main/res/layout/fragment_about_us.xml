@@ -13,14 +13,21 @@
     <LinearLayout
         android:id="@+id/title_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginTop="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/about_us"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -37,18 +44,47 @@
             android:text="@string/aboutUs"
             tools:ignore="HardcodedText" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/webSiteBtn"
-
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:text="IELTSJUICE.com"
-            app:strokeWidth="2dp"
             android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
-            app:cornerRadius="8dp"
-            app:strokeColor="?attr/colorPrimary"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/webSiteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="IELTSJUICE.com"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ourTeamBtn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="2dp"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/ourTeamBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="our team"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/webSiteBtn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="2dp"
+                tools:ignore="HardcodedText" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <LinearLayout
             android:layout_marginTop="20dp"
@@ -109,35 +145,10 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/textSizeTitle"
-            android:layout_marginTop="10dp"
-            android:textColor="?attr/colorSecondaryVariant"
-            android:text="Our Amazing Team"/>
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            app:lottie_loop="true"
-            app:lottie_autoPlay="true"
-            app:lottie_rawRes="@raw/our_team"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:justificationMode="inter_word"
-            android:textSize="@dimen/textSizeDescription"
-            android:text="Meet the people who have given life to the website, teach online and create contents for you on IELTS Juice online academy."/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/aboutUsRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layoutAnimation="@anim/recycler_animation"
-       />
 
         <TextView
+            android:gravity="bottom"
             android:layout_width="match_parent"
             android:layout_marginTop="5dp"
             android:layout_height="wrap_content"

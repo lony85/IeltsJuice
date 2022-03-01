@@ -13,7 +13,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.internetconnection.NetworkChecker
 import com.google.android.material.snackbar.Snackbar
-import com.ieltsjuice.databinding.FragmentOnlineCourcesBinding
+import com.ieltsjuice.databinding.FragmentOnlineCoursesBinding
 
 class FragmentOnlineCourses : Fragment() {
 
@@ -21,20 +21,19 @@ class FragmentOnlineCourses : Fragment() {
     lateinit var mediaController: MediaController
 
 
-    lateinit var binding: FragmentOnlineCourcesBinding
+    lateinit var binding: FragmentOnlineCoursesBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentOnlineCourcesBinding.inflate(layoutInflater, container, false)
+        binding = FragmentOnlineCoursesBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
     @SuppressLint("ShowToast")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.buttonConsultation.setOnClickListener {
             val intent = Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
             intent.putExtra(PAGE_NAME_KEY,"Consultation")
@@ -89,8 +88,6 @@ class FragmentOnlineCourses : Fragment() {
         binding.videoView.setOnInfoListener { _, what, _ ->   //player & extras renamed to _
             if (what == MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START)
                 binding.videoViewProgressBar.visibility = View.INVISIBLE
-            binding.videoViewPlayButton.visibility = View.GONE
-            binding.videoViewPreviewImg.visibility = View.GONE
             true
         }
         mediaController.show()

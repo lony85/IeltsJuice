@@ -1,12 +1,14 @@
 package com.ieltsjuice
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.fragment.app.Fragment
-import com.ieltsjuice.about_us.FragmentAboutUs
+import androidx.core.content.ContextCompat
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.ieltsjuice.databinding.ActivityMainBinding
-import com.ieltsjuice.placement_test.FragmentPlacementQuiz
+
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -16,34 +18,39 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        replaceFragment(FragmentHome()) //First Fragment
+        //Bottom Navigation Controller
+        val navView: BottomNavigationView = binding.navView
+        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        navView.setupWithNavController(navController)
 
-        //Bottom Navigation Guide
-        binding.bottomNavigation.setOnItemSelectedListener  {
-            when (it.itemId){
-                R.id.ic_fragment_home -> replaceFragment(FragmentHome())
-                R.id.ic_fragment_aboutUs -> replaceFragment(FragmentAboutUs())
-                R.id.ic_fragment_studyOnline -> replaceFragment(FragmentOnlineCourses())
-                R.id.ic_fragment_placement_quiz -> replaceFragment(FragmentPlacementQuiz())
-            }
-            true
-        }
-            binding.bottomNavigation.setOnItemReselectedListener {  }  //Leave it - Empty tag
-        
-       // Day Night Switch
+
+        binding.navView.setOnItemReselectedListener { }  //Leave it - Empty tag
+
+        // Day Night Switch
+        binding.ieltsLogo.setImageDrawable(
+            ContextCompat.getDrawable(
+                this,
+                R.drawable.ielts_juice_logo
+            )
+        )
         binding.DayNightSwitch.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked){
+            if (isChecked) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            }else{
+                binding.ieltsLogo.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        this,
+                        R.drawable.ielts_juice_logo_dark
+                    )
+                )
+            } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                binding.ieltsLogo.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        this,
+                        R.drawable.ielts_juice_logo
+                    )
+                )
             }
         }
-    }
-
-    private fun replaceFragment(fragment: Fragment){
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container,fragment)
-        transaction.commit()
-
     }
 }
