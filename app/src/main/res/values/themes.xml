@@ -18,6 +18,8 @@
         <item name="android:windowLightStatusBar" tools:targetApi="m">  true</item>
         <!-- Customize your theme here. -->
         <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
 
 
     </style>

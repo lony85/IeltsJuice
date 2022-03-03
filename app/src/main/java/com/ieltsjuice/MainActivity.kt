@@ -26,31 +26,32 @@ class MainActivity : AppCompatActivity() {
 
         binding.navView.setOnItemReselectedListener { }  //Leave it - Empty tag
 
-        // Day Night Switch
         binding.ieltsLogo.setImageDrawable(
             ContextCompat.getDrawable(
                 this,
                 R.drawable.ielts_juice_logo
             )
         )
-        binding.DayNightSwitch.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                binding.ieltsLogo.setImageDrawable(
-                    ContextCompat.getDrawable(
-                        this,
-                        R.drawable.ielts_juice_logo_dark
-                    )
-                )
-            } else {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                binding.ieltsLogo.setImageDrawable(
-                    ContextCompat.getDrawable(
-                        this,
-                        R.drawable.ielts_juice_logo
-                    )
-                )
-            }
-        }
+        // Day Night Switch
+
+//        binding.DayNightSwitch.setOnCheckedChangeListener { _, isChecked ->
+//            if (isChecked) {
+//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+//                binding.ieltsLogo.setImageDrawable(
+//                    ContextCompat.getDrawable(
+//                        this,
+//                        R.drawable.ielts_juice_logo_dark
+//                    )
+//                )
+//            } else {
+//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//                binding.ieltsLogo.setImageDrawable(
+//                    ContextCompat.getDrawable(
+//                        this,
+//                        R.drawable.ielts_juice_logo
+//                    )
+//                )
+//            }
+//        }
     }
 }

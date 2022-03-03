@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorTertiary"
@@ -75,15 +76,21 @@
             android:gravity="center"
             android:text="Get a cup of coffee and push the \nstart button. :)"
             android:textSize="@dimen/textSizeDescription" />
-
+        <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+            app:lottie_rawRes="@raw/coffee"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
                         android:textStyle="bold"
             android:text="You cannot use back button during the test"
-            android:textSize="@dimen/textSizeDescription" />
+            android:textSize="@dimen/textSizeDescription"
+            tools:ignore="HardcodedText" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonStartPlacementTest"

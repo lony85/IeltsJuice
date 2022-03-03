@@ -41,15 +41,15 @@
                 android:layout_height="56dp"
                 app:layout_collapseMode="pin" />
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/DayNightSwitch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minWidth="56dp"
-                android:thumb="@drawable/thumb"
-                android:layout_gravity="end|center"
-               android:layout_marginEnd="20dp"
-                app:track="@drawable/track" />
+<!--            <androidx.appcompat.widget.SwitchCompat-->
+<!--                android:id="@+id/DayNightSwitch"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:minWidth="56dp"-->
+<!--                android:thumb="@drawable/thumb"-->
+<!--                android:layout_gravity="end|center"-->
+<!--               android:layout_marginEnd="20dp"-->
+<!--                app:track="@drawable/track" />-->
 
             <com.google.android.material.divider.MaterialDivider
                 android:layout_width="match_parent"

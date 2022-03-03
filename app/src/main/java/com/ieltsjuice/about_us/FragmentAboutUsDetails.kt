@@ -30,6 +30,7 @@ class FragmentAboutUsDetails : Fragment() {
         val bundle = arguments
         if (bundle != null) {
             val teacherName = bundle.getString(KEY_teacherName)
+            val teacherFamily = bundle.getString(KEY_teacherFamily)
             val teacherTitle = bundle.getString(KEY_teacherTitle)
             val teacherDescription = bundle.getString(KEY_teacherDesc)
             val teacherInstagram = bundle.getString(KEY_teacherInstagram)
@@ -120,35 +121,36 @@ class FragmentAboutUsDetails : Fragment() {
 
             binding.nameAboutDetails.text = teacherName
             binding.titleAboutDetails.text = teacherTitle
+            binding.familyAboutDetails.text = teacherFamily
             binding.descriptionAboutDetails.text = teacherDescription
-            bindImage(teacherName!!)
+            bindImage(teacherFamily!!)
         }
 
     }
 
-    private fun bindImage(teacherName: String) {
-        when (teacherName) {
+    private fun bindImage(teacherFamily: String) {
+        when (teacherFamily) {
 
-            "Kasra Sharifan" -> {
+            "Sharifan" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_kasra_sharifan)
                 binding.instagram.visibility = GONE
                 binding.skype.visibility = GONE
 
             }
-            "Soolmaz Neishaboori" -> {
+            "Neishaboori" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_soolmaz_neishaboori)
                 binding.instagram.visibility = GONE
                 binding.skype.visibility = GONE
                 binding.webPage.visibility = GONE
             }
-            "Rahman Haghparast" -> {
+            "Haghparast" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_rahman)
                 binding.instagram.visibility = GONE
                 binding.skype.visibility = GONE
                 binding.facebook.visibility = GONE
                 binding.webPage.visibility = GONE
             }
-            "Hamed Hassanizawe" -> {
+            "Hassanizawe" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_hamed_hassanizawe)
                 binding.skype.visibility = GONE
                 binding.facebook.visibility = GONE
@@ -156,41 +158,41 @@ class FragmentAboutUsDetails : Fragment() {
                 binding.linkedin.visibility = GONE
 
             }
-            "David Stanley Beggs" -> {
+            "Stanley Beggs" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_david_beggs)
                 binding.skype.visibility = GONE
                 binding.webPage.visibility = GONE
                 binding.instagram.visibility = GONE
             }
-            "Elham Hedeshi" -> {
+            "Hedeshi" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_elham_hedeshi)
                 binding.skype.visibility = GONE
                 binding.webPage.visibility = GONE
                 binding.linkedin.visibility = GONE
             }
-            "Saghy Ghassemi" -> {
+            "Ghassemi" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_saghy_ghassemi)
                 binding.skype.visibility = GONE
                 binding.facebook.visibility = GONE
                 binding.webPage.visibility = GONE
                 binding.instagram.visibility = GONE
             }
-            "Mehryar Kishi" -> {
+            "Kishi" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_mehryar_kishi)
                 binding.skype.visibility = GONE
                 binding.facebook.visibility = GONE
                 binding.webPage.visibility = GONE
             }
-            "Mehdi Safavi" -> {
+            "Safavi" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_mehdi_safavi)
             }
-            "Sadegh Keshtkar" -> {
+            "Keshtkar" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_sadegh_keshtkar)
                 binding.skype.visibility = GONE
                 binding.facebook.visibility = GONE
                 binding.webPage.visibility = GONE
             }
-            "Elham Naseri" -> {
+            "Naseri" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_elham_naseri)
                 binding.skype.visibility = GONE
                 binding.facebook.visibility = GONE
@@ -199,7 +201,7 @@ class FragmentAboutUsDetails : Fragment() {
                 binding.instagram.visibility = GONE
                 binding.textView.visibility = GONE
             }
-            "ShB Hosseinzadeh" -> {
+            "Hosseinzadeh" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_leila_hosseinzadeh)
                 binding.facebook.visibility = GONE
                 binding.webPage.visibility = GONE

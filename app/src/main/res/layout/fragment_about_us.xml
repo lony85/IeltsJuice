@@ -67,7 +67,7 @@
                             android:layout_height="wrap_content"
                             android:text="Us"
 
-                            android:textColor="#065553"
+                            android:textColor="?attr/colorPrimary"
                             android:textSize="@dimen/textSizeTitle"
                             tools:ignore="HardcodedText" />
                     </LinearLayout>
@@ -130,7 +130,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:text="team"
-                        android:textColor="#065553"
+                        android:textColor="?attr/colorPrimary"
                         android:textSize="@dimen/textSizeTitle"
                         app:layout_constraintBottom_toBottomOf="@+id/textView7"
                         app:layout_constraintStart_toEndOf="@+id/textView7"
@@ -253,7 +253,7 @@
                 android:layout_height="wrap_content"
                 android:text="IELTSJUICE.com"
                 app:cornerRadius="8dp"
-                android:backgroundTint="#065553"
+                android:backgroundTint="?attr/colorPrimary"
                 app:rippleColor="#ebf5f4"
                 tools:ignore="HardcodedText" />
 

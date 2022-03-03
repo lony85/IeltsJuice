@@ -16,6 +16,7 @@ import com.ieltsjuice.model.Teacher
 import com.ieltsjuice.model.Data
 
 const val KEY_teacherName = "KEY_teacherName"
+const val KEY_teacherFamily = "KEY_teacherFamily"
 const val KEY_teacherTitle = "KEY_teacherTitle"
 const val KEY_teacherDesc = "KEY_teacherDesc"
 const val KEY_teacherInstagram = "KEY_teacherInstagram"
@@ -40,6 +41,7 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // our team Recycler View
         teachersAdapter = AboutUsRecyclerAdapter(this.requireActivity(), Data.Teachers, this)
         binding.aboutUsRecyclerView.adapter = teachersAdapter
         val layoutManager = LinearLayoutManager(this.requireActivity(),LinearLayoutManager.HORIZONTAL,false)
@@ -159,9 +161,10 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
     override fun moreInfoBtn(teacher: Teacher, position: Int) {
         val bundle = Bundle()
         bundle.putString(KEY_teacherName, teacher.teacherName)
+        bundle.putString(KEY_teacherFamily, teacher.teacherFamily)
         bundle.putString(KEY_teacherTitle, teacher.title)
         bundle.putString(KEY_teacherDesc, teacher.description)
-        bundle.putString(KEY_teacherImage, teacher.title)
+//        bundle.putString(KEY_teacherImage, teacher.title)
         bundle.putString(KEY_teacherFacebook, teacher.facebook)
         bundle.putString(KEY_teacherLinkedin, teacher.linkedin)
         bundle.putString(KEY_teacherInstagram, teacher.instagram)
