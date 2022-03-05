@@ -223,7 +223,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:justificationMode="inter_word"
-                        android:text="This IELTS Score Calculator will work out your Overall IELTS score and also your score out of 40 for listening and reading."
+                        android:text="This calculator converts your listening and reading scores out of 40 to IELTS band scores out of 9.0. It also calculates your overall IELTS score."
                         android:textSize="@dimen/textSizeDescription"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
