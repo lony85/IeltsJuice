@@ -1244,7 +1244,7 @@ parts: (1,2,3 or 4)"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Finish Quiz"
-                app:cornerRadius="8dp"
+                app:cornerRadius="30dp"
                 tools:ignore="HardcodedText" />
         </LinearLayout>
 

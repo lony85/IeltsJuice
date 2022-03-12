@@ -47,7 +47,7 @@
                 android:textSize="@dimen/textSizeDescription"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/aboutUsTitle"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
 
             <TextView
@@ -60,7 +60,8 @@
                 android:textColor="?attr/colorSecondaryVariant"
                 android:textSize="@dimen/textSizeTitle"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+                app:layout_constraintTop_toBottomOf="@+id/imageView5"
+                tools:ignore="HardcodedText" />
 
 
 
@@ -75,7 +76,8 @@
                 android:text="Meet the people who have given life to the website, teach online and create contents for you on IELTS Juice online academy."
                 android:textSize="@dimen/textSizeDescription"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                app:layout_constraintTop_toBottomOf="@+id/textView7"
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
 
         <androidx.recyclerview.widget.RecyclerView
@@ -116,21 +118,24 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_skype" />
+                android:src="@drawable/ic_skype"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/telegramBtn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_telegram" />
+                android:src="@drawable/ic_telegram"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/youtubeBtn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_youtube" />
+                android:src="@drawable/ic_youtube"
+                tools:ignore="ContentDescription" />
         </LinearLayout>
 
         <LinearLayout
@@ -146,14 +151,16 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_instagram" />
+                android:src="@drawable/ic_instagram"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/twitterBtn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_twitter" />
+                android:src="@drawable/ic_twitter"
+                tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/facebookBtn"
@@ -161,7 +168,8 @@
                 android:layout_height="50dp"
                 android:layout_weight="1"
 
-                android:src="@drawable/ic_facebook" />
+                android:src="@drawable/ic_facebook"
+                tools:ignore="ContentDescription" />
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
@@ -174,7 +182,7 @@
             android:layout_marginBottom="20dp"
             android:backgroundTint="?attr/colorPrimary"
             android:text="IELTSJUICE.com"
-            app:cornerRadius="8dp"
+            app:cornerRadius="30dp"
             app:rippleColor="#ebf5f4"
             tools:ignore="HardcodedText" />
 
@@ -190,7 +198,7 @@
             android:text="Copyright © 2022 | Powered by Juice Academy. Educating the world since 2011"
             android:textColor="?attr/colorSecondaryVariant"
             android:textSize="@dimen/textSizeDate"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText,UnusedAttribute" />
 
         <TextView
             android:layout_width="match_parent"

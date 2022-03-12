@@ -42,7 +42,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_writing_correction" />
+                    android:src="@drawable/img_writing_correction"
+                    tools:ignore="ContentDescription" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -55,7 +56,8 @@
                 android:textSize="@dimen/textSizeTitle"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
-                tools:layout_editor_absoluteX="280dp" />
+                tools:layout_editor_absoluteX="280dp"
+                tools:ignore="HardcodedText" />
 
 
             <TextView
@@ -64,14 +66,16 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text=" Normal (in 72 hrs) : $6.90 USD *"
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text=" Express (in 24 hrs) : $9.90 USD *"
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:ignore="HardcodedText" />
 
 
             <TextView
@@ -79,7 +83,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="*per writing task"
-                android:textSize="@dimen/textSizeDate" />
+                android:textSize="@dimen/textSizeDate"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -88,7 +93,8 @@
                 android:layout_marginTop="10dp"
                 android:justificationMode="inter_word"
                 android:text="Send us your IELTS writing for correction and receive expert feedback. We mark your errors, suggest changes and offer advice on how to improve your writing based on IELTS assessment criteria."
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -101,26 +107,28 @@
                     android:id="@+id/button_correction_contactUs"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:text="Have a question?"
                     android:textColor="?attr/colorSecondaryVariant"
-                    android:textSize="10sp"
-                    app:cornerRadius="20dp"
+                    android:textSize="11sp"
+                    app:cornerRadius="30dp"
                     app:rippleColor="?attr/colorSecondary"
                     app:strokeColor="?attr/colorPrimary"
-                    app:strokeWidth="1dp" />
+                    app:strokeWidth="1dp"
+                    tools:ignore="HardcodedText" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button_correction_sendNow"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:text="Send Now"
                     android:textColor="?attr/colorOnPrimary"
-                    android:textSize="10sp"
+                    android:textSize="11sp"
                     app:backgroundTint="?attr/colorPrimary"
-                    app:cornerRadius="20dp"/>
+                    app:cornerRadius="30dp"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -131,13 +139,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="15dp" />
 
-            <!--            <com.google.android.material.card.MaterialCardView-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="match_parent"-->
-            <!--                app:strokeWidth="0dp"-->
-            <!--                android:layout_marginBottom="40dp">-->
-
-            <LinearLayout
+             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -145,7 +147,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Live in IRAN?" />
+                    android:text="Live in IRAN?"
+                    tools:ignore="HardcodedText" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -155,24 +158,26 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="To pay a discounted price , " />
+                        android:text="To pay a discounted price , "
+                        tools:ignore="HardcodedText" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/button_correction_IranDiscount"
                         style="?attr/materialButtonOutlinedStyle"
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
                         android:text="Click here"
                         android:textColor="?attr/colorSecondaryVariant"
-                        android:textSize="10sp"
-                        app:cornerRadius="20dp"
+                        android:textSize="11sp"
+                        app:cornerRadius="30dp"
                         app:layout_constraintBottom_toBottomOf="@+id/button_main_courses"
                         app:layout_constraintEnd_toStartOf="@+id/button_main_courses"
                         app:layout_constraintTop_toTopOf="@+id/button_main_courses"
                         app:rippleColor="?attr/colorSecondary"
                         app:strokeColor="?attr/colorPrimary"
-                        app:strokeWidth="1dp" />
+                        app:strokeWidth="1dp"
+                        tools:ignore="HardcodedText" />
 
 
                 </LinearLayout>
@@ -185,25 +190,26 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="For the express service , " />
+                        android:text="For the express service , "
+                        tools:ignore="HardcodedText" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/button_correction_IranExpress"
                         style="?attr/materialButtonOutlinedStyle"
                         android:layout_width="wrap_content"
-                        android:layout_height="40dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
-
                         android:text="Click here"
                         android:textColor="?attr/colorSecondaryVariant"
-                        android:textSize="10sp"
-                        app:cornerRadius="20dp"
+                        android:textSize="11sp"
+                        app:cornerRadius="30dp"
                         app:layout_constraintBottom_toBottomOf="@+id/button_main_courses"
                         app:layout_constraintEnd_toStartOf="@+id/button_main_courses"
                         app:layout_constraintTop_toTopOf="@+id/button_main_courses"
                         app:rippleColor="?attr/colorSecondary"
                         app:strokeColor="?attr/colorPrimary"
-                        app:strokeWidth="1dp" />
+                        app:strokeWidth="1dp"
+                        tools:ignore="HardcodedText" />
 
 
                 </LinearLayout>

@@ -186,11 +186,11 @@
                             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                             android:layout_width="wrap_content"
 
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginEnd="20dp"
                             android:text="Reset"
                             android:textColor="#FF0000"
-                            app:cornerRadius="20dp"
+                            app:cornerRadius="30dp"
                             app:strokeColor="#FF0000"
                             app:strokeWidth="1dp"
                             tools:ignore="HardcodedText" />
@@ -198,10 +198,9 @@
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/scoreCalculatorBtn"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:text="Calculate"
-                            app:cornerRadius="20dp"
-
+                            app:cornerRadius="30dp"
                             tools:ignore="HardcodedText" />
                     </LinearLayout>
                 </LinearLayout>
@@ -355,21 +354,20 @@
                             android:id="@+id/scoreCalculatorOverallResetBtn"
                             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginEnd="20dp"
                             android:text="Reset"
                             android:textColor="#FF0000"
-                            app:cornerRadius="20dp"
+                            app:cornerRadius="30dp"
                             app:strokeColor="#FF0000"
                             tools:ignore="HardcodedText" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/scoreCalculatorOverallBtn"
                             android:layout_width="wrap_content"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:text="Calculate"
-                            app:cornerRadius="20dp"
-
+                            app:cornerRadius="30dp"
                             tools:ignore="HardcodedText" />
                     </LinearLayout>
 
@@ -395,7 +393,8 @@
                         \nScores ending in .25 are rounded up to the next half band and those ending in .75 are rounded up to the next whole band.
                         \nSo for example, if the average of the four components is 5.25, the IELTS band score calculator will round your score up to 5.5. If it is 5.75, the IELTS band score calculator will round up your score to band 6."
                         android:textSize="@dimen/textSizeDescription"
-                        tools:ignore="HardcodedText" />
+                        tools:ignore="HardcodedText"
+                        tools:targetApi="o" />
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>

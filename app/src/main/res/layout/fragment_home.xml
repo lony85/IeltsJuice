@@ -19,8 +19,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <com.google.android.material.card.MaterialCardView
@@ -47,7 +46,8 @@
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/education_home"/>
+                        android:src="@drawable/education_home"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
 
@@ -59,7 +59,8 @@
                         android:textSize="@dimen/textSizeTitle"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/educationImg" />
+                        app:layout_constraintTop_toBottomOf="@+id/educationImg"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/text_main_courses"
@@ -71,7 +72,8 @@
                         android:textSize="@dimen/textSizeDescription"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/title_main_courses" />
+                        app:layout_constraintTop_toBottomOf="@+id/title_main_courses"
+                        tools:ignore="HardcodedText,UnusedAttribute" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/button_main_courses"
@@ -81,12 +83,13 @@
                         android:layout_marginBottom="5dp"
                         android:text="Get Started"
                         android:textColor="?attr/colorOnPrimary"
-                        android:textSize="10sp"
+                        android:textSize="11sp"
                         app:backgroundTint="?attr/colorPrimary"
-                        app:cornerRadius="20dp"
+                        app:cornerRadius="30dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/text_main_courses" />
+                        app:layout_constraintTop_toBottomOf="@+id/text_main_courses"
+                        tools:ignore="HardcodedText" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/buttonConsultation"
@@ -94,16 +97,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
-                        android:text="Get Consulation"
+                        android:text="Get Consultation"
                         android:textColor="?attr/colorSecondaryVariant"
-                        android:textSize="10sp"
-                        app:cornerRadius="20dp"
+                        android:textSize="11sp"
+                        app:cornerRadius="30dp"
                         app:layout_constraintBottom_toBottomOf="@+id/button_main_courses"
                         app:layout_constraintEnd_toStartOf="@+id/button_main_courses"
                         app:layout_constraintTop_toTopOf="@+id/button_main_courses"
                         app:rippleColor="?attr/colorSecondary"
                         app:strokeColor="?attr/colorPrimary"
-                        app:strokeWidth="1dp" />
+                        app:strokeWidth="1dp"
+                        tools:ignore="HardcodedText" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.card.MaterialCardView>
@@ -131,11 +135,12 @@
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/correction_home"/>
+                        android:src="@drawable/correction_home"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
 
-                        android:id="@+id/title_main_correctiom"
+                        android:id="@+id/title_main_correction"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="IELTS Writing Correction"
@@ -144,7 +149,8 @@
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/correctionImg"
-                        tools:layout_editor_absoluteY="10dp" />
+                        tools:layout_editor_absoluteY="10dp"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/text_main_correction"
@@ -156,7 +162,9 @@
                         android:textSize="@dimen/textSizeDescription"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/title_main_correctiom" />
+                        app:layout_constraintTop_toBottomOf="@+id/title_main_correction"
+                        tools:ignore="HardcodedText"
+                        tools:targetApi="o" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/button_main_correction"
@@ -166,12 +174,13 @@
                         android:layout_marginBottom="5dp"
                         android:text="More Info"
                         android:textColor="?attr/colorOnPrimary"
-                        android:textSize="10sp"
+                        android:textSize="11sp"
                         app:backgroundTint="?attr/colorPrimary"
-                        app:cornerRadius="20dp"
+                        app:cornerRadius="30dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/text_main_correction" />
+                        app:layout_constraintTop_toBottomOf="@+id/text_main_correction"
+                        tools:ignore="HardcodedText" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -202,7 +211,8 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:src="@drawable/score_home"/>
+                    android:src="@drawable/score_home"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
 
@@ -239,9 +249,9 @@
                         android:layout_marginBottom="5dp"
                         android:text="Score Calculator"
                         android:textColor="?attr/colorOnPrimary"
-                        android:textSize="10sp"
+                        android:textSize="11sp"
                         app:backgroundTint="?attr/colorPrimary"
-                        app:cornerRadius="20dp"
+                        app:cornerRadius="30dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/text_main_score_calculator"

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorTertiary"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="15dp">
 
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -39,18 +40,21 @@
                 <TextView
                     android:id="@+id/txtQueRadioBtn1"
                     android:layout_width="wrap_content"
-                    android:textStyle="bold"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
-                    tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
+                    android:textStyle="bold"
+                    tools:text="Is the Speaking exam different for Academic and General Training Modules?"
+                    tools:targetApi="o" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_test_writing"/>
+                    android:src="@drawable/img_test_writing"
+                    tools:ignore="ContentDescription" />
+
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -66,6 +70,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         tools:text="No" />
+
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup1Btn3"
                         android:layout_width="wrap_content"
@@ -89,12 +94,13 @@
                     android:id="@+id/txtQueRadioBtn2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="5dp"
-                    android:textSize="@dimen/textSizeDescription"
                     android:text="Match the different skill types to their definitions:"
-                    tools:ignore="HardcodedText" />
+                    android:textSize="@dimen/textSizeDescription"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
 
                 <TextView
                     android:id="@+id/txtQueRadioBtn2_1"
@@ -102,20 +108,22 @@
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="5dp"
-                    android:textSize="@dimen/textSizeDescription"
                     android:text="..."
-                    tools:ignore="HardcodedText" />
+                    android:textSize="@dimen/textSizeDescription"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
                 <RadioGroup
-                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup2Btn1"
                         android:layout_width="wrap_content"
-                        android:layout_marginEnd="30dp"
-
                         android:layout_height="wrap_content"
+
+                        android:layout_marginEnd="30dp"
                         android:text="Receptive Skills"
                         tools:ignore="HardcodedText" />
 
@@ -126,25 +134,28 @@
                         android:text="Productive Skills"
                         tools:ignore="HardcodedText" />
                 </RadioGroup>
+
                 <TextView
                     android:id="@+id/txtQueRadioBtn2_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="5dp"
-                    android:textSize="@dimen/textSizeDescription"
                     android:text="..."
-                    tools:ignore="HardcodedText" />
+                    android:textSize="@dimen/textSizeDescription"
+                    tools:ignore="HardcodedText"
+                    tools:targetApi="o" />
+
                 <RadioGroup
-                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup2Btn3"
                         android:layout_width="wrap_content"
-                        android:layout_marginEnd="30dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
                         android:text="Receptive Skills"
                         tools:ignore="HardcodedText" />
 
@@ -173,10 +184,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
-                    android:textStyle="bold"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
-                    tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
+                    android:textStyle="bold"
+                    tools:text="Is the Speaking exam different for Academic and General Training Modules?"
+                    tools:targetApi="o" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -223,30 +235,31 @@
                     android:id="@+id/txtQuestionLayout_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:textSize="@dimen/textSizeDescription"
-                    tools:text="2. Fill the gap. Write no more than ONE WORD or A NUMBER in each gap:"
-                    tools:ignore="HardcodedText" />
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText"
+                    tools:text="2. Fill the gap. Write no more than ONE WORD or A NUMBER in each gap:" />
 
                 <TextView
                     android:id="@+id/txtFillTheGap"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
-                    tools:text="The Speaking test is ___ and ..."
-                    android:textSize="@dimen/textSizeDescription" />
+                    android:textSize="@dimen/textSizeDescription"
+                    tools:targetApi="o"
+                    tools:text="The Speaking test is ___ and ..." />
 
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/txtQue4InputLayout1"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:helperText="Type your answer inside the box."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
                     android:hint="Your answer to fill 1st gap is ..."
                     android:padding="3dp"
+                    app:helperText="Type your answer inside the box."
                     tools:ignore="HardcodedText">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -257,16 +270,17 @@
                         android:maxLength="20"
                         android:singleLine="true" />
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/txtQue4InputLayout2"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:helperText="Type your answer inside the box."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
                     android:hint="Your answer to fill 2nd gap is ..."
                     android:padding="3dp"
+                    app:helperText="Type your answer inside the box."
                     tools:ignore="HardcodedText">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -278,21 +292,19 @@
                         android:maxLength="20"
                         android:singleLine="true" />
                 </com.google.android.material.textfield.TextInputLayout>
+
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"
                     android:layout_height="2dp" />
             </LinearLayout>
 
-
-
-
-
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/finishQuizBtn"
                 android:layout_width="match_parent"
-                app:cornerRadius="8dp"
                 android:layout_height="wrap_content"
-                android:text="Finish Quiz"/>
+                android:text="Finish Quiz"
+                app:cornerRadius="30dp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
 

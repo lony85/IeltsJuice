@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="?attr/colorTertiary"
-    android:orientation="vertical"
-    tools:context=".ConsultationActivity">
-
+    android:orientation="vertical">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -20,20 +16,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBar">
 
-
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Online Consultation"
+                tools:ignore="HardcodedText"
                 android:textColor="?attr/colorSecondaryVariant"
                 android:textSize="@dimen/textSizeTitle"
                 android:textStyle="bold" />
@@ -44,7 +38,9 @@
                 android:layout_marginBottom="10dp"
                 android:justificationMode="inter_word"
                 android:text="Face-to-face consultation with experienced English teachers and IELTS experts certified by Cambridge University and trained by British Council and IDP Australia over Skype (Free for a limited time)."
-                android:textSize="@dimen/textSizeDescription" />
+                tools:ignore="HardcodedText"
+                android:textSize="@dimen/textSizeDescription"
+                tools:targetApi="o" />
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
@@ -59,7 +55,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
-                    android:src="@drawable/img_online_consultation" />
+                    android:src="@drawable/img_online_consultation"
+                    tools:ignore="ContentDescription" />
 
 
             </com.google.android.material.card.MaterialCardView>
@@ -71,7 +68,8 @@
                 android:text="Consultation"
                 android:textColor="?attr/colorSecondaryVariant"
                 android:textSize="@dimen/textSizeTitle"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -94,7 +92,8 @@
                     android:text="free*"
                     android:textColor="@color/Green"
                     android:textSize="@dimen/textSizeDescription"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -102,6 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="* free for a limited time"
+                tools:ignore="HardcodedText"
                 android:textSize="@dimen/textSizeDate" />
 
             <TextView
@@ -110,32 +110,38 @@
                 android:layout_marginTop="8dp"
                 android:justificationMode="inter_word"
                 android:text="Success in English learning and getting a great score in IELTS begins with reliable advice. In a 20-minute consultation, you will:"
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:ignore="HardcodedText"
+                tools:targetApi="o" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text=" • get to know your exact English level"
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" • be introduced to recommended learning materials"
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" • receive a personalized study plan"
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" • learn about available study methods"
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:ignore="HardcodedText"  />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -143,20 +149,22 @@
                 android:layout_marginTop="8dp"
                 android:justificationMode="inter_word"
                 android:text="All you need to do is book a consultation and one of our experienced English teachers will show up on Skype to meet you."
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonConsultation"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="10dp"
                 android:text="Schedule time"
                 android:textColor="?attr/colorOnPrimary"
-                android:textSize="10sp"
+                android:textSize="11sp"
                 app:backgroundTint="?attr/colorPrimary"
-                app:cornerRadius="20dp" />
+                app:cornerRadius="30dp"
+                tools:ignore="HardcodedText" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:layout_width="wrap_content"
@@ -169,12 +177,14 @@
                 android:text="Frequently Asked Questions"
                 android:textColor="?attr/colorSecondaryVariant"
                 android:textSize="@dimen/textSizeTitle"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Here are our answers to some of your questions about our online consultation service at IELTS Juice Online Academy" />
+                android:text="Here are our answers to some of your questions about our online consultation service at IELTS Juice Online Academy"
+                tools:ignore="HardcodedText" />
 
 
             <LinearLayout
@@ -198,7 +208,8 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center|start"
                         android:layout_marginStart="10dp"
-                        android:src="@drawable/ic_question_mark" />
+                        android:src="@drawable/ic_question_mark"
+                        tools:ignore="ContentDescription" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -240,7 +251,8 @@
                             android:layout_marginEnd="40dp"
                             android:layout_marginBottom="2dp"
                             android:justificationMode="inter_word"
-                            android:textSize="0dp" />
+                            android:textSize="0sp"
+                            tools:ignore="HardcodedText,UnusedAttribute" />
                     </LinearLayout>
 
                     <ImageView
@@ -248,7 +260,8 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="center|end"
-                        android:src="@drawable/ic_arrow_right" />
+                        android:src="@drawable/ic_arrow_right"
+                        tools:ignore="ContentDescription" />
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
@@ -267,7 +280,8 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center|start"
                         android:layout_marginStart="10dp"
-                        android:src="@drawable/ic_question_mark" />
+                        android:src="@drawable/ic_question_mark"
+                        tools:ignore="ContentDescription" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -309,7 +323,8 @@
                             android:layout_marginEnd="40dp"
                             android:layout_marginBottom="2dp"
                             android:justificationMode="inter_word"
-                            android:textSize="0dp" />
+                            android:textSize="0sp"
+                            tools:ignore="UnusedAttribute" />
                     </LinearLayout>
 
                     <ImageView
@@ -317,7 +332,8 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="center|end"
-                        android:src="@drawable/ic_arrow_right" />
+                        android:src="@drawable/ic_arrow_right"
+                        tools:ignore="ContentDescription" />
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
@@ -336,7 +352,8 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center|start"
                         android:layout_marginStart="10dp"
-                        android:src="@drawable/ic_question_mark" />
+                        android:src="@drawable/ic_question_mark"
+                        tools:ignore="ContentDescription" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -378,7 +395,8 @@
                             android:layout_marginEnd="40dp"
                             android:layout_marginBottom="2dp"
                             android:justificationMode="inter_word"
-                            android:textSize="0dp" />
+                            android:textSize="0sp"
+                            tools:ignore="UnusedAttribute" />
                     </LinearLayout>
 
                     <ImageView
@@ -386,7 +404,8 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="center|end"
-                        android:src="@drawable/ic_arrow_right" />
+                        android:src="@drawable/ic_arrow_right"
+                        tools:ignore="ContentDescription" />
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
@@ -405,7 +424,8 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center|start"
                         android:layout_marginStart="10dp"
-                        android:src="@drawable/ic_question_mark" />
+                        android:src="@drawable/ic_question_mark"
+                        tools:ignore="ContentDescription" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -447,7 +467,8 @@
                             android:layout_marginEnd="40dp"
                             android:layout_marginBottom="2dp"
                             android:justificationMode="inter_word"
-                            android:textSize="0dp" />
+                            android:textSize="0sp"
+                            tools:ignore="UnusedAttribute" />
                     </LinearLayout>
 
                     <ImageView
@@ -455,7 +476,8 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="center|end"
-                        android:src="@drawable/ic_arrow_right" />
+                        android:src="@drawable/ic_arrow_right"
+                        tools:ignore="ContentDescription" />
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
@@ -474,7 +496,8 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center|start"
                         android:layout_marginStart="10dp"
-                        android:src="@drawable/ic_question_mark" />
+                        android:src="@drawable/ic_question_mark"
+                        tools:ignore="ContentDescription" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -516,7 +539,8 @@
                             android:layout_marginEnd="40dp"
                             android:layout_marginBottom="2dp"
                             android:justificationMode="inter_word"
-                            android:textSize="0dp" />
+                            android:textSize="0sp"
+                            tools:ignore="UnusedAttribute" />
                     </LinearLayout>
 
                     <ImageView
@@ -524,7 +548,8 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="center|end"
-                        android:src="@drawable/ic_arrow_right" />
+                        android:src="@drawable/ic_arrow_right"
+                        tools:ignore="ContentDescription" />
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
@@ -544,7 +569,8 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center|start"
                         android:layout_marginStart="10dp"
-                        android:src="@drawable/ic_question_mark" />
+                        android:src="@drawable/ic_question_mark"
+                        tools:ignore="ContentDescription" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -586,7 +612,8 @@
                             android:layout_marginEnd="40dp"
                             android:layout_marginBottom="2dp"
                             android:justificationMode="inter_word"
-                            android:textSize="0dp" />
+                            android:textSize="0sp"
+                            tools:ignore="UnusedAttribute" />
                     </LinearLayout>
 
                     <ImageView
@@ -594,7 +621,8 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_gravity="center|end"
-                        android:src="@drawable/ic_arrow_right" />
+                        android:src="@drawable/ic_arrow_right"
+                        tools:ignore="ContentDescription" />
                 </com.google.android.material.card.MaterialCardView>
 
 

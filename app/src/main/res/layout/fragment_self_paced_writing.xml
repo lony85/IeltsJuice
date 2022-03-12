@@ -118,7 +118,7 @@
                     android:id="@+id/courseContentRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    tools:listitem="@layout/template_cource_content">
+                    tools:listitem="@layout/template_course_content">
 
                 </androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>
@@ -128,10 +128,11 @@
                 android:layout_marginTop="10dp"
                 android:id="@+id/button_writingCourse_Register"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:text="Register Now"
-                app:cornerRadius="20dp" />
+                app:cornerRadius="30dp"
+                />
 
             <com.google.android.material.divider.MaterialDivider
                 android:layout_width="match_parent"
@@ -161,7 +162,7 @@
                     android:id="@+id/button_writingCourse_RegisterIRAN"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:text="Click Here"
                     android:textColor="?attr/colorSecondaryVariant"

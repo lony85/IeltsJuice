@@ -360,6 +360,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:textSize="@dimen/textSizeDescription"
+                    tools:ignore="HardcodedText"
                     android:text="4. Watch the video again and fill in the gap." />
 
                 <TextView
@@ -379,6 +380,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp"
+                    tools:ignore="HardcodedText"
                     android:hint="Your answer is ..."
                     android:padding="3dp">
 
@@ -411,20 +413,24 @@
                     android:lineSpacingExtra="5dp"
                     android:textStyle="bold"
                     android:textSize="@dimen/textSizeDescription"
+                    tools:ignore="HardcodedText"
                     android:text="5. Write the Speaking priority to their contents: (1,2 or 3)" />
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText"
                     android:text="1) Talk for up to 2 minutes on a written topic without any distractions."/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText"
                     android:text="2) Questions about your life or your career or your ideas about certain matters"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText"
                     android:text="3) Discussion about broader and issues"/>
 
                 <LinearLayout
@@ -523,20 +529,26 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:justificationMode="inter_word"
-                        android:text="Being able to speak with fluent British or Australian accent." />
+                        android:text="Being able to speak with fluent British or Australian accent."
+                    tools:ignore="HardcodedText"
+                        tools:targetApi="o" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup7Btn2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:justificationMode="inter_word"
-                        android:text="Speaking fluently and at length." />
+                        android:text="Speaking fluently and at length."
+                        tools:ignore="HardcodedText"
+                        tools:targetApi="o" />
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup7Btn3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:justificationMode="inter_word"
-                        android:text="Being able to analyze issues and justify your reasons and/or opinions" />
+                        tools:ignore="HardcodedText,TooManyViews"
+                        android:text="Being able to analyze issues and justify your reasons and/or opinions"
+                        tools:targetApi="o" />
                 </RadioGroup>
 
                 <com.google.android.material.divider.MaterialDivider
@@ -549,9 +561,10 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/finishQuizBtn"
                 android:layout_width="match_parent"
-                app:cornerRadius="8dp"
+                app:cornerRadius="30dp"
                 android:layout_height="wrap_content"
-                android:text="Finish Quiz"/>
+                android:text="Finish Quiz"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
 

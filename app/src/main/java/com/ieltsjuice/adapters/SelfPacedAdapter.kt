@@ -36,7 +36,7 @@ class SelfPacedAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view =
-            LayoutInflater.from(context).inflate(R.layout.template_cource_content, parent, false)
+            LayoutInflater.from(context).inflate(R.layout.template_course_content, parent, false)
         return Holder(view)
     }
 

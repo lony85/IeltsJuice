@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:padding="8dp"
     android:layout_height="wrap_content"
@@ -19,7 +20,8 @@
             android:gravity="center"
             android:text="Result"
             android:textSize="@dimen/textSizeTitle"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
         <com.google.android.material.divider.MaterialDivider
             android:layout_marginTop="5dp"
@@ -32,7 +34,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="@dimen/textSizeTitle"
-            android:text="1 of 3 Questions answered correctly." />
+            android:text="1 of 3 Questions answered correctly."
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:layout_width="match_parent"
@@ -40,7 +43,8 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:textSize="@dimen/textSizeTitle"
-            android:text="Do you want to restart the quiz?" />
+            android:text="Do you want to restart the quiz?"
+            tools:ignore="HardcodedText" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -55,22 +59,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No"
+                app:cornerRadius="30dp"
                 android:textColor="?attr/colorSecondaryVariant"
                 app:layout_constraintEnd_toStartOf="@+id/restartBtn"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:strokeColor="?attr/colorPrimary" />
+                app:strokeColor="?attr/colorPrimary"
+                tools:ignore="HardcodedText" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/restartBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Restart quiz"
+                app:cornerRadius="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/CancelBtn"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -81,11 +89,13 @@
             android:textSize="@dimen/textSizeDate"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
+            app:cornerRadius="30dp"
 
             android:textColor="?attr/colorSecondaryVariant"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_height="40dp"
-            android:text="View answers" />
+            android:text="View answers"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

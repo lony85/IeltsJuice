@@ -38,6 +38,8 @@
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/track.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/font/roboto.xml" value="0.2125" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/font/roboto_thin.xml" value="0.2125" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout-v26/fragment_test_speaking.xml" value="0.33489583333333334" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout-v26/fragment_test_writing.xml" value="0.16145833333333334" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout-v31/test.xml" value="0.334375" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/about_us_template.xml" value="0.22" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_consultation.xml" value="0.39926062846580407" />
@@ -60,13 +62,13 @@
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/cource_content_template.xml" value="0.2896396396396396" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/d.xml" value="0.22" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/drop_down_item.xml" value="0.2896396396396396" />
-        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_about_us.xml" value="0.33" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_about_us.xml" value="0.5120370370370371" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_about_us_Details.xml" value="0.3182291666666667" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_about_us_details.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_consultation.xml" value="0.2896396396396396" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_correction.xml" value="0.2896396396396396" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_home.xml" value="0.3628668171557562" />
-        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_one_to_one.xml" value="0.2896396396396396" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_one_to_one.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_online_cources.xml" value="0.22" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_online_courses.xml" value="0.2896396396396396" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_our_team.xml" value="0.2896396396396396" />

@@ -121,13 +121,14 @@
                                         <com.google.android.material.button.MaterialButton
                                             android:id="@+id/buttonSelfPacedListening"
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:layout_gravity="center"
                                             android:layout_marginTop="18dp"
                                             android:text="Go to Course"
                                             android:textColor="?attr/colorOnPrimary"
                                             android:textSize="10sp"
-                                            app:cornerRadius="10dp" />
+                                            app:cornerRadius="30dp"
+                                            />
 
 
                                     </LinearLayout>
@@ -219,13 +220,14 @@
                                         <com.google.android.material.button.MaterialButton
                                             android:id="@+id/buttonSelfPacedWriting"
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:layout_gravity="center"
                                             android:layout_marginBottom="5dp"
                                             android:text="Go to Course"
                                             android:textColor="?attr/colorOnPrimary"
                                             android:textSize="10sp"
-                                            app:cornerRadius="10dp" />
+                                            app:cornerRadius="30dp"
+                                            />
 
 
                                     </LinearLayout>
@@ -315,13 +317,14 @@
                                         <com.google.android.material.button.MaterialButton
                                             android:id="@+id/buttonSelfPacedReading"
                                             android:layout_width="wrap_content"
-                                            android:layout_height="40dp"
+                                            android:layout_height="wrap_content"
                                             android:layout_gravity="center"
                                             android:layout_marginBottom="5dp"
                                             android:text="Go to Course"
                                             android:textColor="?attr/colorOnPrimary"
                                             android:textSize="10sp"
-                                            app:cornerRadius="10dp" />
+                                            app:cornerRadius="30dp"
+                                            />
 
 
                                     </LinearLayout>
@@ -419,7 +422,8 @@
                                             android:text="Go to Course"
                                             android:textColor="?attr/colorOnPrimary"
                                             android:textSize="10sp"
-                                            app:cornerRadius="10dp" />
+                                            app:cornerRadius="30dp"
+                                            />
 
 
                                     </LinearLayout>
