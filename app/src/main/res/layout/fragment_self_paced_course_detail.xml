@@ -71,7 +71,8 @@
                     android:backgroundTint="@color/white"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    tools:src="@drawable/self_paced_speaking_1_1" />
+                    tools:src="@drawable/self_paced_speaking_1_1"
+                    tools:ignore="ContentDescription" />
 
                 <Button
                     android:id="@+id/videoViewPlayButton"
@@ -105,8 +106,8 @@
                 android:layout_marginTop="5dp"
                 android:justificationMode="inter_word"
                 android:textSize="@dimen/textSizeDescription"
-
-                tools:text="@string/loremIpsum" />
+                tools:text="@string/loremIpsum"
+                tools:ignore="UnusedAttribute" />
 
             <LinearLayout
                 android:id="@+id/selfPacedSpeakingCardViewContainer"

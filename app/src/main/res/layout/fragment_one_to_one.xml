@@ -148,7 +148,7 @@
                 android:textSize="@dimen/textSizeDescription" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_OnetoOne_Register"
+                android:id="@+id/button_OneToOne_Register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
@@ -180,7 +180,7 @@
                 tools:targetApi="o" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/button_OnetoOne_consultation"
+                android:id="@+id/button_OneToOne_consultation"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

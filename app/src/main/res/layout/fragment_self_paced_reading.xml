@@ -30,13 +30,15 @@
                 android:layout_height="wrap_content"
                 android:text="IELTS Reading"
                 android:textColor="?attr/colorSecondaryVariant"
-                android:textSize="@dimen/textSizeTitle" />
+                android:textSize="@dimen/textSizeTitle"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="An Online Self-paced Course"
-                android:textSize="@dimen/textSizeDate" />
+                android:textSize="@dimen/textSizeDate"
+                tools:ignore="HardcodedText" />
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
@@ -51,15 +53,17 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/img_reading" />
+                    android:src="@drawable/img_reading"
+                    tools:ignore="ContentDescription" />
             </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="About the Cource"
+                android:text="About the Course"
                 android:textColor="?attr/colorSecondaryVariant"
-                android:textSize="@dimen/textSizeTitle" />
+                android:textSize="@dimen/textSizeTitle"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -67,7 +71,7 @@
                 android:justificationMode="inter_word"
                 android:text="Video lessons covering all the strategies you need for IELTS reading (Ac/GT). You can stop and replay the contents as many times as you want. Start today and study IELTS in your own time and at your own pace."
                 android:textSize="@dimen/textSizeDescription"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
             <ImageView
                 android:layout_width="50dp"
@@ -75,7 +79,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/ic_book" />
+                android:src="@drawable/ic_book"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -84,7 +89,7 @@
                 android:text="This course includes :"
                 android:textColor="?attr/colorSecondaryVariant"
                 android:textSize="@dimen/textSizeDescription"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -92,7 +97,7 @@
                 android:justificationMode="inter_word"
                 android:text="Self-study program 36 video lessons 16 hrs of study time 44 downloadable resources Full lifetime access Access on any devices."
                 android:textSize="@dimen/textSizeDescription"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
             <com.google.android.material.textfield.TextInputLayout
 
@@ -108,7 +113,8 @@
                 <AutoCompleteTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="none" />
+                    android:inputType="none"
+                    tools:ignore="LabelFor" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
@@ -133,7 +139,8 @@
                 android:layout_height="40dp"
                 android:layout_gravity="end"
                 android:text="Register Now"
-                app:cornerRadius="20dp" />
+                app:cornerRadius="20dp"
+                tools:ignore="HardcodedText" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:layout_width="match_parent"
@@ -145,19 +152,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Live in IRAN?"
-                android:textColor="?attr/colorSecondaryVariant" />
+                android:textColor="?attr/colorSecondaryVariant"
+                tools:ignore="HardcodedText" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center|start
-"
-                android:orientation="horizontal">
+"                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="To register at a discounted price , " />
+                    android:text="To register at a discounted price , "
+                    tools:ignore="HardcodedText" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button_readingCourse_RegisterIRAN"
@@ -170,7 +178,8 @@
                     android:textSize="@dimen/textSizeDate"
                     app:cornerRadius="20dp"
                     app:strokeColor="?attr/colorPrimary"
-                    app:strokeWidth="1dp" />
+                    app:strokeWidth="1dp"
+                    tools:ignore="HardcodedText" />
             </LinearLayout>
 
             <com.google.android.material.divider.MaterialDivider
@@ -178,8 +187,6 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp" />
-
-
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

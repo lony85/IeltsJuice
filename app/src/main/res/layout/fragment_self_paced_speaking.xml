@@ -53,7 +53,8 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/img_speaking" />
+                    android:src="@drawable/img_speaking"
+                    tools:ignore="ContentDescription" />
             </com.google.android.material.card.MaterialCardView>
 
             <TextView
@@ -70,7 +71,7 @@
                 android:justificationMode="inter_word"
                 android:text="Video lessons covering all the strategies you need for IELTS speaking. You can stop and replay the contents as many times as you want. Start today and study IELTS in your own time and at your own pace."
                 android:textSize="@dimen/textSizeDescription"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
             <ImageView
                 android:layout_width="50dp"
@@ -78,7 +79,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/ic_microphone" />
+                android:src="@drawable/ic_microphone"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -87,7 +89,7 @@
                 android:text="This course includes :"
                 android:textColor="?attr/colorSecondaryVariant"
                 android:textSize="@dimen/textSizeDescription"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -95,7 +97,7 @@
                 android:justificationMode="inter_word"
                 android:text="Self-study program 36 video lessons 21 hrs of study time 3 downloadable resources Full lifetime access Access on any devices."
                 android:textSize="@dimen/textSizeDescription"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
             <com.google.android.material.textfield.TextInputLayout
 
@@ -111,7 +113,8 @@
                 <AutoCompleteTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="none" />
+                    android:inputType="none"
+                    tools:ignore="LabelFor" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout

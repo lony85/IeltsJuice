@@ -36,7 +36,7 @@
                 android:justificationMode="inter_word"
                 android:text="Prepare for IELTS online with self-paced or one-to-one courses, and enjoy the IELTS writing correction and consultation services at an international language academy powered by Machine Learning*."
                 android:textSize="@dimen/textSizeDescription"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -63,7 +63,8 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:backgroundTint="@color/white"
-                    android:src="@drawable/online_learning"/>
+                    android:src="@drawable/online_learning"
+                    tools:ignore="ContentDescription" />
                 <Button
                     android:id="@+id/videoViewPlayButton"
                     android:layout_width="45dp"
@@ -100,7 +101,7 @@
                 android:justificationMode="inter_word"
                 android:text="Depending on your learning style, urgency and budget, you can choose between one-to-one or self-paced online courses."
                 android:textSize="@dimen/textSizeDescription"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -156,7 +157,8 @@
                             android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                            tools:ignore="HardcodedText" />
 
                         <TextView
                             android:id="@+id/textView4"
@@ -174,7 +176,7 @@
                             tools:ignore="HardcodedText" />
 
                         <com.google.android.material.button.MaterialButton
-                            android:id="@+id/button_main_courses_OnetoOne"
+                            android:id="@+id/button_main_courses_OneToOne"
                             style="?attr/materialButtonOutlinedStyle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -183,7 +185,7 @@
                             android:layout_marginBottom="5dp"
                             android:text="Learn More >>"
                             android:textColor="?attr/colorSecondaryVariant"
-                            android:textSize="10sp"
+                            android:textSize="11sp"
                             app:cornerRadius="30dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -271,7 +273,7 @@
                             android:layout_marginBottom="5dp"
                             android:text="Learn More >>"
                             android:textColor="?attr/colorSecondaryVariant"
-                            android:textSize="10sp"
+                            android:textSize="11sp"
                             app:cornerRadius="30dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -311,7 +313,7 @@
                 android:layout_marginBottom="10dp"
                 android:text="Get Consultation"
                 android:textColor="?attr/colorSecondaryVariant"
-                android:textSize="10sp"
+                android:textSize="11sp"
                 app:cornerRadius="30dp"
                 app:layout_constraintBottom_toBottomOf="@+id/button_main_courses"
                 app:layout_constraintEnd_toStartOf="@+id/button_main_courses"

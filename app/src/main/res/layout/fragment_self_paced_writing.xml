@@ -30,13 +30,15 @@
                 android:layout_height="wrap_content"
                 android:text="IELTS Writing"
                 android:textColor="?attr/colorSecondaryVariant"
-                android:textSize="@dimen/textSizeTitle" />
+                android:textSize="@dimen/textSizeTitle"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="An Online Self-paced Course"
-                android:textSize="@dimen/textSizeDate" />
+                android:textSize="@dimen/textSizeDate"
+                tools:ignore="HardcodedText" />
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
@@ -51,15 +53,17 @@
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/img_writing" />
+                    android:src="@drawable/img_writing"
+                    tools:ignore="ContentDescription" />
             </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="About the Cource"
+                android:text="About the Course"
                 android:textColor="?attr/colorSecondaryVariant"
-                android:textSize="@dimen/textSizeTitle" />
+                android:textSize="@dimen/textSizeTitle"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -67,7 +71,7 @@
                 android:justificationMode="inter_word"
                 android:text="Video lessons covering all the strategies you need for IELTS Writing (Ac/GT). You can stop and replay the contents as many times as you want. Start today and study IELTS in your own time and at your own pace."
                 android:textSize="@dimen/textSizeDescription"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
             <ImageView
                 android:layout_width="50dp"
@@ -75,7 +79,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/ic_write" />
+                android:src="@drawable/ic_write"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -83,7 +88,8 @@
                 android:justificationMode="inter_word"
                 android:text="This course includes :"
                 android:textColor="?attr/colorSecondaryVariant"
-                android:textSize="@dimen/textSizeDescription" />
+                android:textSize="@dimen/textSizeDescription"
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -91,7 +97,7 @@
                 android:justificationMode="inter_word"
                 android:text="Self-study program 90 video lessons 21 hrs of study time 16 downloadable resources Full lifetime access Access on any devices."
                 android:textSize="@dimen/textSizeDescription"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText,UnusedAttribute" />
 
             <com.google.android.material.textfield.TextInputLayout
 
@@ -101,12 +107,14 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:focusableInTouchMode="true"
-                android:hint="Choose Course Content ...">
+                android:hint="Choose Course Content ..."
+                tools:ignore="HardcodedText">
 
                 <AutoCompleteTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="none" />
+                    android:inputType="none"
+                    tools:ignore="LabelFor" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
@@ -132,7 +140,7 @@
                 android:layout_gravity="end"
                 android:text="Register Now"
                 app:cornerRadius="30dp"
-                />
+                tools:ignore="HardcodedText" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:layout_width="match_parent"
@@ -144,7 +152,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Live in IRAN?"
-                android:textColor="?attr/colorSecondaryVariant" />
+                android:textColor="?attr/colorSecondaryVariant"
+                tools:ignore="HardcodedText" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -156,7 +165,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="To register at a discounted price , " />
+                    android:text="To register at a discounted price , "
+                    tools:ignore="HardcodedText" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button_writingCourse_RegisterIRAN"
@@ -169,7 +179,8 @@
                     android:textSize="@dimen/textSizeDate"
                     app:cornerRadius="20dp"
                     app:strokeColor="?attr/colorPrimary"
-                    app:strokeWidth="1dp" />
+                    app:strokeWidth="1dp"
+                    tools:ignore="HardcodedText" />
             </LinearLayout>
 
             <com.google.android.material.divider.MaterialDivider

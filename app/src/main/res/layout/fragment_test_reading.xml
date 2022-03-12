@@ -45,7 +45,8 @@
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
-                    tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
+                    tools:text="Is the Speaking exam different for Academic and General Training Modules?"
+                    tools:ignore="UnusedAttribute" />
                 <TextView
                     android:id="@+id/txtQueRadioBtn1_2"
                     android:layout_width="wrap_content"
@@ -53,7 +54,8 @@
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
-                    tools:text="Is the Speaking exam differ"/>
+                    tools:text="Is the Speaking exam differ"
+                    tools:ignore="UnusedAttribute" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -92,7 +94,8 @@
                     android:textStyle="bold"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
-                    tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
+                    tools:text="Is the Speaking exam different for Academic and General Training Modules?"
+                    tools:ignore="UnusedAttribute" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -150,7 +153,7 @@
                     android:justificationMode="inter_word"
                     android:text="In IELTS Reading part, there are ___ sections. You need to answer ___ questions in exactly ___ minutes and each question carries ___ mark."
                     android:textSize="@dimen/textSizeDescription"
-                    tools:ignore="HardcodedText" />
+                    tools:ignore="HardcodedText,UnusedAttribute" />
 
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -243,16 +246,13 @@
                     android:layout_height="2dp" />
             </LinearLayout>
 
-
-
-
-
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/finishQuizBtn"
                 android:layout_width="match_parent"
                 app:cornerRadius="8dp"
                 android:layout_height="wrap_content"
-                android:text="Finish Quiz"/>
+                android:text="Finish Quiz"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
 

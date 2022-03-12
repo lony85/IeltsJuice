@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="?attr/colorTertiary"
     android:layout_height="match_parent"
+    android:background="?attr/colorTertiary"
     android:padding="15dp">
 
 
@@ -46,7 +46,7 @@
 speakers in each section.: (1,2,3 or 4)"
                     android:textSize="@dimen/textSizeDescription"
                     android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
+                    tools:ignore="HardcodedText,UnusedAttribute" />
 
 
                 <TextView
@@ -59,7 +59,7 @@ speakers in each section.: (1,2,3 or 4)"
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2) a speech by one speechmaker."
+                    android:text="2) a speech by one speech maker."
 
                     tools:ignore="HardcodedText" />
 
@@ -102,7 +102,8 @@ speakers in each section.: (1,2,3 or 4)"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_forward" />
+                        android:src="@drawable/ic_forward"
+                        tools:ignore="ContentDescription" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtLayoutQue7Order2"
@@ -125,7 +126,8 @@ speakers in each section.: (1,2,3 or 4)"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_forward" />
+                        android:src="@drawable/ic_forward"
+                        tools:ignore="ContentDescription" />
 
                     <com.google.android.material.textfield.TextInputLayout
 
@@ -156,7 +158,8 @@ speakers in each section.: (1,2,3 or 4)"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_forward" />
+                        android:src="@drawable/ic_forward"
+                        tools:ignore="ContentDescription" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtLayoutQue7Order4"
@@ -197,7 +200,7 @@ speakers in each section.: (1,2,3 or 4)"
 parts: (1,2,3 or 4)"
                     android:textSize="@dimen/textSizeDescription"
                     android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
+                    tools:ignore="HardcodedText,UnusedAttribute" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -252,7 +255,8 @@ parts: (1,2,3 or 4)"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_forward" />
+                        android:src="@drawable/ic_forward"
+                        tools:ignore="ContentDescription" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtLayoutQue8Order2"
@@ -275,7 +279,8 @@ parts: (1,2,3 or 4)"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_forward" />
+                        android:src="@drawable/ic_forward"
+                        tools:ignore="ContentDescription" />
 
                     <com.google.android.material.textfield.TextInputLayout
 
@@ -306,7 +311,8 @@ parts: (1,2,3 or 4)"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_forward" />
+                        android:src="@drawable/ic_forward"
+                        tools:ignore="ContentDescription" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtLayoutQue8Order4"
@@ -345,6 +351,7 @@ parts: (1,2,3 or 4)"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
                     android:textStyle="bold"
+                    tools:ignore="UnusedAttribute"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
 
                 <RadioGroup
@@ -355,19 +362,22 @@ parts: (1,2,3 or 4)"
                         android:id="@+id/radioGroup1Btn1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Yes" />
+                        android:text="Yes"
+                        tools:ignore="HardcodedText" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup1Btn2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="No"
+                        tools:ignore="HardcodedText" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup1Btn3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="No"
+                        tools:ignore="HardcodedText" />
                 </RadioGroup>
 
                 <com.google.android.material.divider.MaterialDivider
@@ -390,6 +400,7 @@ parts: (1,2,3 or 4)"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
                     android:textStyle="bold"
+                    tools:ignore="UnusedAttribute"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
 
 
@@ -407,7 +418,7 @@ parts: (1,2,3 or 4)"
                         android:clickable="true"
                         app:fabCustomSize="40dp"
                         app:srcCompat="@drawable/ic_baseline_play"
-                        tools:ignore="VectorDrawableCompat" />
+                        tools:ignore="ContentDescription,KeyboardInaccessibleWidget,VectorDrawableCompat" />
 
                     <SeekBar
                         android:id="@+id/seekBarQue9"
@@ -425,7 +436,8 @@ parts: (1,2,3 or 4)"
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
-                    tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
+                    tools:text="Is the Speaking exam different for Academic and General Training Modules?"
+                    tools:ignore="UnusedAttribute" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -435,19 +447,22 @@ parts: (1,2,3 or 4)"
                         android:id="@+id/radioGroup9Btn1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Yes" />
+                        android:text="Yes"
+                        tools:ignore="HardcodedText" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup9Btn2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="No"
+                        tools:ignore="HardcodedText" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup9Btn3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="No"
+                        tools:ignore="HardcodedText" />
                 </RadioGroup>
 
                 <com.google.android.material.divider.MaterialDivider
@@ -470,7 +485,8 @@ parts: (1,2,3 or 4)"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
                     android:textStyle="bold"
-                    tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
+                    tools:text="Is the Speaking exam different for Academic and General Training Modules?"
+                    tools:ignore="UnusedAttribute" />
 
 
                 <LinearLayout
@@ -487,7 +503,7 @@ parts: (1,2,3 or 4)"
                         android:clickable="true"
                         app:fabCustomSize="40dp"
                         app:srcCompat="@drawable/ic_baseline_play"
-                        tools:ignore="VectorDrawableCompat" />
+                        tools:ignore="ContentDescription,KeyboardInaccessibleWidget,VectorDrawableCompat" />
 
                     <SeekBar
                         android:id="@+id/seekBarQue10"
@@ -506,19 +522,22 @@ parts: (1,2,3 or 4)"
                         android:id="@+id/radioGroup10Btn1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Yes" />
+                        android:text="Yes"
+                        tools:ignore="HardcodedText" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup10Btn2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="No"
+                        tools:ignore="HardcodedText" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup10Btn3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="No"
+                        tools:ignore="HardcodedText" />
                 </RadioGroup>
 
                 <com.google.android.material.divider.MaterialDivider
@@ -541,7 +560,8 @@ parts: (1,2,3 or 4)"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
                     android:textStyle="bold"
-                    tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
+                    tools:text="Is the Speaking exam different for Academic and General Training Modules?"
+                    tools:ignore="UnusedAttribute" />
 
 
                 <LinearLayout
@@ -556,7 +576,7 @@ parts: (1,2,3 or 4)"
                         android:clickable="true"
                         app:fabCustomSize="40dp"
                         app:srcCompat="@drawable/ic_baseline_play"
-                        tools:ignore="VectorDrawableCompat" />
+                        tools:ignore="ContentDescription,KeyboardInaccessibleWidget,VectorDrawableCompat" />
 
                     <SeekBar
                         android:id="@+id/seekBarQue11"
@@ -574,19 +594,22 @@ parts: (1,2,3 or 4)"
                         android:id="@+id/radioGroup11Btn1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Yes" />
+                        android:text="Yes"
+                        tools:ignore="HardcodedText,TooManyViews" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup11Btn2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="No"
+                        tools:ignore="HardcodedText" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup11Btn3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="No" />
+                        android:text="No"
+                        tools:ignore="HardcodedText" />
                 </RadioGroup>
 
                 <com.google.android.material.divider.MaterialDivider
@@ -609,6 +632,7 @@ parts: (1,2,3 or 4)"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
                     android:textStyle="bold"
+                    tools:ignore="UnusedAttribute"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
 
                 <TextView
@@ -618,6 +642,7 @@ parts: (1,2,3 or 4)"
                     android:justificationMode="inter_word"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
+                    tools:ignore="UnusedAttribute"
                     tools:text="" />
 
                 <RadioGroup
@@ -659,6 +684,7 @@ parts: (1,2,3 or 4)"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
                     android:textStyle="bold"
+                    tools:ignore="UnusedAttribute"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
 
                 <RadioGroup
@@ -711,13 +737,15 @@ parts: (1,2,3 or 4)"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
                     android:textStyle="bold"
+                    tools:ignore="UnusedAttribute"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_listening_test1" />
+                    android:src="@drawable/img_listening_test1"
+                    tools:ignore="ContentDescription" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -768,13 +796,15 @@ parts: (1,2,3 or 4)"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
                     android:textStyle="bold"
+                    tools:ignore="UnusedAttribute"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_listening_test2" />
+                    android:src="@drawable/img_listening_test2"
+                    tools:ignore="ContentDescription" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -825,13 +855,15 @@ parts: (1,2,3 or 4)"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
                     android:textStyle="bold"
+                    tools:ignore="UnusedAttribute"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_listening_test3" />
+                    android:src="@drawable/img_listening_test3"
+                    tools:ignore="ContentDescription" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -882,13 +914,15 @@ parts: (1,2,3 or 4)"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
                     android:textStyle="bold"
+                    tools:ignore="UnusedAttribute"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_listening_test4" />
+                    android:src="@drawable/img_listening_test4"
+                    tools:ignore="ContentDescription" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -939,13 +973,15 @@ parts: (1,2,3 or 4)"
                     android:lineSpacingExtra="5dp"
                     android:textSize="@dimen/textSizeDescription"
                     android:textStyle="bold"
+                    tools:ignore="UnusedAttribute"
                     tools:text="Is the Speaking exam different for Academic and General Training Modules?" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/img_listening_test5" />
+                    android:src="@drawable/img_listening_test5"
+                    tools:ignore="ContentDescription" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -1002,6 +1038,7 @@ parts: (1,2,3 or 4)"
                     android:layout_height="wrap_content"
                     android:justificationMode="inter_word"
                     android:textSize="@dimen/textSizeDescription"
+                    tools:ignore="UnusedAttribute"
                     tools:text="The Speaking test is ___ and ..." />
 
 
@@ -1091,7 +1128,7 @@ parts: (1,2,3 or 4)"
                     android:text="5. Write the Speaking priority to their contents: (1,2 or 3)"
                     android:textSize="@dimen/textSizeDescription"
                     android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
+                    tools:ignore="HardcodedText,UnusedAttribute" />
 
 
                 <TextView
@@ -1109,7 +1146,8 @@ parts: (1,2,3 or 4)"
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3) Discussion about broader and issues" />
+                    android:text="3) Discussion about broader and issues"
+                    tools:ignore="HardcodedText" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1137,7 +1175,8 @@ parts: (1,2,3 or 4)"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_forward" />
+                        android:src="@drawable/ic_forward"
+                        tools:ignore="ContentDescription" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/txtLayoutOrder2"
@@ -1160,7 +1199,8 @@ parts: (1,2,3 or 4)"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:src="@drawable/ic_forward" />
+                        android:src="@drawable/ic_forward"
+                        tools:ignore="ContentDescription" />
 
                     <com.google.android.material.textfield.TextInputLayout
 
@@ -1206,7 +1246,6 @@ parts: (1,2,3 or 4)"
 
                 <RadioGroup
                     android:layout_width="wrap_content"
-
                     android:layout_height="wrap_content">
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
@@ -1215,14 +1254,15 @@ parts: (1,2,3 or 4)"
                         android:layout_height="wrap_content"
                         android:justificationMode="inter_word"
                         android:text="Being able to speak with fluent British or Australian accent."
-                        tools:ignore="HardcodedText" />
+                        tools:ignore="HardcodedText,UnusedAttribute" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup7Btn2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:justificationMode="inter_word"
-                        android:text="Speaking fluently and at length." />
+                        android:text="Speaking fluently and at length."
+                        tools:ignore="HardcodedText,UnusedAttribute" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radioGroup7Btn3"
@@ -1230,7 +1270,7 @@ parts: (1,2,3 or 4)"
                         android:layout_height="wrap_content"
                         android:justificationMode="inter_word"
                         android:text="Being able to analyze issues and justify your reasons and/or opinions"
-                        tools:ignore="HardcodedText" />
+                        tools:ignore="HardcodedText,UnusedAttribute" />
                 </RadioGroup>
 
                 <com.google.android.material.divider.MaterialDivider

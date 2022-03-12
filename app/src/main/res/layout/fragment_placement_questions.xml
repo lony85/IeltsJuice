@@ -59,7 +59,8 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            tools:src="@drawable/img_test_1" />
+            tools:src="@drawable/img_test_1"
+            tools:ignore="ContentDescription" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/answerOneCard"
@@ -71,7 +72,8 @@
             android:elevation="4dp"
             app:rippleColor="?attr/colorPrimary"
             app:strokeColor="?attr/colorPrimary"
-            app:strokeWidth="1dp">
+            app:strokeWidth="1dp"
+            android:focusable="true">
 
             <TextView
                 android:id="@+id/txtAnswerOne"
@@ -90,12 +92,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-
             android:clickable="true"
             android:elevation="4dp"
             app:rippleColor="?attr/colorPrimary"
             app:strokeColor="?attr/colorPrimary"
-            app:strokeWidth="1dp">
+            app:strokeWidth="1dp"
+            android:focusable="true">
 
             <TextView
                 android:id="@+id/txtAnswerTwo"
@@ -113,13 +115,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-
             android:layout_marginBottom="10dp"
             android:clickable="true"
             android:elevation="4dp"
             app:rippleColor="?attr/colorPrimary"
             app:strokeColor="?attr/colorPrimary"
-            app:strokeWidth="1dp">
+            app:strokeWidth="1dp"
+            android:focusable="true">
 
             <TextView
                 android:id="@+id/txtAnswerThree"
@@ -139,11 +141,11 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:clickable="true"
-
             android:elevation="4dp"
             app:rippleColor="?attr/colorPrimary"
             app:strokeColor="?attr/colorPrimary"
-            app:strokeWidth="1dp">
+            app:strokeWidth="1dp"
+            android:focusable="true">
 
             <TextView
                 android:id="@+id/txtAnswerFour"
