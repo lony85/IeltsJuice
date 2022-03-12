@@ -39,7 +39,7 @@ class FragmentOnlineCourses : Fragment() {
             intent.putExtra(PAGE_NAME_KEY,"Consultation")
             startActivity(intent)
         }
-        binding.buttonMainCoursesOnetoOne.setOnClickListener {
+        binding.buttonMainCoursesOneToOne.setOnClickListener {
             val intent = Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
             intent.putExtra(PAGE_NAME_KEY,"OneToOne")
             startActivity(intent)

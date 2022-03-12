@@ -24,7 +24,7 @@ class FragmentOneToOne:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonOnetoOneConsultation.setOnClickListener {
+        binding.buttonOneToOneConsultation.setOnClickListener {
             val webUri = Uri.parse("https://ieltsjuice.com/services/consultation/")
             val iWeb = Intent(Intent.ACTION_VIEW, webUri)
             iWeb.setPackage("com.android.chrome")
@@ -39,7 +39,7 @@ class FragmentOneToOne:Fragment() {
                 )
             }
         }
-        binding.buttonOnetoOneIRAN.setOnClickListener {
+        binding.buttonOneToOneIRAN.setOnClickListener {
             val webUri = Uri.parse("https://forush.co/43/679673/")
             val iWeb = Intent(Intent.ACTION_VIEW, webUri)
             iWeb.setPackage("com.android.chrome")
@@ -54,7 +54,7 @@ class FragmentOneToOne:Fragment() {
                 )
             }
         }
-        binding.buttonOnetoOneRegister.setOnClickListener {
+        binding.buttonOneToOneRegister.setOnClickListener {
             val webUri = Uri.parse("https://ieltsjuice.com/services/one-to-one/")
             val iWeb = Intent(Intent.ACTION_VIEW, webUri)
             iWeb.setPackage("com.android.chrome")
