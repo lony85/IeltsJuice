@@ -30,11 +30,6 @@
             app:contentScrim="?attr/colorPrimaryVariant"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-
-
-
-
-
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"

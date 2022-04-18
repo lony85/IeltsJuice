@@ -1,165 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="?attr/colorTertiary"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?attr/colorTertiary">
 
-
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="15dp">
-
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp">
 
-            <com.google.android.material.progressindicator.LinearProgressIndicator
-                android:id="@+id/progress_bar"
-                android:layout_width="0dp"
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:indeterminate="false"
-                android:max="100"
-                android:minHeight="40dp"
-                android:progress="0"
-                app:trackThickness="6dp" />
+                android:orientation="horizontal">
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progress_bar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:minHeight="40dp"
+                    android:progress="0"
+                    app:trackThickness="6dp" />
+
+                <TextView
+                    android:id="@+id/txtProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:textSize="@dimen/textSizeDate"
+                    tools:text="1/100" />
+            </LinearLayout>
+
 
             <TextView
-                android:id="@+id/txtProgressBar"
+                android:id="@+id/txtQuestion"
                 android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:textColor="?attr/colorSecondaryVariant"
+                android:textSize="@dimen/textSizeTitle"
+                app:layout_constraintTop_toBottomOf="@+id/appBar"
+                tools:layout_editor_absoluteX="81dp"
+                tools:text="1. Is she\n ____ history\n teacher\n?" />
+
+
+            <ImageView
+                android:id="@+id/imgPlacementTest"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/img_test_1" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/answerOneCard"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:padding="10dp"
-                android:textSize="@dimen/textSizeDate"
-                tools:text="1/100" />
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:focusable="true"
+                app:rippleColor="?attr/colorPrimary"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    android:id="@+id/txtAnswerOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="@dimen/textSizeDescription"
+                    tools:text="Maria" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/answerTwoCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:focusable="true"
+                app:rippleColor="?attr/colorPrimary"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    android:id="@+id/txtAnswerTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="@dimen/textSizeDescription"
+                    tools:text="Maria" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/answerThreeCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:focusable="true"
+                app:rippleColor="?attr/colorPrimary"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    android:id="@+id/txtAnswerThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="@dimen/textSizeDescription"
+                    tools:text="Maria" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/answerFourCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:elevation="4dp"
+                android:focusable="true"
+                app:rippleColor="?attr/colorPrimary"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    android:id="@+id/txtAnswerFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="@dimen/textSizeDescription"
+                    tools:text="Maria" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
         </LinearLayout>
 
-
-        <TextView
-            android:id="@+id/txtQuestion"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:textColor="?attr/colorSecondaryVariant"
-            android:textSize="@dimen/textSizeTitle"
-            app:layout_constraintTop_toBottomOf="@+id/appBar"
-            tools:layout_editor_absoluteX="81dp"
-            tools:text="1. Is she\n ____ history\n teacher\n?" />
-
-
-        <ImageView
-            android:id="@+id/imgPlacementTest"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            tools:src="@drawable/img_test_1"
-            tools:ignore="ContentDescription" />
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/answerOneCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:clickable="true"
-            android:elevation="4dp"
-            app:rippleColor="?attr/colorPrimary"
-            app:strokeColor="?attr/colorPrimary"
-            app:strokeWidth="1dp"
-            android:focusable="true">
-
-            <TextView
-                android:id="@+id/txtAnswerOne"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:textSize="@dimen/textSizeDescription"
-                tools:text="Maria" />
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/answerTwoCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:clickable="true"
-            android:elevation="4dp"
-            app:rippleColor="?attr/colorPrimary"
-            app:strokeColor="?attr/colorPrimary"
-            app:strokeWidth="1dp"
-            android:focusable="true">
-
-            <TextView
-                android:id="@+id/txtAnswerTwo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:textSize="@dimen/textSizeDescription"
-                tools:text="Maria" />
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/answerThreeCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:clickable="true"
-            android:elevation="4dp"
-            app:rippleColor="?attr/colorPrimary"
-            app:strokeColor="?attr/colorPrimary"
-            app:strokeWidth="1dp"
-            android:focusable="true">
-
-            <TextView
-                android:id="@+id/txtAnswerThree"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:textSize="@dimen/textSizeDescription"
-                tools:text="Maria" />
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/answerFourCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:clickable="true"
-            android:elevation="4dp"
-            app:rippleColor="?attr/colorPrimary"
-            app:strokeColor="?attr/colorPrimary"
-            app:strokeWidth="1dp"
-            android:focusable="true">
-
-            <TextView
-                android:id="@+id/txtAnswerFour"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:textSize="@dimen/textSizeDescription"
-                tools:text="Maria" />
-
-        </com.google.android.material.card.MaterialCardView>
-
-
-    </LinearLayout>
-
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

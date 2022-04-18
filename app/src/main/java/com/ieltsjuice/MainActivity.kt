@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.internetconnection.NetworkChecker
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.ieltsjuice.databinding.ActivityMainBinding
 
