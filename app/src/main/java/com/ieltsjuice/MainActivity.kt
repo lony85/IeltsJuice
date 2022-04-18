@@ -2,11 +2,9 @@ package com.ieltsjuice
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.internetconnection.NetworkChecker
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.ieltsjuice.databinding.ActivityMainBinding
 
@@ -24,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         navView.setupWithNavController(navController)
 
-
         binding.navView.setOnItemReselectedListener { }  //Leave it - Empty tag
 
         binding.ieltsLogo.setImageDrawable(
@@ -33,26 +30,28 @@ class MainActivity : AppCompatActivity() {
                 R.drawable.ielts_juice_logo
             )
         )
-        // Day Night Switch
 
-//        binding.DayNightSwitch.setOnCheckedChangeListener { _, isChecked ->
-//            if (isChecked) {
-//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-//                binding.ieltsLogo.setImageDrawable(
-//                    ContextCompat.getDrawable(
-//                        this,
-//                        R.drawable.ielts_juice_logo_dark
-//                    )
-//                )
-//            } else {
-//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-//                binding.ieltsLogo.setImageDrawable(
-//                    ContextCompat.getDrawable(
-//                        this,
-//                        R.drawable.ielts_juice_logo
-//                    )
-//                )
-//            }
-//        }
+        // Day Night Switch
+/*
+        binding.DayNightSwitch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                binding.ieltsLogo.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        this,
+                        R.drawable.ielts_juice_logo_dark
+                    )
+                )
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                binding.ieltsLogo.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        this,
+                        R.drawable.ielts_juice_logo
+                    )
+                )
+            }
+        }
+ */
     }
 }

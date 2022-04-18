@@ -1,7 +1,6 @@
 package com.ieltsjuice
 
 import android.annotation.SuppressLint
-import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,7 +11,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.BaseTransientBottomBar.LENGTH_SHORT
 import com.google.android.material.snackbar.Snackbar
 import com.ieltsjuice.databinding.FragmentScoreCalculatorBinding
-import kotlin.math.log
+
 
 class FragmentScoreCalculator : Fragment() {
     lateinit var binding: FragmentScoreCalculatorBinding

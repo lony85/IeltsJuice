@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="If you leave the quest right now , your progress will be lost\n\nDo you want to continue?"
+        android:text="If you leave the quiz right now, your progress will be lost\n\nDo you want to continue?"
         android:textSize="@dimen/textSizeDescription"
         tools:ignore="HardcodedText" />
 
