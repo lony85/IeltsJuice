@@ -33,6 +33,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="88dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/shape_teacher_detail"
         android:orientation="vertical"
         android:paddingTop="100dp"
@@ -191,9 +194,5 @@
                 app:layout_constraintTop_toTopOf="@+id/webPage"
                 tools:ignore="ContentDescription" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

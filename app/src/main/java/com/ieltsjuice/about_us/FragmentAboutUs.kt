@@ -9,7 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.ieltsjuice.PAGE_NAME_KEY
 import com.ieltsjuice.R
+import com.ieltsjuice.WithoutBottomNavigationBarActivity
 import com.ieltsjuice.adapters.AboutUsRecyclerAdapter
 import com.ieltsjuice.databinding.FragmentAboutUsBinding
 import com.ieltsjuice.model.Teacher
@@ -159,25 +161,19 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
 
     }
     override fun moreInfoBtn(teacher: Teacher, position: Int) {
-        val bundle = Bundle()
-        bundle.putString(KEY_teacherName, teacher.teacherName)
-        bundle.putString(KEY_teacherFamily, teacher.teacherFamily)
-        bundle.putString(KEY_teacherTitle, teacher.title)
-        bundle.putString(KEY_teacherDesc, teacher.description)
-//        bundle.putString(KEY_teacherImage, teacher.title)
-        bundle.putString(KEY_teacherFacebook, teacher.facebook)
-        bundle.putString(KEY_teacherLinkedin, teacher.linkedin)
-        bundle.putString(KEY_teacherInstagram, teacher.instagram)
-        bundle.putString(KEY_teacherWebpage, teacher.webpage)
-        bundle.putString(KEY_teacherSkype, teacher.skype)
-        val fragment = FragmentAboutUsDetails()
-        fragment.arguments = bundle
 
-        val replaceTransaction = parentFragmentManager.beginTransaction()
-        replaceTransaction.replace(R.id.nav_host_fragment_activity_main, fragment)
-        replaceTransaction.addToBackStack(null)
-        replaceTransaction.commit()
-
+        val intent = Intent(this.requireActivity(),WithoutBottomNavigationBarActivity::class.java)
+        intent.putExtra(PAGE_NAME_KEY,"AboutUs")
+        intent.putExtra(KEY_teacherName, teacher.teacherName)
+        intent.putExtra(KEY_teacherFamily, teacher.teacherFamily)
+        intent.putExtra(KEY_teacherTitle, teacher.title)
+        intent.putExtra(KEY_teacherDesc, teacher.description)
+        intent.putExtra(KEY_teacherImage, teacher.image)
+        intent.putExtra(KEY_teacherFacebook, teacher.facebook)
+        intent.putExtra(KEY_teacherLinkedin, teacher.linkedin)
+        intent.putExtra(KEY_teacherInstagram, teacher.instagram)
+        intent.putExtra(KEY_teacherWebpage, teacher.webpage)
+        intent.putExtra(KEY_teacherSkype, teacher.skype)
+        startActivity(intent)
     }
-
 }

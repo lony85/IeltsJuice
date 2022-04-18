@@ -23,7 +23,6 @@ class FragmentAboutUsDetails : Fragment() {
         binding = FragmentAboutUsDetailsBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -125,9 +124,7 @@ class FragmentAboutUsDetails : Fragment() {
             binding.descriptionAboutDetails.text = teacherDescription
             bindImage(teacherFamily!!)
         }
-
     }
-
     private fun bindImage(teacherFamily: String) {
         when (teacherFamily) {
 
@@ -163,12 +160,15 @@ class FragmentAboutUsDetails : Fragment() {
                 binding.skype.visibility = GONE
                 binding.webPage.visibility = GONE
                 binding.instagram.visibility = GONE
+                binding.facebook.visibility = GONE
+                binding.linkedin.visibility = GONE
             }
             "Hedeshi" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_elham_hedeshi)
                 binding.skype.visibility = GONE
                 binding.webPage.visibility = GONE
                 binding.linkedin.visibility = GONE
+                binding.instagram.visibility = GONE
             }
             "Ghassemi" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_saghy_ghassemi)
@@ -210,7 +210,5 @@ class FragmentAboutUsDetails : Fragment() {
 
             }
         }
-
     }
-
 }
