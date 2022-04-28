@@ -26,7 +26,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
@@ -50,31 +50,37 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:paddingTop="15dp"
                     android:paddingBottom="15dp">
 
 
-                    <FrameLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/frameLayoutListening"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@+id/frameLayoutWriting"
                         app:layout_constraintEnd_toStartOf="@+id/frameLayoutReading"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
                             android:paddingStart="20dp"
-                            android:paddingEnd="20dp">
+                            android:paddingEnd="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
                             <com.google.android.material.card.MaterialCardView
                                 android:id="@+id/materialCardView1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="260dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
                                 app:cardCornerRadius="20dp"
                                 app:cardElevation="8dp"
                                 app:strokeColor="?attr/colorPrimary"
@@ -82,7 +88,7 @@
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="260dp"
                                     android:orientation="vertical">
 
                                     <ImageView
@@ -94,7 +100,7 @@
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
+                                        android:layout_height="wrap_content"
                                         android:orientation="vertical">
 
                                         <TextView
@@ -117,25 +123,23 @@
                                             android:layout_marginTop="8dp"
                                             android:layout_marginEnd="10dp"
                                             android:justificationMode="inter_word"
-                                            android:text="Best approaches to each part of IELTS Listening test"
+                                            android:text="Best approaches to each part of IELTS Listening test\n"
                                             android:textSize="@dimen/textSizeDescription"
                                             tools:ignore="HardcodedText,UnusedAttribute" />
 
 
-                                        <com.google.android.material.button.MaterialButton
-                                            android:id="@+id/buttonSelfPacedListening"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="center"
-                                            android:layout_marginTop="18dp"
-                                            android:text="Go to Course"
-                                            android:textColor="?attr/colorOnPrimary"
-                                            android:textSize="11sp"
-                                            app:cornerRadius="30dp"
-                                            tools:ignore="HardcodedText" />
-
-
                                     </LinearLayout>
+
+                                    <Button
+                                        android:id="@+id/buttonSelfPacedListening"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Go to Course"
+                                        android:textColor="?attr/colorOnPrimary"
+                                        android:textSize="11sp"
+                                        app:cornerRadius="30dp"
+                                        tools:ignore="HardcodedText" />
 
                                 </LinearLayout>
 
@@ -147,38 +151,47 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
-                            android:layout_marginTop="40dp"
+                            android:layout_marginTop="35dp"
                             android:background="@color/Green"
                             android:padding="2dp"
                             android:text="49 USD"
                             android:textColor="?attr/colorOnPrimary"
                             android:textSize="@dimen/textSizeDescription"
                             android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
                             tools:ignore="HardcodedText" />
 
-                    </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-                    <FrameLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/frameLayoutWriting"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/frameLayoutSpeaking"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/frameLayoutListening">
+                        app:layout_constraintTop_toBottomOf="@+id/frameLayoutListening">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:gravity="center"
                             android:paddingStart="20dp"
-                            android:paddingEnd="20dp">
+                            android:paddingEnd="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
                             <com.google.android.material.card.MaterialCardView
                                 android:id="@+id/materialCardView2"
                                 android:layout_width="wrap_content"
-                                android:layout_height="260dp"
-                                android:layout_marginTop="10dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
                                 app:cardCornerRadius="20dp"
                                 app:cardElevation="8dp"
                                 app:strokeColor="?attr/colorPrimary"
@@ -186,7 +199,7 @@
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="260dp"
                                     android:orientation="vertical">
 
                                     <ImageView
@@ -198,7 +211,7 @@
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
+                                        android:layout_height="wrap_content"
                                         android:orientation="vertical">
 
                                         <TextView
@@ -224,22 +237,18 @@
                                             android:textSize="@dimen/textSizeDescription"
                                             tools:ignore="HardcodedText,UnusedAttribute" />
 
-
-                                        <com.google.android.material.button.MaterialButton
-                                            android:id="@+id/buttonSelfPacedWriting"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="center"
-                                            android:layout_marginBottom="5dp"
-                                            android:text="Go to Course"
-                                            android:textColor="?attr/colorOnPrimary"
-                                            android:textSize="11sp"
-                                            app:cornerRadius="30dp"
-                                            tools:ignore="HardcodedText" />
-
-
                                     </LinearLayout>
 
+                                    <Button
+                                        android:id="@+id/buttonSelfPacedWriting"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Go to Course"
+                                        android:textColor="?attr/colorOnPrimary"
+                                        android:textSize="11sp"
+                                        app:cornerRadius="30dp"
+                                        tools:ignore="HardcodedText" />
                                 </LinearLayout>
 
 
@@ -250,36 +259,44 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
-                            android:layout_marginTop="40dp"
+                            android:layout_marginTop="35dp"
                             android:background="@color/Green"
                             android:padding="2dp"
                             android:text="79 USD"
                             android:textColor="?attr/colorOnPrimary"
                             android:textSize="@dimen/textSizeDescription"
                             android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
                             tools:ignore="HardcodedText" />
 
-                    </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <FrameLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/frameLayoutReading"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@+id/frameLayoutSpeaking"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toEndOf="@+id/frameLayoutListening"
                         app:layout_constraintTop_toTopOf="parent">
 
                         <LinearLayout
+
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:paddingStart="20dp"
-                            android:paddingEnd="20dp">
+                            android:paddingEnd="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
                             <com.google.android.material.card.MaterialCardView
                                 android:id="@+id/materialCardView3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="260dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 app:cardCornerRadius="20dp"
                                 app:cardElevation="8dp"
                                 app:strokeColor="?attr/colorPrimary"
@@ -287,7 +304,7 @@
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="260dp"
                                     android:orientation="vertical">
 
                                     <ImageView
@@ -299,7 +316,7 @@
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
+                                        android:layout_height="wrap_content"
                                         android:orientation="vertical">
 
                                         <TextView
@@ -326,21 +343,18 @@
                                             tools:ignore="HardcodedText,UnusedAttribute" />
 
 
-                                        <com.google.android.material.button.MaterialButton
-                                            android:id="@+id/buttonSelfPacedReading"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="center"
-                                            android:layout_marginBottom="5dp"
-                                            android:text="Go to Course"
-                                            android:textColor="?attr/colorOnPrimary"
-                                            android:textSize="11sp"
-                                            app:cornerRadius="30dp"
-                                            tools:ignore="HardcodedText" />
-
-
                                     </LinearLayout>
 
+                                    <Button
+                                        android:id="@+id/buttonSelfPacedReading"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Go to Course"
+                                        android:textColor="?attr/colorOnPrimary"
+                                        android:textSize="11sp"
+                                        app:cornerRadius="30dp"
+                                        tools:ignore="HardcodedText" />
                                 </LinearLayout>
 
 
@@ -351,37 +365,45 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
-                            android:layout_marginTop="40dp"
+                            android:layout_marginTop="35dp"
                             android:background="@color/Green"
                             android:padding="2dp"
                             android:text="79 USD"
                             android:textColor="?attr/colorOnPrimary"
                             android:textSize="@dimen/textSizeDescription"
                             android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
                             tools:ignore="HardcodedText" />
 
-                    </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <FrameLayout
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/frameLayoutSpeaking"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toEndOf="@+id/frameLayoutWriting"
-                        app:layout_constraintTop_toBottomOf="@id/frameLayoutReading">
+                        app:layout_constraintTop_toBottomOf="@+id/frameLayoutReading">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:gravity="center"
                             android:paddingStart="20dp"
-                            android:paddingEnd="20dp">
+                            android:paddingEnd="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
                             <com.google.android.material.card.MaterialCardView
                                 android:id="@+id/materialCardView4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="260dp"
-                                android:layout_marginTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
                                 app:cardCornerRadius="20dp"
                                 app:cardElevation="8dp"
                                 app:strokeColor="?attr/colorPrimary"
@@ -389,7 +411,7 @@
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="260dp"
                                     android:orientation="vertical">
 
                                     <ImageView
@@ -401,7 +423,7 @@
 
                                     <LinearLayout
                                         android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
+                                        android:layout_height="wrap_content"
                                         android:orientation="vertical">
 
                                         <TextView
@@ -428,21 +450,18 @@
                                             tools:ignore="HardcodedText,UnusedAttribute" />
 
 
-                                        <com.google.android.material.button.MaterialButton
-                                            android:id="@+id/button_selfPaced_Speaking"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_gravity="center"
-                                            android:layout_marginBottom="5dp"
-                                            android:text="Go to Course"
-                                            android:textColor="?attr/colorOnPrimary"
-                                            android:textSize="11sp"
-                                            app:cornerRadius="30dp"
-                                            tools:ignore="HardcodedText" />
-
-
                                     </LinearLayout>
 
+                                    <Button
+                                        android:id="@+id/button_selfPaced_Speaking"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Go to Course"
+                                        android:textColor="?attr/colorOnPrimary"
+                                        android:textSize="11sp"
+                                        app:cornerRadius="30dp"
+                                        tools:ignore="HardcodedText" />
                                 </LinearLayout>
 
 
@@ -453,16 +472,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
-                            android:layout_marginTop="40dp"
+                            android:layout_marginTop="35dp"
                             android:background="@color/Green"
                             android:padding="2dp"
                             android:text="39 USD"
                             android:textColor="?attr/colorOnPrimary"
                             android:textSize="@dimen/textSizeDescription"
                             android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
                             tools:ignore="HardcodedText" />
 
-                    </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
