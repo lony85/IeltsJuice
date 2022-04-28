@@ -1,7 +1,9 @@
 package com.ieltsjuice
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
@@ -32,6 +34,26 @@ class MainActivity : AppCompatActivity() {
         )
 
         // Day Night Switch
+        when (this.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)) {
+            Configuration.UI_MODE_NIGHT_YES -> {binding.ieltsLogo.setImageDrawable(
+                ContextCompat.getDrawable(
+                    this,
+                    R.drawable.ielts_juice_logo_dark
+                )
+            )}
+            Configuration.UI_MODE_NIGHT_NO -> {binding.ieltsLogo.setImageDrawable(
+                ContextCompat.getDrawable(
+                    this,
+                    R.drawable.ielts_juice_logo
+                )
+            )}
+            Configuration.UI_MODE_NIGHT_UNDEFINED -> {binding.ieltsLogo.setImageDrawable(
+                ContextCompat.getDrawable(
+                    this,
+                    R.drawable.ielts_juice_logo
+                )
+            )}
+        }
 /*
         binding.DayNightSwitch.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
