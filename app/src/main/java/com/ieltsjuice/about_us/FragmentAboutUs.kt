@@ -30,6 +30,7 @@ const val KEY_teacherImage = "KEY_teacherImage"
 
 class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
     lateinit var binding: FragmentAboutUsBinding
+    lateinit var fragmentAboutUsViewModel: FragmentAboutUsViewModel
     private lateinit var teachersAdapter: AboutUsRecyclerAdapter
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,6 +43,8 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        fragmentAboutUsViewModel = FragmentAboutUsViewModel()
 
         // our team Recycler View
         teachersAdapter = AboutUsRecyclerAdapter(this.requireActivity(), Data.Teachers, this)
@@ -163,17 +166,7 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
     override fun moreInfoBtn(teacher: Teacher, position: Int) {
 
         val intent = Intent(this.requireActivity(),WithoutBottomNavigationBarActivity::class.java)
-        intent.putExtra(PAGE_NAME_KEY,"AboutUs")
-        intent.putExtra(KEY_teacherName, teacher.teacherName)
-        intent.putExtra(KEY_teacherFamily, teacher.teacherFamily)
-        intent.putExtra(KEY_teacherTitle, teacher.title)
-        intent.putExtra(KEY_teacherDesc, teacher.description)
-        intent.putExtra(KEY_teacherImage, teacher.image)
-        intent.putExtra(KEY_teacherFacebook, teacher.facebook)
-        intent.putExtra(KEY_teacherLinkedin, teacher.linkedin)
-        intent.putExtra(KEY_teacherInstagram, teacher.instagram)
-        intent.putExtra(KEY_teacherWebpage, teacher.webpage)
-        intent.putExtra(KEY_teacherSkype, teacher.skype)
+        fragmentAboutUsViewModel.putExtra(intent,teacher)
         startActivity(intent)
     }
 }

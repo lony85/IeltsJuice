@@ -33,7 +33,6 @@ class AboutUsRecyclerAdapter(val context: Context, val Teachers: List<Teacher>,p
 
             moreButton.setOnClickListener {
                 pressed.moreInfoBtn(Teachers[adapterPosition],adapterPosition)
-
             }
             
         }

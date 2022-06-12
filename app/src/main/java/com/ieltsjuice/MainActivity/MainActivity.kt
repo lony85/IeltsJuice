@@ -1,13 +1,13 @@
-package com.ieltsjuice
+package com.ieltsjuice.MainActivity
 
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.ieltsjuice.R
 import com.ieltsjuice.databinding.ActivityMainBinding
 
 
