@@ -1,6 +1,6 @@
 package com.ieltsjuice.model
 
-object Data {
+object TeachersData {
     val Teachers = listOf(
         Teacher(
             "Kasra",

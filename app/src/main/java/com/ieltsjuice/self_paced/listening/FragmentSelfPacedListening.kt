@@ -17,7 +17,7 @@ import com.ieltsjuice.R
 import com.ieltsjuice.adapters.SelfPacedAdapter
 import com.ieltsjuice.databinding.FragmentSelfPacedListeningBinding
 import com.ieltsjuice.databinding.TemplateRegisterAlertDialogBinding
-import com.ieltsjuice.model.Data
+import com.ieltsjuice.model.TeachersData
 import com.ieltsjuice.model.SelfPacedCourses
 import com.ieltsjuice.self_paced.FragmentSelfPacedCourseDetail
 import com.ieltsjuice.self_paced.speaking.KEY_SelfPacedCourseMainTitle
@@ -113,7 +113,7 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.ListeningIntroduction,this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.ListeningIntroduction,this)
                     binding.courseContentRecyclerView.adapter = coursesAdapter
                     binding.scrollView.post {
                         binding.scrollView.scrollTo(
@@ -130,7 +130,7 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.VocabularyForListening, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.VocabularyForListening, this)
 
                 }
                 "TheArtOfPrediction" -> {
@@ -140,7 +140,7 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.TheArtOfPrediction, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.TheArtOfPrediction, this)
                 }
                 "Spelling" -> {
                     //set height of RecyclerView Container
@@ -149,7 +149,7 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.Spelling, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.Spelling, this)
                 }
                 "ListeningPart1" -> {
                     //set height of RecyclerView Container
@@ -159,7 +159,7 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
 
                     coursesAdapter = SelfPacedAdapter(
                         this.requireActivity(),
-                        Data.ListeningPart1,
+                        TeachersData.ListeningPart1,
                         this
                     )
                 }
@@ -170,7 +170,7 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.ListeningPart2, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.ListeningPart2, this)
                 }
                 "ListeningPart3" -> {
                     //set height of RecyclerView Container
@@ -179,7 +179,7 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.ListeningPart3, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.ListeningPart3, this)
                 }
                 "ListeningPart4" -> {
                     //set height of RecyclerView Container
@@ -188,7 +188,7 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.ListeningPart4, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.ListeningPart4, this)
                 }
                 "FinalTips" -> {
                     //set height of RecyclerView Container
@@ -197,7 +197,7 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.FinalTips, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.FinalTips, this)
                 }
 
             }

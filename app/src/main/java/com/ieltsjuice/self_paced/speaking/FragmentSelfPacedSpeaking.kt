@@ -17,7 +17,7 @@ import com.ieltsjuice.R
 import com.ieltsjuice.adapters.SelfPacedAdapter
 import com.ieltsjuice.databinding.FragmentSelfPacedSpeakingBinding
 import com.ieltsjuice.databinding.TemplateRegisterAlertDialogBinding
-import com.ieltsjuice.model.Data
+import com.ieltsjuice.model.TeachersData
 import com.ieltsjuice.model.SelfPacedCourses
 import com.ieltsjuice.self_paced.FragmentSelfPacedCourseDetail
 
@@ -109,7 +109,7 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.speakingIntroduction, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.speakingIntroduction, this)
                     binding.courseContentRecyclerView.adapter = coursesAdapter
                     binding.scrollView.post {
                         binding.scrollView.scrollTo(
@@ -126,7 +126,7 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.SpeakingPart1, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.SpeakingPart1, this)
 
                 }
                 "IELTS Speaking Part 2" -> {
@@ -136,7 +136,7 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.SpeakingPart2, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.SpeakingPart2, this)
                 }
                 "IELTS Speaking Part 3" -> {
                     //set height of RecyclerView Container
@@ -145,7 +145,7 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.SpeakingPart3, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.SpeakingPart3, this)
                 }
                 "IELTS Speaking Assessment Criteria" -> {
                     //set height of RecyclerView Container
@@ -155,7 +155,7 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
 
                     coursesAdapter = SelfPacedAdapter(
                         this.requireActivity(),
-                        Data.SpeakingAssessmentCriteria,
+                        TeachersData.SpeakingAssessmentCriteria,
                         this
                     )
                 }
@@ -166,7 +166,7 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.SpeakingPractice, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.SpeakingPractice, this)
                 }
             }
             binding.courseContentRecyclerView.adapter = coursesAdapter

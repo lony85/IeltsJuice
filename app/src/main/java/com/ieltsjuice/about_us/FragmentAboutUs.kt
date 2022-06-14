@@ -9,13 +9,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ieltsjuice.PAGE_NAME_KEY
-import com.ieltsjuice.R
 import com.ieltsjuice.WithoutBottomNavigationBarActivity
 import com.ieltsjuice.adapters.AboutUsRecyclerAdapter
 import com.ieltsjuice.databinding.FragmentAboutUsBinding
 import com.ieltsjuice.model.Teacher
-import com.ieltsjuice.model.Data
+import com.ieltsjuice.model.TeachersData
 
 const val KEY_teacherName = "KEY_teacherName"
 const val KEY_teacherFamily = "KEY_teacherFamily"
@@ -47,7 +45,7 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
         fragmentAboutUsViewModel = FragmentAboutUsViewModel()
 
         // our team Recycler View
-        teachersAdapter = AboutUsRecyclerAdapter(this.requireActivity(), Data.Teachers, this)
+        teachersAdapter = AboutUsRecyclerAdapter(this.requireActivity(), TeachersData.Teachers, this)
         binding.aboutUsRecyclerView.adapter = teachersAdapter
         val layoutManager = LinearLayoutManager(this.requireActivity(),LinearLayoutManager.HORIZONTAL,false)
         binding.aboutUsRecyclerView.layoutManager = layoutManager

@@ -17,7 +17,7 @@ import com.ieltsjuice.R
 import com.ieltsjuice.adapters.SelfPacedAdapter
 import com.ieltsjuice.databinding.FragmentSelfPacedWritingBinding
 import com.ieltsjuice.databinding.TemplateRegisterAlertDialogBinding
-import com.ieltsjuice.model.Data
+import com.ieltsjuice.model.TeachersData
 import com.ieltsjuice.model.SelfPacedCourses
 import com.ieltsjuice.self_paced.FragmentSelfPacedCourseDetail
 import com.ieltsjuice.self_paced.speaking.KEY_SelfPacedCourseMainTitle
@@ -113,7 +113,7 @@ class FragmentSelfPacedWriting :Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.WritingIntroduction, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.WritingIntroduction, this)
                     binding.courseContentRecyclerView.adapter = coursesAdapter
                     binding.scrollView.post {
                         binding.scrollView.scrollTo(
@@ -130,7 +130,7 @@ class FragmentSelfPacedWriting :Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.IELTSLanguage, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.IELTSLanguage, this)
 
                 }
                 "Stages of Writing" -> {
@@ -140,7 +140,7 @@ class FragmentSelfPacedWriting :Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.StagesOfWriting, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.StagesOfWriting, this)
                 }
                 "Paragraph Structure" -> {
                     //set height of RecyclerView Container
@@ -149,7 +149,7 @@ class FragmentSelfPacedWriting :Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.ParagraphStructure, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.ParagraphStructure, this)
                 }
                 "Essay Writing (Task 2)" -> {
                     //set height of RecyclerView Container
@@ -159,7 +159,7 @@ class FragmentSelfPacedWriting :Fragment(), SelfPacedAdapter.ViewSelected {
 
                     coursesAdapter = SelfPacedAdapter(
                         this.requireActivity(),
-                        Data.EssayWritingTask2,
+                        TeachersData.EssayWritingTask2,
                         this
                     )
                 }
@@ -170,7 +170,7 @@ class FragmentSelfPacedWriting :Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.LetterWritingGeneralTrainingTask1, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.LetterWritingGeneralTrainingTask1, this)
                 }
                 "Report Writing (Academic Task 1)" -> {
                     //set height of RecyclerView Container
@@ -179,7 +179,7 @@ class FragmentSelfPacedWriting :Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.ReportWritingAcademicTask1, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.ReportWritingAcademicTask1, this)
                 }
                 "Writing Assessment Criteria" -> {
                     //set height of RecyclerView Container
@@ -188,7 +188,7 @@ class FragmentSelfPacedWriting :Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), Data.WritingAssessmentCriteria, this)
+                        SelfPacedAdapter(this.requireActivity(), TeachersData.WritingAssessmentCriteria, this)
                 }
             }
             binding.courseContentRecyclerView.adapter = coursesAdapter
