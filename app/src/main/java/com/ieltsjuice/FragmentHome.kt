@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ieltsjuice.databinding.FragmentHomeBinding
+import com.ieltsjuice.util.PAGE_NAME_KEY
 
-const val PAGE_NAME_KEY = "PAGE_NAME_KEY"
 
 class FragmentHome : Fragment() {
     lateinit var binding: FragmentHomeBinding

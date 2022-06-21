@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.ieltsjuice.PAGE_NAME_KEY
 import com.ieltsjuice.WithoutBottomNavigationBarActivity
 import com.ieltsjuice.databinding.FragmentPlacementQuizBinding
+import com.ieltsjuice.util.PAGE_NAME_KEY
 
 class FragmentPlacementQuiz : Fragment() {
     lateinit var binding: FragmentPlacementQuizBinding

@@ -15,16 +15,7 @@ import com.ieltsjuice.databinding.FragmentAboutUsBinding
 import com.ieltsjuice.model.Teacher
 import com.ieltsjuice.model.TeachersData
 
-const val KEY_teacherName = "KEY_teacherName"
-const val KEY_teacherFamily = "KEY_teacherFamily"
-const val KEY_teacherTitle = "KEY_teacherTitle"
-const val KEY_teacherDesc = "KEY_teacherDesc"
-const val KEY_teacherInstagram = "KEY_teacherInstagram"
-const val KEY_teacherLinkedin = "KEY_teacherLinkedin"
-const val KEY_teacherFacebook = "KEY_teacherFacebook"
-const val KEY_teacherSkype = "KEY_teacherSkype"
-const val KEY_teacherWebpage = "KEY_teacherWebpage"
-const val KEY_teacherImage = "KEY_teacherImage"
+
 
 class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
     lateinit var binding: FragmentAboutUsBinding
@@ -50,7 +41,6 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
         val layoutManager = LinearLayoutManager(this.requireActivity(),LinearLayoutManager.HORIZONTAL,false)
         binding.aboutUsRecyclerView.layoutManager = layoutManager
         binding.aboutUsRecyclerView.setHasFixedSize(true)
-
 
         //Social Media
         binding.skypeBtn.setOnClickListener {
@@ -159,10 +149,8 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
             }
         }
 
-
     }
     override fun moreInfoBtn(teacher: Teacher, position: Int) {
-
         val intent = Intent(this.requireActivity(),WithoutBottomNavigationBarActivity::class.java)
         fragmentAboutUsViewModel.putExtra(intent,teacher)
         startActivity(intent)

@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import com.example.internetconnection.NetworkChecker
 import com.google.android.material.snackbar.Snackbar
 import com.ieltsjuice.databinding.FragmentOnlineCoursesBinding
+import com.ieltsjuice.util.PAGE_NAME_KEY
 
 class FragmentOnlineCourses : Fragment() {
 
@@ -103,5 +104,10 @@ class FragmentOnlineCourses : Fragment() {
     override fun onStop() {
         binding.videoView.stopPlayback()
         super.onStop()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.videoView.stopPlayback()
     }
 }

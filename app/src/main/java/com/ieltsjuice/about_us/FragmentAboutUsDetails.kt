@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.ieltsjuice.R
 import com.ieltsjuice.databinding.FragmentAboutUsDetailsBinding
+import com.ieltsjuice.util.*
 
 
 class FragmentAboutUsDetails : Fragment() {

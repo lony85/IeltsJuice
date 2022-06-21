@@ -1,14 +1,10 @@
 package com.ieltsjuice.model
 
 import com.ieltsjuice.util.*
-import io.reactivex.Observable
 import io.reactivex.Single
-import io.reactivex.internal.operators.observable.ObservableFromIterable
-import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.Date.from
 
 class YoutubeRepository {
     private val youtubeApiService: YoutubeApiService
@@ -25,14 +21,49 @@ class YoutubeRepository {
     }
 
     fun getListeningPlayList(): Single<Youtube> {
-
         return youtubeApiService.getYoutubePlayList(
-            "search",
-            YouTubeApiKey,
-            channelId,
-            "snippet,id",
-            listeningPlayList
-        )
+            "playlistItems",
+            youTubeApiKey,
+            "snippet",
+            listeningPlayList,
+            "50"
 
+        )
+    }
+    fun getSpeakingPlayList(): Single<Youtube> {
+        return youtubeApiService.getYoutubePlayList(
+            "playlistItems",
+            youTubeApiKey,
+            "snippet",
+            speakingPlayList,
+            "50"
+        )
+    }
+    fun getReadingPlayList(): Single<Youtube> {
+        return youtubeApiService.getYoutubePlayList(
+            "playlistItems",
+            youTubeApiKey,
+            "snippet",
+            readingPlayList,
+            "50"
+        )
+    }
+    fun getWritingPlayList(): Single<Youtube> {
+        return youtubeApiService.getYoutubePlayList(
+            "playlistItems",
+            youTubeApiKey,
+            "snippet",
+            writingPlayList,
+            "50"
+        )
+    }
+    fun getOverviewPlayList(): Single<Youtube> {
+        return youtubeApiService.getYoutubePlayList(
+            "playlistItems",
+            youTubeApiKey,
+            "snippet",
+            overViewPlayList,
+            "50"
+        )
     }
 }

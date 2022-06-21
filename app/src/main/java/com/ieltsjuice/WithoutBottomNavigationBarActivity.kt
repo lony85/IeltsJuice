@@ -11,6 +11,7 @@ import com.ieltsjuice.databinding.TemplaterAlertDialogBackTestPlacementBinding
 import com.ieltsjuice.placement_test.FragmentPlacementQuestions
 import com.ieltsjuice.self_paced.FragmentOneToOne
 import com.ieltsjuice.self_paced.FragmentSelfPaced
+import com.ieltsjuice.util.*
 
 class WithoutBottomNavigationBarActivity : AppCompatActivity() {
     lateinit var binding: ActivityWithoutBottomNavigationBarBinding
@@ -113,6 +114,22 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 transaction.commit()
                 binding.collapsingBarMain.title = "Test Your English" // set toolbar names
             }
+            "youtube" -> {
+                val videoId = intent.getStringExtra("videoId")
+                val bundle = Bundle()
+                bundle.putString("videoId",videoId)
+//                                val fragment = FragmentYoutubePlayer()
+//                fragment.arguments = bundle
+//                val transaction = supportFragmentManager.beginTransaction()
+//                transaction.replace(
+//                    R.id.fragment_container_withoutNavigationActivity,
+//                    fragment
+//                )
+//                transaction.commit()
+
+                binding.collapsingBarMain.title = "IELTS Juice youtube channel" // set toolbar names
+
+            }
         }
 
         // Toolbar
@@ -152,7 +169,6 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
             }
         } else {
             super.onBackPressed() // in any page except placement test
-
         }
     }
 }

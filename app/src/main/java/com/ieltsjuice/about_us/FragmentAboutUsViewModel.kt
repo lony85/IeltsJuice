@@ -1,8 +1,8 @@
 package com.ieltsjuice.about_us
 
 import android.content.Intent
-import com.ieltsjuice.PAGE_NAME_KEY
 import com.ieltsjuice.model.Teacher
+import com.ieltsjuice.util.*
 
 class FragmentAboutUsViewModel {
     fun putExtra(intent: Intent,teacher:Teacher){
