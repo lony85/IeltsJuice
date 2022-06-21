@@ -26,6 +26,12 @@
         tools:layout="@layout/fragment_placement_quiz" />
 
     <fragment
+        android:id="@+id/navigation_placement_youtube"
+        android:name="com.ieltsjuice.youtube.FragmentYoutube"
+        android:label="Youtube"
+        tools:layout="@layout/fragment_youtube" />
+
+    <fragment
         android:id="@+id/navigation_aboutUs"
         android:name="com.ieltsjuice.about_us.FragmentAboutUs"
         android:label="About US"

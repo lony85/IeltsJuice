@@ -19,6 +19,11 @@
         android:title="@string/test"/>
 
     <item
+        android:id="@+id/navigation_placement_youtube"
+        android:icon="@drawable/ic_youtube_bw"
+        android:title="@string/youtube"/>
+
+    <item
         android:id="@+id/navigation_aboutUs"
         android:icon="@drawable/ic_about_50"
         android:title="@string/about_us"/>

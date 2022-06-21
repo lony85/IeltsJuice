@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorTertiary">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Choose a playlist ..."
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSizeTitle"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:scrollbars="none">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/overviewModuleBtn"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_radio_button"
+                        android:button="@null"
+                        android:padding="10dp"
+                        android:text="IELTS Juice Overview"
+                        tools:ignore="HardcodedText" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/listeningModuleBtn"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/background_radio_button"
+                        android:button="@null"
+                        android:padding="10dp"
+                        android:text="Listening Module"
+                        tools:ignore="HardcodedText" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/readingModuleBtn"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/background_radio_button"
+                        android:button="@null"
+                        android:padding="10dp"
+                        android:text="Reading Module"
+                        tools:ignore="HardcodedText" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/writingModuleBtn"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/background_radio_button"
+                        android:button="@null"
+                        android:padding="10dp"
+                        android:text="Writing Module"
+                        tools:ignore="HardcodedText" />
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/speakingModuleBtn"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/background_radio_button"
+                        android:button="@null"
+                        android:padding="10dp"
+                        android:text="Speaking Module"
+                        tools:ignore="HardcodedText" />
+
+                </RadioGroup>
+            </HorizontalScrollView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/template_youtube_content" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
