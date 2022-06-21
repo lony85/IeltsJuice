@@ -1,6 +1,5 @@
 package com.ieltsjuice.youtube
 
-import android.graphics.YuvImage
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -38,6 +37,7 @@ class FragmentYoutube : Fragment() ,YoutubeAdapter.PressedBtn{
         youtubeViewModel = YoutubeViewModel(YoutubeRepository())
 
         with(youtubeViewModel) {
+//        youtubeViewModel
             getListeningPlayList()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -62,7 +62,7 @@ class FragmentYoutube : Fragment() ,YoutubeAdapter.PressedBtn{
     }
 
     private fun setDataToRecycler(data: List<Youtube.Item?>?) {
-        val myData = ArrayList(data)
+        val myData = ArrayList(data!!)
         youtubeAdapter = YoutubeAdapter(myData, this)
         binding.recyclerViewContainer.adapter = youtubeAdapter
         binding.recyclerViewContainer.layoutManager = LinearLayoutManager(this.requireActivity(), RecyclerView.VERTICAL, false)
