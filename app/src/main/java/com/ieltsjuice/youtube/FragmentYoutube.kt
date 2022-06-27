@@ -192,7 +192,7 @@ class FragmentYoutube : Fragment() ,YoutubeAdapter.PressedBtn{
 
     override fun onItemClickListener(itemClicked: Snippet) {
         val intent = YouTubeStandalonePlayer.createVideoIntent(
-        this.requireActivity(), youTubeApiKey, itemClicked.resourceId?.videoId, 0, true, false)
+        this.requireActivity(), youTubeApiKey, itemClicked.resourceId?.videoId, 0, true, true)
 //        val intent = Intent(this.requireActivity(),YouTubeStandalonePlayer::class.java)
 //        intent.putExtra(PAGE_NAME_KEY,"youtube")
 //        intent.putExtra("videoId",itemClicked.resourceId?.videoId)
