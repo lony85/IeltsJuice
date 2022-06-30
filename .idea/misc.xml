@@ -26,9 +26,11 @@
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_play.xml" value="0.302" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_question_mark.xml" value="0.19427083333333334" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_self_paced.xml" value="0.1655" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_study_online.xml" value="0.337" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_sun.xml" value="0.1" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_telegram.xml" value="0.304" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_write.xml" value="0.292" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_youtube_bw.xml" value="0.1655" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/shape_about_us_header.xml" value="0.302" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/shape_about_us_header_top.xml" value="0.302" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/shape_about_us_middle.xml" value="0.302" />
@@ -47,7 +49,7 @@
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_consultation.xml" value="0.39926062846580407" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_correction.xml" value="0.43568464730290457" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_introduction.xml" value="0.1" />
-        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_main.xml" value="0.20588235294117646" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_one_to_one.xml" value="0.25" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_one_toone.xml" value="0.2896396396396396" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/activity_placement_test.xml" value="0.33" />
