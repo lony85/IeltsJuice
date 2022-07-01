@@ -2,11 +2,13 @@ package com.ieltsjuice.MainActivity
 
 import android.content.res.Configuration
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.messaging.FirebaseMessaging
 import com.ieltsjuice.R
 import com.ieltsjuice.databinding.ActivityMainBinding
 
@@ -19,6 +21,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //Firebase Token - To send test Notification
+        FirebaseMessaging.getInstance().token.addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                val token = task.result
+                Log.i("FMS_TOKEN",token)
+            }
+        }
 
         //Bottom Navigation Controller
         val navView: BottomNavigationView = binding.navView
