@@ -38,16 +38,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="ContentDescription"
                 tools:srcCompat="@tools:sample/avatars" />
-            <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_play"
-                app:layout_constraintBottom_toBottomOf="@+id/imgThumbnail_youtube"
-                app:layout_constraintEnd_toEndOf="@+id/imgThumbnail_youtube"
-                app:layout_constraintStart_toStartOf="@+id/imgThumbnail_youtube"
-                app:layout_constraintTop_toTopOf="@+id/imgThumbnail_youtube"
-                android:contentDescription="TODO"
-                app:tint="?attr/colorPrimary" />
+
 
 
             <TextView

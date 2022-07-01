@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Choose a playlist ..."
-                android:textColor="@color/black"
+                android:textColor="?attr/colorSecondaryVariant"
                 android:textSize="@dimen/textSizeTitle"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />
@@ -47,6 +47,7 @@
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
+
                     android:orientation="horizontal">
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
@@ -58,8 +59,8 @@
                         android:button="@null"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
+                        android:textColor="@drawable/custom_radio_button_text"
                         android:text="IELTS Juice Overview"
-                        android:textColor="?attr/colorSecondaryVariant"
                         tools:ignore="HardcodedText" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
@@ -73,7 +74,7 @@
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
                         android:text="Listening Module"
-                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textColor="@drawable/custom_radio_button_text"
                         tools:ignore="HardcodedText" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
@@ -87,7 +88,7 @@
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
                         android:text="Reading Module"
-                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textColor="@drawable/custom_radio_button_text"
                         tools:ignore="HardcodedText" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
@@ -101,7 +102,7 @@
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
                         android:text="Writing Module"
-                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textColor="@drawable/custom_radio_button_text"
                         tools:ignore="HardcodedText" />
 
                     <com.google.android.material.radiobutton.MaterialRadioButton
@@ -115,7 +116,7 @@
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"
                         android:text="Speaking Module"
-                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textColor="@drawable/custom_radio_button_text"
                         tools:ignore="HardcodedText" />
 
                 </RadioGroup>
