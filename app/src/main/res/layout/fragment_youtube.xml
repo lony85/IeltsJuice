@@ -122,12 +122,32 @@
                 </RadioGroup>
             </HorizontalScrollView>
 
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewContainer"
+            <FrameLayout
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:listitem="@layout/template_youtube_content" />
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/template_youtube_content" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_rawRes="@raw/circle_loading"
+                    android:id="@+id/loadingIndicator"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="top|center"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginBottom="50dp"/>
+            </FrameLayout>
+
+
+
+
 
 
         </LinearLayout>

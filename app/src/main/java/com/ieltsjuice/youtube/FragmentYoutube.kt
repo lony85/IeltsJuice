@@ -105,6 +105,7 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
     }
 
     private fun overviewInit() {
+        binding.loadingIndicator.visibility = View.VISIBLE
         with(youtubeViewModel) {
             getOverviewPlayList()
                 .subscribeOn(Schedulers.io())
@@ -116,8 +117,8 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
                     }
 
                     override fun onSuccess(t: Youtube) {
-                        Log.i("test", t.toString())
                         setDataToRecycler(t.items)
+                        binding.loadingIndicator.visibility = View.GONE
                     }
 
                     override fun onError(e: Throwable) {
@@ -128,6 +129,7 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
     }
 
     private fun listeningInit() {
+        binding.loadingIndicator.visibility = View.VISIBLE
         with(youtubeViewModel) {
             getListeningPlayList()
                 .subscribeOn(Schedulers.io())
@@ -139,8 +141,8 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
                     }
 
                     override fun onSuccess(t: Youtube) {
-                        Log.i("test", t.toString())
                         setDataToRecycler(t.items)
+                        binding.loadingIndicator.visibility = View.GONE
                     }
 
                     override fun onError(e: Throwable) {
@@ -151,6 +153,7 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
     }
 
     private fun readingInit() {
+        binding.loadingIndicator.visibility = View.VISIBLE
         with(youtubeViewModel) {
             getReadingPlayList()
                 .subscribeOn(Schedulers.io())
@@ -162,8 +165,8 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
                     }
 
                     override fun onSuccess(t: Youtube) {
-                        Log.i("test", t.toString())
                         setDataToRecycler(t.items)
+                        binding.loadingIndicator.visibility = View.GONE
                     }
 
                     override fun onError(e: Throwable) {
@@ -174,6 +177,7 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
     }
 
     private fun speakingInit() {
+        binding.loadingIndicator.visibility = View.VISIBLE
         with(youtubeViewModel) {
             getSpeakingPlayList()
                 .subscribeOn(Schedulers.io())
@@ -185,8 +189,8 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
                     }
 
                     override fun onSuccess(t: Youtube) {
-                        Log.i("test", t.toString())
                         setDataToRecycler(t.items)
+                        binding.loadingIndicator.visibility = View.GONE
                     }
 
                     override fun onError(e: Throwable) {
@@ -197,6 +201,7 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
     }
 
     private fun writingInit() {
+        binding.loadingIndicator.visibility = View.VISIBLE
         with(youtubeViewModel) {
             getWritingPlayList()
                 .subscribeOn(Schedulers.io())
@@ -208,8 +213,8 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
                     }
 
                     override fun onSuccess(t: Youtube) {
-                        Log.i("test", t.toString())
                         setDataToRecycler(t.items)
+                        binding.loadingIndicator.visibility = View.GONE
                     }
 
                     override fun onError(e: Throwable) {

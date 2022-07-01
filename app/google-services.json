@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "155297437368",
+    "project_id": "ielts-juice-55d5a",
+    "storage_bucket": "ielts-juice-55d5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155297437368:android:f8d266b56afb7edaf2064d",
+        "android_client_info": {
+          "package_name": "com.ieltsjuice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155297437368-e0hncohsqoh8ebaomvplp5orrtd1ubf7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8vlzn7M4u-w5YIdvwujhgsJbjPCXj_fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155297437368-e0hncohsqoh8ebaomvplp5orrtd1ubf7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
