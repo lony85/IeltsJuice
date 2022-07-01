@@ -100,6 +100,7 @@
                 tools:ignore="HardcodedText,UnusedAttribute" />
 
             <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
                 android:id="@+id/dropdown_menu"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
