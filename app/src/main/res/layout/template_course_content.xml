@@ -28,13 +28,14 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-
             <TextView
                 android:id="@+id/txtTitle_course_Details"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
                 android:textSize="@dimen/textSizeDescription"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/iconStatus_course_RecyclerView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="S.1.1 The Speaking Test Layout Quiz" />
@@ -50,6 +51,9 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@tools:sample/avatars"
                 tools:ignore="ContentDescription" />
+
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
