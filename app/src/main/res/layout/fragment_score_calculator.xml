@@ -389,7 +389,7 @@
                         android:layout_height="wrap_content"
                         android:justificationMode="inter_word"
                         android:lineSpacingExtra="1dp"
-                        android:text="Learning more about IELTS overall band scores Your Overall Band Score is the average of your four scores for listening, reading, speaking and writing, rounded to the nearest whole or half band. The scores are weighted equally.
+                        android:text="Your Overall Band Score is the average of your four scores for listening, reading, speaking and writing, rounded to the nearest whole or half band. The scores are weighted equally.
                         \nScores ending in .25 are rounded up to the next half band and those ending in .75 are rounded up to the next whole band.
                         \nSo for example, if the average of the four components is 5.25, the IELTS band score calculator will round your score up to 5.5. If it is 5.75, the IELTS band score calculator will round up your score to band 6."
                         android:textSize="@dimen/textSizeDescription"

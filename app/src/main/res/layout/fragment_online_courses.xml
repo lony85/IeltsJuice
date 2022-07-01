@@ -318,7 +318,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/button_main_courses"
                 app:layout_constraintEnd_toStartOf="@+id/button_main_courses"
                 app:layout_constraintTop_toTopOf="@+id/button_main_courses"
-                app:rippleColor="?attr/colorSecondary"
+
                 app:strokeColor="?attr/colorPrimary"
                 app:strokeWidth="1dp"
                 tools:ignore="HardcodedText" />

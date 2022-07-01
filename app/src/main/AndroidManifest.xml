@@ -13,12 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/Theme.IeltsJuice">
-        <activity
-            android:name=".youtube.YoutubePlayerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".WithoutBottomNavigationBarActivity"
-            android:exported="false" />
+
         <activity
             android:name=".SplashScreen"
             android:exported="true"
@@ -30,12 +25,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".MainActivity.MainActivity"
             android:exported="false"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"></activity>
+            tools:ignore="LockedOrientationActivity">
+        </activity>
 
+        <activity
+            android:name=".WithoutBottomNavigationBarActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
