@@ -13,7 +13,7 @@ import com.ieltsjuice.WithoutBottomNavigationBarActivity
 import com.ieltsjuice.adapters.AboutUsRecyclerAdapter
 import com.ieltsjuice.databinding.FragmentAboutUsBinding
 import com.ieltsjuice.model.Teacher
-import com.ieltsjuice.model.TeachersData
+import com.ieltsjuice.model.Data
 
 
 
@@ -36,7 +36,7 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
         fragmentAboutUsViewModel = FragmentAboutUsViewModel()
 
         // our team Recycler View
-        teachersAdapter = AboutUsRecyclerAdapter(this.requireActivity(), TeachersData.Teachers, this)
+        teachersAdapter = AboutUsRecyclerAdapter(this.requireActivity(), Data.Teachers, this)
         binding.aboutUsRecyclerView.adapter = teachersAdapter
         val layoutManager = LinearLayoutManager(this.requireActivity(),LinearLayoutManager.HORIZONTAL,false)
         binding.aboutUsRecyclerView.layoutManager = layoutManager

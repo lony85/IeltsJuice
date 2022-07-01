@@ -17,12 +17,13 @@ import com.ieltsjuice.R
 import com.ieltsjuice.adapters.SelfPacedAdapter
 import com.ieltsjuice.databinding.FragmentSelfPacedReadingBinding
 import com.ieltsjuice.databinding.TemplateRegisterAlertDialogBinding
-import com.ieltsjuice.model.TeachersData
+import com.ieltsjuice.model.Data
 import com.ieltsjuice.model.SelfPacedCourses
 import com.ieltsjuice.self_paced.FragmentSelfPacedCourseDetail
 import com.ieltsjuice.self_paced.speaking.KEY_SelfPacedCourseMainTitle
 
 class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
+
     lateinit var binding: FragmentSelfPacedReadingBinding
     private lateinit var coursesAdapter: SelfPacedAdapter
 
@@ -63,8 +64,8 @@ class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
                         )
                     )
                 }
-
             }
+
             dialogBinding.CancelBtn.setOnClickListener {
                 dialog.dismiss()
             }
@@ -111,7 +112,7 @@ class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), TeachersData.ReadingIntroduction, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.ReadingIntroduction, this)
                     binding.courseContentRecyclerView.adapter = coursesAdapter
                     binding.scrollView.post {
                         binding.scrollView.scrollTo(
@@ -128,7 +129,7 @@ class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), TeachersData.VocabularyAndGrammar, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.VocabularyAndGrammar, this)
 
                 }
                 "Reading Skills" -> {
@@ -138,7 +139,7 @@ class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), TeachersData.ReadingSkills, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.ReadingSkills, this)
                 }
                 "Different IELTS Reading Question Types" -> {
                     //set height of RecyclerView Container
@@ -147,7 +148,7 @@ class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), TeachersData.DifferentIELTSReadingQuestionTypes, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.DifferentIELTSReadingQuestionTypes, this)
                 }
                 "How to Answer Golden Questions" -> {
                     //set height of RecyclerView Container
@@ -157,7 +158,7 @@ class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
 
                     coursesAdapter = SelfPacedAdapter(
                         this.requireActivity(),
-                        TeachersData.HowToAnswerGoldenQuestions,
+                        Data.HowToAnswerGoldenQuestions,
                         this
                     )
                 }
@@ -168,7 +169,7 @@ class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), TeachersData.HowToAnswerSilverQuestions, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.HowToAnswerSilverQuestions, this)
                 }
                 "How to Answer Iron Questions" -> {
                     //set height of RecyclerView Container
@@ -177,7 +178,7 @@ class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), TeachersData.HowToAnswerIronQuestions, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.HowToAnswerIronQuestions, this)
                 }
                 "Final Tips" -> {
                     //set height of RecyclerView Container
@@ -186,9 +187,10 @@ class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), TeachersData.ReadingFinalTips, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.ReadingFinalTips, this)
                 }
             }
+
             binding.courseContentRecyclerView.adapter = coursesAdapter
             binding.scrollView.post {
                 binding.scrollView.scrollTo(
@@ -200,12 +202,12 @@ class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
         val layoutManager = LinearLayoutManager(this.requireActivity())
         binding.courseContentRecyclerView.layoutManager = layoutManager
         binding.courseContentRecyclerView.setHasFixedSize(true)
-
     }
 
     //implement "selected view" fun that are coming from SelfPacedAdapter
     override fun selectedView(Course: SelfPacedCourses, position: Int) {
         if (binding.dropdownMenu.editText!!.text.toString() == "Introduction") {
+
             val bundle = Bundle()
             bundle.putString(KEY_SelfPacedCourseMainTitle, Course.Title)
             when (Course.Title) {
@@ -221,7 +223,6 @@ class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
                 "R.1.2 Academic vs. General Training - Quiz" -> {
                     quiz("R.1.2 Academic vs. General Training - Quiz")
                 }
-
             }
         }
     }

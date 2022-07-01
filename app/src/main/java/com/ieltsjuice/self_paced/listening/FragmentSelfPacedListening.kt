@@ -17,7 +17,7 @@ import com.ieltsjuice.R
 import com.ieltsjuice.adapters.SelfPacedAdapter
 import com.ieltsjuice.databinding.FragmentSelfPacedListeningBinding
 import com.ieltsjuice.databinding.TemplateRegisterAlertDialogBinding
-import com.ieltsjuice.model.TeachersData
+import com.ieltsjuice.model.Data
 import com.ieltsjuice.model.SelfPacedCourses
 import com.ieltsjuice.self_paced.FragmentSelfPacedCourseDetail
 import com.ieltsjuice.self_paced.speaking.KEY_SelfPacedCourseMainTitle
@@ -64,8 +64,8 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
                         )
                     )
                 }
-
             }
+
             dialogBinding.CancelBtn.setOnClickListener {
                 dialog.dismiss()
             }
@@ -92,6 +92,7 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
         val courseContent = listOf(
             "Introduction",
             "Vocabulary for Listening",
+            "The Art of Prediction",
             "Spelling",
             "Listening Part 1",
             "Listening Part 2",
@@ -113,7 +114,7 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), TeachersData.ListeningIntroduction,this)
+                        SelfPacedAdapter(this.requireActivity(), Data.ListeningIntroduction,this)
                     binding.courseContentRecyclerView.adapter = coursesAdapter
                     binding.scrollView.post {
                         binding.scrollView.scrollTo(
@@ -123,24 +124,24 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
                     }
 
                 }
-                "VocabularyForListening" -> {
+                "Vocabulary For Listening" -> {
                     //set height of RecyclerView Container
                     val lp: ViewGroup.LayoutParams = binding.frameViewRecyclerView.layoutParams
                     lp.height = 1000
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), TeachersData.VocabularyForListening, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.VocabularyForListening, this)
 
                 }
-                "TheArtOfPrediction" -> {
+                "The Art Of Prediction" -> {
                     //set height of RecyclerView Container
                     val lp: ViewGroup.LayoutParams = binding.frameViewRecyclerView.layoutParams
                     lp.height = 1000
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), TeachersData.TheArtOfPrediction, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.TheArtOfPrediction, this)
                 }
                 "Spelling" -> {
                     //set height of RecyclerView Container
@@ -149,9 +150,9 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), TeachersData.Spelling, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.Spelling, this)
                 }
-                "ListeningPart1" -> {
+                "Listening Part 1" -> {
                     //set height of RecyclerView Container
                     val lp: ViewGroup.LayoutParams = binding.frameViewRecyclerView.layoutParams
                     lp.height = 1000
@@ -159,48 +160,48 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
 
                     coursesAdapter = SelfPacedAdapter(
                         this.requireActivity(),
-                        TeachersData.ListeningPart1,
+                        Data.ListeningPart1,
                         this
                     )
                 }
-                "ListeningPart2" -> {
+                "Listening Part 2" -> {
                     //set height of RecyclerView Container
                     val lp: ViewGroup.LayoutParams = binding.frameViewRecyclerView.layoutParams
                     lp.height = 1000
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), TeachersData.ListeningPart2, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.ListeningPart2, this)
                 }
-                "ListeningPart3" -> {
+                "Listening Part 3" -> {
                     //set height of RecyclerView Container
                     val lp: ViewGroup.LayoutParams = binding.frameViewRecyclerView.layoutParams
                     lp.height = 1000
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), TeachersData.ListeningPart3, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.ListeningPart3, this)
                 }
-                "ListeningPart4" -> {
+                "Listening Part 4" -> {
                     //set height of RecyclerView Container
                     val lp: ViewGroup.LayoutParams = binding.frameViewRecyclerView.layoutParams
                     lp.height = 1000
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), TeachersData.ListeningPart4, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.ListeningPart4, this)
                 }
-                "FinalTips" -> {
+                "Final Tips" -> {
                     //set height of RecyclerView Container
                     val lp: ViewGroup.LayoutParams = binding.frameViewRecyclerView.layoutParams
                     lp.height = 1000
                     binding.frameViewRecyclerView.requestLayout()
 
                     coursesAdapter =
-                        SelfPacedAdapter(this.requireActivity(), TeachersData.FinalTips, this)
+                        SelfPacedAdapter(this.requireActivity(), Data.FinalTips, this)
                 }
-
             }
+
             binding.courseContentRecyclerView.adapter = coursesAdapter
             binding.scrollView.post {
                 binding.scrollView.scrollTo(
@@ -212,7 +213,6 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
         val layoutManager = LinearLayoutManager(this.requireActivity())
         binding.courseContentRecyclerView.layoutManager = layoutManager
         binding.courseContentRecyclerView.setHasFixedSize(true)
-
     }
 
     //implement "selected view" fun that are coming from SelfPacedAdapter
@@ -285,5 +285,4 @@ class FragmentSelfPacedListening : Fragment(), SelfPacedAdapter.ViewSelected {
         replaceTransaction.addToBackStack(null)
         replaceTransaction.commit()
     }
-
 }
