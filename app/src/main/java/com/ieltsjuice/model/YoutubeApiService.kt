@@ -14,8 +14,5 @@ interface YoutubeApiService {
         @Query("part") part:String,
         @Query("playlistId") playlistId:String,
         @Query("maxResults") maxResults:String
-
-
-
     ): Single<Youtube>
 }

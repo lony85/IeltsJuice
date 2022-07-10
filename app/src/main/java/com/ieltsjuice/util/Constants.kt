@@ -11,6 +11,8 @@ const val writingPlayList = "PLzv4_7S0bZm9P-QzJuElntXRoWp-ehm6i"
 const val readingPlayList = "PLzv4_7S0bZm_OJuhBdOW-taU4poqz4xxr"
 const val overViewPlayList = "PLzv4_7S0bZm8Uas-cOG38oCPXBMUzmX5A"
 
+const val dictionaryBaseURL = "https://api.dictionaryapi.dev/api/v2/entries/en/"
+
 const val KEY_teacherName = "KEY_teacherName"
 const val KEY_teacherFamily = "KEY_teacherFamily"
 const val KEY_teacherTitle = "KEY_teacherTitle"

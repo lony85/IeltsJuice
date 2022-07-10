@@ -1,4 +1,4 @@
-package com.ieltsjuice
+package com.ieltsjuice.online_courses
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -13,6 +13,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.internetconnection.NetworkChecker
 import com.google.android.material.snackbar.Snackbar
+import com.ieltsjuice.R
+import com.ieltsjuice.WithoutBottomNavigationBarActivity
 import com.ieltsjuice.databinding.FragmentOnlineCoursesBinding
 import com.ieltsjuice.util.PAGE_NAME_KEY
 

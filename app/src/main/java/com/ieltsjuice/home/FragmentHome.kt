@@ -1,4 +1,4 @@
-package com.ieltsjuice
+package com.ieltsjuice.home
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.ieltsjuice.R
+import com.ieltsjuice.WithoutBottomNavigationBarActivity
 import com.ieltsjuice.databinding.FragmentHomeBinding
 import com.ieltsjuice.util.PAGE_NAME_KEY
 

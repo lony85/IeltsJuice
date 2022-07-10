@@ -1,4 +1,4 @@
-package com.ieltsjuice
+package com.ieltsjuice.consultation
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.ieltsjuice.R
 import com.ieltsjuice.databinding.FragmentConsultationBinding
 
 class FragmentConsultation : Fragment() {

@@ -5,10 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.core.content.ContextCompat
+import com.ieltsjuice.consultation.FragmentConsultation
+import com.ieltsjuice.correction.FragmentCorrection
 import com.ieltsjuice.about_us.*
 import com.ieltsjuice.databinding.ActivityWithoutBottomNavigationBarBinding
 import com.ieltsjuice.databinding.TemplaterAlertDialogBackTestPlacementBinding
 import com.ieltsjuice.placement_test.FragmentPlacementQuestions
+import com.ieltsjuice.score_calculator.FragmentScoreCalculator
 import com.ieltsjuice.self_paced.FragmentOneToOne
 import com.ieltsjuice.self_paced.FragmentSelfPaced
 import com.ieltsjuice.util.*

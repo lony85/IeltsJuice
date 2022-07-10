@@ -29,6 +29,7 @@
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_play.xml" value="0.302" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_question_mark.xml" value="0.19427083333333334" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_self_paced.xml" value="0.1655" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_speaker.xml" value="0.311" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_study_online.xml" value="0.337" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_sun.xml" value="0.1" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/drawable/ic_telegram.xml" value="0.304" />
@@ -76,6 +77,7 @@
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_about_us_details.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_consultation.xml" value="0.2896396396396396" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_correction.xml" value="0.2896396396396396" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_dictionary.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_one_to_one.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/fragment_online_cources.xml" value="0.22" />
@@ -107,6 +109,7 @@
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/template_cource_content.xml" value="0.5" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/template_cource_content_lock.xml" value="0.75" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/template_course_content.xml" value="0.67" />
+        <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/template_dictionary_content.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/template_register_alert_dialog.xml" value="0.2896396396396396" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/template_youtube_content.xml" value="0.5788617886178862" />
         <entry key="..\:/AndroidProjects/ieltsjuice/app/src/main/res/layout/templater_alert_dialog_back_test_placement.xml" value="0.67" />

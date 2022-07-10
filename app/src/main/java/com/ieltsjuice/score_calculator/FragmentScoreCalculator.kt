@@ -1,4 +1,4 @@
-package com.ieltsjuice
+package com.ieltsjuice.score_calculator
 
 import android.annotation.SuppressLint
 import android.os.Bundle

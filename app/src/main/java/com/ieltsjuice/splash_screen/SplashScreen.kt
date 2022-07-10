@@ -1,4 +1,4 @@
-package com.ieltsjuice
+package com.ieltsjuice.splash_screen
 
 import android.annotation.SuppressLint
 import android.content.Intent
