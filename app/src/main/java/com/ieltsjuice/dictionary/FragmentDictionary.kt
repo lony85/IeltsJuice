@@ -56,11 +56,13 @@ class FragmentDictionary:Fragment() ,DictionaryAdapter.PressedBtn{
                 }
 
                 override fun onSuccess(t: Dictionary) {
+                    binding.dictionaryRecyclerView.visibility = View.VISIBLE
                     setDataToRecycler(t)
                     Log.i("test", t.toString())
                 }
 
                 override fun onError(e: Throwable) {
+                    binding.dictionaryRecyclerView.visibility = View.GONE
                     Log.i("test_error", e.toString())
                 }
 
@@ -71,7 +73,7 @@ class FragmentDictionary:Fragment() ,DictionaryAdapter.PressedBtn{
         dictionaryAdapter = DictionaryAdapter(myData, this)
         binding.dictionaryRecyclerView.adapter = dictionaryAdapter
         binding.dictionaryRecyclerView.layoutManager =
-            LinearLayoutManager(this.requireActivity(), RecyclerView.VERTICAL, true)
+            LinearLayoutManager(this.requireActivity(), RecyclerView.VERTICAL, false)
     }
 
     override fun onItemClickListener(itemClicked: Youtube.Item.Snippet) {

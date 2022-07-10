@@ -8,18 +8,18 @@ import com.ieltsjuice.databinding.TemplateDictionaryContentBinding
 import com.ieltsjuice.model.Dictionary
 import com.ieltsjuice.model.Youtube
 
-class DictionaryAdapter(private val dictionary: ArrayList<Dictionary.DictionaryItem.Meaning.Definition>, private val pressed: PressedBtn) :
+class DictionaryAdapter(private val dictionary: ArrayList<Dictionary.DictionaryItem>, private val pressed: PressedBtn) :
     RecyclerView.Adapter<DictionaryAdapter.Holder>() {
 
 
     inner class Holder(private val binding: TemplateDictionaryContentBinding) : RecyclerView.ViewHolder(binding.root) {
 
        @SuppressLint("SetTextI18n")
-       fun bindData(category: Dictionary.DictionaryItem.Meaning.Definition) {
+       fun bindData(category: Dictionary.DictionaryItem) {
 
 
-//            binding.txtTitleDictionary.text = category.word
-            binding.txtDescDictionary.text = category.definition
+            binding.txtTitleDictionary.text = category.word
+//            binding.txtDescDictionary.text = category.definitions.de
 
 
             itemView.setOnClickListener {
