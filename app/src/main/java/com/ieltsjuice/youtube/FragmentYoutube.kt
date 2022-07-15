@@ -175,7 +175,6 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
                 })
         }
     }
-
     private fun speakingInit() {
         binding.loadingIndicator.visibility = View.VISIBLE
         with(youtubeViewModel) {
@@ -199,7 +198,6 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
                 })
         }
     }
-
     private fun writingInit() {
         binding.loadingIndicator.visibility = View.VISIBLE
         with(youtubeViewModel) {
@@ -213,6 +211,7 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
                     }
 
                     override fun onSuccess(t: Youtube) {
+
                         setDataToRecycler(t.items)
                         binding.loadingIndicator.visibility = View.GONE
                     }
@@ -226,8 +225,8 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
 
     private fun setDataToRecycler(data: List<Youtube.Item?>?) {
         Log.i("test2", data.toString())
-        val myData = ArrayList(data!!)
-        val filteredList = data.filter {
+//        val myData = ArrayList(data!!)
+        val filteredList = data!!.filter {
             !it!!.snippet!!.title!!.contains("Private video")
         }
         Log.i("test3", filteredList.toString())

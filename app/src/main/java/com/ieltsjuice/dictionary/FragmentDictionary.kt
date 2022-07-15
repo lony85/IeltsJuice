@@ -9,6 +9,8 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.Gson
+import com.google.gson.JsonObject
 import com.ieltsjuice.databinding.FragmentDictionaryBinding
 import com.ieltsjuice.model.Dictionary
 import com.ieltsjuice.model.DictionaryRepository
@@ -19,8 +21,9 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
-class FragmentDictionary:Fragment() ,DictionaryAdapter.PressedBtn{
-    lateinit var binding : FragmentDictionaryBinding
+
+class FragmentDictionary :Fragment() ,DictionaryAdapter.PressedBtn {
+    lateinit var binding: FragmentDictionaryBinding
     lateinit var dictionaryViewModel: DictionaryViewModel
     private val compositeDisposable = CompositeDisposable()
     lateinit var dictionaryAdapter: DictionaryAdapter
@@ -29,7 +32,7 @@ class FragmentDictionary:Fragment() ,DictionaryAdapter.PressedBtn{
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentDictionaryBinding.inflate(layoutInflater,container,false)
+        binding = FragmentDictionaryBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
@@ -40,35 +43,40 @@ class FragmentDictionary:Fragment() ,DictionaryAdapter.PressedBtn{
         binding.edtTextDictionary.addTextChangedListener {
             if (it!!.isNotEmpty()) {
                 getSearchWord(it.toString())
-            }else{
+            } else {
                 binding.dictionaryRecyclerView.visibility = View.GONE
             }
         }
     }
-    private fun getSearchWord(word:String){
-        dictionaryViewModel
-            .getWordMeaning(word)
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(object : SingleObserver<Dictionary>{
-                override fun onSubscribe(d: Disposable) {
-                    compositeDisposable.add(d)
-                }
 
-                override fun onSuccess(t: Dictionary) {
-                    binding.dictionaryRecyclerView.visibility = View.VISIBLE
-                    setDataToRecycler(t)
-                    Log.i("test", t.toString())
-                }
+    private fun getSearchWord(word: String) {
+        with(dictionaryViewModel) {
+            getWordMeaning(word)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(object : SingleObserver<Dictionary> {
+                    override fun onSubscribe(d: Disposable) {
+                        compositeDisposable.add(d)
+                    }
 
-                override fun onError(e: Throwable) {
-                    binding.dictionaryRecyclerView.visibility = View.GONE
-                    Log.i("test_error", e.toString())
-                }
+                    override fun onSuccess(t: Dictionary) {
+                        binding.dictionaryRecyclerView.visibility = View.VISIBLE
 
-            })
+
+                        setDataToRecycler(t)
+                        Log.i("test", t.toString())
+                    }
+
+                    override fun onError(e: Throwable) {
+                        binding.dictionaryRecyclerView.visibility = View.GONE
+                        Log.i("test_error", e.toString())
+                    }
+
+                })
+        }
     }
-    private fun setDataToRecycler(data: List<Dictionary.DictionaryItem>) {
+
+    private fun setDataToRecycler(data: Dictionary) {
         val myData = ArrayList(data)
         dictionaryAdapter = DictionaryAdapter(myData, this)
         binding.dictionaryRecyclerView.adapter = dictionaryAdapter
