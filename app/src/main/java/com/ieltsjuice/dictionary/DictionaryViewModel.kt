@@ -5,9 +5,11 @@ import com.ieltsjuice.model.DictionaryRepository
 import io.reactivex.Single
 
 class DictionaryViewModel(
-    private val dictionaryRepository: DictionaryRepository
+    private val dictionaryRepository: DictionaryRepository,
 ) {
     fun getWordMeaning(word:String):Single<Dictionary>{
         return dictionaryRepository.getWordMeaning(word)
     }
+
+
 }

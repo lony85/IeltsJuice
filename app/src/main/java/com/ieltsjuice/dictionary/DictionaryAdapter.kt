@@ -1,15 +1,14 @@
 package com.ieltsjuice.dictionary
 
 import android.annotation.SuppressLint
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.ieltsjuice.databinding.TemplateDictionaryContentBinding
 import com.ieltsjuice.model.Dictionary
-import com.ieltsjuice.model.Youtube
-import java.lang.Exception
+import java.util.*
+import java.util.stream.Collectors
+import kotlin.collections.ArrayList
 
 class DictionaryAdapter(
     private val dictionary: ArrayList<Dictionary.DictionaryItem>,
@@ -27,17 +26,24 @@ class DictionaryAdapter(
             binding.txtPhoneticDictionary.text = category.phonetic
 
             var noOfDefinition = 0
+            var no = 1
             var listOfDefinitions: ArrayList<String?> = arrayListOf()
             for (i in 1..10) {
                 try {
-                    listOfDefinitions.add(category.meanings?.get(0)?.definitions?.get(noOfDefinition)?.definition)
+                    listOfDefinitions.add(
+                        "$no) " + category.meanings?.get(0)?.definitions?.get(
+                            noOfDefinition
+                        )?.definition + "\n"
+                    )
+                    no += 1
                     noOfDefinition += 1
                 } catch (e: Exception) {
                     //catch Error
                 }
             }
             binding.txtDescDictionary.text =
-                listOfDefinitions.toString().substring(1, listOfDefinitions.toString().length - 1)
+                listOfDefinitions.stream()
+                    .collect(Collectors.joining(""))  // remove   "["     &   "]"   &   ","   from the list
 
 
             binding.favBtn.setOnClickListener {
