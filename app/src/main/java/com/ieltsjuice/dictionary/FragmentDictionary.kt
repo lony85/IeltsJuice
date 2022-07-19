@@ -84,7 +84,7 @@ class FragmentDictionary :Fragment() ,DictionaryAdapter.PressedBtn {
             LinearLayoutManager(this.requireActivity(), RecyclerView.VERTICAL, false)
     }
 
-    override fun onItemClickListener(itemClicked: Youtube.Item.Snippet) {
-        TODO("Not yet implemented")
+    override fun onItemClickListener(itemClicked: Dictionary.DictionaryItem) {
+
     }
 }
