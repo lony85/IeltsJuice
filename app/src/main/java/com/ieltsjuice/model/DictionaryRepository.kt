@@ -5,32 +5,25 @@ import com.ieltsjuice.model.local.DictionaryDao
 import com.ieltsjuice.model.local.DictionaryDatabase
 import com.ieltsjuice.model.local.DictionaryLocalDataClass
 import com.ieltsjuice.util.dictionaryBaseURL
+import io.reactivex.Completable
 import io.reactivex.Single
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
-class DictionaryRepository {
-    private var dictionaryApiService: DictionaryApiService
+class DictionaryRepository(
+    private val dictionaryApiService: DictionaryApiService,
+    private val dictionaryDao: DictionaryDao
+) {
 
 
-    init {
-        val retrofit = Retrofit
-            .Builder()
-            .baseUrl(dictionaryBaseURL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .build()
-
-        dictionaryApiService = retrofit.create(DictionaryApiService::class.java)
-
-    }
-
-    fun getWordMeaning(word:String): Single<Dictionary> {
+    fun getWordMeaning(word: String): Single<Dictionary> {
         return dictionaryApiService.getWord(
             word
         )
     }
-
+fun insertWordToFav(dictionaryLocalDataClass: DictionaryLocalDataClass){
+    return dictionaryDao.insertWord(dictionaryLocalDataClass)
+}
 
 }

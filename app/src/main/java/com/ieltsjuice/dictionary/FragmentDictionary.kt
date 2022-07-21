@@ -7,22 +7,31 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.gson.Gson
-import com.google.gson.JsonObject
 import com.ieltsjuice.databinding.FragmentDictionaryBinding
 import com.ieltsjuice.model.Dictionary
 import com.ieltsjuice.model.DictionaryRepository
-import com.ieltsjuice.model.Youtube
+import com.ieltsjuice.model.local.DictionaryDatabase
+import com.ieltsjuice.model.local.DictionaryLocalDataClass
+import com.ieltsjuice.util.ApiServiceSingleton
+import com.ieltsjuice.util.MainViewModelFactory
+import io.reactivex.Single
 import io.reactivex.SingleObserver
+import io.reactivex.SingleOnSubscribe
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
+import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import java.util.stream.Collectors
 
 
-class FragmentDictionary :Fragment() ,DictionaryAdapter.PressedBtn {
+class FragmentDictionary : Fragment(), DictionaryAdapter.PressedBtn {
     lateinit var binding: FragmentDictionaryBinding
     lateinit var dictionaryViewModel: DictionaryViewModel
     private val compositeDisposable = CompositeDisposable()
@@ -38,7 +47,16 @@ class FragmentDictionary :Fragment() ,DictionaryAdapter.PressedBtn {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dictionaryViewModel = DictionaryViewModel(DictionaryRepository())
+//        dictionaryViewModel = DictionaryViewModel(DictionaryRepository())
+        dictionaryViewModel = ViewModelProvider(
+            this,
+            MainViewModelFactory(
+                DictionaryRepository(
+                    ApiServiceSingleton.dictionaryApiService!!,
+                    DictionaryDatabase.getDatabase(this.requireActivity()).dictionaryDao
+                )
+            )
+        ).get(DictionaryViewModel::class.java)
 
         binding.edtTextDictionary.addTextChangedListener {
             if (it!!.isNotEmpty()) {
@@ -85,6 +103,37 @@ class FragmentDictionary :Fragment() ,DictionaryAdapter.PressedBtn {
     }
 
     override fun onItemClickListener(itemClicked: Dictionary.DictionaryItem) {
+        var noOfDefinition = 0
+        var no = 1
+        var listOfDefinitions: ArrayList<String?> = arrayListOf()
+        for (i in 1..10) {
+            try {
+                listOfDefinitions.add(
+                    "$no) " + itemClicked.meanings?.get(0)?.definitions?.get(
+                        noOfDefinition
+                    )?.definition + "\n"
+                )
+                no += 1
+                noOfDefinition += 1
+            } catch (e: Exception) {
+                //catch Error
+            }
+        }
+        val definition =
+            listOfDefinitions.stream()
+                .collect(Collectors.joining(""))  // remove   "["     &   "]"   &   ","   from the list
+
+        lifecycleScope.launch(Dispatchers.IO) {
+            dictionaryViewModel.insertWordToFav(
+                DictionaryLocalDataClass(
+                    word = itemClicked.word.toString(),
+                    definition = definition,
+                    phonetics = itemClicked.phonetic.toString(),
+                    partOfSpeech = itemClicked.meanings?.get(0)?.partOfSpeech.toString()
+                )
+            )
+        }
+
 
     }
 }

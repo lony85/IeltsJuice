@@ -23,6 +23,7 @@ abstract class DictionaryDatabase : RoomDatabase() {
                         DictionaryDatabase::class.java,
                         "DictionaryDatabase.db"
                     )
+//                        .allowMainThreadQueries()
                         .build()
                 }
                 return database!!
