@@ -28,17 +28,61 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imgThumbnail_speaker"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:scaleType="centerCrop"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <LinearLayout
+                android:id="@+id/US_pronunciation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription"
-                android:src="@drawable/ic_speaker"
-                app:tint="#D81818" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textUK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="US"
+                    android:textColor="#D81818" />
+
+                <ImageView
+                    android:id="@+id/speakerUsBtn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_speaker"
+                    app:tint="#D81818"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/UK_pronunciation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/US_pronunciation">
+
+                <TextView
+                    android:id="@+id/textUS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="UK"
+                    android:textColor="#D81818" />
+
+                <ImageView
+                    android:id="@+id/speakerUkBtn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_speaker"
+                    app:tint="#D81818"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
 
             <TextView
                 android:id="@+id/txtPhonetic_dictionary"
@@ -51,7 +95,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/txtTitle_dictionary"
                 app:layout_constraintStart_toEndOf="@+id/txtTitle_dictionary"
                 app:layout_constraintTop_toTopOf="@+id/txtTitle_dictionary"
-                tools:text="hello" />
+                tools:text="Phonetic" />
 
             <TextView
                 android:id="@+id/txtPartOfSpeech_dictionary"
@@ -67,16 +111,17 @@
                 app:layout_constraintStart_toEndOf="@+id/txtPhonetic_dictionary"
                 app:layout_constraintTop_toTopOf="@+id/txtTitle_dictionary"
                 tools:text="Noun" />
+
             <TextView
                 android:id="@+id/txtTitle_dictionary"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="5dp"
                 android:justificationMode="inter_word"
                 android:textColor="?attr/colorPrimary"
                 android:textSize="@dimen/textSizeTitle"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/imgThumbnail_speaker"
+                app:layout_constraintStart_toEndOf="@+id/US_pronunciation"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Hello" />
 
@@ -85,28 +130,29 @@
                 android:id="@+id/txtDesc_dictionary"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginEnd="10dp"
                 android:ellipsize="end"
                 android:justificationMode="inter_word"
                 android:textColor="?attr/colorSecondaryVariant"
                 android:textSize="@dimen/textSizeDescription2"
                 app:layout_constraintEnd_toStartOf="@+id/favBtn"
-                app:layout_constraintStart_toEndOf="@+id/imgThumbnail_speaker"
-                app:layout_constraintTop_toBottomOf="@+id/txtTitle_dictionary"
+                app:layout_constraintStart_toEndOf="@+id/UK_pronunciation"
+                app:layout_constraintTop_toTopOf="@+id/UK_pronunciation"
+                tools:ignore="UnusedAttribute"
                 tools:text="Greeting" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/favBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="1dp"
-                android:src="@drawable/ic_favorite_border"
+                android:src="@drawable/ic_favorite_red"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="#D61212" />
+                android:background="#00E8131F"
+                tools:ignore="ContentDescription" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>

@@ -28,21 +28,29 @@ class FragmentHome : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonConsultation.setOnClickListener {
-            val intent = Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
-            intent.putExtra(PAGE_NAME_KEY,"Consultation")
+            val intent =
+                Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
+            intent.putExtra(PAGE_NAME_KEY, "Consultation")
             startActivity(intent)
         }
         binding.buttonMainCorrection.setOnClickListener {
-            val intent = Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
-            intent.putExtra(PAGE_NAME_KEY,"Correction")
+            val intent =
+                Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
+            intent.putExtra(PAGE_NAME_KEY, "Correction")
             startActivity(intent)
         }
-
-
-        binding.buttonMainCourses.setOnClickListener {
+        binding.textMainCourses.setOnClickListener {
             findNavController().navigate(R.id.navigation_studyOnline)
 
         }
+
+        binding.buttonDictionary.setOnClickListener {
+            val intent =
+                Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
+            intent.putExtra(PAGE_NAME_KEY, "Dictionary")
+            startActivity(intent)
+        }
+
         binding.buttonMainScoreCalculator.setOnClickListener {
             val intent =
                 Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
@@ -50,4 +58,4 @@ class FragmentHome : Fragment() {
             startActivity(intent)
         }
     }
-  }
+}

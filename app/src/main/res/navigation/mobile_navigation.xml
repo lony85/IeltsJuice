@@ -33,7 +33,7 @@
 
     <fragment
         android:id="@+id/navigation_aboutUs"
-        android:name="com.ieltsjuice.dictionary.FragmentDictionary"
+        android:name="com.ieltsjuice.about_us.FragmentAboutUs"
         android:label="About US"
         tools:layout="@layout/fragment_about_us" />
 

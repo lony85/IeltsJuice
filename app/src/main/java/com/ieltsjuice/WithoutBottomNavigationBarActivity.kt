@@ -10,6 +10,8 @@ import com.ieltsjuice.correction.FragmentCorrection
 import com.ieltsjuice.about_us.*
 import com.ieltsjuice.databinding.ActivityWithoutBottomNavigationBarBinding
 import com.ieltsjuice.databinding.TemplaterAlertDialogBackTestPlacementBinding
+import com.ieltsjuice.dictionary.FragmentDictionary
+import com.ieltsjuice.dictionary.FragmentFavoriteWords
 import com.ieltsjuice.placement_test.FragmentPlacementQuestions
 import com.ieltsjuice.score_calculator.FragmentScoreCalculator
 import com.ieltsjuice.self_paced.FragmentOneToOne
@@ -58,6 +60,24 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
 
 
 //                binding.collapsingBarMain.title = "IELTS Score Calculator" // set toolbar names
+            }
+            "Dictionary" -> {
+                val transaction = supportFragmentManager.beginTransaction()
+                transaction.add(
+                    R.id.fragment_container_withoutNavigationActivity,
+                    FragmentDictionary()
+                )
+                transaction.commit()
+                binding.collapsingBarMain.title = "Dictionary" // set toolbar names
+            }
+            "favoriteWords" -> {
+                val transaction = supportFragmentManager.beginTransaction()
+                transaction.add(
+                    R.id.fragment_container_withoutNavigationActivity,
+                    FragmentFavoriteWords()
+                )
+                transaction.commit()
+                binding.collapsingBarMain.title = "Favorite Words" // set toolbar names
             }
             "calculator" -> {
                 val transaction = supportFragmentManager.beginTransaction()
@@ -120,7 +140,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
             "youtube" -> {
                 val videoId = intent.getStringExtra("videoId")
                 val bundle = Bundle()
-                bundle.putString("videoId",videoId)
+                bundle.putString("videoId", videoId)
 //                                val fragment = FragmentYoutubePlayer()
 //                fragment.arguments = bundle
 //                val transaction = supportFragmentManager.beginTransaction()

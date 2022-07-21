@@ -1,28 +1,45 @@
 package com.ieltsjuice.dictionary
 
+import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.gson.Gson
-import com.google.gson.JsonObject
+import com.ieltsjuice.WithoutBottomNavigationBarActivity
 import com.ieltsjuice.databinding.FragmentDictionaryBinding
+import com.ieltsjuice.databinding.TemplateDictionaryContentBinding
 import com.ieltsjuice.model.Dictionary
 import com.ieltsjuice.model.DictionaryRepository
-import com.ieltsjuice.model.Youtube
+import com.ieltsjuice.model.local.DictionaryDatabase
+import com.ieltsjuice.model.local.DictionaryLocalDataClass
+import com.ieltsjuice.util.ApiServiceSingleton
+import com.ieltsjuice.util.MainViewModelFactory
+import com.ieltsjuice.util.PAGE_NAME_KEY
 import io.reactivex.SingleObserver
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import java.util.*
+import java.util.stream.Collectors
+import kotlin.collections.ArrayList
 
 
-class FragmentDictionary :Fragment() ,DictionaryAdapter.PressedBtn {
+class FragmentDictionary : Fragment(), DictionaryAdapter.PressedBtn,
+    DictionaryAdapter.UsPronunciation, DictionaryAdapter.UkPronunciation {
+    lateinit var tts: TextToSpeech
     lateinit var binding: FragmentDictionaryBinding
     lateinit var dictionaryViewModel: DictionaryViewModel
     private val compositeDisposable = CompositeDisposable()
@@ -38,7 +55,16 @@ class FragmentDictionary :Fragment() ,DictionaryAdapter.PressedBtn {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dictionaryViewModel = DictionaryViewModel(DictionaryRepository())
+
+        dictionaryViewModel = ViewModelProvider(
+            this,
+            MainViewModelFactory(
+                DictionaryRepository(
+                    ApiServiceSingleton.dictionaryApiService!!,
+                    DictionaryDatabase.getDatabase(this.requireActivity()).dictionaryDao
+                )
+            )
+        ).get(DictionaryViewModel::class.java)
 
         binding.edtTextDictionary.addTextChangedListener {
             if (it!!.isNotEmpty()) {
@@ -46,6 +72,13 @@ class FragmentDictionary :Fragment() ,DictionaryAdapter.PressedBtn {
             } else {
                 binding.dictionaryRecyclerView.visibility = View.GONE
             }
+        }
+
+        binding.favButton.setOnClickListener {
+            val intent =
+                Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
+            intent.putExtra(PAGE_NAME_KEY, "favoriteWords")
+            startActivity(intent)
         }
     }
 
@@ -60,14 +93,14 @@ class FragmentDictionary :Fragment() ,DictionaryAdapter.PressedBtn {
                     }
 
                     override fun onSuccess(t: Dictionary) {
+                        binding.serverError500.visibility = View.INVISIBLE
                         binding.dictionaryRecyclerView.visibility = View.VISIBLE
-
-
                         setDataToRecycler(t)
-                        Log.i("test", t.toString())
                     }
 
                     override fun onError(e: Throwable) {
+                        binding.serverError500.visibility = View.VISIBLE
+                        binding.serverError500.playAnimation()
                         binding.dictionaryRecyclerView.visibility = View.GONE
                         Log.i("test_error", e.toString())
                     }
@@ -78,13 +111,98 @@ class FragmentDictionary :Fragment() ,DictionaryAdapter.PressedBtn {
 
     private fun setDataToRecycler(data: Dictionary) {
         val myData = ArrayList(data)
-        dictionaryAdapter = DictionaryAdapter(myData, this)
+        dictionaryAdapter = DictionaryAdapter(myData, this, this, this)
         binding.dictionaryRecyclerView.adapter = dictionaryAdapter
         binding.dictionaryRecyclerView.layoutManager =
             LinearLayoutManager(this.requireActivity(), RecyclerView.VERTICAL, false)
     }
 
     override fun onItemClickListener(itemClicked: Dictionary.DictionaryItem) {
+        Toast.makeText(
+            this.requireActivity(),
+            itemClicked.word + " added to Favorite",
+            Toast.LENGTH_SHORT
+        ).show()
+
+        dictionaryViewModel.getAllFavData().observe(this.requireActivity()) {
+            if (!it.toString().contains(itemClicked.meanings?.get(0)?.definitions?.get(0)?.definition.toString())){
+                addItemToDatabase(itemClicked)
+            }
+        }
+
+
+
+
 
     }
+    private fun addItemToDatabase(itemClicked:Dictionary.DictionaryItem){
+        var noOfDefinition = 0
+        var no = 1
+        var listOfDefinitions: ArrayList<String?> = arrayListOf()
+        for (i in 1..10) {
+            try {
+                listOfDefinitions.add(
+                    "$no) " + itemClicked.meanings?.get(0)?.definitions?.get(
+                        noOfDefinition
+                    )?.definition + "\n"
+                )
+                no += 1
+                noOfDefinition += 1
+            } catch (e: Exception) {
+                //catch Error
+            }
+        }
+        val definition =
+            listOfDefinitions.stream()
+                .collect(Collectors.joining(""))  // remove   "["     &   "]"   &   ","   from the list
+
+        lifecycleScope.launch(Dispatchers.IO) {
+            dictionaryViewModel.insertWordToFav(
+                DictionaryLocalDataClass(
+                    word = itemClicked.word.toString(),
+                    definition = definition,
+                    phonetics = itemClicked.phonetic.toString(),
+                    partOfSpeech = itemClicked.meanings?.get(0)?.partOfSpeech.toString()
+                )
+            )
+        }
+    }
+
+    override fun onUsSpeakerClickListener(itemClicked: Dictionary.DictionaryItem) {
+        val toSpeak = itemClicked.word.toString()
+        tts = TextToSpeech(this.requireActivity(), TextToSpeech.OnInitListener { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                tts.language = Locale.US
+                tts.setPitch(0.9f)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    tts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null, null)
+                } else {
+                    tts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null)
+                }
+            }
+        })
+    }
+
+    override fun onUkSpeakerClickListener(itemClicked: Dictionary.DictionaryItem) {
+        val toSpeak = itemClicked.word.toString()
+        tts = TextToSpeech(this.requireActivity(), TextToSpeech.OnInitListener { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                tts.language = Locale.UK
+                tts.setPitch(0.9f)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    tts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null, null)
+                } else {
+                    tts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null)
+                }
+            }
+        })
+    }
+
+//    override fun onDestroy() {
+//        // Shutdown TTS when
+//        // activity is destroyed
+//        tts.stop()
+//        tts.shutdown()
+//        super.onDestroy()
+//    }
 }

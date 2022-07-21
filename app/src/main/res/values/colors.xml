@@ -11,7 +11,8 @@
     <color name="correctAnswer">#0ACF13</color>
     <color name="grey">#E8423C3C</color>
     <color name="colorPrimary">#1878D8</color>
-    <color name="blueLight">#DCE8F4</color>
+    <color name="blueLight">#00FFF0</color>
+    <color name="red">#E8131F</color>
 
 <!--    Animations-->
     <color name="purple">#d67de9</color>
