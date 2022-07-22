@@ -1,6 +1,7 @@
 package com.ieltsjuice
 
 import android.app.AlertDialog
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -24,6 +25,28 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityWithoutBottomNavigationBarBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Day Night Switch
+        when (this.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)) {
+            Configuration.UI_MODE_NIGHT_YES -> {binding.ieltsLogo.setImageDrawable(
+                ContextCompat.getDrawable(
+                    this,
+                    R.drawable.ielts_juice_logo_dark
+                )
+            )}
+            Configuration.UI_MODE_NIGHT_NO -> {binding.ieltsLogo.setImageDrawable(
+                ContextCompat.getDrawable(
+                    this,
+                    R.drawable.ielts_juice_logo
+                )
+            )}
+            Configuration.UI_MODE_NIGHT_UNDEFINED -> {binding.ieltsLogo.setImageDrawable(
+                ContextCompat.getDrawable(
+                    this,
+                    R.drawable.ielts_juice_logo
+                )
+            )}
+        }
 
         // Fill the fragment_container of current Activity
         when (intent.getStringExtra(PAGE_NAME_KEY)) {

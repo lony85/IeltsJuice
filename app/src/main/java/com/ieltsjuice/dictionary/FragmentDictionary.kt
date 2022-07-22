@@ -193,12 +193,4 @@ class FragmentDictionary : Fragment(), DictionaryAdapter.PressedBtn,
             }
         })
     }
-
-    override fun onDestroy() {
-        // Shutdown TTS when
-        // activity is destroyed
-        tts.stop()
-        tts.shutdown()
-        super.onDestroy()
-    }
 }
