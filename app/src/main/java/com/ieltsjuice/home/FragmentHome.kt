@@ -39,7 +39,7 @@ class FragmentHome : Fragment() {
             intent.putExtra(PAGE_NAME_KEY, "Correction")
             startActivity(intent)
         }
-        binding.textMainCourses.setOnClickListener {
+        binding.buttonMainCourses.setOnClickListener {
             findNavController().navigate(R.id.navigation_studyOnline)
 
         }

@@ -56,6 +56,16 @@
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/server_error" />
 
+    <TextView
+        android:id="@+id/txtError"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Server error or word not found!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serverError500"
+        tools:ignore="HardcodedText" />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/favButton"
         android:layout_width="wrap_content"

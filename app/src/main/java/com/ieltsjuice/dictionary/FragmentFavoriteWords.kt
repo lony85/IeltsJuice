@@ -3,7 +3,6 @@ package com.ieltsjuice.dictionary
 import android.os.Build
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,7 +19,6 @@ import com.ieltsjuice.model.local.DictionaryLocalDataClass
 import com.ieltsjuice.util.ApiServiceSingleton
 import com.ieltsjuice.util.MainViewModelFactory
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.launch
 import java.util.*
 
@@ -111,11 +109,11 @@ class FragmentFavoriteWords : Fragment(), DictionaryRoomAdapter.PressedBtn,
         })
     }
 
-//    override fun onDestroy() {
-//        // Shutdown TTS when
-//        // activity is destroyed
-//        tts.stop()
-//        tts.shutdown()
-//        super.onDestroy()
-//    }
+    override fun onDestroy() {
+        // Shutdown TTS when
+        // activity is destroyed
+        tts.stop()
+        tts.shutdown()
+        super.onDestroy()
+    }
 }

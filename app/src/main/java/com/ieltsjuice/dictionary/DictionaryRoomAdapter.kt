@@ -5,11 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ieltsjuice.databinding.TemplateDictionaryContentBinding
-import com.ieltsjuice.model.Dictionary
 import com.ieltsjuice.model.local.DictionaryLocalDataClass
-import java.util.*
-import java.util.stream.Collectors
-import kotlin.collections.ArrayList
 
 class DictionaryRoomAdapter(
     private val dictionary: List<DictionaryLocalDataClass>,

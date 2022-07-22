@@ -1,5 +1,6 @@
 package com.ieltsjuice.dictionary
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -17,7 +18,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ieltsjuice.WithoutBottomNavigationBarActivity
 import com.ieltsjuice.databinding.FragmentDictionaryBinding
-import com.ieltsjuice.databinding.TemplateDictionaryContentBinding
 import com.ieltsjuice.model.Dictionary
 import com.ieltsjuice.model.DictionaryRepository
 import com.ieltsjuice.model.local.DictionaryDatabase
@@ -94,15 +94,16 @@ class FragmentDictionary : Fragment(), DictionaryAdapter.PressedBtn,
 
                     override fun onSuccess(t: Dictionary) {
                         binding.serverError500.visibility = View.INVISIBLE
+                        binding.txtError.visibility = View.INVISIBLE
                         binding.dictionaryRecyclerView.visibility = View.VISIBLE
                         setDataToRecycler(t)
                     }
 
                     override fun onError(e: Throwable) {
                         binding.serverError500.visibility = View.VISIBLE
+                        binding.txtError.visibility = View.VISIBLE
                         binding.serverError500.playAnimation()
                         binding.dictionaryRecyclerView.visibility = View.GONE
-                        Log.i("test_error", e.toString())
                     }
 
                 })
@@ -129,11 +130,6 @@ class FragmentDictionary : Fragment(), DictionaryAdapter.PressedBtn,
                 addItemToDatabase(itemClicked)
             }
         }
-
-
-
-
-
     }
     private fun addItemToDatabase(itemClicked:Dictionary.DictionaryItem){
         var noOfDefinition = 0
@@ -198,11 +194,11 @@ class FragmentDictionary : Fragment(), DictionaryAdapter.PressedBtn,
         })
     }
 
-//    override fun onDestroy() {
-//        // Shutdown TTS when
-//        // activity is destroyed
-//        tts.stop()
-//        tts.shutdown()
-//        super.onDestroy()
-//    }
+    override fun onDestroy() {
+        // Shutdown TTS when
+        // activity is destroyed
+        tts.stop()
+        tts.shutdown()
+        super.onDestroy()
+    }
 }
