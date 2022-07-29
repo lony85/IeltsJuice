@@ -43,7 +43,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="US"
-                    android:textColor="#D81818" />
+                    android:textColor="#D81818"
+                    tools:ignore="HardcodedText" />
 
                 <ImageView
                     android:id="@+id/speakerUsBtn"
@@ -71,7 +72,8 @@
                     android:layout_height="wrap_content"
 
                     android:text="UK"
-                    android:textColor="#D81818" />
+                    android:textColor="#D81818"
+                    tools:ignore="HardcodedText" />
 
                 <ImageView
                     android:id="@+id/speakerUkBtn"
@@ -95,7 +97,8 @@
                 app:layout_constraintBottom_toBottomOf="@+id/txtTitle_dictionary"
                 app:layout_constraintStart_toEndOf="@+id/txtTitle_dictionary"
                 app:layout_constraintTop_toTopOf="@+id/txtTitle_dictionary"
-                tools:text="Phonetic" />
+                tools:text="Phonetic"
+                tools:ignore="UnusedAttribute" />
 
             <TextView
                 android:id="@+id/txtPartOfSpeech_dictionary"
@@ -110,7 +113,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/favBtn"
                 app:layout_constraintStart_toEndOf="@+id/txtPhonetic_dictionary"
                 app:layout_constraintTop_toTopOf="@+id/txtTitle_dictionary"
-                tools:text="Noun" />
+                tools:text="Noun"
+                tools:ignore="UnusedAttribute" />
 
             <TextView
                 android:id="@+id/txtTitle_dictionary"
@@ -123,7 +127,8 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/US_pronunciation"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Hello" />
+                tools:text="Hello"
+                tools:ignore="UnusedAttribute" />
 
 
             <TextView
@@ -146,12 +151,11 @@
                 android:id="@+id/favBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="1dp"
-                android:src="@drawable/ic_favorite_red"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:background="#00E8131F"
+                android:src="@drawable/ic_favorite_red"
+                app:layout_constraintBottom_toBottomOf="@+id/txtTitle_dictionary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtTitle_dictionary"
                 tools:ignore="ContentDescription" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

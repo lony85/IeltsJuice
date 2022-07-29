@@ -1,14 +1,13 @@
 package com.ieltsjuice.dictionary
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
@@ -16,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.ieltsjuice.R
 import com.ieltsjuice.WithoutBottomNavigationBarActivity
 import com.ieltsjuice.databinding.FragmentDictionaryBinding
 import com.ieltsjuice.model.Dictionary
@@ -34,7 +34,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.util.*
 import java.util.stream.Collectors
-import kotlin.collections.ArrayList
 
 
 class FragmentDictionary : Fragment(), DictionaryAdapter.PressedBtn,
@@ -79,7 +78,40 @@ class FragmentDictionary : Fragment(), DictionaryAdapter.PressedBtn,
                 Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
             intent.putExtra(PAGE_NAME_KEY, "favoriteWords")
             startActivity(intent)
+            activity?.finish()
         }
+
+        //Fab icon custom style
+        var scrollingDown = false
+        binding.dictionaryRecyclerView.addOnScrollListener(object :
+            RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+
+                if (scrollingDown
+                    && dy >= 1
+                ) {
+                    scrollingDown = !scrollingDown
+                    binding.favButton.startAnimation(
+                        AnimationUtils.loadAnimation(
+                            activity?.applicationContext,
+                            R.anim.fab_close
+                        )
+                    )
+                } else if (!scrollingDown
+                    && dy < 1
+                ) {
+                    scrollingDown = !scrollingDown
+                    binding.favButton.startAnimation(
+                        AnimationUtils.loadAnimation(
+                            activity?.applicationContext,
+                            R.anim.fab_open
+                        )
+                    )
+                }
+            }
+        })
+
     }
 
     private fun getSearchWord(word: String) {
@@ -126,12 +158,15 @@ class FragmentDictionary : Fragment(), DictionaryAdapter.PressedBtn,
         ).show()
 
         dictionaryViewModel.getAllFavData().observe(this.requireActivity()) {
-            if (!it.toString().contains(itemClicked.meanings?.get(0)?.definitions?.get(0)?.definition.toString())){
+            if (!it.toString()
+                    .contains(itemClicked.meanings?.get(0)?.definitions?.get(0)?.definition.toString())
+            ) {
                 addItemToDatabase(itemClicked)
             }
         }
     }
-    private fun addItemToDatabase(itemClicked:Dictionary.DictionaryItem){
+
+    private fun addItemToDatabase(itemClicked: Dictionary.DictionaryItem) {
         var noOfDefinition = 0
         var no = 1
         var listOfDefinitions: ArrayList<String?> = arrayListOf()

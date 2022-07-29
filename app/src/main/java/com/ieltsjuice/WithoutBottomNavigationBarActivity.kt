@@ -28,24 +28,30 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
 
         // Day Night Switch
         when (this.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)) {
-            Configuration.UI_MODE_NIGHT_YES -> {binding.ieltsLogo.setImageDrawable(
-                ContextCompat.getDrawable(
-                    this,
-                    R.drawable.ielts_juice_logo_dark
+            Configuration.UI_MODE_NIGHT_YES -> {
+                binding.ieltsLogo.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        this,
+                        R.drawable.ielts_juice_logo_dark
+                    )
                 )
-            )}
-            Configuration.UI_MODE_NIGHT_NO -> {binding.ieltsLogo.setImageDrawable(
-                ContextCompat.getDrawable(
-                    this,
-                    R.drawable.ielts_juice_logo
+            }
+            Configuration.UI_MODE_NIGHT_NO -> {
+                binding.ieltsLogo.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        this,
+                        R.drawable.ielts_juice_logo
+                    )
                 )
-            )}
-            Configuration.UI_MODE_NIGHT_UNDEFINED -> {binding.ieltsLogo.setImageDrawable(
-                ContextCompat.getDrawable(
-                    this,
-                    R.drawable.ielts_juice_logo
+            }
+            Configuration.UI_MODE_NIGHT_UNDEFINED -> {
+                binding.ieltsLogo.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        this,
+                        R.drawable.ielts_juice_logo
+                    )
                 )
-            )}
+            }
         }
 
         // Fill the fragment_container of current Activity
@@ -164,15 +170,6 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 val videoId = intent.getStringExtra("videoId")
                 val bundle = Bundle()
                 bundle.putString("videoId", videoId)
-//                                val fragment = FragmentYoutubePlayer()
-//                fragment.arguments = bundle
-//                val transaction = supportFragmentManager.beginTransaction()
-//                transaction.replace(
-//                    R.id.fragment_container_withoutNavigationActivity,
-//                    fragment
-//                )
-//                transaction.commit()
-
                 binding.collapsingBarMain.title = "IELTS Juice youtube channel" // set toolbar names
 
             }

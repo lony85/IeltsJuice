@@ -6,7 +6,6 @@ import android.speech.tts.TextToSpeech
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -72,8 +71,6 @@ class FragmentFavoriteWords : Fragment(), DictionaryRoomAdapter.PressedBtn,
                 lifecycleScope.launch(Dispatchers.IO) {
                     dictionaryViewModel.deleteWordFromFav(itemClicked.definition)
                 }
-                Toast.makeText(this.requireActivity(), itemClicked.word +" removed from Favorite", Toast.LENGTH_SHORT).show()
-
             }
         }
 
