@@ -1,5 +1,6 @@
 package com.ieltsjuice.youtube
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,12 +12,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.internetconnection.NetworkChecker
 import com.google.android.material.snackbar.Snackbar
-import com.google.android.youtube.player.YouTubeStandalonePlayer
+//import com.google.android.youtube.player.YouTubeStandalonePlayer
 import com.ieltsjuice.R
+import com.ieltsjuice.WithoutBottomNavigationBarActivity
 import com.ieltsjuice.databinding.FragmentYoutubeBinding
 import com.ieltsjuice.model.Youtube
 import com.ieltsjuice.model.Youtube.Item.Snippet
 import com.ieltsjuice.model.YoutubeRepository
+import com.ieltsjuice.util.PAGE_NAME_KEY
 import com.ieltsjuice.util.youTubeApiKey
 import io.reactivex.SingleObserver
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -237,10 +240,15 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
     }
 
     override fun onItemClickListener(itemClicked: Snippet) {
-        val intent = YouTubeStandalonePlayer.createVideoIntent(
-            this.requireActivity(), youTubeApiKey, itemClicked.resourceId?.videoId, 0, true, true
-        )
+
+        val intent =
+            Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
+        intent.putExtra(PAGE_NAME_KEY, "youtube")
+        intent.putExtra("videoId" , itemClicked.resourceId?.videoId)
+        intent.putExtra("videoTitle",itemClicked.title)
+        intent.putExtra("videoDesc",itemClicked.description)
         startActivity(intent)
+
     }
     private fun snackBar(){
         Snackbar.make(binding.root, R.string.NoInternet, Snackbar.LENGTH_SHORT)

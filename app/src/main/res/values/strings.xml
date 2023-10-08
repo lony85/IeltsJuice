@@ -120,6 +120,8 @@ Got a question or not sure if you need to register at the IELTS Juice Online Aca
     </string>
     <string name="NoInternet">Check your Internet connection…</string>
     <string name="GOOGLE_API_KEY">AIzaSyAk79gPVoTkRkf6v0Ex2dZfofP-FfyqDso</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

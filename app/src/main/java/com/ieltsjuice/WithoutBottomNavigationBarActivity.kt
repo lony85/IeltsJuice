@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.core.content.ContextCompat
 import com.ieltsjuice.consultation.FragmentConsultation
@@ -18,6 +19,7 @@ import com.ieltsjuice.score_calculator.FragmentScoreCalculator
 import com.ieltsjuice.self_paced.FragmentOneToOne
 import com.ieltsjuice.self_paced.FragmentSelfPaced
 import com.ieltsjuice.util.*
+import com.ieltsjuice.youtube.FragmentYoutubePlayer
 
 class WithoutBottomNavigationBarActivity : AppCompatActivity() {
     lateinit var binding: ActivityWithoutBottomNavigationBarBinding
@@ -36,6 +38,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                     )
                 )
             }
+
             Configuration.UI_MODE_NIGHT_NO -> {
                 binding.ieltsLogo.setImageDrawable(
                     ContextCompat.getDrawable(
@@ -44,6 +47,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                     )
                 )
             }
+
             Configuration.UI_MODE_NIGHT_UNDEFINED -> {
                 binding.ieltsLogo.setImageDrawable(
                     ContextCompat.getDrawable(
@@ -90,6 +94,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
 
 //                binding.collapsingBarMain.title = "IELTS Score Calculator" // set toolbar names
             }
+
             "Dictionary" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.add(
@@ -99,6 +104,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 transaction.commit()
                 binding.collapsingBarMain.title = "Dictionary" // set toolbar names
             }
+
             "favoriteWords" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.add(
@@ -108,6 +114,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 transaction.commit()
                 binding.collapsingBarMain.title = "Favorite Words" // set toolbar names
             }
+
             "calculator" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.add(
@@ -118,6 +125,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 binding.collapsingBarMain.title = "IELTS Score Calculator" // set toolbar names
 
             }
+
             "Correction" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.add(
@@ -128,6 +136,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 binding.collapsingBarMain.title = "IELTS Writing Correction" // set toolbar names
 
             }
+
             "Consultation" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.add(
@@ -137,6 +146,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 transaction.commit()
                 binding.collapsingBarMain.title = "Consultation" // set toolbar names
             }
+
             "OneToOne" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.add(
@@ -147,6 +157,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 binding.collapsingBarMain.title = "Online Private Courses" // set toolbar names
 
             }
+
             "selfPaced" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.add(
@@ -157,6 +168,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 binding.collapsingBarMain.title = "self-Paced Courses" // set toolbar names
 
             }
+
             "placementQuestions" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.add(
@@ -166,11 +178,27 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 transaction.commit()
                 binding.collapsingBarMain.title = "Test Your English" // set toolbar names
             }
+
             "youtube" -> {
+
+//                binding.collapsingBarMain.title = "IELTS Juice youtube channel" // set toolbar names
+
+                val transaction = supportFragmentManager.beginTransaction()
                 val videoId = intent.getStringExtra("videoId")
+                val videoTitle = intent.getStringExtra("videoTitle")
+                val videoDesc = intent.getStringExtra("videoDesc")
                 val bundle = Bundle()
                 bundle.putString("videoId", videoId)
-                binding.collapsingBarMain.title = "IELTS Juice youtube channel" // set toolbar names
+                bundle.putString("videoTitle",videoTitle)
+                bundle.putString("videoDesc",videoDesc)
+                val fragment = FragmentYoutubePlayer()
+                fragment.arguments = bundle
+                transaction.add(
+                    R.id.fragment_container_withoutNavigationActivity,
+                    fragment
+                )
+                transaction.commit()
+                binding.collapsingBarMain.title = "Youtube Player" // set toolbar names
 
             }
         }

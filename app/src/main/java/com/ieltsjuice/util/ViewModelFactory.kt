@@ -7,7 +7,7 @@ import com.ieltsjuice.model.DictionaryRepository
 
 class MainViewModelFactory(private val dictionaryRepository: DictionaryRepository) :ViewModelProvider.Factory {
 
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return DictionaryViewModel(dictionaryRepository) as T
     }
 }
