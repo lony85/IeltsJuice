@@ -13,17 +13,20 @@ android {
         applicationId "com.ieltsjuice"
         minSdk 23
         targetSdk 34
-        versionCode 4
-        versionName "1.2.0"
+        versionCode 6
+        versionName "1.2.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled false
+            shrinkResources false
+            multiDexEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
         }
     }
     compileOptions {
@@ -82,8 +85,7 @@ dependencies {
 
     //Youtube
     //implementation files('libs/YouTubeAndroidPlayerApi.jar')
-
-        implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0'
     
     // My Own Github Dependency for checking internet connection
     implementation 'com.github.lony85:CheckInternetConnection:1.0.2'
