@@ -39,21 +39,21 @@ class FragmentOneToOne:Fragment() {
                 )
             }
         }
-        binding.buttonOneToOneIRAN.setOnClickListener {
-            val webUri = Uri.parse("https://forush.co/43/679673/")
-            val iWeb = Intent(Intent.ACTION_VIEW, webUri)
-            iWeb.setPackage("com.android.chrome")
-            try {
-                startActivity(iWeb)
-            } catch (e: ActivityNotFoundException) {
-                startActivity(
-                    Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse("https://forush.co/43/679673/")
-                    )
-                )
-            }
-        }
+//        binding.buttonOneToOneIRAN.setOnClickListener {
+//            val webUri = Uri.parse("https://forush.co/43/679673/")
+//            val iWeb = Intent(Intent.ACTION_VIEW, webUri)
+//            iWeb.setPackage("com.android.chrome")
+//            try {
+//                startActivity(iWeb)
+//            } catch (e: ActivityNotFoundException) {
+//                startActivity(
+//                    Intent(
+//                        Intent.ACTION_VIEW,
+//                        Uri.parse("https://forush.co/43/679673/")
+//                    )
+//                )
+//            }
+//        }
         binding.buttonOneToOneRegister.setOnClickListener {
             val webUri = Uri.parse("https://ieltsjuice.com/services/one-to-one/")
             val iWeb = Intent(Intent.ACTION_VIEW, webUri)

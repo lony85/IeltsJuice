@@ -57,5 +57,12 @@ class FragmentHome : Fragment() {
             intent.putExtra(PAGE_NAME_KEY, "calculator")
             startActivity(intent)
         }
+
+        binding.buttonEssayEvaluate.setOnClickListener {
+            val intent =
+                Intent(this.requireActivity(), WithoutBottomNavigationBarActivity::class.java)
+            intent.putExtra(PAGE_NAME_KEY, "essay")
+            startActivity(intent)
+        }
     }
 }

@@ -279,6 +279,66 @@
                     android:padding="10dp">
 
                     <ImageView
+                        android:id="@+id/essayImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:src="@drawable/essay_evaluate"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/txtTitle_essay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IELTS Writing Assessor"
+                        android:textColor="?attr/colorSecondaryVariant"
+                        android:textSize="@dimen/textSizeTitle"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/essayImg"
+                        tools:ignore="HardcodedText" />
+
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_essay_evaluate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Assess now"
+                        android:textColor="?attr/colorOnPrimary"
+                        android:textSize="11sp"
+                        app:backgroundTint="?attr/colorPrimary"
+                        app:cornerRadius="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtTitle_essay"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginTop="50dp"
+                app:cardElevation="5dp"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp">
+
+                    <ImageView
                         android:id="@+id/dictionaryImg"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

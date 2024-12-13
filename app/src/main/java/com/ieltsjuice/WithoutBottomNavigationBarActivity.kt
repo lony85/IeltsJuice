@@ -14,6 +14,7 @@ import com.ieltsjuice.databinding.ActivityWithoutBottomNavigationBarBinding
 import com.ieltsjuice.databinding.TemplaterAlertDialogBackTestPlacementBinding
 import com.ieltsjuice.dictionary.FragmentDictionary
 import com.ieltsjuice.dictionary.FragmentFavoriteWords
+import com.ieltsjuice.essay_evaluate.FragmentEssayEvaluate
 import com.ieltsjuice.placement_test.FragmentPlacementQuestions
 import com.ieltsjuice.score_calculator.FragmentScoreCalculator
 import com.ieltsjuice.self_paced.FragmentOneToOne
@@ -72,6 +73,8 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 val teacherInstagram = intent.getStringExtra("KEY_teacherInstagram")
                 val teacherWebpage = intent.getStringExtra("KEY_teacherWebpage")
                 val teacherSkype = intent.getStringExtra("KEY_teacherSkype")
+                val teacherTelegram = intent.getStringExtra("KEY_teacherTelegram")
+                val teacherTwitter = intent.getStringExtra("KEY_teacherTwitter")
 
                 val bundle = Bundle()
                 bundle.putString(KEY_teacherName, teacherName)
@@ -84,6 +87,8 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 bundle.putString(KEY_teacherInstagram, teacherInstagram)
                 bundle.putString(KEY_teacherWebpage, teacherWebpage)
                 bundle.putString(KEY_teacherSkype, teacherSkype)
+                bundle.putString(KEY_teacherTelegram, teacherTelegram)
+                bundle.putString(KEY_teacherTwitter, teacherTwitter)
                 val fragment = FragmentAboutUsDetails()
                 fragment.arguments = bundle
 
@@ -123,6 +128,17 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 )
                 transaction.commit()
                 binding.collapsingBarMain.title = "IELTS Score Calculator" // set toolbar names
+
+            }
+
+            "essay" -> {
+                val transaction = supportFragmentManager.beginTransaction()
+                transaction.add(
+                    R.id.fragment_container_withoutNavigationActivity,
+                    FragmentEssayEvaluate()
+                )
+                transaction.commit()
+                binding.collapsingBarMain.title = "IELTS Writing Assessor" // set toolbar names
 
             }
 

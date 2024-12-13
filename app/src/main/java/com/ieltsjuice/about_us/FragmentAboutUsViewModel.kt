@@ -17,5 +17,8 @@ class FragmentAboutUsViewModel {
         intent.putExtra(KEY_teacherInstagram, teacher.instagram)
         intent.putExtra(KEY_teacherWebpage, teacher.webpage)
         intent.putExtra(KEY_teacherSkype, teacher.skype)
+        intent.putExtra(KEY_teacherTelegram, teacher.telegram)
+        intent.putExtra(KEY_teacherTwitter, teacher.twitter)
+
     }
 }

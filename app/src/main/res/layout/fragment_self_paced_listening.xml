@@ -166,22 +166,22 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="To register at a discounted price , "
+                    android:text="To register at a discounted price ,contact us. "
                     tools:ignore="HardcodedText" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/button_listeningCourse_RegisterIRAN"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:text="Click Here"
-                    android:textColor="?attr/colorSecondaryVariant"
-                    android:textSize="@dimen/textSizeDate"
-                    app:cornerRadius="30dp"
-                    app:strokeColor="?attr/colorPrimary"
-                    app:strokeWidth="1dp"
-                    tools:ignore="HardcodedText"/>
+<!--                <com.google.android.material.button.MaterialButton-->
+<!--                    android:id="@+id/button_listeningCourse_RegisterIRAN"-->
+<!--                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="end"-->
+<!--                    android:text="Click Here"-->
+<!--                    android:textColor="?attr/colorSecondaryVariant"-->
+<!--                    android:textSize="@dimen/textSizeDate"-->
+<!--                    app:cornerRadius="30dp"-->
+<!--                    app:strokeColor="?attr/colorPrimary"-->
+<!--                    app:strokeWidth="1dp"-->
+<!--                    tools:ignore="HardcodedText"/>-->
             </LinearLayout>
 
             <com.google.android.material.divider.MaterialDivider

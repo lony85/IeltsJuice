@@ -1,8 +1,14 @@
 package com.ieltsjuice.MainActivity
 
+import android.annotation.SuppressLint
+import android.content.ActivityNotFoundException
+import android.content.Intent
 import android.content.res.Configuration
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.view.animation.TranslateAnimation
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
@@ -15,8 +21,9 @@ import com.ieltsjuice.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
+    private var isFabOpen = false
 
-
+    @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -65,6 +72,44 @@ class MainActivity : AppCompatActivity() {
                 )
             )}
         }
+
+        //fab icon
+        var isFABExpened=false
+
+
+        binding.floatingActionButton.setOnClickListener {
+            toggleFab()
+        }
+
+        binding.floatingActionButtonEmail.setOnClickListener {
+            val email = Intent(Intent.ACTION_SENDTO)
+                .setData(Uri.parse("mailto:support@ieltsjuice.freshdesk.com"))
+            startActivity(email)
+
+//            val email = Intent(Intent.ACTION_VIEW)
+//                .setData(Uri.parse("support@ieltsjuice.freshdesk.com"))
+//                .setPackage("com.google.android.gm")
+//            startActivity(email)
+        }
+        binding.floatingActionButtonTelegram.setOnClickListener {
+            val telegramUri = Uri.parse("https://telegram.me/ieltsjuice")
+            val iTelegram = Intent(Intent.ACTION_VIEW, telegramUri)
+            iTelegram.setPackage("com.telegram")
+            try {
+                startActivity(iTelegram)
+            } catch (e: ActivityNotFoundException) {
+                startActivity(
+                    Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("https://telegram.me/ieltsjuice")
+                    )
+                )
+            }
+
+        }
+
+
+
 /*
         binding.DayNightSwitch.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
@@ -87,4 +132,69 @@ class MainActivity : AppCompatActivity() {
         }
  */
     }
+
+    private fun toggleFab() {
+        if (isFabOpen) {
+            binding.floatingActionButtonEmail.hide()
+            binding.floatingActionButtonTelegram.hide()
+        } else {
+            binding.floatingActionButtonEmail.show()
+            binding.floatingActionButtonTelegram.show()
+        }
+        isFabOpen = !isFabOpen    }
+
+    private fun collapseFABMenu() {
+
+        val fabEmail = TranslateAnimation(
+            0f,
+            0f,
+            0f,
+            0f
+        )
+        val fabTelegram = TranslateAnimation(
+            0f,
+            0f,
+            0f,
+            0f
+        )
+        fabEmail.fillAfter = true
+        fabEmail.duration = 300
+        fabTelegram.fillAfter = true
+        fabTelegram.duration = 300
+        binding.floatingActionButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_fab_contact_us))
+        binding.floatingActionButtonEmail.startAnimation(fabEmail)
+        binding.floatingActionButtonTelegram.startAnimation(fabTelegram)
+
+    }
+
+
+    private fun expendFABMenu() {
+
+        val fabEmail = TranslateAnimation(
+            0f,
+            0f,
+            0f,
+            -200f
+        )
+        val fabTelegram = TranslateAnimation(
+            0f,
+            0f,
+            0f,
+            -350f
+        )
+        fabEmail.fillAfter = true
+        fabEmail.duration = 200
+        fabTelegram.fillAfter = true
+        fabTelegram.duration = 200
+
+        binding.floatingActionButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_fab_cross))
+        binding.floatingActionButtonEmail.startAnimation(fabEmail)
+        binding.floatingActionButtonTelegram.startAnimation(fabTelegram)    }
 }
+
+
+
+
+
+
+

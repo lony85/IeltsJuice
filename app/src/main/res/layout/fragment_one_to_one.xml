@@ -91,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:text=": $199 USD"
+                    android:text=": $290 USD"
                     tools:ignore="HardcodedText"
                     android:textSize="@dimen/textSizeDescription" />
 
@@ -100,7 +100,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="(Save ~ 14%)"
+                    android:text="(Save ~ 15%)"
                     tools:ignore="HardcodedText"
                     android:textColor="@color/Green"
                     android:textSize="13sp"
@@ -111,7 +111,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Session by Session : $23 USD"
+                android:text="Session by Session : $35 USD"
                 tools:ignore="HardcodedText"
                 android:textSize="@dimen/textSizeDescription" />
 
@@ -221,24 +221,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         tools:ignore="HardcodedText"
-                        android:text="To register at a discounted price , " />
+                        android:text="To register at a discounted price ,contact us." />
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/button_OneToOne_IRAN"
-                        style="?attr/materialButtonOutlinedStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="16dp"
-                        android:text="Click here"
-                        tools:ignore="HardcodedText"
-                        android:textColor="?attr/colorSecondaryVariant"
-                        android:textSize="11sp"
-                        app:cornerRadius="30dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/button_main_courses"
-                        app:layout_constraintEnd_toStartOf="@+id/button_main_courses"
-                        app:layout_constraintTop_toTopOf="@+id/button_main_courses"
-                        app:strokeColor="?attr/colorPrimary"
-                        app:strokeWidth="1dp" />
+<!--                    <com.google.android.material.button.MaterialButton-->
+<!--                        android:id="@+id/button_OneToOne_IRAN"-->
+<!--                        style="?attr/materialButtonOutlinedStyle"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginEnd="16dp"-->
+<!--                        android:text="Click here"-->
+<!--                        tools:ignore="HardcodedText"-->
+<!--                        android:textColor="?attr/colorSecondaryVariant"-->
+<!--                        android:textSize="11sp"-->
+<!--                        app:cornerRadius="30dp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/button_main_courses"-->
+<!--                        app:layout_constraintEnd_toStartOf="@+id/button_main_courses"-->
+<!--                        app:layout_constraintTop_toTopOf="@+id/button_main_courses"-->
+<!--                        app:strokeColor="?attr/colorPrimary"-->
+<!--                        app:strokeWidth="1dp" />-->
 
 
                 </LinearLayout>

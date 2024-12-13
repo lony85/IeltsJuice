@@ -37,7 +37,7 @@ class FragmentYoutubePlayer : Fragment() {
         val videoTitle = bundle?.getString("videoTitle")
         val videoDesc = bundle?.getString("videoDesc")
 
-        Log.d("id1",videoId!!)
+        Log.d("id1", videoId!!)
         binding.youtubeVideoTitle.text = videoTitle
         binding.youtubeVideoDesc.text = videoDesc
 
@@ -45,7 +45,7 @@ class FragmentYoutubePlayer : Fragment() {
 //        getLifecycle().addObserver(youTubePlayerView)
 
         youTubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
-            override fun onReady(@NonNull youTubePlayer: YouTubePlayer) {
+            override fun onReady(youTubePlayer: YouTubePlayer) {
                 youTubePlayer.loadVideo(videoId, 0f)
             }
         })

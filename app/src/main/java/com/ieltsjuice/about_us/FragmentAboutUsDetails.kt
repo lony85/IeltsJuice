@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.View.GONE
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.ieltsjuice.R
 import com.ieltsjuice.databinding.FragmentAboutUsDetailsBinding
@@ -38,6 +39,8 @@ class FragmentAboutUsDetails : Fragment() {
             val teacherWebpage = bundle.getString(KEY_teacherWebpage)
             val teacherLinkedin = bundle.getString(KEY_teacherLinkedin)
             val teacherSkype = bundle.getString(KEY_teacherSkype)
+            val teacherTelegram = bundle.getString(KEY_teacherTelegram)
+            val teacherTwitter = bundle.getString(KEY_teacherTwitter)
 
             binding.webPage.setOnClickListener {
                 val webUri = Uri.parse(teacherWebpage)
@@ -56,11 +59,11 @@ class FragmentAboutUsDetails : Fragment() {
             }
             binding.linkedin.setOnClickListener {
                 val linkedinUri = Uri.parse(teacherLinkedin)
-                val iInsta = Intent(Intent.ACTION_VIEW, linkedinUri)
-                iInsta.setPackage("com.linkedin.android")
+                val iLinkdin = Intent(Intent.ACTION_VIEW, linkedinUri)
+                iLinkdin.setPackage("com.linkedin.android")
 
                 try {
-                    startActivity(iInsta)
+                    startActivity(iLinkdin)
                 } catch (e: ActivityNotFoundException) {
                     startActivity(
                         Intent(
@@ -72,11 +75,11 @@ class FragmentAboutUsDetails : Fragment() {
             }
             binding.facebook.setOnClickListener {
                 val facebookUri = Uri.parse(teacherFacebook)
-                val iInsta = Intent(Intent.ACTION_VIEW, facebookUri)
-                iInsta.setPackage("com.facebook.android")
+                val iFacebook = Intent(Intent.ACTION_VIEW, facebookUri)
+                iFacebook.setPackage("com.facebook.android")
 
                 try {
-                    startActivity(iInsta)
+                    startActivity(iFacebook)
                 } catch (e: ActivityNotFoundException) {
                     startActivity(
                         Intent(
@@ -105,10 +108,10 @@ class FragmentAboutUsDetails : Fragment() {
             }
             binding.skype.setOnClickListener {
                 val skypeUri = Uri.parse(teacherSkype)
-                val iInsta = Intent(Intent.ACTION_VIEW, skypeUri)
-                iInsta.setPackage("com.skype.raider")
+                val iSkype = Intent(Intent.ACTION_VIEW, skypeUri)
+                iSkype.setPackage("com.skype.raider")
                 try {
-                    startActivity(iInsta)
+                    startActivity(iSkype)
                 } catch (e: ActivityNotFoundException) {
                     startActivity(
                         Intent(
@@ -118,97 +121,165 @@ class FragmentAboutUsDetails : Fragment() {
                     )
                 }
             }
+            binding.telegram.setOnClickListener {
+                val telegramUri = Uri.parse(teacherTelegram)
+                val iTelegram = Intent(Intent.ACTION_VIEW, telegramUri)
+                iTelegram.setPackage("com.telegram")
+                try {
+                    startActivity(iTelegram)
+                } catch (e: ActivityNotFoundException) {
+                    startActivity(
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse(teacherTelegram)
+                        )
+                    )
+                }
+            }
+            binding.twitter.setOnClickListener {
+                val twitterUri = Uri.parse(teacherTwitter)
+                val iTwitter = Intent(Intent.ACTION_VIEW, twitterUri)
+                iTwitter.setPackage("com.twitter.android")
+                try {
+                    startActivity(iTwitter)
+                } catch (e: ActivityNotFoundException) {
+                    startActivity(
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse(teacherTwitter)
+                        )
+                    )
+                }
+            }
 
             binding.nameAboutDetails.text = teacherName
             binding.titleAboutDetails.text = teacherTitle
             binding.familyAboutDetails.text = teacherFamily
             binding.descriptionAboutDetails.text = teacherDescription
-            bindImage(teacherFamily!!)
+            bindImage(teacherName!!,teacherFamily!!)
         }
     }
-    private fun bindImage(teacherFamily: String) {
-        when (teacherFamily) {
+    private fun bindImage(teacherName:String, teacherFamily: String) {
+        when {
 
-            "Sharifan" -> {
+            teacherName =="Kasra" && teacherFamily == "Sharifan" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_kasra_sharifan)
                 binding.instagram.visibility = GONE
                 binding.skype.visibility = GONE
+                binding.telegram.visibility = GONE
 
             }
-            "Neishaboori" -> {
+            teacherName =="Soolmaz" && teacherFamily == "Neishaboori" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_soolmaz_neishaboori)
                 binding.instagram.visibility = GONE
                 binding.skype.visibility = GONE
                 binding.webPage.visibility = GONE
+                binding.telegram.visibility = GONE
+                binding.twitter.visibility = GONE
             }
-            "Haghparast" -> {
+            teacherName =="Rahman" && teacherFamily == "Haghparast" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_rahman)
                 binding.instagram.visibility = GONE
                 binding.skype.visibility = GONE
                 binding.facebook.visibility = GONE
                 binding.webPage.visibility = GONE
+                binding.twitter.visibility = GONE
+                binding.telegram.visibility = GONE
             }
-            "Hassanizawe" -> {
+            teacherName =="Hamed" && teacherFamily == "Hassanizawe" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_hamed_hassanizawe)
-                binding.skype.visibility = GONE
-                binding.facebook.visibility = GONE
-                binding.webPage.visibility = GONE
-                binding.linkedin.visibility = GONE
-
-            }
-            "Stanley Beggs" -> {
-                binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_david_beggs)
-                binding.skype.visibility = GONE
-                binding.webPage.visibility = GONE
-                binding.instagram.visibility = GONE
-                binding.facebook.visibility = GONE
-                binding.linkedin.visibility = GONE
-            }
-            "Hedeshi" -> {
-                binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_elham_hedeshi)
-                binding.skype.visibility = GONE
-                binding.webPage.visibility = GONE
-                binding.linkedin.visibility = GONE
-                binding.instagram.visibility = GONE
-            }
-            "Ghassemi" -> {
-                binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_saghy_ghassemi)
-                binding.skype.visibility = GONE
-                binding.facebook.visibility = GONE
-                binding.webPage.visibility = GONE
-                binding.instagram.visibility = GONE
-            }
-            "Kishi" -> {
-                binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_mehryar_kishi)
-                binding.skype.visibility = GONE
-                binding.facebook.visibility = GONE
-                binding.webPage.visibility = GONE
-            }
-            "Safavi" -> {
-                binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_mehdi_safavi)
-            }
-            "Keshtkar" -> {
-                binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_sadegh_keshtkar)
-                binding.skype.visibility = GONE
-                binding.facebook.visibility = GONE
-                binding.webPage.visibility = GONE
-            }
-            "Naseri" -> {
-                binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_elham_naseri)
                 binding.skype.visibility = GONE
                 binding.facebook.visibility = GONE
                 binding.webPage.visibility = GONE
                 binding.linkedin.visibility = GONE
                 binding.instagram.visibility = GONE
                 binding.textView.visibility = GONE
+                binding.twitter.visibility = GONE
+                binding.telegram.visibility = GONE
             }
-            "Hosseinzadeh" -> {
+            teacherName =="David" && teacherFamily == "Stanley Beggs" -> {
+                binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_david_beggs)
+                binding.skype.visibility = GONE
+                binding.webPage.visibility = GONE
+                binding.instagram.visibility = GONE
+                binding.facebook.visibility = GONE
+                binding.telegram.visibility = GONE
+                binding.twitter.visibility = GONE
+                binding.linkedin.visibility = GONE
+                binding.textView.visibility = GONE
+
+            }
+            teacherName =="Elham" && teacherFamily == "Hedeshi" -> {
+                binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_elham_hedeshi)
+                binding.skype.visibility = GONE
+                binding.webPage.visibility = GONE
+                binding.linkedin.visibility = GONE
+                binding.telegram.visibility = GONE
+                binding.twitter.visibility = GONE
+            }
+            teacherName =="Saghy" && teacherFamily == "Ghassemi" -> {
+                binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_saghy_ghassemi)
+                binding.skype.visibility = GONE
+                binding.facebook.visibility = GONE
+                binding.webPage.visibility = GONE
+                binding.instagram.visibility = GONE
+                binding.twitter.visibility = GONE
+                binding.telegram.visibility = GONE
+            }
+            teacherName =="Marzieh" && teacherFamily == "Naseri" -> {
+                binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_marzieh_naseri)
+                binding.skype.visibility = GONE
+                binding.webPage.visibility = GONE
+                binding.instagram.visibility = GONE
+                binding.facebook.visibility = GONE
+                binding.linkedin.visibility = GONE
+                binding.twitter.visibility = GONE
+                binding.telegram.visibility = GONE
+                binding.textView.visibility = GONE
+
+            }
+            teacherName =="Mehryar" && teacherFamily == "Kishi" -> {
+                binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_mehryar_kishi)
+                binding.skype.visibility = GONE
+                binding.facebook.visibility = GONE
+                binding.webPage.visibility = GONE
+                binding.twitter.visibility = GONE
+                binding.telegram.visibility = GONE
+            }
+            teacherName =="Mehdi" && teacherFamily == "Safavi" -> {
+
+                binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_mehdi_safavi)
+                binding.twitter.visibility = GONE
+                binding.telegram.visibility = GONE
+            }
+            teacherName =="Sadegh" && teacherFamily == "Keshtkar" -> {
+                binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_sadegh_keshtkar)
+                binding.skype.visibility = GONE
+                binding.facebook.visibility = GONE
+                binding.webPage.visibility = GONE
+                binding.telegram.visibility = GONE
+                binding.twitter.visibility = GONE
+            }
+            teacherName =="Elham" && teacherFamily == "Naseri" -> {
+                binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_elham_naseri)
+                binding.skype.visibility = GONE
+                binding.facebook.visibility = GONE
+                binding.webPage.visibility = GONE
+                binding.instagram.visibility = GONE
+                binding.telegram.visibility = GONE
+                binding.twitter.visibility = GONE
+
+            }
+            teacherName =="Shahab" && teacherFamily == "Hosseinzadeh" -> {
                 binding.imageViewAboutDetails.setImageResource(R.drawable.teacher_leila_hosseinzadeh)
                 binding.facebook.visibility = GONE
                 binding.webPage.visibility = GONE
                 binding.linkedin.visibility = GONE
                 binding.skype.visibility = GONE
-
+                binding.twitter.visibility = GONE
+                binding.telegram.visibility = GONE
+                binding.instagram.visibility = GONE
+                binding.textView.visibility = GONE
             }
         }
     }

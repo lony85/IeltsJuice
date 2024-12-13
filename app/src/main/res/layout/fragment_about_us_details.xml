@@ -188,11 +188,36 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:src="@drawable/ic_instagram"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/telegram"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/facebook"
                 app:layout_constraintTop_toTopOf="@+id/webPage"
                 tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/telegram"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_telegram"
+                app:layout_constraintEnd_toEndOf="@id/twitter"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/instagram"
+                app:layout_constraintTop_toTopOf="@+id/webPage"
+                tools:ignore="ContentDescription"
+
+                />
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_twitter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/telegram"
+                app:layout_constraintTop_toTopOf="@+id/webPage"
+                tools:ignore="ContentDescription"
+
+                />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

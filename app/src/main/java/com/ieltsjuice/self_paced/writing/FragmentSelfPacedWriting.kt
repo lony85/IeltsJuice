@@ -70,21 +70,21 @@ class FragmentSelfPacedWriting :Fragment(), SelfPacedAdapter.ViewSelected {
             }
         }
 
-        binding.buttonWritingCourseRegisterIRAN.setOnClickListener {
-            val webUri = Uri.parse("https://forush.co/18773/583490/")
-            val iWeb = Intent(Intent.ACTION_VIEW, webUri)
-            iWeb.setPackage("com.android.chrome")
-            try {
-                startActivity(iWeb)
-            } catch (e: ActivityNotFoundException) {
-                startActivity(
-                    Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse("https://forush.co/18773/583490/")
-                    )
-                )
-            }
-        }
+//        binding.buttonWritingCourseRegisterIRAN.setOnClickListener {
+//            val webUri = Uri.parse("https://forush.co/18773/583490/")
+//            val iWeb = Intent(Intent.ACTION_VIEW, webUri)
+//            iWeb.setPackage("com.android.chrome")
+//            try {
+//                startActivity(iWeb)
+//            } catch (e: ActivityNotFoundException) {
+//                startActivity(
+//                    Intent(
+//                        Intent.ACTION_VIEW,
+//                        Uri.parse("https://forush.co/18773/583490/")
+//                    )
+//                )
+//            }
+//        }
 
 
         //Choose Courses Content
