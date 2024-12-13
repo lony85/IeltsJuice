@@ -45,10 +45,10 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
         //Social Media
         binding.skypeBtn.setOnClickListener {
             val skypeUri = Uri.parse("https://join.skype.com/invite/jDYbf4HtV0ZT")
-            val iInsta = Intent(Intent.ACTION_VIEW, skypeUri)
-            iInsta.setPackage("com.skype.raider")
+            val iSkypr = Intent(Intent.ACTION_VIEW, skypeUri)
+            iSkypr.setPackage("com.skype.raider")
             try {
-                startActivity(iInsta)
+                startActivity(iSkypr)
             } catch (e: ActivityNotFoundException) {
                 startActivity(
                     Intent(
@@ -60,10 +60,10 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
         }
         binding.telegramBtn.setOnClickListener {
             val telegramUri = Uri.parse("https://telegram.me/ieltsjuice")
-            val iInsta = Intent(Intent.ACTION_VIEW, telegramUri)
-            iInsta.setPackage("org.telegram")
+            val iTelegram = Intent(Intent.ACTION_VIEW, telegramUri)
+            iTelegram.setPackage("org.telegram")
             try {
-                startActivity(iInsta)
+                startActivity(iTelegram)
             } catch (e: ActivityNotFoundException) {
                 startActivity(
                     Intent(
@@ -75,10 +75,10 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
         }
         binding.youtubeBtn.setOnClickListener {
             val youtubeUri = Uri.parse("https://www.youtube.com/c/Ieltsjuice")
-            val iInsta = Intent(Intent.ACTION_VIEW, youtubeUri)
-            iInsta.setPackage("com.google.android.youtube")
+            val iYoutube = Intent(Intent.ACTION_VIEW, youtubeUri)
+            iYoutube.setPackage("com.google.android.youtube")
             try {
-                startActivity(iInsta)
+                startActivity(iYoutube)
             } catch (e: ActivityNotFoundException) {
                 startActivity(
                     Intent(
@@ -105,10 +105,10 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
         }
         binding.twitterBtn.setOnClickListener {
             val twitterUri = Uri.parse("https://twitter.com/ieltsjuice")
-            val iInsta = Intent(Intent.ACTION_VIEW, twitterUri)
-            iInsta.setPackage("com.twitter")
+            val iTwitter = Intent(Intent.ACTION_VIEW, twitterUri)
+            iTwitter.setPackage("com.twitter.android")
             try {
-                startActivity(iInsta)
+                startActivity(iTwitter)
             } catch (e: ActivityNotFoundException) {
                 startActivity(
                     Intent(
@@ -119,11 +119,11 @@ class FragmentAboutUs : Fragment(), AboutUsRecyclerAdapter.PressedBtn {
         }}
         binding.facebookBtn.setOnClickListener {
             val facebookUri = Uri.parse("https://www.facebook.com/IeltsJuice/")
-            val iInsta = Intent(Intent.ACTION_VIEW, facebookUri)
-            iInsta.setPackage("com.facebook.android")
+            val iFacebook = Intent(Intent.ACTION_VIEW, facebookUri)
+            iFacebook.setPackage("com.facebook.android")
 
             try {
-                startActivity(iInsta)
+                startActivity(iFacebook)
             } catch (e: ActivityNotFoundException) {
                 startActivity(
                     Intent(

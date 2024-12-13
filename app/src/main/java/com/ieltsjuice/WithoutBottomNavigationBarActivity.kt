@@ -72,6 +72,8 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 val teacherInstagram = intent.getStringExtra("KEY_teacherInstagram")
                 val teacherWebpage = intent.getStringExtra("KEY_teacherWebpage")
                 val teacherSkype = intent.getStringExtra("KEY_teacherSkype")
+                val teacherTelegram = intent.getStringExtra("KEY_teacherTelegram")
+                val teacherTwitter = intent.getStringExtra("KEY_teacherTwitter")
 
                 val bundle = Bundle()
                 bundle.putString(KEY_teacherName, teacherName)
@@ -84,6 +86,8 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
                 bundle.putString(KEY_teacherInstagram, teacherInstagram)
                 bundle.putString(KEY_teacherWebpage, teacherWebpage)
                 bundle.putString(KEY_teacherSkype, teacherSkype)
+                bundle.putString(KEY_teacherTelegram, teacherTelegram)
+                bundle.putString(KEY_teacherTwitter, teacherTwitter)
                 val fragment = FragmentAboutUsDetails()
                 fragment.arguments = bundle
 

@@ -24,3 +24,6 @@ const val KEY_teacherSkype = "KEY_teacherSkype"
 const val KEY_teacherWebpage = "KEY_teacherWebpage"
 const val KEY_teacherImage = "KEY_teacherImage"
 const val PAGE_NAME_KEY = "PAGE_NAME_KEY"
+const val KEY_teacherTelegram = "KEY_teacherTelegram"
+const val KEY_teacherTwitter = "KEY_teacherTwitter"
+

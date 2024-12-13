@@ -2,7 +2,7 @@ package com.ieltsjuice.model
 
 object Data {
     val Teachers = listOf(
-        Teacher(
+       Teacher(
             "Kasra",
             "Sharifan",
             "Co-founder and CFO",
@@ -12,7 +12,10 @@ object Data {
             "https://www.linkedin.com/in/kasra-sharifan",
             "https://www.facebook.com/kasra.sharifan",
             "",
-            "https://kasrasharifan.com/"
+            "https://kasrasharifan.com/",
+            "",
+            "https://twitter.com/KasraSharifan"
+
         ),
         Teacher(
             "Mehdi",
@@ -24,8 +27,12 @@ object Data {
             "https://www.linkedin.com/in/mehdi-safavi-5b0b2349/",
             "https://www.facebook.com/mehdi.safavi",
             "skype:mehdi-safavi?chat",
-            "https://mehdisafavi.com/"
+            "https://mehdisafavi.com/",
+            "",
+            ""
         ),
+
+
         Teacher(
             "David",
             "Stanley Beggs",
@@ -36,8 +43,12 @@ object Data {
             "",
             "",
             "",
+            "",
+            "",
             ""
-        ),
+    ),
+
+
         Teacher(
             "Soolmaz",
             "Neishaboori",
@@ -48,7 +59,10 @@ object Data {
             "https://www.linkedin.com/in/soolmaz-neishaboori-530a5180/",
             "https://www.facebook.com/Soul.Ne",
             "",
+            "",
+            "",
             ""
+
         ),
         Teacher(
             "Elham",
@@ -60,7 +74,10 @@ object Data {
             "",
             "https://www.facebook.com/elhami.hedeshi",
             "",
+            "",
+            "",
             ""
+
         ),
         Teacher(
             "Sadegh",
@@ -72,7 +89,10 @@ object Data {
             "http://www.linkedin.com/in/sadegh-keshtkar",
             "",
             "",
+            "",
+            "",
             ""
+
         ),
         Teacher(
             "Rahman",
@@ -84,7 +104,10 @@ object Data {
             "https://www.linkedin.com/in/rahmanhaghparast/",
             "",
             "",
+            "",
+            "",
             ""
+
         ),
         Teacher(
             "Saghy",
@@ -96,7 +119,10 @@ object Data {
             "https://www.linkedin.com/in/saghy-ghassemi/",
             "",
             "",
+            "",
+            "",
             ""
+
         ),
         Teacher(
             "Elham",
@@ -105,10 +131,28 @@ object Data {
             "Experienced in the fields of content development and management, as well as digital marketing.",
             "teacher_elham_naseri",
             "",
+            "https://www.linkedin.com/in/elham-naseri-a1b016212/",
+            "",
             "",
             "",
             "",
             ""
+
+        ),
+        Teacher(
+            "Marzieh",
+            "Naseri",
+            "Content Writer",
+            "Enthusiastic content writer and graphic designer on a journey to learn and teach as much as possible.",
+            "teacher_marzieh_naseri",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+
         ),
         Teacher(
             "Hamed",
@@ -116,11 +160,14 @@ object Data {
             "Content Writer",
             "A passionate traveler, travel blogger and researcher.",
             "teacher_hamed_hassanizawe",
-            "https://www.instagram.com/hamed.hassanizadeh/",
+            "",
+            "",
+            "",
             "",
             "",
             "",
             ""
+
         ),
         Teacher(
             "Mehryar",
@@ -132,19 +179,25 @@ object Data {
             "https://www.linkedin.com/in/matt-kishi/",
             "",
             "",
+            "",
+            "",
             ""
+
         ),
         Teacher(
-            "ShB",
+            "Shahab",
             "Hosseinzadeh",
             "Content Writer",
             "An expert and committed online general English teacher interested in writing, traveling, biking, doing research, and digital learning.",
             "teacher_leila_hosseinzadeh",
-            "https://www.instagram.com/ge_booster/",
+            "",
+            "",
+            "",
             "",
             "",
             "",
             ""
+
         )
 
     )

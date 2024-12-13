@@ -71,21 +71,21 @@ class FragmentSelfPacedReading:Fragment() , SelfPacedAdapter.ViewSelected {
             }
         }
 
-        binding.buttonReadingCourseRegisterIRAN.setOnClickListener {
-            val webUri = Uri.parse("https://forush.co/18757/769507/")
-            val iWeb = Intent(Intent.ACTION_VIEW, webUri)
-            iWeb.setPackage("com.android.chrome")
-            try {
-                startActivity(iWeb)
-            } catch (e: ActivityNotFoundException) {
-                startActivity(
-                    Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse("https://forush.co/18757/769507/")
-                    )
-                )
-            }
-        }
+//        binding.buttonReadingCourseRegisterIRAN.setOnClickListener {
+//            val webUri = Uri.parse("https://forush.co/18757/769507/")
+//            val iWeb = Intent(Intent.ACTION_VIEW, webUri)
+//            iWeb.setPackage("com.android.chrome")
+//            try {
+//                startActivity(iWeb)
+//            } catch (e: ActivityNotFoundException) {
+//                startActivity(
+//                    Intent(
+//                        Intent.ACTION_VIEW,
+//                        Uri.parse("https://forush.co/18757/769507/")
+//                    )
+//                )
+//            }
+//        }
 
         //Choose Courses Content
         val courseContent = listOf(
