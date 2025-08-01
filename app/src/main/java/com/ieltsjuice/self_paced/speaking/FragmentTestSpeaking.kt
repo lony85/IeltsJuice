@@ -2,7 +2,6 @@ package com.ieltsjuice.self_paced.speaking
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.ieltsjuice.R
 import com.ieltsjuice.databinding.FragmentTestSpeakingBinding
 import com.ieltsjuice.databinding.TemplateAlertDialogBinding
+import androidx.core.graphics.toColorInt
 
 class FragmentTestSpeaking : Fragment() {
     lateinit var binding: FragmentTestSpeakingBinding
@@ -270,34 +270,34 @@ class FragmentTestSpeaking : Fragment() {
         when (quizTitle) {
             "S.1.1 The Speaking Test Layout - Quiz" -> {
                 binding.radioGroup1Btn2.isChecked = true
-                binding.radioGroup1Btn2.setTextColor(Color.parseColor("#66BB6A"))
+                binding.radioGroup1Btn2.setTextColor("#66BB6A".toColorInt())
                 binding.radioGroup1Btn1.isEnabled = false
 
 
                 binding.radioGroup2Btn1.isChecked = true
-                binding.radioGroup2Btn1.setTextColor(Color.parseColor("#66BB6A"))
+                binding.radioGroup2Btn1.setTextColor("#66BB6A".toColorInt())
                 binding.radioGroup2Btn2.isEnabled = false
 
                 binding.radioGroup3Btn4.isChecked = true
-                binding.radioGroup3Btn4.setTextColor(Color.parseColor("#66BB6A"))
+                binding.radioGroup3Btn4.setTextColor("#66BB6A".toColorInt())
                 binding.radioGroup3Btn1.isEnabled = false
                 binding.radioGroup3Btn2.isEnabled = false
                 binding.radioGroup3Btn3.isEnabled = false
 
                 binding.txtInputLayout.editText?.setText("interactive")
-                binding.txtInputLayout.editText?.setTextColor(Color.parseColor("#66BB6A"))
+                binding.txtInputLayout.editText?.setTextColor("#66BB6A".toColorInt())
 
                 binding.txtLayoutOrder1.editText?.setText("2")
-                binding.txtLayoutOrder1.editText?.setTextColor(Color.parseColor("#66BB6A"))
+                binding.txtLayoutOrder1.editText?.setTextColor("#66BB6A".toColorInt())
 
                 binding.txtLayoutOrder2.editText?.setText("1")
-                binding.txtLayoutOrder2.editText?.setTextColor(Color.parseColor("#66BB6A"))
+                binding.txtLayoutOrder2.editText?.setTextColor("#66BB6A".toColorInt())
 
                 binding.txtLayoutOrder3.editText?.setText("3")
-                binding.txtLayoutOrder3.editText?.setTextColor(Color.parseColor("#66BB6A"))
+                binding.txtLayoutOrder3.editText?.setTextColor("#66BB6A".toColorInt())
 
                 binding.radioGroup7Btn1.isChecked = true
-                binding.radioGroup7Btn1.setTextColor(Color.parseColor("#66BB6A"))
+                binding.radioGroup7Btn1.setTextColor("#66BB6A".toColorInt())
                 binding.radioGroup7Btn2.isEnabled = false
                 binding.radioGroup7Btn3.isEnabled = false
 
@@ -306,17 +306,17 @@ class FragmentTestSpeaking : Fragment() {
 
             "S.1.2 Model Speaking Part 1 - Quiz" -> {
                 binding.txtLayoutQue7Order1.editText?.setText("2")
-                binding.txtLayoutQue7Order1.editText?.setTextColor(Color.parseColor("#66BB6A"))
+                binding.txtLayoutQue7Order1.editText?.setTextColor("#66BB6A".toColorInt())
                 binding.txtLayoutQue7Order2.editText?.setText("4")
-                binding.txtLayoutQue7Order2.editText?.setTextColor(Color.parseColor("#66BB6A"))
+                binding.txtLayoutQue7Order2.editText?.setTextColor("#66BB6A".toColorInt())
                 binding.txtLayoutQue7Order3.editText?.setText("3")
-                binding.txtLayoutQue7Order3.editText?.setTextColor(Color.parseColor("#66BB6A"))
+                binding.txtLayoutQue7Order3.editText?.setTextColor("#66BB6A".toColorInt())
                 binding.txtLayoutQue7Order4.editText?.setText("1")
-                binding.txtLayoutQue7Order4.editText?.setTextColor(Color.parseColor("#66BB6A"))
+                binding.txtLayoutQue7Order4.editText?.setTextColor("#66BB6A".toColorInt())
                 binding.txtLayoutQue7Order5.editText?.setText("6")
-                binding.txtLayoutQue7Order5.editText?.setTextColor(Color.parseColor("#66BB6A"))
+                binding.txtLayoutQue7Order5.editText?.setTextColor("#66BB6A".toColorInt())
                 binding.txtLayoutQue7Order6.editText?.setText("5")
-                binding.txtLayoutQue7Order6.editText?.setTextColor(Color.parseColor("#66BB6A"))
+                binding.txtLayoutQue7Order6.editText?.setTextColor("#66BB6A".toColorInt())
 
 
             }
@@ -324,15 +324,15 @@ class FragmentTestSpeaking : Fragment() {
 
             "S.1.3 Model Speaking Part 2 - Quiz" -> {
                 binding.radioGroup1Btn2.isChecked = true
-                binding.radioGroup1Btn2.setTextColor(Color.parseColor("#66BB6A"))
+                binding.radioGroup1Btn2.setTextColor("#66BB6A".toColorInt())
                 binding.radioGroup1Btn1.isEnabled = false
 
                 binding.radioGroup2Btn1.isChecked = true
-                binding.radioGroup2Btn1.setTextColor(Color.parseColor("#66BB6A"))
+                binding.radioGroup2Btn1.setTextColor("#66BB6A".toColorInt())
                 binding.radioGroup2Btn2.isEnabled = false
 
                 binding.radioGroup3Btn3.isChecked = true
-                binding.radioGroup3Btn3.setTextColor(Color.parseColor("#66BB6A"))
+                binding.radioGroup3Btn3.setTextColor("#66BB6A".toColorInt())
                 binding.radioGroup3Btn1.isEnabled = false
                 binding.radioGroup3Btn2.isEnabled = false
                 binding.radioGroup3Btn4.isEnabled = false
@@ -342,11 +342,11 @@ class FragmentTestSpeaking : Fragment() {
 
             "S.1.4 Model Speaking Part 3 - Quiz" -> {
                 binding.radioGroup1Btn2.isChecked = true
-                binding.radioGroup1Btn2.setTextColor(Color.parseColor("#66BB6A"))
+                binding.radioGroup1Btn2.setTextColor("#66BB6A".toColorInt())
                 binding.radioGroup1Btn1.isEnabled = false
 
                 binding.radioGroup2Btn1.isChecked = true
-                binding.radioGroup2Btn1.setTextColor(Color.parseColor("#66BB6A"))
+                binding.radioGroup2Btn1.setTextColor("#66BB6A".toColorInt())
                 binding.radioGroup2Btn2.isEnabled = false
 
             }

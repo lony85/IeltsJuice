@@ -4,7 +4,6 @@ import android.app.AlertDialog
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import androidx.core.content.ContextCompat
 import com.ieltsjuice.consultation.FragmentConsultation
@@ -238,6 +237,7 @@ class WithoutBottomNavigationBarActivity : AppCompatActivity() {
         return true
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
 
         if (intent.getStringExtra(PAGE_NAME_KEY) == "placementQuestions") {    // To avoid loosing test process , User must confirm exit button

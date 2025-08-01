@@ -13,6 +13,7 @@ import com.ieltsjuice.databinding.FragmentTestReadingBinding
 import com.ieltsjuice.databinding.TemplateAlertDialogBinding
 import com.ieltsjuice.self_paced.speaking.FragmentTestSpeaking
 import com.ieltsjuice.self_paced.speaking.KEY_SelfPacedCourseMainTitle
+import androidx.core.graphics.toColorInt
 
 class FragmentTestReading : Fragment() {
     lateinit var binding: FragmentTestReadingBinding
@@ -188,12 +189,12 @@ class FragmentTestReading : Fragment() {
         when (quizTitle) {
             "R.1.1 About the reading test - Quiz" -> {
                 binding.radioGroup1Btn2.isChecked = true
-                binding.radioGroup1Btn2.setTextColor(Color.parseColor("#66BB6A"))
+                binding.radioGroup1Btn2.setTextColor("#66BB6A".toColorInt())
                 binding.radioGroup1Btn1.isEnabled = false
 
 
                 binding.radioGroup2Btn3.isChecked = true
-                binding.radioGroup2Btn3.setTextColor(Color.parseColor("#66BB6A"))
+                binding.radioGroup2Btn3.setTextColor("#66BB6A".toColorInt())
                 binding.radioGroup2Btn1.isEnabled = false
                 binding.radioGroup2Btn2.isEnabled = false
                 binding.radioGroup2Btn4.isEnabled = false
@@ -201,27 +202,27 @@ class FragmentTestReading : Fragment() {
 
 
                 binding.txtQue3InputLayout1.editText?.setText("3 , three")
-                binding.txtQue3InputLayout1.editText?.setTextColor(Color.parseColor("#66BB6A"))
+                binding.txtQue3InputLayout1.editText?.setTextColor("#66BB6A".toColorInt())
 
                 binding.txtQue3InputLayout2.editText?.setText("40 , forty")
-                binding.txtQue3InputLayout2.editText?.setTextColor(Color.parseColor("#66BB6A"))
+                binding.txtQue3InputLayout2.editText?.setTextColor("#66BB6A".toColorInt())
 
                 binding.txtQue3InputLayout3.editText?.setText("60 , sixty")
-                binding.txtQue3InputLayout3.editText?.setTextColor(Color.parseColor("#66BB6A"))
+                binding.txtQue3InputLayout3.editText?.setTextColor("#66BB6A".toColorInt())
 
                 binding.txtQue3InputLayout4.editText?.setText("1 , one")
-                binding.txtQue3InputLayout4.editText?.setTextColor(Color.parseColor("#66BB6A"))
+                binding.txtQue3InputLayout4.editText?.setTextColor("#66BB6A".toColorInt())
 
             }
 
             "R.1.2 Academic vs. General Training - Quiz" -> {
                 binding.radioGroup1Btn2.isChecked = true
-                binding.radioGroup1Btn2.setTextColor(Color.parseColor("#66BB6A"))
+                binding.radioGroup1Btn2.setTextColor("#66BB6A".toColorInt())
                 binding.radioGroup1Btn1.isEnabled = false
 
 
                 binding.radioGroup2Btn3.isChecked = true
-                binding.radioGroup2Btn3.setTextColor(Color.parseColor("#66BB6A"))
+                binding.radioGroup2Btn3.setTextColor("#66BB6A".toColorInt())
                 binding.radioGroup2Btn1.isEnabled = false
                 binding.radioGroup2Btn2.isEnabled = false
                 binding.radioGroup2Btn4.isEnabled = false

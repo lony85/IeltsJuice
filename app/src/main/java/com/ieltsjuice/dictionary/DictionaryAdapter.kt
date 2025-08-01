@@ -1,26 +1,11 @@
 package com.ieltsjuice.dictionary
 
 import android.annotation.SuppressLint
-import android.content.Context
-import android.content.res.ColorStateList
-import android.graphics.Color
-import android.graphics.ColorFilter
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.getColor
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
-import com.ieltsjuice.R
 import com.ieltsjuice.databinding.TemplateDictionaryContentBinding
 import com.ieltsjuice.model.Dictionary
-import com.ieltsjuice.model.DictionaryRepository
-import com.ieltsjuice.model.local.DictionaryDao
-import com.ieltsjuice.model.local.DictionaryDatabase
-import com.ieltsjuice.util.ApiServiceSingleton
-import com.ieltsjuice.util.MainViewModelFactory
-import java.util.*
 import java.util.stream.Collectors
 import kotlin.collections.ArrayList
 

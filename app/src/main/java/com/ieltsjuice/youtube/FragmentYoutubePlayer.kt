@@ -2,7 +2,6 @@ package com.ieltsjuice.youtube
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,6 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.FullscreenListener
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-import io.reactivex.annotations.NonNull
 
 
 class FragmentYoutubePlayer : Fragment() {
@@ -37,7 +35,6 @@ class FragmentYoutubePlayer : Fragment() {
         val videoTitle = bundle?.getString("videoTitle")
         val videoDesc = bundle?.getString("videoDesc")
 
-        Log.d("id1", videoId!!)
         binding.youtubeVideoTitle.text = videoTitle
         binding.youtubeVideoDesc.text = videoDesc
 
@@ -46,7 +43,9 @@ class FragmentYoutubePlayer : Fragment() {
 
         youTubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
             override fun onReady(youTubePlayer: YouTubePlayer) {
-                youTubePlayer.loadVideo(videoId, 0f)
+                if (videoId != null) {
+                    youTubePlayer.loadVideo(videoId, 0f)
+                }
             }
         })
         youTubePlayerView.addFullscreenListener(object : FullscreenListener {

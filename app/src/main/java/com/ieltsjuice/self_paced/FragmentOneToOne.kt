@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.ieltsjuice.databinding.FragmentOneToOneBinding
+import androidx.core.net.toUri
 
 class FragmentOneToOne:Fragment() {
     lateinit var binding: FragmentOneToOneBinding
@@ -25,7 +26,7 @@ class FragmentOneToOne:Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonOneToOneConsultation.setOnClickListener {
-            val webUri = Uri.parse("https://ieltsjuice.com/services/consultation/")
+            val webUri = "https://ieltsjuice.com/services/consultation/".toUri()
             val iWeb = Intent(Intent.ACTION_VIEW, webUri)
             iWeb.setPackage("com.android.chrome")
             try {
@@ -34,7 +35,7 @@ class FragmentOneToOne:Fragment() {
                 startActivity(
                     Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("https://ieltsjuice.com/services/consultation/")
+                        "https://ieltsjuice.com/services/consultation/".toUri()
                     )
                 )
             }
@@ -55,7 +56,7 @@ class FragmentOneToOne:Fragment() {
 //            }
 //        }
         binding.buttonOneToOneRegister.setOnClickListener {
-            val webUri = Uri.parse("https://ieltsjuice.com/services/one-to-one/")
+            val webUri = "https://ieltsjuice.com/services/one-to-one/".toUri()
             val iWeb = Intent(Intent.ACTION_VIEW, webUri)
             iWeb.setPackage("com.android.chrome")
             try {
@@ -64,7 +65,7 @@ class FragmentOneToOne:Fragment() {
                 startActivity(
                     Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("https://ieltsjuice.com/services/one-to-one/")
+                        "https://ieltsjuice.com/services/one-to-one/".toUri()
                     )
                 )
             }

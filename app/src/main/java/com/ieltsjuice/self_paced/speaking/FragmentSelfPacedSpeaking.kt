@@ -20,6 +20,7 @@ import com.ieltsjuice.databinding.TemplateRegisterAlertDialogBinding
 import com.ieltsjuice.model.Data
 import com.ieltsjuice.model.SelfPacedCourses
 import com.ieltsjuice.self_paced.FragmentSelfPacedCourseDetail
+import androidx.core.net.toUri
 
 const val KEY_SelfPacedCourseMainTitle = "KEY_SelfPacedCourseMainTitle"
 
@@ -51,7 +52,7 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
             dialogBinding.registerBtn.setOnClickListener {
                 dialog.dismiss()
                 val webUri =
-                    Uri.parse("https://ieltsjuice.com/services/ielts-speaking-self-paced-course/")
+                    "https://ieltsjuice.com/services/ielts-speaking-self-paced-course/".toUri()
                 val iWeb = Intent(Intent.ACTION_VIEW, webUri)
                 iWeb.setPackage("com.android.chrome")
                 try {
@@ -60,7 +61,7 @@ class FragmentSelfPacedSpeaking : Fragment(), SelfPacedAdapter.ViewSelected {
                     startActivity(
                         Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse("https://ieltsjuice.com/services/ielts-speaking-self-paced-course/")
+                            "https://ieltsjuice.com/services/ielts-speaking-self-paced-course/".toUri()
                         )
                     )
                 }

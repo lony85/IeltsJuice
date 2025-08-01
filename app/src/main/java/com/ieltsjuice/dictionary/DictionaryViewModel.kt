@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import com.ieltsjuice.model.Dictionary
 import com.ieltsjuice.model.DictionaryRepository
 import com.ieltsjuice.model.local.DictionaryLocalDataClass
-import io.reactivex.Completable
 import io.reactivex.Single
 import io.reactivex.disposables.Disposable
 

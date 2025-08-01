@@ -2,7 +2,6 @@ package com.ieltsjuice.score_calculator
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -204,16 +203,11 @@ class FragmentScoreCalculator : Fragment() {
         writingScoreOverall: Float,
         readingScoreOverall: Float
     ) {
-        Log.i("hamed-1", listeningScoreOverall.toString())
-        Log.i("hamed-2", speakingScoreOverall.toString())
-        Log.i("hamed-3", writingScoreOverall.toString())
-        Log.i("hamed-4", readingScoreOverall.toString())
+
         val overallResult: Float =
             (listeningScoreOverall + speakingScoreOverall + writingScoreOverall + readingScoreOverall) / 4
-        Log.i("hamed", overallResult.toString())
         var overallResultInt = overallResult.toInt()
         val overallResultDecimal = overallResult - overallResultInt
-        Log.i("hamed", overallResultDecimal.toString())
         if (overallResultDecimal in 0.0..0.24) {
             binding.txtScoreOverallResult.text = "Your overall score is : $overallResultInt"
         } else if (overallResultDecimal in 0.25..0.74) {

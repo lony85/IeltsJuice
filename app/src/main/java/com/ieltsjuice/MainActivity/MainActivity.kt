@@ -8,7 +8,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.animation.TranslateAnimation
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
@@ -17,6 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.messaging.FirebaseMessaging
 import com.ieltsjuice.R
 import com.ieltsjuice.databinding.ActivityMainBinding
+import androidx.core.net.toUri
 
 
 class MainActivity : AppCompatActivity() {
@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.floatingActionButtonEmail.setOnClickListener {
             val email = Intent(Intent.ACTION_SENDTO)
-                .setData(Uri.parse("mailto:support@ieltsjuice.freshdesk.com"))
+                .setData("mailto:support@ieltsjuice.freshdesk.com".toUri())
             startActivity(email)
 
 //            val email = Intent(Intent.ACTION_VIEW)
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
 //            startActivity(email)
         }
         binding.floatingActionButtonTelegram.setOnClickListener {
-            val telegramUri = Uri.parse("https://telegram.me/ieltsjuice")
+            val telegramUri = "https://telegram.me/ieltsjuice".toUri()
             val iTelegram = Intent(Intent.ACTION_VIEW, telegramUri)
             iTelegram.setPackage("com.telegram")
             try {
@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(
                     Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("https://telegram.me/ieltsjuice")
+                        "https://telegram.me/ieltsjuice".toUri()
                     )
                 )
             }

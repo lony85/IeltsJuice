@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -41,24 +42,49 @@ class FragmentEssayEvaluate : Fragment() {
 
 
         binding.buttonEssayEvaluate.setOnClickListener {
+            binding.essayFeedback.text = ""
+            binding.essayFeedBackTitle.visibility = View.INVISIBLE
             if (NetworkChecker(this.requireActivity()).isInternetConnected) {
-                val topic = binding.txtTopic.editText?.text
-                val userResponse = binding.txtResponse.editText?.text
-                binding.loadingIndicator.visibility = View.VISIBLE
-                val prompt =
-                    "You are an IELTS assessor. Provide detailed feedback along an estimated IELTS score on this writing based on the task prompt. Use official IELTS band descriptors." +
-                            "task prompt is $topic" + " and writing is $userResponse"
-                Log.e("AI_ERROR", prompt)
-                lifecycleScope.launch {
-                    try {
-                        val response = model.generateContent(prompt)
-                        binding.essayFeedback.text = response.text
-                        binding.loadingIndicator.visibility = View.GONE
-                        binding.essayFeedBackTitle.visibility = View.VISIBLE
-                        // use result
-                    } catch (e: FirebaseAIException) {
-                        Log.e("AI_ERROR", "Generation failed: ${e.message}")
-                        // fallback or show message to user
+                checkUserCountryCode(context!!) { countryCode ->
+                    if (countryCode == "IR") {
+                        Log.e("GeoCheck", "User is from $countryCode")
+                        Toast.makeText(
+                            context,
+                            "Unfortunately, you can't use this feature from Iran.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        // block feature or redirect
+                    } else {
+                        Log.e("GeoCheck", "User is from $countryCode")
+                        val topic = binding.txtTopic.editText?.text
+                        val userResponse = binding.txtResponse.editText?.text
+                        if (topic.isNullOrBlank() || userResponse.isNullOrBlank()) {
+                            Toast.makeText(
+                                this.requireActivity(),
+                                "Please fill in all fields",
+                                Toast.LENGTH_SHORT
+                            ).show()
+
+                        } else {
+                            binding.loadingIndicator.visibility = View.VISIBLE
+                            val prompt =
+                                "You are an IELTS assessor. Provide detailed feedback along an estimated IELTS score on this writing based on the task prompt. Use official IELTS band descriptors." +
+                                        "task prompt is $topic" + " and writing is $userResponse"
+                            Log.e("AI_ERROR", prompt)
+                            lifecycleScope.launch {
+                                try {
+                                    val response = model.generateContent(prompt)
+                                    binding.essayFeedback.text = response.text
+                                    binding.loadingIndicator.visibility = View.GONE
+                                    binding.essayFeedBackTitle.visibility = View.VISIBLE
+                                    // use result
+                                } catch (e: FirebaseAIException) {
+                                    Log.e("AI_ERROR", "Generation failed: ${e.message}")
+                                    // fallback or show message to user
+                                }
+                            }
+
+                        }
                     }
                 }
             } else {
@@ -77,6 +103,5 @@ class FragmentEssayEvaluate : Fragment() {
             )
             .show()
     }
-
 }
 

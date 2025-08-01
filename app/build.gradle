@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.ieltsjuice"
-        minSdk 23
+        minSdk 24
         targetSdk 35
         versionCode 7
         versionName "1.2.3"
@@ -24,7 +24,7 @@ android {
             minifyEnabled false
             shrinkResources false
             multiDexEnabled true
-//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+      //      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug{
         }
@@ -51,8 +51,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
-    implementation 'com.google.firebase:firebase-analytics:22.1.2'
-    implementation 'com.google.firebase:firebase-messaging:24.1.0'
+    implementation 'com.google.firebase:firebase-analytics:23.0.0'
+    implementation 'com.google.firebase:firebase-messaging:25.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.4.0'
     implementation 'com.google.firebase:firebase-ai:17.0.0'
 
@@ -96,5 +96,9 @@ dependencies {
     //Firebase AI (Gemini)
     implementation(platform("com.google.firebase:firebase-bom:34.0.0"))
     implementation("com.google.firebase:firebase-ai")
+
+    //checkIP
+    implementation("com.squareup.okhttp3:okhttp:5.1.0")
+
 
 }

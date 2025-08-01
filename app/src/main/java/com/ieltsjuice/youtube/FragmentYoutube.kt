@@ -20,7 +20,6 @@ import com.ieltsjuice.model.Youtube
 import com.ieltsjuice.model.Youtube.Item.Snippet
 import com.ieltsjuice.model.YoutubeRepository
 import com.ieltsjuice.util.PAGE_NAME_KEY
-import com.ieltsjuice.util.youTubeApiKey
 import io.reactivex.SingleObserver
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -173,7 +172,7 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
                     }
 
                     override fun onError(e: Throwable) {
-                        Log.i("test_error", e.toString())
+
                     }
                 })
         }
@@ -196,7 +195,7 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
                     }
 
                     override fun onError(e: Throwable) {
-                        Log.i("test_error", e.toString())
+
                     }
                 })
         }
@@ -220,19 +219,17 @@ class FragmentYoutube : Fragment(), YoutubeAdapter.PressedBtn {
                     }
 
                     override fun onError(e: Throwable) {
-                        Log.i("test_error", e.toString())
+
                     }
                 })
         }
     }
 
     private fun setDataToRecycler(data: List<Youtube.Item?>?) {
-        Log.i("test2", data.toString())
 //        val myData = ArrayList(data!!)
         val filteredList = data!!.filter {
             !it!!.snippet!!.title!!.contains("Private video")
         }
-        Log.i("test3", filteredList.toString())
         youtubeAdapter = YoutubeAdapter(filteredList as ArrayList<Youtube.Item?>, this)
         binding.recyclerViewContainer.adapter = youtubeAdapter
         binding.recyclerViewContainer.layoutManager =
